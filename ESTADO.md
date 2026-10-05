@@ -4,7 +4,7 @@
 
 ## Onde estamos
 
-**Fase 2 — O Mercado.** A F2-E1 está em levantamento: pesquisa verificada concluída e documento final ainda não redigido. A Fase 1 está com as 3 entregas em versão revisada.
+**Fase 2 — O Mercado.** A F2-E1 está na v2, em revisão pela equipe. A Fase 1 está com as 3 entregas em versão revisada.
 
 ## Ciclo completo
 
@@ -27,7 +27,7 @@
 | F1-E1 | Mapa da Situação | [PDF](01_Fase1_A_Chegada/F1-E1_Mapa_da_Situacao/F1-E1_Mapa_da_Situacao_revisada.pdf) | ✅ Revisada |
 | F1-E2 | Mapa de Stakeholders | [PDF](01_Fase1_A_Chegada/F1-E2_Mapa_de_Stakeholders/F1-E2_Mapa_de_Stakeholders_revisada.pdf) | ✅ Revisada |
 | F1-E3 | Declaração de Intenção | [PDF](01_Fase1_A_Chegada/F1-E3_Declaracao_de_Intencao/F1-E3_Declaracao_de_Intencao_revisada.pdf) | ✅ Revisada |
-| F2-E1 | Mapa do Território | [Levantamento v1](02_Fase2_O_Mercado/F2-E1_Mapa_do_Territorio/F2-E1_Levantamento_v1.md) · [Dados dos Quadros 3–6](02_Fase2_O_Mercado/F2-E1_Mapa_do_Territorio/Dados_Quadros_3-6.md) | 🟡 Levantamento concluído; redação pendente |
+| F2-E1 | Mapa do Território | [**v2 .docx**](02_Fase2_O_Mercado/F2-E1_Mapa_do_Territorio/F2-E1_Mapa_do_Territorio_v2.docx) · [v2 .md](02_Fase2_O_Mercado/F2-E1_Mapa_do_Territorio/F2-E1_Mapa_do_Territorio_v2.md) · base: v1 do colega · [Levantamento](02_Fase2_O_Mercado/F2-E1_Mapa_do_Territorio/F2-E1_Levantamento_v1.md) | 🟡 v2 redigida; aguarda revisão da equipe |
 | F2-E2 | Auditoria do Ativo: Dados e Métricas | — | ⚪ A fazer |
 | F2-E3 | Linha de Responsabilidade | — | ⚪ A fazer |
 | F2-E4 | Diagnóstico de Cultura e Funil de Inovação | — | ⚪ A fazer |
@@ -40,14 +40,14 @@
 
 - **Prazo de envio da Fase 2 no portal:** não consta nos arquivos. Os "60 dias" são o prazo da história, não da disciplina.
 - **Nota e feedback das entregas da Fase 1:** não constam. Se houver devolutiva do professor, salvar na pasta da entrega.
-- **Identificação da equipe:** exigida no documento da Fase 2 e não consta nos arquivos. A F1-E2 menciona "estimativa do grupo".
+- **Equipe (para identificação):** Bruno Müller, Diego Franca Evangelista, Felipe Alef, Gustavo Halfen Simon e Maria Fernanda Barros (D-008).
 - **Divergências entre o Cap. 1 e o Cap. 2:** CTO, diretoria jurídica, aporte, crescimento e volume de decisões. Ver [00_Lumis/Pessoas_e_Cargos.md](00_Lumis/Pessoas_e_Cargos.md) e [00_Lumis/Empresa_e_Contexto.md](00_Lumis/Empresa_e_Contexto.md).
 - **Tabelas do Anexo A (Cap. 2):** os Quadros 3–6 já estão transcritos e conferidos em `F2-E1_Mapa_do_Territorio/Dados_Quadros_3-6.md`, e o Quadro 7 foi conferido no PDF em 05/10/2026. A extração em modo `pdftotext -raw` funciona para os demais quadros, que ainda estão por transcrever.
 
 - **PDFs originais na raiz:** foram copiados para a estrutura. A remoção dos originais depende de autorização (ver D-002).
 
-- **Decisão pendente na F2-E1:** usar ou não os Quadros 7–11 e 14 (fora da lista do enunciado) na resposta à pergunta "o que é difícil de copiar".
+
 
 ## Próximo passo
 
-Decidir sobre o uso dos Quadros 7–14 na F2-E1 e redigir o documento da F2-E1 a partir do levantamento v1. Em seguida: F2-E2 (Auditoria do Ativo) e F2-E3 (Linha de Responsabilidade). Ver a ordem sugerida em [02_Fase2_O_Mercado/README.md](02_Fase2_O_Mercado/README.md).
+A equipe revisa a F2-E1 v2. Em seguida: F2-E2 (Auditoria do Ativo) e F2-E3 (Linha de Responsabilidade). Ver a ordem sugerida em [02_Fase2_O_Mercado/README.md](02_Fase2_O_Mercado/README.md).

@@ -33,3 +33,17 @@ A IA é apoio à decisão e não substitui a responsabilidade humana. Foram adot
 ### D-007 · 05/10/2026 · [Organização] Método de pesquisa com IA da Fase 2
 A pesquisa externa é feita por subagentes, com verificação adversarial independente de cada achado, e todo o registro (prompts, resultados, veredictos e material bruto) fica em `F2-A_Apendice_de_Prompts/`. Achados "não confirmado" e "refutado" não entram no texto. Antes da entrega, as URLs usadas no texto final são conferidas por pessoa.
 **Motivo:** atender a regra "Pesquisa não checada não é pesquisa" (Cap. 2, Entrega 1) e manter trilha de auditoria para a Fase 7.
+
+### D-008 · 05/10/2026 · [Organização] Diretrizes da F2-E1 v2 (a partir da v1 do colega)
+- **Base:** a versão do colega (`F2-E1_Mapa_do_Territorio_v1_colega.pdf`) é o esqueleto. Mantêm-se a estrutura de 7 seções, a camada transversal de integração e operação e a nuance de que os R$ 340 mil da Aster são adicional sobre contrato existente.
+- **Tese de "difícil de copiar":** híbrida. Parte da combinação apontada pelo colega, testa cada elemento contra os dados e conclui que hoje a combinação é frágil, a base é passivo e o fosso ainda precisa ser construído.
+- **Dados:** usar também os Quadros 7, 9, 10 e 14 onde forem indispensáveis, com citação leve no texto.
+- **Pesquisa externa:** seletiva, com 5 a 8 análogos reais rotulados como análogos.
+- **Ordem de criticidade:** dados de clientes → modelo fundacional → câmbio → nuvem → bases clínicas.
+- **Apêndice A:** os prompts do colega são substituídos pelos prompts de pesquisa do F2-A.
+- **Formato:** .docx com 4 a 5 páginas de corpo, mais uma cópia em .md na pasta.
+- **Equipe:** Bruno Müller, Diego Franca Evangelista, Felipe Alef, Gustavo Halfen Simon e Maria Fernanda Barros. Na identificação, só os nomes.
+
+### D-009 · 05/10/2026 · [Lumis] Leitura do território (F2-E1 v2)
+A Lumis controla de fato só a camada de aplicação. A dependência estrutural mais crítica é a de dados de clientes, e a mais rápida é a do fornecedor de modelo. A ameaça competitiva principal é a distribuição de quem já está instalado no hospital e a internalização pelos grandes compradores. Hoje, quase nada na Lumis é difícil de copiar: o fosso possível (dado de desfecho com direito de uso limpo e validação auditável por subgrupo) precisa ser construído. Esse fosso se conecta ao compromisso C2.
+[fonte: F2-E1 v2]
