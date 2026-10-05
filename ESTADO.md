@@ -32,7 +32,7 @@
 | F2-E3 | Linha de Responsabilidade | — | ⚪ A fazer |
 | F2-E4 | Diagnóstico de Cultura e Funil de Inovação | — | ⚪ A fazer |
 | F2-E5 | Due Diligence ESG da Expansão | — | ⚪ A fazer |
-| F2-A | Apêndice de Prompts (da F2-E1) | [Registro v1](02_Fase2_O_Mercado/F2-A_Apendice_de_Prompts/F2-A_Registro_de_Prompts_v1.md) | 🟡 Prompts registrados; falta a verificação humana das URLs finais |
+| F2-A | Apêndice de Prompts (da F2-E1) | [Registro v1](02_Fase2_O_Mercado/F2-A_Apendice_de_Prompts/F2-A_Registro_de_Prompts_v1.md) · [Verificação de URLs](02_Fase2_O_Mercado/F2-A_Apendice_de_Prompts/F2-A_Verificacao_de_URLs_v1.md) | 🟢 Prompts registrados; URLs da F2-E1 v2 conferidas por Felipe em 05/10/2026 (9/9 confirmadas, 2 sugestões de precisão) |
 | F2-M | Memorando ao Conselho (máx. 2 páginas) | — | ⚪ A fazer |
 | F2-D | Documento Integrado + planilhas e matrizes | — | ⚪ A fazer |
 
