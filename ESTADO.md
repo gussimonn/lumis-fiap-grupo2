@@ -27,7 +27,7 @@
 | F1-E1 | Mapa da Situação | [PDF](01_Fase1_A_Chegada/F1-E1_Mapa_da_Situacao/F1-E1_Mapa_da_Situacao_revisada.pdf) | ✅ Revisada |
 | F1-E2 | Mapa de Stakeholders | [PDF](01_Fase1_A_Chegada/F1-E2_Mapa_de_Stakeholders/F1-E2_Mapa_de_Stakeholders_revisada.pdf) | ✅ Revisada |
 | F1-E3 | Declaração de Intenção | [PDF](01_Fase1_A_Chegada/F1-E3_Declaracao_de_Intencao/F1-E3_Declaracao_de_Intencao_revisada.pdf) | ✅ Revisada |
-| F2-E1 | Mapa do Território | [**v2 .docx**](02_Fase2_O_Mercado/F2-E1_Mapa_do_Territorio/F2-E1_Mapa_do_Territorio_v2.docx) · base: v1 do colega · [Levantamento](02_Fase2_O_Mercado/F2-E1_Mapa_do_Territorio/F2-E1_Levantamento_v1.md) | 🟡 v2 redigida; aguarda revisão da equipe |
+| F2-E1 | Mapa do Território | [**v2 .docx**](02_Fase2_O_Mercado/F2-E1_Mapa_do_Territorio/F2-E1_Mapa_do_Territorio_v2.docx) · base: v1 do colega · [Levantamento](02_Fase2_O_Mercado/F2-E1_Mapa_do_Territorio/F2-E1_Levantamento_v1.md) · [Mercado e concorrentes](02_Fase2_O_Mercado/F2-E1_Mapa_do_Territorio/F2-E1_Mercado_e_Concorrentes_v1.md) | 🟡 v2 redigida; aguarda revisão da equipe |
 | F2-E2 | Auditoria do Ativo: Dados e Métricas | — | ⚪ A fazer |
 | F2-E3 | Linha de Responsabilidade | — | ⚪ A fazer |
 | F2-E4 | Diagnóstico de Cultura e Funil de Inovação | — | ⚪ A fazer |
