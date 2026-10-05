@@ -47,3 +47,11 @@ A pesquisa externa é feita por subagentes, com verificação adversarial indepe
 ### D-009 · 05/10/2026 · [Lumis] Leitura do território (F2-E1 v2)
 A Lumis controla de fato só a camada de aplicação. A dependência estrutural mais crítica é a de dados de clientes, e a mais rápida é a do fornecedor de modelo. A ameaça competitiva principal é a distribuição de quem já está instalado no hospital e a internalização pelos grandes compradores. Hoje, quase nada na Lumis é difícil de copiar: o fosso possível (dado de desfecho com direito de uso limpo e validação auditável por subgrupo) precisa ser construído. Esse fosso se conecta ao compromisso C2.
 [fonte: F2-E1 v2]
+
+### D-010 · 05/10/2026 · [Organização] Padrão de escrita: skill humanizer
+Todo texto do LumisOS passa pela skill `humanizer` (github.com/blader/humanizer, commit 225a6f3, MIT), instalada em `.claude/skills/humanizer/` com uma adaptação para o português (`PT-BR.md`). A revisão tira marcas de texto gerado por IA (contrastes "não X, e sim Y", travessões, tríades, negrito decorativo, frases de efeito) e não altera números, fontes, hipóteses, prompts nem URLs. A primeira aplicação foi a F2-E1 v2; a versão anterior à revisão está em `_Historico/2026-10-05_F2-E1_Mapa_do_Territorio_v2.*`.
+**Motivo:** pedido da equipe para que a escrita das entregas soe como texto da equipe.
+
+### D-011 · 05/10/2026 · [Organização] A entrega fica só em .docx
+Cada entrega tem um único arquivo vigente, em `.docx`. A cópia `F2-E1_Mapa_do_Territorio_v2.md` foi apagada; o `.docx` já tinha o mesmo texto revisado. Substitui a parte "mais uma cópia em .md" de D-008. Levantamento, dados transcritos e registro de prompts continuam em `.md`, porque são material de apoio.
+**Motivo:** evitar duas fontes para o mesmo documento.
