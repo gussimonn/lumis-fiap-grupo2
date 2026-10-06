@@ -5,20 +5,6 @@ Trabalho acadêmico de **Gestão em IA (FIAP)**. A Lumis Intelligence é uma emp
 ## Antes de responder sobre andamento
 Abrir `ESTADO.md` e conferir contra os arquivos reais da pasta. Nunca responder por memória de conversa.
 
-## Antes de trabalhar numa entrega
-Em todo chat novo que trate de uma entrega, montar o contexto antes de propor ou gerar qualquer coisa:
-1. Identificar a entrega (código `FX-EY`) e abrir o `README.md` da fase e o da pasta da entrega.
-2. Ler no PDF do capítulo, em `0X_*/_Enunciado/`, o trecho da entrega: o objetivo, o que deve ser entregue, os critérios e os quadros indicados. O README é um resumo; quem manda é o enunciado.
-3. Ler o contexto da Lumis em `00_Lumis/` (`Empresa_e_Contexto.md`, `Pessoas_e_Cargos.md`, `Compromissos_Vigentes.md`) e as decisões ligadas à entrega em `DECISOES.md`.
-4. Ver o que já existe na pasta da entrega e o status no `ESTADO.md`.
-5. Dizer à equipe, em poucas linhas, o objetivo da entrega como foi entendido e o que já existe. Só depois começar.
-
-## Como conduzir a conversa
-- Ir passo a passo. Fazer uma etapa, mostrar o resultado e combinar a próxima antes de seguir.
-- Fazer uma pergunta por vez, no máximo duas, e só quando a resposta mudar o que vai ser feito. O que dá para decidir pelo enunciado, pelas decisões registradas ou por bom senso, decidir e avisar.
-- Antes de gerar ou alterar um arquivo, dizer em uma frase o que vai ser feito e por quê.
-- Explicar de forma simples e direta, sem jargão: o que foi feito, onde está e o que falta. Respostas curtas.
-
 ## Fontes de verdade
 - Dados da Lumis: **somente** os capítulos em `0X_*/_Enunciado/` e as entregas já feitas. Regra do curso: *"Não invente números sobre a Lumis: se algo não está no anexo, trate como informação indisponível e diga isso explicitamente."* Uma conclusão que não se apoia num quadro é **hipótese** e deve ser marcada como tal.
 - Citar a origem: `[fonte: Cap. 2, Quadro 9]`, `[fonte: F1-E3]`, `[não consta]`, `[hipótese]`.

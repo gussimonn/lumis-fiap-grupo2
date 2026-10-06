@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guia do LumisOS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --vital:#3DBE93; --vital-escuro:#1E8C6B; --profundo:#0F2D3A; --pulso:#2BA6C9;
+  --tinta:#18252C; --nevoa:#6B7C85; --papel:#EEF7F3; --papel-frio:#F1F6F4; --borda:#D3DEDB;
+  --ambar:#B7791F; --tijolo:#B4442F;
+  --serif:"Source Serif 4", Georgia, serif;
+  --sans:"Source Sans 3", Calibri, "Segoe UI", sans-serif;
+  --s1:8px; --s2:16px; --s3:24px; --s4:40px; --s5:64px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#fff;color:var(--tinta);font:17px/1.65 var(--sans)}
+a{color:var(--vital-escuro)}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--pulso);outline-offset:3px;border-radius:4px}
+.duas>*,.mapa>*,.tres>*,.tipos>*{min-width:0}
+code{overflow-wrap:anywhere;font:600 .9em/1 var(--sans);background:var(--papel-frio);border:1px solid var(--borda);padding:2px 6px;border-radius:4px;color:var(--profundo)}
+
+/* Capa */
+.capa{background:var(--profundo);color:#fff}
+.capa .feixe{display:block;width:100%;height:auto;max-height:360px;object-fit:cover;object-position:left bottom}
+.capa .texto{max-width:1040px;margin:0 auto;padding:var(--s4) var(--s2) var(--s5)}
+.logo-neg{height:40px;width:auto;display:block;margin-bottom:var(--s3)}
+h1{font:400 clamp(2.2rem,5vw,3.4rem)/1.1 var(--serif);letter-spacing:-.02em;margin:0 0 var(--s2);max-width:18ch}
+.capa p{color:#C9DAD6;max-width:60ch;margin:0;font-size:1.1rem}
+
+/* Navegação */
+nav{position:sticky;top:0;z-index:5;background:rgba(255,255,255,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--borda)}
+nav ul{max-width:1040px;margin:0 auto;padding:0 var(--s2);list-style:none;display:flex;gap:var(--s3);overflow-x:auto}
+nav a{display:block;padding:14px 0;text-decoration:none;color:var(--profundo);font-weight:600;white-space:nowrap;border-bottom:3px solid transparent}
+nav a:hover{border-bottom-color:var(--vital)}
+
+main{max-width:1040px;margin:0 auto;padding:0 var(--s2)}
+section{padding:var(--s5) 0;border-bottom:1px solid var(--borda)}
+section:last-child{border-bottom:0}
+h2{font:400 2rem/1.2 var(--serif);color:var(--profundo);letter-spacing:-.015em;margin:0 0 var(--s1);padding-bottom:var(--s1);border-bottom:2px solid var(--vital);display:inline-block}
+h3{font:700 1.05rem/1.3 var(--sans);color:var(--profundo);margin:0 0 var(--s1)}
+.lead{font-size:1.12rem;max-width:64ch;margin:var(--s2) 0 var(--s4)}
+.destaque{font:italic 400 1.25rem/1.5 var(--serif);color:var(--profundo);background:var(--papel);border-left:4px solid var(--vital);padding:var(--s2) var(--s3);margin:var(--s3) 0;max-width:70ch}
+
+/* Git */
+.duas{display:grid;grid-template-columns:1fr 1fr;gap:var(--s3)}
+.via{border:1px solid var(--borda);border-radius:10px;padding:var(--s3);background:#fff}
+.via p{margin:0 0 var(--s1)}
+.via ol{margin:var(--s1) 0 0;padding-left:1.2em}
+.via li{margin-bottom:6px}
+.ciclo{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:var(--s3) 0 var(--s4);counter-reset:passo}
+.ciclo div{padding:var(--s2) var(--s2) var(--s2) 0;border-top:3px solid var(--borda);position:relative}
+.ciclo div::before{counter-increment:passo;content:counter(passo);position:absolute;top:-15px;left:0;width:26px;height:26px;border-radius:50%;background:var(--profundo);color:#fff;font:700 .85rem/26px var(--sans);text-align:center}
+.ciclo div:first-child{border-top-color:var(--vital)}
+.ciclo b{display:block;color:var(--profundo);margin-top:var(--s1)}
+.ciclo span{font-size:.95rem;color:var(--nevoa)}
+.aviso{background:var(--papel-frio);border-radius:10px;padding:var(--s2) var(--s3);margin-top:var(--s3)}
+.aviso h3{color:var(--tijolo)}
+.aviso ul{margin:0;padding-left:1.2em}
+
+.regra-ouro{display:flex;gap:var(--s3);align-items:center;background:var(--profundo);color:#fff;border-radius:12px;padding:var(--s3) var(--s4);margin:0 0 var(--s4)}
+.regra-ouro svg{flex:none;width:56px;height:56px}
+.regra-ouro b{display:block;font:400 1.6rem/1.25 var(--serif);letter-spacing:-.01em;margin-bottom:6px}
+.regra-ouro p{margin:0;color:#C9DAD6;max-width:62ch}
+.regra-ouro code{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.2);color:#fff}
+.ciclo div.chave{border-top-color:var(--pulso)}
+.ciclo div.chave::before{background:var(--pulso)}
+.ciclo div.chave b{color:var(--pulso)}
+@media (max-width:860px){.regra-ouro{flex-direction:column;align-items:flex-start;padding:var(--s3)}}
+
+/* Mapa da pasta */
+.mapa{display:grid;grid-template-columns:minmax(260px,340px) 1fr;gap:var(--s4);align-items:start}
+.arvore{list-style:none;margin:0;padding:var(--s2);background:var(--profundo);border-radius:12px;position:sticky;top:70px}
+.arvore button{all:unset;box-sizing:border-box;display:flex;gap:10px;align-items:center;width:100%;padding:8px 12px;border-radius:6px;color:#D6E5E1;cursor:pointer;font:600 .98rem/1.3 var(--sans)}
+.arvore button:hover{background:rgba(255,255,255,.07);color:#fff}
+.arvore button:active{transform:scale(.98)}
+.arvore button[aria-selected="true"]{background:rgba(61,190,147,.18);color:#fff}
+.arvore button[aria-selected="true"] .pt{background:var(--vital)}
+.arvore .pt{width:9px;height:9px;border-radius:50%;background:#3E5D69;flex:none}
+.arvore .sub button{padding-left:34px;font-weight:400;font-size:.92rem}
+.arvore .sep{height:1px;background:rgba(255,255,255,.1);margin:6px 12px}
+.painel{min-height:320px}
+.painel .caminho{font:600 .95rem/1 var(--sans);color:var(--vital-escuro);margin:0 0 var(--s1)}
+.painel h3{font:400 1.6rem/1.25 var(--serif);margin-bottom:var(--s2)}
+.painel p{max-width:62ch;margin:0 0 var(--s2)}
+.painel ul{max-width:62ch;padding-left:1.2em;margin:0 0 var(--s2)}
+.painel .quando{background:var(--papel);border-radius:8px;padding:12px var(--s2);max-width:62ch;margin:0}
+.painel .quando b{color:var(--vital-escuro)}
+
+/* Narrativa */
+.fases{list-style:none;padding:0;margin:var(--s4) 0;display:grid;grid-template-columns:repeat(7,1fr);position:relative}
+.fases::before{content:"";position:absolute;left:0;right:0;top:11px;height:2px;background:linear-gradient(90deg,var(--vital) 0%,var(--vital) 22%,var(--borda) 22%)}
+.fases li{position:relative;padding-top:34px;padding-right:var(--s1)}
+.fases li::before{content:"";position:absolute;top:4px;left:0;width:16px;height:16px;border-radius:50%;background:#fff;border:2px solid var(--borda)}
+.fases li.feita::before{background:var(--vital);border-color:var(--vital)}
+.fases li.agora::before{background:var(--pulso);border-color:var(--pulso);box-shadow:0 0 0 6px rgba(43,166,201,.18)}
+.fases li.final::before{border-color:var(--profundo);background:var(--profundo)}
+.fases b{display:block;font:600 1.02rem/1.25 var(--serif);color:var(--profundo)}
+.fases span{font-size:.85rem;color:var(--nevoa)}
+.tres{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s3)}
+.tres p{margin:0;font-size:.98rem}
+
+/* Design system */
+.cores{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--s2);margin:var(--s3) 0 var(--s4)}
+.cor{border-radius:10px;overflow:hidden;border:1px solid var(--borda)}
+.cor i{display:block;height:88px}
+.cor div{padding:10px 12px;font-size:.92rem;line-height:1.4}
+.cor b{display:block;color:var(--profundo)}
+.tipos{display:grid;grid-template-columns:1fr 1fr;gap:var(--s3);margin-bottom:var(--s4)}
+.tipos .amostra-serif{font:400 2.2rem/1.15 var(--serif);color:var(--profundo);letter-spacing:-.02em}
+.tipos .amostra-sans{font:400 1.25rem/1.5 var(--sans)}
+.tipos small{display:block;color:var(--nevoa);margin-top:6px;font-size:.9rem}
+.tags{display:flex;flex-wrap:wrap;gap:var(--s1) var(--s3);margin:var(--s2) 0}
+.tag{font:700 .9rem/1 var(--sans)}
+.t-fonte{color:var(--vital-escuro)} .t-hip{color:var(--ambar)} .t-nc{color:#6B7A8C} .t-risco{color:var(--tijolo)}
+.regras{columns:2;column-gap:var(--s4);padding-left:1.2em;margin:var(--s2) 0 0}
+.regras li{break-inside:avoid;margin-bottom:10px}
+
+footer{max-width:1040px;margin:0 auto;padding:var(--s4) var(--s2) var(--s5);color:var(--nevoa);font-size:.9rem;display:flex;gap:var(--s2);align-items:center}
+footer svg{height:28px;width:auto}
+
+@media (max-width:860px){
+  .duas,.tres,.tipos,.mapa{grid-template-columns:1fr}
+  .arvore{position:static}
+  .ciclo{grid-template-columns:1fr 1fr;row-gap:var(--s3)}
+  .cores{grid-template-columns:1fr 1fr}
+  .fases{grid-template-columns:1fr;gap:var(--s2)}
+  .fases::before{left:7px;right:auto;top:0;bottom:0;width:2px;height:auto;background:linear-gradient(180deg,var(--vital) 0%,var(--vital) 22%,var(--borda) 22%)}
+  .fases li{padding:0 0 0 32px}
+  .fases li::before{top:3px}
+  .regras{columns:1}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="capa">
+  <img class="feixe" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjQwIDU2MCIgd2lkdGg9IjEyNDAiIGhlaWdodD0iNTYwIj4NCjxkZWZzPg0KPHJhZGlhbEdyYWRpZW50IGlkPSJmdW5kbyIgY3g9IjAuMTIxIiBjeT0iMC44NTciIHI9IjEuMSIgZng9IjAuMTIxIiBmeT0iMC44NTciPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iIzE3NDA0RiIvPjxzdG9wIG9mZnNldD0iLjU1IiBzdG9wLWNvbG9yPSIjMEYyRDNBIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMEIyMzMwIi8+PC9yYWRpYWxHcmFkaWVudD4NCjxyYWRpYWxHcmFkaWVudCBpZD0iaGFsbyI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjM0RCRTkzIiBzdG9wLW9wYWNpdHk9Ii40NSIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzNEQkU5MyIgc3RvcC1vcGFjaXR5PSIwIi8+PC9yYWRpYWxHcmFkaWVudD4NCjxsaW5lYXJHcmFkaWVudCBpZD0idnAiIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIwIj48c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMzREJFOTMiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiMyQkE2QzkiLz48L2xpbmVhckdyYWRpZW50Pg0KPGZpbHRlciBpZD0iZ3JhbyIgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSI+PGZlVHVyYnVsZW5jZSB0eXBlPSJmcmFjdGFsTm9pc2UiIGJhc2VGcmVxdWVuY3k9Ii45IiBudW1PY3RhdmVzPSIyIiBzdGl0Y2hUaWxlcz0ic3RpdGNoIi8+PGZlQ29sb3JNYXRyaXggdmFsdWVzPSIwIDAgMCAwIDEgIDAgMCAwIDAgMSAgMCAwIDAgMCAxICAwIDAgMCAuMDUgMCIvPjwvZmlsdGVyPg0KPC9kZWZzPg0KPHJlY3Qgd2lkdGg9IjEyNDAiIGhlaWdodD0iNTYwIiBmaWxsPSJ1cmwoI2Z1bmRvKSIvPg0KPGNpcmNsZSBjeD0iMTUwIiBjeT0iNDgwIiByPSI2NCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRkZGRkZGIiBzdHJva2Utb3BhY2l0eT0iMC4zMiIgc3Ryb2tlLXdpZHRoPSIxLjYiLz4NCjxjaXJjbGUgY3g9IjE1MCIgY3k9IjQ4MCIgcj0iOTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0ZGRkZGRiIgc3Ryb2tlLW9wYWNpdHk9IjAuMjgiIHN0cm9rZS13aWR0aD0iMS4xIi8+DQo8Y2lyY2xlIGN4PSIxNTAiIGN5PSI0ODAiIHI9IjEyMSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRkZGRkZGIiBzdHJva2Utb3BhY2l0eT0iMC4zOCIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtZGFzaGFycmF5PSIwIDExIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4NCjxjaXJjbGUgY3g9IjE1MCIgY3k9IjQ4MCIgcj0iMTU4IiBmaWxsPSJub25lIiBzdHJva2U9IiNGRkZGRkYiIHN0cm9rZS1vcGFjaXR5PSIwLjIzIiBzdHJva2Utd2lkdGg9IjEuNiIvPg0KPGNpcmNsZSBjeD0iMTUwIiBjeT0iNDgwIiByPSIyMDIiIGZpbGw9Im5vbmUiIHN0cm9rZT0idXJsKCN2cCkiIHN0cm9rZS13aWR0aD0iMS44IiBzdHJva2Utb3BhY2l0eT0iLjkiLz4NCjxjaXJjbGUgY3g9IjE1MCIgY3k9IjQ4MCIgcj0iMjU1IiBmaWxsPSJub25lIiBzdHJva2U9IiNGRkZGRkYiIHN0cm9rZS1vcGFjaXR5PSIwLjIxIiBzdHJva2Utd2lkdGg9IjEuMSIvPg0KPGNpcmNsZSBjeD0iMTUwIiBjeT0iNDgwIiByPSIzMTciIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0ZGRkZGRiIgc3Ryb2tlLW9wYWNpdHk9IjAuMTciIHN0cm9rZS13aWR0aD0iMS42Ii8+DQo8Y2lyY2xlIGN4PSIxNTAiIGN5PSI0ODAiIHI9IjM5MiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRkZGRkZGIiBzdHJva2Utb3BhY2l0eT0iMC4yNSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtZGFzaGFycmF5PSIwIDE2IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4NCjxjaXJjbGUgY3g9IjE1MCIgY3k9IjQ4MCIgcj0iNDgwIiBmaWxsPSJub25lIiBzdHJva2U9IiNGRkZGRkYiIHN0cm9rZS1vcGFjaXR5PSIwLjEzIiBzdHJva2Utd2lkdGg9IjEuMSIvPg0KPGNpcmNsZSBjeD0iMTUwIiBjeT0iNDgwIiByPSI1ODUiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0ZGRkZGRiIgc3Ryb2tlLW9wYWNpdHk9IjAuMTIiIHN0cm9rZS13aWR0aD0iMS42Ii8+DQo8Y2lyY2xlIGN4PSIxNTAiIGN5PSI0ODAiIHI9IjcxMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRkZGRkZGIiBzdHJva2Utb3BhY2l0eT0iMC4xNyIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtZGFzaGFycmF5PSIwIDE5IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4NCjxjaXJjbGUgY3g9IjE1MCIgY3k9IjQ4MCIgcj0iODU5IiBmaWxsPSJub25lIiBzdHJva2U9IiNGRkZGRkYiIHN0cm9rZS1vcGFjaXR5PSIwLjA3IiBzdHJva2Utd2lkdGg9IjEuMSIvPg0KPGNpcmNsZSBjeD0iMTUwIiBjeT0iNDgwIiByPSIxMDM3IiBmaWxsPSJub25lIiBzdHJva2U9IiNGRkZGRkYiIHN0cm9rZS1vcGFjaXR5PSIwLjA1IiBzdHJva2Utd2lkdGg9IjEuNiIvPg0KPGNpcmNsZSBjeD0iMTUwIiBjeT0iNDgwIiByPSIxMjAiIGZpbGw9InVybCgjaGFsbykiLz4NCjxwYXRoIGQ9Ik0xNTAuMCw0ODAuMCBMMjcwLjAsNDgwLjAgTDI3MC4wLDQ4MC4wIEwyNzAuOCw0ODAuMCBMMjcxLjUsNDgwLjAgTDI3Mi4yLDQ4MC4wIEwyNzMuMCw0ODAuMCBMMjczLjgsNDgwLjAgTDI3NC41LDQ4MC4wIEwyNzUuMiw0ODAuMCBMMjc2LjAsNDgwLjAgTDI3Ni44LDQ4MC4wIEwyNzcuNSw0ODAuMCBMMjc4LjIsNDgwLjAgTDI3OS4wLDQ4MC4wIEwyNzkuOCw0ODAuMCBMMjgwLjUsNDgwLjAgTDI4MS4yLDQ4MC4wIEwyODIuMCw0ODAuMCBMMjgyLjgsNDgwLjAgTDI4My41LDQ4MC4wIEwyODQuMiw0ODAuMCBMMjg1LjAsNDgwLjAgTDI4NS44LDQ4MC4wIEwyODYuNSw0ODAuMCBMMjg3LjIsNDgwLjAgTDI4OC4wLDQ4MC4wIEwyODguOCw0ODAuMCBMMjg5LjUsNDgwLjAgTDI5MC4yLDQ4MC4wIEwyOTEuMCw0ODAuMCBMMjkxLjgsNDgwLjAgTDI5Mi41LDQ4MC4wIEwyOTMuMiw0ODAuMCBMMjk0LjAsNDgwLjAgTDI5NC44LDQ4MC4wIEwyOTUuNSw0ODAuMCBMMjk2LjIsNDgwLjAgTDI5Ny4wLDQ4MC4wIEwyOTcuOCw0ODAuMCBMMjk4LjUsNDgwLjAgTDI5OS4yLDQ4MC4wIEwzMDAuMCw0NzkuOSBMMzAwLjgsNDc5LjkgTDMwMS41LDQ3OS45IEwzMDIuMiw0NzkuOCBMMzAzLjAsNDc5LjggTDMwMy44LDQ3OS43IEwzMDQuNSw0NzkuNiBMMzA1LjIsNDc5LjUgTDMwNi4wLDQ3OS40IEwzMDYuOCw0NzkuMiBMMzA3LjUsNDc5LjAgTDMwOC4yLDQ3OC43IEwzMDkuMCw0NzguNCBMMzA5LjgsNDc4LjEgTDMxMC41LDQ3Ny43IEwzMTEuMiw0NzcuMyBMMzEyLjAsNDc2LjcgTDMxMi44LDQ3Ni4yIEwzMTMuNSw0NzUuNiBMMzE0LjIsNDc0LjkgTDMxNS4wLDQ3NC4yIEwzMTUuOCw0NzMuNSBMMzE2LjUsNDcyLjggTDMxNy4yLDQ3Mi4xIEwzMTguMCw0NzEuMyBMMzE4LjgsNDcwLjcgTDMxOS41LDQ3MC4wIEwzMjAuMiw0NjkuNCBMMzIxLjAsNDY4LjkgTDMyMS44LDQ2OC41IEwzMjIuNSw0NjguMiBMMzIzLjIsNDY4LjEgTDMyNC4wLDQ2OC4wIEwzMjQuOCw0NjguMSBMMzI1LjUsNDY4LjIgTDMyNi4yLDQ2OC41IEwzMjcuMCw0NjguOSBMMzI3LjgsNDY5LjQgTDMyOC41LDQ3MC4wIEwzMjkuMiw0NzAuNyBMMzMwLjAsNDcxLjMgTDMzMC44LDQ3Mi4xIEwzMzEuNSw0NzIuOCBMMzMyLjIsNDczLjUgTDMzMy4wLDQ3NC4yIEwzMzMuOCw0NzQuOSBMMzM0LjUsNDc1LjYgTDMzNS4yLDQ3Ni4yIEwzMzYuMCw0NzYuNyBMMzM2LjgsNDc3LjMgTDMzNy41LDQ3Ny43IEwzMzguMiw0NzguMSBMMzM5LjAsNDc4LjQgTDMzOS44LDQ3OC43IEwzNDAuNSw0NzkuMCBMMzQxLjIsNDc5LjIgTDM0Mi4wLDQ3OS40IEwzNDIuOCw0NzkuNSBMMzQzLjUsNDc5LjYgTDM0NC4yLDQ3OS43IEwzNDUuMCw0NzkuOCBMMzQ1LjgsNDc5LjggTDM0Ni41LDQ3OS45IEwzNDcuMiw0NzkuOSBMMzQ4LjAsNDc5LjkgTDM0OC44LDQ4MC4wIEwzNDkuNSw0ODAuMCBMMzUwLjIsNDgwLjAgTDM1MS4wLDQ4MC4wIEwzNTEuOCw0ODAuMCBMMzUyLjUsNDgwLjAgTDM1My4yLDQ4MC4wIEwzNTQuMCw0ODAuMCBMMzU0LjgsNDgwLjAgTDM1NS41LDQ4MC4wIEwzNTYuMiw0ODAuMCBMMzU3LjAsNDgwLjAgTDM1Ny44LDQ4MC4wIEwzNTguNSw0ODAuMCBMMzU5LjIsNDgwLjAgTDM2MC4wLDQ4MC4wIEwzNjAuOCw0ODAuMCBMMzYxLjUsNDgwLjAgTDM2Mi4yLDQ4MC4wIEwzNjMuMCw0ODAuMCBMMzYzLjgsNDgwLjAgTDM2NC41LDQ4MC4wIEwzNjUuMiw0ODAuMCBMMzY2LjAsNDgwLjAgTDM2Ni44LDQ4MC4wIEwzNjcuNSw0ODAuMCBMMzY4LjIsNDgwLjAgTDM2OS4wLDQ4MC4wIEwzNjkuOCw0ODAuMCBMMzcwLjUsNDgwLjAgTDM3MS4yLDQ4MC4wIEwzNzIuMCw0ODAuMCBMMzcyLjgsNDgwLjAgTDM3My41LDQ4MC4xIEwzNzQuMiw0ODAuMyBMMzc1LjAsNDgwLjYgTDM3NS44LDQ4MS4xIEwzNzYuNSw0ODEuOSBMMzc3LjIsNDgzLjAgTDM3OC4wLDQ4NC41IEwzNzguOCw0ODYuMSBMMzc5LjUsNDg3LjYgTDM4MC4yLDQ4OC42IEwzODEuMCw0ODkuMCBMMzgxLjgsNDg4LjUgTDM4Mi41LDQ4Ny4zIEwzODMuMiw0ODUuNiBMMzg0LjAsNDgzLjMgTDM4NC44LDQ4MC42IEwzODUuNSw0NzcuMCBMMzg2LjIsNDcyLjIgTDM4Ny4wLDQ2NS4yIEwzODcuOCw0NTUuNSBMMzg4LjUsNDQyLjcgTDM4OS4yLDQyNi45IEwzOTAuMCw0MDkuMiBMMzkwLjgsMzkxLjQgTDM5MS41LDM3Ni4xIEwzOTIuMiwzNjUuNyBMMzkzLjAsMzYyLjAgTDM5My44LDM2NS43IEwzOTQuNSwzNzYuMiBMMzk1LjIsMzkxLjUgTDM5Ni4wLDQwOS4zIEwzOTYuOCw0MjcuMiBMMzk3LjUsNDQzLjQgTDM5OC4yLDQ1Ni45IEwzOTkuMCw0NjcuNyBMMzk5LjgsNDc2LjMgTDQwMC41LDQ4My42IEw0MDEuMiw0OTAuMiBMNDAyLjAsNDk2LjUgTDQwMi44LDUwMi40IEw0MDMuNSw1MDcuNCBMNDA0LjIsNTEwLjcgTDQwNS4wLDUxMi4wIEw0MDUuOCw1MTAuOCBMNDA2LjUsNTA3LjYgTDQwNy4yLDUwMi45IEw0MDguMCw0OTcuNyBMNDA4LjgsNDkyLjcgTDQwOS41LDQ4OC41IEw0MTAuMiw0ODUuMiBMNDExLjAsNDgzLjAgTDQxMS44LDQ4MS42IEw0MTIuNSw0ODAuOCBMNDEzLjIsNDgwLjQgTDQxNC4wLDQ4MC4yIEw0MTQuOCw0ODAuMSBMNDE1LjUsNDgwLjAgTDQxNi4yLDQ4MC4wIEw0MTcuMCw0ODAuMCBMNDE3LjgsNDgwLjAgTDQxOC41LDQ4MC4wIEw0MTkuMiw0ODAuMCBMNDIwLjAsNDgwLjAgTDQyMC44LDQ4MC4wIEw0MjEuNSw0ODAuMCBMNDIyLjIsNDgwLjAgTDQyMy4wLDQ4MC4wIEw0MjMuOCw0ODAuMCBMNDI0LjUsNDgwLjAgTDQyNS4yLDQ4MC4wIEw0MjYuMCw0ODAuMCBMNDI2LjgsNDgwLjAgTDQyNy41LDQ3OS45IEw0MjguMiw0NzkuOSBMNDI5LjAsNDc5LjkgTDQyOS44LDQ3OS45IEw0MzAuNSw0NzkuOSBMNDMxLjIsNDc5LjggTDQzMi4wLDQ3OS44IEw0MzIuOCw0NzkuNyBMNDMzLjUsNDc5LjcgTDQzNC4yLDQ3OS42IEw0MzUuMCw0NzkuNiBMNDM1LjgsNDc5LjUgTDQzNi41LDQ3OS40IEw0MzcuMiw0NzkuMyBMNDM4LjAsNDc5LjEgTDQzOC44LDQ3OS4wIEw0MzkuNSw0NzguOCBMNDQwLjIsNDc4LjYgTDQ0MS4wLDQ3OC40IEw0NDEuOCw0NzguMSBMNDQyLjUsNDc3LjggTDQ0My4yLDQ3Ny41IEw0NDQuMCw0NzcuMSBMNDQ0LjgsNDc2LjcgTDQ0NS41LDQ3Ni4zIEw0NDYuMiw0NzUuOCBMNDQ3LjAsNDc1LjIgTDQ0Ny44LDQ3NC43IEw0NDguNSw0NzQuMSBMNDQ5LjIsNDczLjQgTDQ1MC4wLDQ3Mi43IEw0NTAuOCw0NzIuMCBMNDUxLjUsNDcxLjIgTDQ1Mi4yLDQ3MC40IEw0NTMuMCw0NjkuNSBMNDUzLjgsNDY4LjYgTDQ1NC41LDQ2Ny43IEw0NTUuMiw0NjYuOCBMNDU2LjAsNDY1LjkgTDQ1Ni44LDQ2NC45IEw0NTcuNSw0NjQuMCBMNDU4LjIsNDYzLjEgTDQ1OS4wLDQ2Mi4yIEw0NTkuOCw0NjEuMyBMNDYwLjUsNDYwLjUgTDQ2MS4yLDQ1OS43IEw0NjIuMCw0NTkuMCBMNDYyLjgsNDU4LjMgTDQ2My41LDQ1Ny43IEw0NjQuMiw0NTcuMiBMNDY1LjAsNDU2LjggTDQ2NS44LDQ1Ni40IEw0NjYuNSw0NTYuMiBMNDY3LjIsNDU2LjAgTDQ2OC4wLDQ1Ni4wIEw0NjguOCw0NTYuMCBMNDY5LjUsNDU2LjIgTDQ3MC4yLDQ1Ni40IEw0NzEuMCw0NTYuOCBMNDcxLjgsNDU3LjIgTDQ3Mi41LDQ1Ny43IEw0NzMuMiw0NTguMyBMNDc0LjAsNDU5LjAgTDQ3NC44LDQ1OS43IEw0NzUuNSw0NjAuNSBMNDc2LjIsNDYxLjMgTDQ3Ny4wLDQ2Mi4yIEw0NzcuOCw0NjMuMSBMNDc4LjUsNDY0LjAgTDQ3OS4yLDQ2NC45IEw0ODAuMCw0NjUuOSBMNDgwLjgsNDY2LjggTDQ4MS41LDQ2Ny43IEw0ODIuMiw0NjguNiBMNDgzLjAsNDY5LjUgTDQ4My44LDQ3MC40IEw0ODQuNSw0NzEuMiBMNDg1LjIsNDcyLjAgTDQ4Ni4wLDQ3Mi43IEw0ODYuOCw0NzMuNCBMNDg3LjUsNDc0LjEgTDQ4OC4yLDQ3NC43IEw0ODkuMCw0NzUuMiBMNDg5LjgsNDc1LjggTDQ5MC41LDQ3Ni4zIEw0OTEuMiw0NzYuNyBMNDkyLjAsNDc3LjEgTDQ5Mi44LDQ3Ny41IEw0OTMuNSw0NzcuOCBMNDk0LjIsNDc4LjEgTDQ5NS4wLDQ3OC40IEw0OTUuOCw0NzguNiBMNDk2LjUsNDc4LjggTDQ5Ny4yLDQ3OS4wIEw0OTguMCw0NzkuMSBMNDk4LjgsNDc5LjMgTDQ5OS41LDQ3OS40IEw1MDAuMiw0NzkuNSBMNTAxLjAsNDc5LjYgTDUwMS44LDQ3OS42IEw1MDIuNSw0NzkuNyBMNTAzLjIsNDc5LjcgTDUwNC4wLDQ3OS44IEw1MDQuOCw0NzkuOCBMNTA1LjUsNDc5LjkgTDUwNi4yLDQ3OS45IEw1MDcuMCw0NzkuOSBMNTA3LjgsNDc5LjkgTDUwOC41LDQ3OS45IEw1MDkuMiw0ODAuMCBMNTEwLjAsNDgwLjAgTDUxMC44LDQ4MC4wIEw1MTEuNSw0ODAuMCBMNTEyLjIsNDgwLjAgTDUxMy4wLDQ4MC4wIEw1MTMuOCw0ODAuMCBMNTE0LjUsNDgwLjAgTDUxNS4yLDQ4MC4wIEw1MTYuMCw0ODAuMCBMNTE2LjgsNDgwLjAgTDUxNy41LDQ4MC4wIEw1MTguMiw0ODAuMCBMNTE5LjAsNDgwLjAgTDUxOS44LDQ4MC4wIEw1MjAuNSw0ODAuMCBMNTIxLjIsNDgwLjAgTDUyMi4wLDQ4MC4wIEw1MjIuOCw0ODAuMCBMNTIzLjUsNDgwLjAgTDUyNC4yLDQ4MC4wIEw1MjUuMCw0ODAuMCBMNTI1LjgsNDgwLjAgTDUyNi41LDQ4MC4wIEw1MjcuMiw0ODAuMCBMNTI4LjAsNDgwLjAgTDUyOC44LDQ4MC4wIEw1MjkuNSw0ODAuMCBMNTMwLjIsNDgwLjAgTDUzMS4wLDQ4MC4wIEw1MzEuOCw0ODAuMCBMNTMyLjUsNDgwLjAgTDUzMy4yLDQ4MC4wIEw1MzQuMCw0ODAuMCBMNTM0LjgsNDgwLjAgTDUzNS41LDQ4MC4wIEw1MzYuMiw0ODAuMCBMNTM3LjAsNDgwLjAgTDUzNy44LDQ4MC4wIEw1MzguNSw0ODAuMCBMNTM5LjIsNDgwLjAgTDU0MC4wLDQ4MC4wIEw1NDAuOCw0ODAuMCBMNTQxLjUsNDgwLjAgTDU0Mi4yLDQ4MC4wIEw1NDMuMCw0ODAuMCBMNTQzLjgsNDgwLjAgTDU0NC41LDQ4MC4wIEw1NDUuMiw0ODAuMCBMNTQ2LjAsNDgwLjAgTDU0Ni44LDQ4MC4wIEw1NDcuNSw0ODAuMCBMNTQ4LjIsNDgwLjAgTDU0OS4wLDQ4MC4wIEw1NDkuOCw0ODAuMCBMNTUwLjUsNDgwLjAgTDU1MS4yLDQ4MC4wIEw1NTIuMCw0ODAuMCBMNTUyLjgsNDgwLjAgTDU1My41LDQ4MC4wIEw1NTQuMiw0ODAuMCBMNTU1LjAsNDgwLjAgTDU1NS44LDQ4MC4wIEw1NTYuNSw0ODAuMCBMNTU3LjIsNDgwLjAgTDU1OC4wLDQ4MC4wIEw1NTguOCw0ODAuMCBMNTU5LjUsNDgwLjAgTDU2MC4yLDQ4MC4wIEw1NjEuMCw0ODAuMCBMNTYxLjgsNDgwLjAgTDU2Mi41LDQ4MC4wIEw1NjMuMiw0ODAuMCBMNTY0LjAsNDgwLjAgTDU2NC44LDQ4MC4wIEw1NjUuNSw0ODAuMCBMNTY2LjIsNDgwLjAgTDU2Ny4wLDQ4MC4wIEw1NjcuOCw0ODAuMCBMNTY4LjUsNDgwLjAgTDU2OS4yLDQ4MC4wIEw1NzAuMCw0ODAuMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjM0RCRTkzIiBzdHJva2Utd2lkdGg9IjQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPg0KPGNpcmNsZSBjeD0iNTcwLjAiIGN5PSI0ODAuMCIgcj0iMy4yIiBmaWxsPSIjM0RCRTkzIiBmaWxsLW9wYWNpdHk9IjAuOTUiLz4NCjxjaXJjbGUgY3g9IjU4MS4yIiBjeT0iNDgwLjAiIHI9IjMuMiIgZmlsbD0iIzNEQkU5MyIgZmlsbC1vcGFjaXR5PSIwLjk1Ii8+DQo8Y2lyY2xlIGN4PSI1OTIuNSIgY3k9IjQ4MC4wIiByPSIzLjIiIGZpbGw9IiMzREJFOTMiIGZpbGwtb3BhY2l0eT0iMC45NSIvPg0KPGNpcmNsZSBjeD0iNjAzLjgiIGN5PSI0NzkuNyIgcj0iMy4yIiBmaWxsPSIjM0RCRTkzIiBmaWxsLW9wYWNpdHk9IjAuOTUiLz4NCjxjaXJjbGUgY3g9IjYxNC4yIiBjeT0iNDc0LjkiIHI9IjMuMiIgZmlsbD0iIzNEQkU5MyIgZmlsbC1vcGFjaXR5PSIwLjk1Ii8+DQo8Y2lyY2xlIGN4PSI2MjMuMiIgY3k9IjQ2OC4xIiByPSIzLjIiIGZpbGw9IiMzREJFOTMiIGZpbGwtb3BhY2l0eT0iMC45NSIvPg0KPGNpcmNsZSBjeD0iNjMzLjAiIGN5PSI0NzQuMiIgcj0iMy4yIiBmaWxsPSIjM0RCRTkzIiBmaWxsLW9wYWNpdHk9IjAuOTUiLz4NCjxjaXJjbGUgY3g9IjY0Mi44IiBjeT0iNDc5LjUiIHI9IjMuMiIgZmlsbD0iIzNEQkU5MyIgZmlsbC1vcGFjaXR5PSIwLjk1Ii8+DQo8Y2lyY2xlIGN4PSI2NTQuMCIgY3k9IjQ4MC4wIiByPSIzLjIiIGZpbGw9IiMzREJFOTMiIGZpbGwtb3BhY2l0eT0iMC45NSIvPg0KPGNpcmNsZSBjeD0iNjY1LjIiIGN5PSI0ODAuMCIgcj0iMy4yIiBmaWxsPSIjM0RCRTkzIiBmaWxsLW9wYWNpdHk9IjAuOTUiLz4NCjxjaXJjbGUgY3g9IjY3Ni41IiBjeT0iNDgxLjkiIHI9IjMuMiIgZmlsbD0iIzNEQkU5MyIgZmlsbC1vcGFjaXR5PSIwLjk1Ii8+DQo8Y2lyY2xlIGN4PSI2ODMuMiIgY3k9IjQ4NS42IiByPSIzLjIiIGZpbGw9IiMzREJFOTMiIGZpbGwtb3BhY2l0eT0iMC45NSIvPg0KPGNpcmNsZSBjeD0iNjg2LjIiIGN5PSI0NzIuMiIgcj0iMy4yIiBmaWxsPSIjM0RCRTkzIiBmaWxsLW9wYWNpdHk9IjAuOTUiLz4NCjxjaXJjbGUgY3g9IjY4Ny44IiBjeT0iNDU1LjUiIHI9IjMuMiIgZmlsbD0iIzNEQkU5MyIgZmlsbC1vcGFjaXR5PSIwLjk1Ii8+DQo8Y2lyY2xlIGN4PSI2ODguNSIgY3k9IjQ0Mi43IiByPSIzLjIiIGZpbGw9IiMzREJFOTMiIGZpbGwtb3BhY2l0eT0iMC45NSIvPg0KPGNpcmNsZSBjeD0iNjg5LjIiIGN5PSI0MjYuOSIgcj0iMy4yIiBmaWxsPSIjM0RCRTkzIiBmaWxsLW9wYWNpdHk9IjAuOTUiLz4NCjxjaXJjbGUgY3g9IjY5MC4wIiBjeT0iNDA5LjIiIHI9IjMuMiIgZmlsbD0iIzNEQkU5MyIgZmlsbC1vcGFjaXR5PSIwLjk1Ii8+DQo8Y2lyY2xlIGN4PSI2OTAuOCIgY3k9IjM5MS40IiByPSIzLjIiIGZpbGw9IiMzREJFOTMiIGZpbGwtb3BhY2l0eT0iMC45NSIvPg0KPGNpcmNsZSBjeD0iNjkxLjUiIGN5PSIzNzYuMSIgcj0iMy4yIiBmaWxsPSIjM0RCRTkzIiBmaWxsLW9wYWNpdHk9IjAuOTUiLz4NCjxjaXJjbGUgY3g9IjY5My4wIiBjeT0iMzYyLjAiIHI9IjMuMiIgZmlsbD0iIzNEQkU5MyIgZmlsbC1vcGFjaXR5PSIwLjk1Ii8+DQo8Y2lyY2xlIGN4PSI2OTQuNSIgY3k9IjM3Ni4yIiByPSIzLjIiIGZpbGw9IiMzREJFOTMiIGZpbGwtb3BhY2l0eT0iMC45NSIvPg0KPGNpcmNsZSBjeD0iNjk1LjIiIGN5PSIzOTEuNSIgcj0iMy4yIiBmaWxsPSIjM0RCRTkzIiBmaWxsLW9wYWNpdHk9IjAuOTUiLz4NCjxjaXJjbGUgY3g9IjY5Ni4wIiBjeT0iNDA5LjMiIHI9IjMuMiIgZmlsbD0iIzNEQkU5MyIgZmlsbC1vcGFjaXR5PSIwLjk1Ii8+DQo8Y2lyY2xlIGN4PSI2OTYuOCIgY3k9IjQyNy4yIiByPSIzLjIiIGZpbGw9IiMzREJFOTMiIGZpbGwtb3BhY2l0eT0iMC45NSIvPg0KPGNpcmNsZSBjeD0iNjk3LjUiIGN5PSI0NDMuNCIgcj0iMy4yIiBmaWxsPSIjM0RCRTkzIiBmaWxsLW9wYWNpdHk9IjAuOTUiLz4NCjxjaXJjbGUgY3g9IjY5OC4yIiBjeT0iNDU2LjkiIHI9IjMuMiIgZmlsbD0iIzNEQkU5MyIgZmlsbC1vcGFjaXR5PSIwLjk1Ii8+DQo8Y2lyY2xlIGN4PSI2OTkuOCIgY3k9IjQ3Ni4zIiByPSIzLjIiIGZpbGw9IiMzREJFOTMiIGZpbGwtb3BhY2l0eT0iMC45NSIvPg0KPGNpcmNsZSBjeD0iNzAxLjIiIGN5PSI0OTAuMiIgcj0iMy4yIiBmaWxsPSIjM0RCRTkzIiBmaWxsLW9wYWNpdHk9IjAuOTUiLz4NCjxjaXJjbGUgY3g9IjcwMi44IiBjeT0iNTAyLjQiIHI9IjMuMiIgZmlsbD0iIzNEQkU5MyIgZmlsbC1vcGFjaXR5PSIwLjk1Ii8+DQo8Y2lyY2xlIGN4PSI3MDUuOCIgY3k9IjUxMC44IiByPSIzLjIiIGZpbGw9IiMzREJFOTMiIGZpbGwtb3BhY2l0eT0iMC45NSIvPg0KPGNpcmNsZSBjeD0iNzA4LjAiIGN5PSI0OTcuNyIgcj0iMy4yIiBmaWxsPSIjM0RCRTkzIiBmaWxsLW9wYWNpdHk9IjAuOTUiLz4NCjxjaXJjbGUgY3g9IjcxMC4yIiBjeT0iNDg1LjIiIHI9IjMuMiIgZmlsbD0iIzNEQkU5MyIgZmlsbC1vcGFjaXR5PSIwLjk1Ii8+DQo8Y2lyY2xlIGN4PSI3MTguNSIgY3k9IjQ4MC4wIiByPSIzLjIiIGZpbGw9IiMzREJFOTMiIGZpbGwtb3BhY2l0eT0iMC45NSIvPg0KPGNpcmNsZSBjeD0iNzI5LjgiIGN5PSI0NzkuOSIgcj0iMy4yIiBmaWxsPSIjM0RCRTkzIiBmaWxsLW9wYWNpdHk9IjAuOTUiLz4NCjxjaXJjbGUgY3g9Ijc0MS4wIiBjeT0iNDc4LjQiIHI9IjMuMiIgZmlsbD0iIzNEQkU5MyIgZmlsbC1vcGFjaXR5PSIwLjk1Ii8+DQo8Y2lyY2xlIGN4PSI3NTAuOCIgY3k9IjQ3Mi4wIiByPSIzLjIiIGZpbGw9IiMzREJFOTMiIGZpbGwtb3BhY2l0eT0iMC45NSIvPg0KPGNpcmNsZSBjeD0iNzU4LjIiIGN5PSI0NjMuMSIgcj0iMy4yIiBmaWxsPSIjM0RCRTkzIiBmaWxsLW9wYWNpdHk9IjAuOTUiLz4NCjxjaXJjbGUgY3g9Ijc2Ny4yIiBjeT0iNDU2LjAiIHI9IjMuMiIgZmlsbD0iIzNEQkU5MyIgZmlsbC1vcGFjaXR5PSIwLjk1Ii8+DQo8Y2lyY2xlIGN4PSI3NzcuMCIgY3k9IjQ2Mi4yIiByPSIzLjIiIGZpbGw9IiMzREJFOTMiIGZpbGwtb3BhY2l0eT0iMC45NSIvPg0KPGNpcmNsZSBjeD0iNzg0LjUiIGN5PSI0NzEuMiIgcj0iMy4yIiBmaWxsPSIjM0RCRTkzIiBmaWxsLW9wYWNpdHk9IjAuOTUiLz4NCjxjaXJjbGUgY3g9Ijc5My41IiBjeT0iNDc3LjgiIHI9IjMuMiIgZmlsbD0iIzNEQkU5MyIgZmlsbC1vcGFjaXR5PSIwLjk1Ii8+DQo8Y2lyY2xlIGN4PSI4MDQuOCIgY3k9IjQ3OS44IiByPSIzLjIiIGZpbGw9IiMzREJFOTMiIGZpbGwtb3BhY2l0eT0iMC45NSIvPg0KPGNpcmNsZSBjeD0iODE2LjAiIGN5PSI0ODAuMCIgcj0iMy4yIiBmaWxsPSIjM0RCRTkzIiBmaWxsLW9wYWNpdHk9IjAuOTUiLz4NCjxjaXJjbGUgY3g9IjgyNy4yIiBjeT0iNDgwLjAiIHI9IjMuMiIgZmlsbD0iIzNEQkU5MyIgZmlsbC1vcGFjaXR5PSIwLjk1Ii8+DQo8Y2lyY2xlIGN4PSI4MzguNSIgY3k9IjQ4MC4wIiByPSIzLjIiIGZpbGw9IiMzREJFOTMiIGZpbGwtb3BhY2l0eT0iMC45NSIvPg0KPGNpcmNsZSBjeD0iODQ5LjgiIGN5PSI0ODAuMCIgcj0iMy4yIiBmaWxsPSIjMkJBNkM5IiBmaWxsLW9wYWNpdHk9IjAuOTUiLz4NCjxjaXJjbGUgY3g9Ijg2MS4wIiBjeT0iNDgwLjAiIHI9IjMuMiIgZmlsbD0iIzJCQTZDOSIgZmlsbC1vcGFjaXR5PSIwLjk1Ii8+DQo8Y2lyY2xlIGN4PSI4NzAuMCIgY3k9IjQ4MC4wIiByPSIyLjYiIGZpbGw9IiMyQkE2QzkiIGZpbGwtb3BhY2l0eT0iMC43Ii8+DQo8Y2lyY2xlIGN4PSI4ODUuMCIgY3k9IjQ4MC4wIiByPSIyLjYiIGZpbGw9IiMyQkE2QzkiIGZpbGwtb3BhY2l0eT0iMC43Ii8+DQo8Y2lyY2xlIGN4PSI5MDAuMCIgY3k9IjQ3OS45IiByPSIyLjYiIGZpbGw9IiMyQkE2QzkiIGZpbGwtb3BhY2l0eT0iMC43Ii8+DQo8Y2lyY2xlIGN4PSI5MTQuMiIgY3k9IjQ3NC45IiByPSIyLjYiIGZpbGw9IiMyQkE2QzkiIGZpbGwtb3BhY2l0eT0iMC43Ii8+DQo8Y2lyY2xlIGN4PSI5MjcuMCIgY3k9IjQ2OC45IiByPSIyLjYiIGZpbGw9IiMyQkE2QzkiIGZpbGwtb3BhY2l0eT0iMC43Ii8+DQo8Y2lyY2xlIGN4PSI5MzkuMCIgY3k9IjQ3OC40IiByPSIyLjYiIGZpbGw9IiMyQkE2QzkiIGZpbGwtb3BhY2l0eT0iMC43Ii8+DQo8Y2lyY2xlIGN4PSI5NTQuMCIgY3k9IjQ4MC4wIiByPSIyLjYiIGZpbGw9IiMyQkE2QzkiIGZpbGwtb3BhY2l0eT0iMC43Ii8+DQo8Y2lyY2xlIGN4PSI5NjkuMCIgY3k9IjQ4MC4wIiByPSIyLjYiIGZpbGw9IiMyQkE2QzkiIGZpbGwtb3BhY2l0eT0iMC43Ii8+DQo8Y2lyY2xlIGN4PSI5ODAuMiIgY3k9IjQ4OC42IiByPSIyLjYiIGZpbGw9IiMyQkE2QzkiIGZpbGwtb3BhY2l0eT0iMC43Ii8+DQo8Y2lyY2xlIGN4PSI5ODYuMiIgY3k9IjQ3Mi4yIiByPSIyLjYiIGZpbGw9IiMyQkE2QzkiIGZpbGwtb3BhY2l0eT0iMC43Ii8+DQo8Y2lyY2xlIGN4PSI5ODcuOCIgY3k9IjQ1NS41IiByPSIyLjYiIGZpbGw9IiMyQkE2QzkiIGZpbGwtb3BhY2l0eT0iMC43Ii8+DQo8Y2lyY2xlIGN4PSI5ODkuMiIgY3k9IjQyNi45IiByPSIyLjYiIGZpbGw9IiMyQkE2QzkiIGZpbGwtb3BhY2l0eT0iMC43Ii8+DQo8Y2lyY2xlIGN4PSI5OTAuMCIgY3k9IjQwOS4yIiByPSIyLjYiIGZpbGw9IiMyQkE2QzkiIGZpbGwtb3BhY2l0eT0iMC43Ii8+DQo8Y2lyY2xlIGN4PSI5OTAuOCIgY3k9IjM5MS40IiByPSIyLjYiIGZpbGw9IiMyQkE2QzkiIGZpbGwtb3BhY2l0eT0iMC43Ii8+DQo8Y2lyY2xlIGN4PSI5OTEuNSIgY3k9IjM3Ni4xIiByPSIyLjYiIGZpbGw9IiMyQkE2QzkiIGZpbGwtb3BhY2l0eT0iMC43Ii8+DQo8Y2lyY2xlIGN4PSI5OTMuOCIgY3k9IjM2NS43IiByPSIyLjYiIGZpbGw9IiMyQkE2QzkiIGZpbGwtb3BhY2l0eT0iMC43Ii8+DQo8Y2lyY2xlIGN4PSI5OTUuMiIgY3k9IjM5MS41IiByPSIyLjYiIGZpbGw9IiMyQkE2QzkiIGZpbGwtb3BhY2l0eT0iMC43Ii8+DQo8Y2lyY2xlIGN4PSI5OTYuMCIgY3k9IjQwOS4zIiByPSIyLjYiIGZpbGw9IiMyQkE2QzkiIGZpbGwtb3BhY2l0eT0iMC43Ii8+DQo8Y2lyY2xlIGN4PSI5OTYuOCIgY3k9IjQyNy4yIiByPSIyLjYiIGZpbGw9IiMyQkE2QzkiIGZpbGwtb3BhY2l0eT0iMC43Ii8+DQo8Y2lyY2xlIGN4PSI5OTcuNSIgY3k9IjQ0My40IiByPSIyLjYiIGZpbGw9IiMyQkE2QzkiIGZpbGwtb3BhY2l0eT0iMC43Ii8+DQo8Y2lyY2xlIGN4PSI5OTkuMCIgY3k9IjQ2Ny43IiByPSIyLjYiIGZpbGw9IiMyQkE2QzkiIGZpbGwtb3BhY2l0eT0iMC43Ii8+DQo8Y2lyY2xlIGN4PSIxMDAwLjUiIGN5PSI0ODMuNiIgcj0iMi42IiBmaWxsPSIjMkJBNkM5IiBmaWxsLW9wYWNpdHk9IjAuNyIvPg0KPGNpcmNsZSBjeD0iMTAwMi44IiBjeT0iNTAyLjQiIHI9IjIuNiIgZmlsbD0iIzJCQTZDOSIgZmlsbC1vcGFjaXR5PSIwLjciLz4NCjxjaXJjbGUgY3g9IjEwMDcuMiIgY3k9IjUwMi45IiByPSIyLjYiIGZpbGw9IiMyQkE2QzkiIGZpbGwtb3BhY2l0eT0iMC43Ii8+DQo8Y2lyY2xlIGN4PSIxMDEwLjIiIGN5PSI0ODUuMiIgcj0iMi42IiBmaWxsPSIjMkJBNkM5IiBmaWxsLW9wYWNpdHk9IjAuNyIvPg0KPGNpcmNsZSBjeD0iMTAyMy4wIiBjeT0iNDgwLjAiIHI9IjIuNiIgZmlsbD0iIzJCQTZDOSIgZmlsbC1vcGFjaXR5PSIwLjciLz4NCjxjaXJjbGUgY3g9IjEwMzguMCIgY3k9IjQ3OS4xIiByPSIyLjYiIGZpbGw9IiMyQkE2QzkiIGZpbGwtb3BhY2l0eT0iMC43Ii8+DQo8Y2lyY2xlIGN4PSIxMDUxLjUiIGN5PSI0NzEuMiIgcj0iMi42IiBmaWxsPSIjMkJBNkM5IiBmaWxsLW9wYWNpdHk9IjAuNyIvPg0KPGNpcmNsZSBjeD0iMTA2MS4yIiBjeT0iNDU5LjciIHI9IjIuNiIgZmlsbD0iIzJCQTZDOSIgZmlsbC1vcGFjaXR5PSIwLjciLz4NCjxjaXJjbGUgY3g9IjEwNzQuOCIgY3k9IjQ1OS43IiByPSIyLjYiIGZpbGw9IiMyQkE2QzkiIGZpbGwtb3BhY2l0eT0iMC43Ii8+DQo8Y2lyY2xlIGN4PSIxMDg0LjUiIGN5PSI0NzEuMiIgcj0iMi42IiBmaWxsPSIjMkJBNkM5IiBmaWxsLW9wYWNpdHk9IjAuNyIvPg0KPGNpcmNsZSBjeD0iMTA5Ny4yIiBjeT0iNDc5LjAiIHI9IjIuNiIgZmlsbD0iIzJCQTZDOSIgZmlsbC1vcGFjaXR5PSIwLjciLz4NCjxjaXJjbGUgY3g9IjExMTIuMiIgY3k9IjQ4MC4wIiByPSIyLjYiIGZpbGw9IiMyQkE2QzkiIGZpbGwtb3BhY2l0eT0iMC43Ii8+DQo8Y2lyY2xlIGN4PSIxMTI3LjIiIGN5PSI0ODAuMCIgcj0iMi42IiBmaWxsPSIjMkJBNkM5IiBmaWxsLW9wYWNpdHk9IjAuNyIvPg0KPGNpcmNsZSBjeD0iMTE0Mi4yIiBjeT0iNDgwLjAiIHI9IjIuNiIgZmlsbD0iIzJCQTZDOSIgZmlsbC1vcGFjaXR5PSIwLjciLz4NCjxjaXJjbGUgY3g9IjExNTcuMiIgY3k9IjQ4MC4wIiByPSIyLjYiIGZpbGw9IiMyQkE2QzkiIGZpbGwtb3BhY2l0eT0iMC43Ii8+DQo8Y2lyY2xlIGN4PSIxMTcwLjAiIGN5PSI0ODAuMCIgcj0iMi4wIiBmaWxsPSIjMkJBNkM5IiBmaWxsLW9wYWNpdHk9IjAuNDUiLz4NCjxjaXJjbGUgY3g9IjExOTEuMCIgY3k9IjQ4MC4wIiByPSIyLjAiIGZpbGw9IiMyQkE2QzkiIGZpbGwtb3BhY2l0eT0iMC40NSIvPg0KPGNpcmNsZSBjeD0iMTIxMi4wIiBjeT0iNDc2LjciIHI9IjIuMCIgZmlsbD0iIzJCQTZDOSIgZmlsbC1vcGFjaXR5PSIwLjQ1Ii8+DQo8Y2lyY2xlIGN4PSIxMjI5LjIiIGN5PSI0NzAuNyIgcj0iMi4wIiBmaWxsPSIjMkJBNkM5IiBmaWxsLW9wYWNpdHk9IjAuNDUiLz4NCjxjaXJjbGUgY3g9IjEyNDguMCIgY3k9IjQ3OS45IiByPSIyLjAiIGZpbGw9IiMyQkE2QzkiIGZpbGwtb3BhY2l0eT0iMC40NSIvPg0KPGNpcmNsZSBjeD0iMTI2OS4wIiBjeT0iNDgwLjAiIHI9IjIuMCIgZmlsbD0iIzJCQTZDOSIgZmlsbC1vcGFjaXR5PSIwLjQ1Ii8+DQo8Y2lyY2xlIGN4PSIxMjg0LjAiIGN5PSI0ODMuMyIgcj0iMi4wIiBmaWxsPSIjMkJBNkM5IiBmaWxsLW9wYWNpdHk9IjAuNDUiLz4NCjxjaXJjbGUgY3g9IjEyODcuOCIgY3k9IjQ1NS41IiByPSIyLjAiIGZpbGw9IiMyQkE2QzkiIGZpbGwtb3BhY2l0eT0iMC40NSIvPg0KPGNpcmNsZSBjeD0iMTI4OS4yIiBjeT0iNDI2LjkiIHI9IjIuMCIgZmlsbD0iIzJCQTZDOSIgZmlsbC1vcGFjaXR5PSIwLjQ1Ii8+DQo8Y2lyY2xlIGN4PSIxMjkwLjgiIGN5PSIzOTEuNCIgcj0iMi4wIiBmaWxsPSIjMkJBNkM5IiBmaWxsLW9wYWNpdHk9IjAuNDUiLz4NCjxjaXJjbGUgY3g9IjEyOTIuMiIgY3k9IjM2NS43IiByPSIyLjAiIGZpbGw9IiMyQkE2QzkiIGZpbGwtb3BhY2l0eT0iMC40NSIvPg0KPGNpcmNsZSBjeD0iMTI5NS4yIiBjeT0iMzkxLjUiIHI9IjIuMCIgZmlsbD0iIzJCQTZDOSIgZmlsbC1vcGFjaXR5PSIwLjQ1Ii8+DQo8Y2lyY2xlIGN4PSIxMjk2LjgiIGN5PSI0MjcuMiIgcj0iMi4wIiBmaWxsPSIjMkJBNkM5IiBmaWxsLW9wYWNpdHk9IjAuNDUiLz4NCjxjaXJjbGUgY3g9IjEyOTguMiIgY3k9IjQ1Ni45IiByPSIyLjAiIGZpbGw9IiMyQkE2QzkiIGZpbGwtb3BhY2l0eT0iMC40NSIvPg0KPGNpcmNsZSBjeD0iMTMwMC41IiBjeT0iNDgzLjYiIHI9IjIuMCIgZmlsbD0iIzJCQTZDOSIgZmlsbC1vcGFjaXR5PSIwLjQ1Ii8+DQo8Y2lyY2xlIGN4PSIxMzAzLjUiIGN5PSI1MDcuNCIgcj0iMi4wIiBmaWxsPSIjMkJBNkM5IiBmaWxsLW9wYWNpdHk9IjAuNDUiLz4NCjxjaXJjbGUgY3g9IjEzMDguOCIgY3k9IjQ5Mi43IiByPSIyLjAiIGZpbGw9IiMyQkE2QzkiIGZpbGwtb3BhY2l0eT0iMC40NSIvPg0KPGNpcmNsZSBjeD0iMTMyMC44IiBjeT0iNDgwLjAiIHI9IjIuMCIgZmlsbD0iIzJCQTZDOSIgZmlsbC1vcGFjaXR5PSIwLjQ1Ii8+DQo8Y2lyY2xlIGN4PSIxMzQxLjgiIGN5PSI0NzguMSIgcj0iMi4wIiBmaWxsPSIjMkJBNkM5IiBmaWxsLW9wYWNpdHk9IjAuNDUiLz4NCjxjaXJjbGUgY3g9IjEzNTcuNSIgY3k9IjQ2NC4wIiByPSIyLjAiIGZpbGw9IiMyQkE2QzkiIGZpbGwtb3BhY2l0eT0iMC40NSIvPg0KPGNpcmNsZSBjeD0iMTM3NC44IiBjeT0iNDU5LjciIHI9IjIuMCIgZmlsbD0iIzJCQTZDOSIgZmlsbC1vcGFjaXR5PSIwLjQ1Ii8+DQo8Y2lyY2xlIGN4PSIxMzg5LjAiIGN5PSI0NzUuMiIgcj0iMi4wIiBmaWxsPSIjMkJBNkM5IiBmaWxsLW9wYWNpdHk9IjAuNDUiLz4NCjxjaXJjbGUgY3g9IjE0MDkuMiIgY3k9IjQ4MC4wIiByPSIyLjAiIGZpbGw9IiMyQkE2QzkiIGZpbGwtb3BhY2l0eT0iMC40NSIvPg0KPGNpcmNsZSBjeD0iMTQzMC4yIiBjeT0iNDgwLjAiIHI9IjIuMCIgZmlsbD0iIzJCQTZDOSIgZmlsbC1vcGFjaXR5PSIwLjQ1Ii8+DQo8Y2lyY2xlIGN4PSIxNDUxLjIiIGN5PSI0ODAuMCIgcj0iMi4wIiBmaWxsPSIjMkJBNkM5IiBmaWxsLW9wYWNpdHk9IjAuNDUiLz4NCjxjaXJjbGUgY3g9IjE1MCIgY3k9IjQ4MCIgcj0iMjAiIGZpbGw9IiMzREJFOTMiLz4NCjxyZWN0IHdpZHRoPSIxMjQwIiBoZWlnaHQ9IjU2MCIgZmlsdGVyPSJ1cmwoI2dyYW8pIi8+DQo8L3N2Zz4=" alt="">
+  <div class="texto">
+    <svg class="logo-neg" viewBox="0 0 260 56" role="img" aria-label="lumis insight">
+      <g transform="translate(4 4)">
+        <path d="M38.8 13.6 A18 18 0 1 0 41.5 28.9" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round"/>
+        <circle cx="24" cy="24" r="7" fill="#3DBE93"/>
+        <circle cx="44" cy="21.2" r="2.2" fill="#2BA6C9"/>
+      </g>
+      <text x="62" y="37" font-family="Georgia, 'Source Serif 4', serif" font-size="30" fill="#FFFFFF" letter-spacing="-0.5">lumis</text>
+      <text x="145" y="37" font-family="Calibri, 'Source Sans 3', 'Segoe UI', sans-serif" font-size="21" fill="#3DBE93" letter-spacing="0.5">insight</text>
+    </svg>
+    <h1>Como a nossa pasta de trabalho funciona</h1>
+    <p>Um guia rápido para a equipe: onde o material fica, como abrir e editar, o que tem em cada pasta e por que o padrão importa até a Fase 7.</p>
+  </div>
+</header>
+
+<nav aria-label="Seções">
+  <ul>
+    <li><a href="#repositorio">O repositório</a></li>
+    <li><a href="#pasta">O que tem em cada pasta</a></li>
+    <li><a href="#narrativa">A narrativa da Lumis</a></li>
+    <li><a href="#design">Design system</a></li>
+    <li><a href="#regras">Combinados</a></li>
+  </ul>
+</nav>
+
+<main>
+
+<section id="repositorio">
+  <h2>O repositório</h2>
+  <p class="lead">Todo o trabalho fica num repositório no GitHub: <a href="https://github.com/gussimonn/lumis-fiap-grupo2">gussimonn/lumis-fiap-grupo2</a>. Pense nele como uma pasta compartilhada que guarda o histórico de cada alteração, com quem mudou o quê e quando. Cada um tem uma cópia no próprio computador e sincroniza com o GitHub.</p>
+
+  <div class="regra-ouro" role="note">
+    <svg viewBox="0 0 56 56" aria-hidden="true"><circle cx="28" cy="28" r="26" fill="none" stroke="#3DBE93" stroke-width="3"/><path d="M28 14v20m-9-8 9 9 9-9" fill="none" stroke="#3DBE93" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M17 41h22" stroke="#2BA6C9" stroke-width="3.5" stroke-linecap="round"/></svg>
+    <div>
+      <b>Sincronize antes de começar. Sempre.</b>
+      <p>Antes de abrir, ler ou editar qualquer arquivo, puxe o que a equipe mudou. No Claude, a primeira mensagem do dia é <code>atualiza a pasta com o GitHub</code>. Quem trabalha numa versão velha sobrescreve o trabalho dos outros, e no <code>.docx</code> isso não tem conserto.</p>
+    </div>
+  </div>
+
+  <h3>O ciclo de trabalho</h3>
+  <div class="ciclo">
+    <div><b>Clonar</b><span>Uma vez só: baixa a pasta inteira para o seu computador.</span></div>
+    <div class="chave"><b>Atualizar (pull)</b><span>Toda vez, antes de qualquer trabalho. Sem exceção.</span></div>
+    <div><b>Salvar (commit)</b><span>Registra o que você fez, com uma frase dizendo o quê.</span></div>
+    <div><b>Enviar (push)</b><span>Manda o seu commit para o GitHub e a equipe passa a ver.</span></div>
+  </div>
+
+  <h3>Duas formas de usar</h3>
+  <div class="duas" style="margin-top:var(--s2)">
+    <div class="via">
+      <h3>Claude Desktop</h3>
+      <p>Para quem não quer mexer com terminal. Abra a pasta do repositório no Claude Desktop e peça em português: primeiro "atualiza a pasta com o GitHub", depois "o que falta na Fase 2?", "salva e envia o que eu fiz".</p>
+      <p>O Claude lê o <code>CLAUDE.md</code> da pasta e já segue as regras do projeto: onde gravar, como citar a fonte, qual padrão visual usar.</p>
+    </div>
+    <div class="via">
+      <h3>IDE (VS Code, Cursor…)</h3>
+      <p>Para quem quer ver os arquivos lado a lado. O painel de controle de versão da IDE mostra o que mudou e tem botões para pull, commit e push. Comece sempre pelo pull.</p>
+      <p>Com a extensão do Claude Code instalada, o Claude roda dentro da IDE com as mesmas regras do <code>CLAUDE.md</code>.</p>
+    </div>
+  </div>
+
+  <div class="aviso">
+    <h3>Cuidado com o Word</h3>
+    <ul>
+      <li>O Git não junta duas edições do mesmo <code>.docx</code>. Se duas pessoas mexerem no mesmo arquivo ao mesmo tempo, uma das versões se perde. Combine no grupo quem está editando cada entrega.</li>
+      <li>Feche o Word antes de salvar e enviar. Arquivos que começam com <code>~$</code> são temporários do Word e não devem ir para o repositório.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="pasta">
+  <h2>O que tem em cada pasta</h2>
+  <p class="lead">Clique numa pasta para ver o que ela guarda e quando você vai precisar dela.</p>
+
+  <div class="mapa">
+    <ul class="arvore" role="tablist" aria-label="Pastas do repositório">
+      <li><button role="tab" aria-selected="true" data-id="estado"><span class="pt"></span>ESTADO.md</button></li>
+      <li><button role="tab" data-id="decisoes"><span class="pt"></span>DECISOES.md</button></li>
+      <li><button role="tab" data-id="claude"><span class="pt"></span>CLAUDE.md</button></li>
+      <li class="sep" aria-hidden="true"></li>
+      <li><button role="tab" data-id="lumis"><span class="pt"></span>00_Lumis/</button></li>
+      <li class="sub"><button role="tab" data-id="compromissos"><span class="pt"></span>Compromissos_Vigentes.md</button></li>
+      <li class="sub"><button role="tab" data-id="ds"><span class="pt"></span>Design_System/</button></li>
+      <li class="sep" aria-hidden="true"></li>
+      <li><button role="tab" data-id="fases"><span class="pt"></span>01_ a 07_ (fases)</button></li>
+      <li class="sub"><button role="tab" data-id="enunciado"><span class="pt"></span>_Enunciado/</button></li>
+      <li class="sub"><button role="tab" data-id="entrega"><span class="pt"></span>F2-E1_Mapa_do_Territorio/</button></li>
+      <li class="sep" aria-hidden="true"></li>
+      <li><button role="tab" data-id="historico"><span class="pt"></span>_Historico/</button></li>
+      <li><button role="tab" data-id="documentos"><span class="pt"></span>Documentos/</button></li>
+    </ul>
+    <div class="painel" id="painel" role="tabpanel" aria-live="polite"></div>
+  </div>
+</section>
+
+<section id="narrativa">
+  <h2>A narrativa da Lumis</h2>
+  <p class="lead">Somos o Head of AI Management de uma empresa fictícia, a Lumis Intelligence, dona do Lumis Insight. São sete capítulos de uma mesma história, e cada fase parte do que decidimos na anterior.</p>
+
+  <ol class="fases" aria-label="Fases do curso">
+    <li class="feita"><b>A Chegada</b><span>Fase 1 · entregue</span></li>
+    <li class="agora"><b>O Mercado</b><span>Fase 2 · estamos aqui</span></li>
+    <li><b>O Motor</b><span>Fase 3</span></li>
+    <li><b>As Regras</b><span>Fase 4</span></li>
+    <li><b>O Produto</b><span>Fase 5</span></li>
+    <li><b>As Pessoas</b><span>Fase 6</span></li>
+    <li class="final"><b>O Julgamento</b><span>Fase 7 · defesa final</span></li>
+  </ol>
+
+  <p class="destaque">"Nada do que você produz é descartado: o material de cada fase se acumula e será cobrado no encerramento." (Cap. 2, seção 3)</p>
+
+  <div class="tres">
+    <div><h3>O que dissemos vira régua</h3><p>Os cinco compromissos da Declaração de Intenção (F1-E3) vão ser usados para julgar nossas decisões nas próximas fases. Toda entrega nova é conferida contra eles.</p></div>
+    <div><h3>Contradição custa caro</h3><p>Na Fase 7 defendemos tudo diante de investidores, regulador e sociedade civil. Se a F2 diz uma coisa e a F5 diz outra sem explicar, perdemos credibilidade.</p></div>
+    <div><h3>Só o que está no capítulo</h3><p>Número da Lumis só vale se estiver no enunciado. O que não está é "não consta", e conclusão sem quadro que a sustente é marcada como hipótese.</p></div>
+  </div>
+</section>
+
+<section id="design">
+  <h2>Design system</h2>
+  <p class="lead">A Lumis ganhou identidade própria, criada pela equipe (o curso não traz logo nem cores). Vale para tudo que geramos a partir da F2-E2: entregas, memorandos, anexos, slides e páginas como esta.</p>
+
+  <div class="cores">
+    <div class="cor"><i style="background:#3DBE93"></i><div><b>Vital</b>#3DBE93 · saúde</div></div>
+    <div class="cor"><i style="background:#0F2D3A"></i><div><b>Profundo</b>#0F2D3A · dados</div></div>
+    <div class="cor"><i style="background:#2BA6C9"></i><div><b>Pulso</b>#2BA6C9 · inovação</div></div>
+    <div class="cor"><i style="background:#1E8C6B"></i><div><b>Vital escuro</b>#1E8C6B · verde para texto</div></div>
+  </div>
+
+  <div class="tipos">
+    <div><div class="amostra-serif">Georgia nos títulos</div><small>Fora do Office: Source Serif 4</small></div>
+    <div><div class="amostra-sans">Calibri no texto corrido, nas tabelas e nas legendas.</div><small>Fora do Office: Source Sans 3</small></div>
+  </div>
+
+  <h3>Marcadores de origem</h3>
+  <p style="max-width:64ch;margin:0">Cada um tem cor própria para o leitor ver de longe o que é dado do curso e o que é leitura nossa.</p>
+  <div class="tags">
+    <span class="tag t-fonte">[fonte: Cap. 2, Quadro 9]</span>
+    <span class="tag t-hip">[hipótese]</span>
+    <span class="tag t-nc">[não consta]</span>
+    <span class="tag t-risco">[risco: C2]</span>
+  </div>
+
+  <div class="aviso" style="background:var(--papel)">
+    <h3 style="color:var(--vital-escuro)">Para começar uma entrega</h3>
+    <ul>
+      <li>Copie <code>Modelo_Entrega_Lumis.docx</code> para a pasta da entrega com o nome padrão (ex.: <code>F2-E2_Auditoria_do_Ativo_v1.docx</code>).</li>
+      <li>Troque capa e cabeçalho e escreva usando só os estilos da galeria do Word. Nada de cor ou fonte aplicada à mão.</li>
+      <li>Logo e Feixe (a arte da capa) vêm prontos em <code>00_Lumis/Design_System/</code>. O Feixe aparece uma vez por documento, na capa.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="regras">
+  <h2>Combinados</h2>
+  <ul class="regras">
+    <li><b>Sincronize antes de qualquer trabalho</b> e envie assim que terminar.</li>
+    <li>Antes de perguntar "onde estamos?", abra o <code>ESTADO.md</code>.</li>
+    <li>Decisão tomada vira entrada no <code>DECISOES.md</code>. Lá só se acrescenta, nunca se apaga.</li>
+    <li>Antes de substituir uma versão, a anterior vai para <code>_Historico/</code>.</li>
+    <li>Uma entrega tem um único arquivo vigente, em <code>.docx</code>.</li>
+    <li>Nomes de arquivo e pasta sem acento. O conteúdo é escrito em português normal.</li>
+    <li>Lumis Intelligence é a empresa. Lumis Insight é o produto.</li>
+    <li>Os PDFs do curso têm marca d'água com dados pessoais. Esses dados não entram nos arquivos de trabalho.</li>
+  </ul>
+</section>
+
+</main>
+
+<footer>
+  <svg viewBox="0 0 56 56" aria-hidden="true"><g transform="translate(4 4)"><path d="M38.8 13.6 A18 18 0 1 0 41.5 28.9" fill="none" stroke="#0F2D3A" stroke-width="5" stroke-linecap="round"/><circle cx="24" cy="24" r="7" fill="#3DBE93"/><circle cx="44" cy="21.2" r="2.2" fill="#2BA6C9"/></g></svg>
+  <span>LumisOS · Gestão em IA, FIAP · Grupo 2. A Lumis Intelligence é uma empresa fictícia criada pelo curso.</span>
+</footer>
+
+<script>
+const pastas = {
+  estado:{c:"ESTADO.md",t:"Comece por aqui",p:"O painel do projeto: em que fase estamos, o status de cada entrega, o arquivo vigente de cada uma e o que falta.",q:"Toda vez que for perguntar \"onde estamos?\" ou \"o que falta?\"."},
+  decisoes:{c:"DECISOES.md",t:"O diário de bordo",p:"Toda decisão da equipe, numerada (D-001, D-002…), com data e motivo. Só se acrescenta, nunca se apaga. Na Fase 7 é a nossa trilha de auditoria.",q:"Quando alguém perguntar \"por que fizemos assim?\"."},
+  claude:{c:"CLAUDE.md",t:"As regras para a IA",p:"Instruções que o Claude lê sozinho ao abrir a pasta: de onde tirar dados, como citar a fonte, onde gravar, que padrão visual seguir. É o que faz o Claude trabalhar do jeito da equipe.",q:"Se quiser mudar uma regra de como a IA trabalha aqui. Combine com o grupo antes."},
+  lumis:{c:"00_Lumis/",t:"A base de conhecimento da empresa",p:"Tudo o que sabemos sobre a Lumis, organizado por assunto e com a fonte de cada informação.",l:["Empresa_e_Contexto.md: números, contexto e as divergências entre capítulos","Pessoas_e_Cargos.md: quem é quem na história","Compromissos_Vigentes.md: os 5 compromissos da F1-E3","Referencias.md: pesquisa externa citada"],q:"Antes de escrever qualquer coisa sobre a empresa."},
+  compromissos:{c:"00_Lumis/Compromissos_Vigentes.md",t:"Os 5 compromissos",p:"Transparência, Não Amplificação de Danos, Reversibilidade, Responsabilidade e Prestação de Contas, Segurança e Privacidade (C1 a C5). Também lista os fatos do Cap. 2 que tensionam cada compromisso e em qual entrega tratá-los.",q:"Ao fechar qualquer entrega: ela contradiz algum compromisso? Se sim, mantemos ou revisamos com nova decisão."},
+  ds:{c:"00_Lumis/Design_System/",t:"A identidade visual",p:"O README com cores, fontes e regras; o Modelo_Entrega_Lumis.docx; o logo em três versões e o Feixe, a arte da capa.",q:"Sempre que for gerar um documento, slide ou página."},
+  fases:{c:"01_Fase1_A_Chegada/ … 07_Fase7_O_Julgamento/",t:"Uma pasta por fase",p:"Cada fase tem um README.md com o briefing do capítulo (o que pede, prazos, ordem sugerida das entregas), a pasta _Enunciado e uma subpasta por entrega.",q:"Ao começar a trabalhar numa fase."},
+  enunciado:{c:"0X_.../_Enunciado/",t:"O capítulo do curso",p:"O PDF original do capítulo. É a única fonte de dados sobre a Lumis. Se um número não está aqui, ele é \"não consta\".",q:"Para conferir um quadro ou um número antes de citar."},
+  entrega:{c:"02_Fase2_O_Mercado/F2-E1_Mapa_do_Territorio/",t:"A pasta de uma entrega",p:"O código F2-E1 quer dizer Fase 2, Entrega 1, e é como citamos a entrega em qualquer documento. Dentro fica:",l:["o arquivo vigente da entrega, em .docx, com a versão no nome (_v2)","material de apoio em .md: levantamento, dados transcritos dos quadros, registro de prompts"],q:"Ao trabalhar numa entrega. Entregas sem número usam letra: M = memorando, A = apêndice, D = documento integrado."},
+  historico:{c:"_Historico/",t:"Versões anteriores",p:"Quando um arquivo é substituído, a versão anterior vem para cá com a data no nome. Nada se perde.",q:"Para recuperar algo de uma versão antiga ou comparar."},
+  documentos:{c:"Documentos/",t:"Os originais",p:"Os PDFs como chegaram: capítulos e entregas revisadas. Já foram copiados para a estrutura das fases. Ficam aqui até a equipe autorizar a remoção (D-002).",q:"Raramente. Prefira as cópias dentro de cada fase."}
+};
+const painel = document.getElementById("painel");
+const botoes = document.querySelectorAll(".arvore button");
+function mostra(id){
+  const d = pastas[id];
+  painel.innerHTML = `<p class="caminho">${d.c}</p><h3>${d.t}</h3><p>${d.p}</p>` +
+    (d.l ? `<ul>${d.l.map(i=>`<li>${i}</li>`).join("")}</ul>` : "") +
+    `<p class="quando"><b>Quando usar:</b> ${d.q}</p>`;
+  botoes.forEach(b=>b.setAttribute("aria-selected", b.dataset.id===id ? "true" : "false"));
+}
+botoes.forEach(b=>b.addEventListener("click",()=>mostra(b.dataset.id)));
+mostra("estado");
+</script>
+</body>
+</html>

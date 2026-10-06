@@ -1,6 +1,6 @@
 # ESTADO — LumisOS
 
-**Atualizado em:** 05/10/2026 · **Conferido contra:** arquivos reais da pasta nesta data.
+**Atualizado em:** 06/10/2026 · **Conferido contra:** arquivos reais da pasta nesta data.
 
 ## Onde estamos
 
@@ -27,8 +27,8 @@
 | F1-E1 | Mapa da Situação | [PDF](01_Fase1_A_Chegada/F1-E1_Mapa_da_Situacao/F1-E1_Mapa_da_Situacao_revisada.pdf) | ✅ Revisada |
 | F1-E2 | Mapa de Stakeholders | [PDF](01_Fase1_A_Chegada/F1-E2_Mapa_de_Stakeholders/F1-E2_Mapa_de_Stakeholders_revisada.pdf) | ✅ Revisada |
 | F1-E3 | Declaração de Intenção | [PDF](01_Fase1_A_Chegada/F1-E3_Declaracao_de_Intencao/F1-E3_Declaracao_de_Intencao_revisada.pdf) | ✅ Revisada |
-| F2-E1 | Mapa do Território | [**v2 .docx**](02_Fase2_O_Mercado/F2-E1_Mapa_do_Territorio/F2-E1_Mapa_do_Territorio_v2.docx) · base: v1 do colega · [Levantamento](02_Fase2_O_Mercado/F2-E1_Mapa_do_Territorio/F2-E1_Levantamento_v1.md) · [Mercado e concorrentes](02_Fase2_O_Mercado/F2-E1_Mapa_do_Territorio/F2-E1_Mercado_e_Concorrentes_v1.md) | 🟡 v2 redigida; aguarda revisão da equipe |
-| F2-E2 | Auditoria do Ativo: Dados e Métricas | — | ⚪ A fazer |
+| F2-E1 | Mapa do Território | [**v2 .docx**](02_Fase2_O_Mercado/F2-E1_Mapa_do_Territorio/F2-E1_Mapa_do_Territorio_v2.docx) · base: v1 do colega · [Levantamento](02_Fase2_O_Mercado/F2-E1_Mapa_do_Territorio/F2-E1_Levantamento_v1.md) · [Mercado e concorrentes](02_Fase2_O_Mercado/F2-E1_Mapa_do_Territorio/F2-E1_Mercado_e_Concorrentes_v1.md) | 🟡 v2 enxuta, com 3 figuras e 4 tabelas (D-017 a D-021); aguarda revisão da equipe |
+| F2-E2 | Auditoria do Ativo: Dados e Métricas | [v1 .docx](02_Fase2_O_Mercado/F2-E2_Auditoria_do_Ativo/F2-E2_Auditoria_do_Ativo_v1.docx) · base: v1 do colega (PDF) | 🟡 v1 do colega passada para o padrão visual, texto sem revisão; próximo passo: revisão |
 | F2-E3 | Linha de Responsabilidade | — | ⚪ A fazer |
 | F2-E4 | Diagnóstico de Cultura e Funil de Inovação | — | ⚪ A fazer |
 | F2-E5 | Due Diligence ESG da Expansão | — | ⚪ A fazer |
@@ -37,6 +37,8 @@
 | F2-D | Documento Integrado + planilhas e matrizes | — | ⚪ A fazer |
 
 ## Pendências e informações que não constam
+
+- **Design system:** criado em 06/10/2026 em [00_Lumis/Design_System/](00_Lumis/Design_System/README.md), com o modelo `Modelo_Entrega_Lumis.docx`. Paleta verde de saúde desde D-014. Vale a partir da F2-E2 (D-013); aguarda o aval da equipe.
 
 - **Prazo de envio da Fase 2 no portal:** não consta nos arquivos. Os "60 dias" são o prazo da história, não da disciplina.
 - **Nota e feedback das entregas da Fase 1:** não constam. Se houver devolutiva do professor, salvar na pasta da entrega.

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 56" width="260" height="56">
+  <g transform="translate(4 4)">
+    <path d="M38.8 13.6 A18 18 0 1 0 41.5 28.9" fill="none" stroke="#1F3A5F" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="24" cy="24" r="7" fill="#E8A33D"/>
+  </g>
+  <text x="62" y="37" font-family="Georgia, 'Source Serif 4', serif" font-size="30" fill="#1F3A5F" letter-spacing="-0.5">lumis</text>
+  <text x="145" y="37" font-family="Calibri, 'Source Sans 3', 'Segoe UI', sans-serif" font-size="21" fill="#6B7A8C" letter-spacing="0.5">insight</text>
+</svg>

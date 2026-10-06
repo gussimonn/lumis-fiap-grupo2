@@ -55,3 +55,50 @@ Todo texto do LumisOS passa pela skill `humanizer` (github.com/blader/humanizer,
 ### D-011 · 05/10/2026 · [Organização] A entrega fica só em .docx
 Cada entrega tem um único arquivo vigente, em `.docx`. A cópia `F2-E1_Mapa_do_Territorio_v2.md` foi apagada; o `.docx` já tinha o mesmo texto revisado. Substitui a parte "mais uma cópia em .md" de D-008. Levantamento, dados transcritos e registro de prompts continuam em `.md`, porque são material de apoio.
 **Motivo:** evitar duas fontes para o mesmo documento.
+
+### D-012 · 06/10/2026 · [Organização] F2-E1 v2 reescrita como relatório ao conselho
+A equipe achou a v2 técnica demais, com dados em excesso e estrutura de texto gerado por IA. O mapa foi reescrito para o conselho, em torno de uma tese ("quase tudo o que faz o Lumis Insight funcionar é alugado, e o único ativo que poderia ser da Lumis ainda não é dela"), contada em quatro passos que se encadeiam: onde a Lumis está, quem pode tomar esse espaço, o que pode mudar sem ela decidir e o que é difícil de copiar. A conclusão abre o texto e não se repete no fim. Saem do corpo a síntese consolidada, os desdobramentos e as tabelas de camadas e de participantes. Ficam a tabela de dependências e a de veredito, que guardam os números. O arquivo continua com o nome v2, a pedido da equipe. Na voz do texto, os contratos de dados aparecem como "pendentes de revisão". A versão anterior está em `_Historico/2026-10-06_F2-E1_Mapa_do_Territorio_v2_antes-storytelling.docx`.
+**Motivo:** dar coesão ao texto e deixar no corpo só os números que mudam a conclusão.
+
+### D-013 · 06/10/2026 · [Organização] Design system dos documentos
+Os documentos da equipe passam a seguir o design system em `00_Lumis/Design_System/`: logo do Lumis Insight (anel azul aberto com um ponto de luz âmbar), paleta Noite `#1F3A5F` e Lúmen `#E8A33D`, Georgia nos títulos e Calibri no texto, cores fixas para os marcadores `[fonte]`, `[hipótese]`, `[não consta]` e `[risco]`, e o Feixe (arcos concêntricos) como artefato visual da capa. O ponto de partida de cada entrega é `Modelo_Entrega_Lumis.docx`. Vale a partir da F2-E2. As entregas já feitas não precisam ser refeitas. O Cap. 1 e o Cap. 2 não trazem identidade visual da Lumis; tudo foi criado pela equipe.
+**Motivo:** pedido da equipe para dar um padrão visual simples aos documentos.
+
+### D-014 · 06/10/2026 · [Organização] Design system com paleta de saúde (substitui as cores de D-013)
+A paleta azul-noite e âmbar de D-013 sai. Entram três cores, uma para cada voz do produto: Vital `#3DBE93` (saúde), Profundo `#0F2D3A` (dados) e Pulso `#2BA6C9` (inovação), com Vital escuro `#1E8C6B` para texto. O logo ganhou um ponto Pulso saindo pela abertura do anel, e o Feixe ganhou uma linha de pulso que vira pontos de dado. O verde se inspira no tom de saúde da Arkium sem copiá-lo. Tipografia, marcadores e modelo de entrega seguem como em D-013. A versão anterior está em `_Historico/2026-10-06_Design_System_v1_azul-ambar/`.
+**Motivo:** pedido da equipe para uma cor que lembre saúde e para uma identidade que misture saúde, dados e inovação.
+
+### D-015 · 06/10/2026 · [Organização] Capa revista e padrão visual obrigatório
+O Feixe da capa foi redesenhado para parecer menos artificial: fundo com brilho suave e grão, arcos com espaçamento crescente e alguns pontilhados, e um batimento cardíaco desenhado como curva, cujas repetições viram pontos de dado do verde ao ciano. O desenho sai de `_fonte/gerar_feixe.py`. O CLAUDE.md passou a exigir que todo material gerado no LumisOS siga o design system. A versão anterior da pasta está em `_Historico/2026-10-06_Design_System_v2_verde-capa-geometrica/`.
+**Motivo:** a equipe gostou da identidade e achou a capa artificial demais, e pediu que o padrão valha para tudo o que for gerado.
+
+### D-016 · 06/10/2026 · [Organização] Contexto antes da entrega e conversa passo a passo
+O CLAUDE.md passou a exigir que, em todo chat novo sobre uma entrega, o Claude leia o README da fase e o da entrega, o trecho do enunciado com os objetivos e critérios, o contexto da Lumis em `00_Lumis/` e as decisões ligadas, e resuma à equipe o que entendeu antes de começar. A conversa vai passo a passo, com uma pergunta por vez (no máximo duas), aviso antes de gerar ou alterar arquivo e explicação simples do que foi feito. A versão anterior do CLAUDE.md está em `_Historico/2026-10-06_CLAUDE_antes-regras-de-entrega.md`.
+**Motivo:** pedido da equipe para que cada entrega comece pelo enunciado e pelo contexto da Lumis, e para que a interação seja mais fácil de acompanhar.
+
+### D-017 · 06/10/2026 · [Organização] F2-E1 v2 no padrão visual e com figuras
+A pedido da equipe, que achou o texto longo demais, a F2-E1 v2 foi refeita a partir do `Modelo_Entrega_Lumis.docx`. Ela ganhou cinco figuras: camadas, direções de ameaça, prazos das dependências, margem por cenário e a escala do que é difícil de copiar. As figuras ficam em `F2-E1_Mapa_do_Territorio/figuras/`, com os scripts que as geram e que montam o .docx. As tabelas de camadas e de participantes saíram, e a de dependências virou a Tabela 1. O Apêndice A passa a dizer que a IA apoiou a pesquisa e a redação, com revisão e reescrita final da equipe. Na mesma revisão foi corrigido um dado: o Cap. 2 (Quadro 7) diz que os seis instrumentos de dados estão sem revisão jurídica, e não os 38 contratos. Esta entrada abre uma exceção pontual à regra do CLAUDE.md de deixar a F2-E1 como está. A versão anterior está em `_Historico/2026-10-06_F2-E1_Mapa_do_Territorio_v2_antes-design.docx`.
+**Motivo:** reduzir o texto, mostrar os dados como figura e alinhar a entrega ao design system.
+
+### D-018 · 06/10/2026 · [Organização] F2-E1 v2 enxuta, a partir dos ajustes da equipe
+A nova versão parte da que a equipe ajustou: capa só com título e subtítulo e "nosso stakeholder" no lugar de "gestor". Ela tem menos texto, mais tópicos e menos citações. As referências caíram de 10 para 5 (MV/KLAS, Einstein, Wong et al., TechCrunch e Shapiro e Varian). As fontes do caso agora ficam nas legendas e na nota final. A Tabela 1 passou a ter três colunas: dependência, o que pode acontecer e resposta recomendada. As figuras não mudaram. A versão da equipe está em `_Historico/2026-10-06_F2-E1_Mapa_do_Territorio_v2_ajustes-equipe.docx`.
+**Motivo:** pedido da equipe por um documento mais curto e objetivo.
+
+### D-019 · 06/10/2026 · [Organização] F2-E1 v2: menos figuras, mais tabelas
+Saíram a figura da linha do tempo e a da escala do que é difícil de copiar. Os prazos viraram a coluna "Prazo" da tabela de dependências, agora Tabela 2. A escala foi substituída por uma figura simples de três faixas (passivo, copiável ou parcial, difícil de copiar), no mesmo desenho da Figura 1. As ameaças da seção 2 passaram de tópicos para a Tabela 1, que ganhou a coluna "O que joga a favor da Lumis". As seções agora alternam figura, tópicos e tabela. Os arquivos das figuras antigas continuam em `figuras/`, sem uso no documento. A versão anterior está em `_Historico/2026-10-06_F2-E1_Mapa_do_Territorio_v2_antes-tabelas.docx`.
+**Motivo:** pedido da equipe, que acha que as tabelas ajudam a visualizar e que a figura da escala não funcionou.
+
+### D-020 · 06/10/2026 · [Lumis] F2-E1 v2: ameaças completas, risco atual dos dados e por que a base ainda não é fosso
+- **Ameaças:** a Tabela 1 passou de 4 para 7 linhas. A linha "fornecedor de modelo" virou "os próprios fornecedores", com nuvem e bases como [hipótese]. Núcleo e consultorias ficaram em linhas separadas, e entraram birôs e plataformas de dados (bancos e seguros) e healthtechs de IA clínica [hipótese]. A Figura 2 foi atualizada para bater com a tabela.
+- **Risco dos dados:** o risco existe hoje, e não só nos vencimentos. O modelo já foi treinado com os 35,4% de dados de clientes com autorização fraca (Vila Ipê e Prisma), nenhum dos seis instrumentos passou por revisão jurídica, as autorizações da Sanare e do Meridiano têm condições, e a base legal da LGPD para dado de saúde é incerta [hipótese] [fonte: Cap. 2, Quadro 7].
+- **Difícil de copiar:** a faixa "Passivo hoje" virou "Valioso, mas travado hoje". A Tabela 3 mostra a composição da base (63,6% pública, 9,5% sintética, 26,8% de clientes). A seção lista as quatro travas dos dados de clientes (autorização, concentração, escala e viés) e explica que os "4 anos" medem a experiência da equipe. O histórico de 2019 a 2026 pode ser o fosso, se os contratos forem regularizados e o viés corrigido [hipótese].
+Versões anteriores em `_Historico/2026-10-06_F2-E1_Mapa_do_Territorio_v2_antes-ameacas.docx` e nas figuras `2026-10-06_F2-E1_fig*.png`.
+**Motivo:** a equipe não via com clareza o risco dos contratos de dados nem por que a base histórica não é difícil de copiar.
+
+### D-021 · 06/10/2026 · [Organização] F2-E1 v2: a Figura 4 vira tabela e entram as edições da equipe no Word
+A figura de faixas do "difícil de copiar" virou a Tabela 3, com as colunas "Hoje", "Elemento" e "Por quê". A tabela da composição da base passou a ser a Tabela 4. A versão gravada incorpora as edições que a equipe fez no Word: saíram da Tabela 1 as linhas de birôs de dados e de healthtechs, a legenda ficou mais curta e saiu o marcador [hipótese] da recomendação de modelo próprio. A Figura 2 voltou a mostrar só Núcleo e consultorias no grupo "por fora". O arquivo editado pela equipe está em `_Historico/2026-10-06_F2-E1_Mapa_do_Territorio_v2_editado-no-word.docx`.
+**Motivo:** a figura não funcionou, e a tabela é mais clara.
+
+### D-022 · 06/10/2026 · [Organização] F2-E1 v2: formatação da Tabela 3
+A Tabela 3 ("difícil de copiar") ganhou células de nível mescladas e cor de fundo por grupo, seguindo a paleta: âmbar para "valioso, mas travado" e Papel com texto Vital escuro para "difícil de copiar". O "destrava com…" passou para uma linha própria, em itálico. A equipe tinha começado a mesclar células no Word, e essa versão está em `_Historico/2026-10-06_F2-E1_Mapa_do_Territorio_v2_editado-no-word-2.docx`; a nova formatação cobre essa edição.
+**Motivo:** pedido da equipe por uma Tabela 3 mais legível.

@@ -1,0 +1,6 @@
+{
+  "name": "lumis-estado",
+  "version": "0.1.0",
+  "description": "Faixa acima do prompt com a fase atual e as entregas em andamento, lidas do ESTADO.md do LumisOS",
+  "types": "./types/index.d.ts"
+}
