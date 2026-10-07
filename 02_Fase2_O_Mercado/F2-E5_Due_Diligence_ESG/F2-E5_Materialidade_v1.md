@@ -54,6 +54,6 @@ Um tema é material quando tem nota Alta em pelo menos um dos dois eixos.
 ## 5. Próximas etapas
 
 1. ~~Matriz de materialidade~~ (esta)
-2. Riscos de equidade no novo mercado e como medi-los (Quadros 10 e 17)
+2. ~~Riscos de equidade~~ (ver [F2-E5_Equidade_v1.md](F2-E5_Equidade_v1.md))
 3. Privacidade e dados sensíveis na operação ampliada (Quadros 7 e 17)
 4. Métrica de impacto pública, com periodicidade e cargo responsável. Depois: montar o .docx no modelo da equipe e conferir contra C1 a C5.
