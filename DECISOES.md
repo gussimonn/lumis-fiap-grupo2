@@ -102,3 +102,7 @@ A figura de faixas do "difícil de copiar" virou a Tabela 3, com as colunas "Hoj
 ### D-022 · 06/10/2026 · [Organização] F2-E1 v2: formatação da Tabela 3
 A Tabela 3 ("difícil de copiar") ganhou células de nível mescladas e cor de fundo por grupo, seguindo a paleta: âmbar para "valioso, mas travado" e Papel com texto Vital escuro para "difícil de copiar". O "destrava com…" passou para uma linha própria, em itálico. A equipe tinha começado a mesclar células no Word, e essa versão está em `_Historico/2026-10-06_F2-E1_Mapa_do_Territorio_v2_editado-no-word-2.docx`; a nova formatação cobre essa edição.
 **Motivo:** pedido da equipe por uma Tabela 3 mais legível.
+
+### D-023 · 07/10/2026 · [Organização] F2-E5: qual expansão a due diligence analisa
+O enunciado pede os riscos "no novo mercado", mas a direção de crescimento só será escolhida no memorando (F2-M). A F2-E5 analisa a expansão como o Vetor Capital a propõe (dois novos países e o Lumis Insight como plataforma) [fonte: Cap. 2, 1.1] e usa dois casos concretos do backlog: a expansão para o México e o módulo de risco de crédito para bancos [fonte: Cap. 2, Quadro 16]. Responsável pela entrega: Felipe Alef.
+**Motivo:** deixar a F2-E5 útil para qualquer direção que o memorando escolher e permitir que ela aponte uma expansão arriscada demais.

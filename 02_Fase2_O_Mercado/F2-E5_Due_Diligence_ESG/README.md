@@ -1,5 +1,5 @@
 # F2-E5 — Due Diligence ESG da Expansão
-**Status:** ⚪ A fazer · **Quadros:** 17 Indicadores socioambientais e de equidade, 10 Desempenho por subgrupo, 7 Situação contratual dos dados
+**Status:** 🟡 Em andamento (Felipe) · etapa 1 de 4 em [F2-E5_Materialidade_v1.md](F2-E5_Materialidade_v1.md) · **Quadros:** 17 Indicadores socioambientais e de equidade, 10 Desempenho por subgrupo, 7 Situação contratual dos dados
 **Atenção:** o enunciado diz *"Este é o capítulo que o comitê de investimento lerá primeiro."*
 
 ## Checklist
