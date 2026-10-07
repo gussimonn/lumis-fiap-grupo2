@@ -37,6 +37,28 @@ def fig_subgrupo():
     save(fig, 'fig1_subgrupo.png')
 
 
+def fig_subgrupo_v2():
+    """v2: o pior subgrupo em destaque e a média de campo como referência (Quadros 9 e 10)."""
+    dados = [('18 a 59, CEP A/B', 10.6), ('18 a 59, CEP C', 14.3), ('18 a 59, CEP D/E', 20.2),
+             ('60+, CEP A/B', 15.9), ('60+, CEP C', 23.5), ('60+, CEP D/E', 31.8)]
+    fig, ax = plt.subplots(figsize=(W, 2.6))
+    ys = list(range(len(dados)))[::-1]
+    for y, (rot, v) in zip(ys, dados):
+        cor = PROFUNDO if v == 31.8 else PULSO
+        ax.barh(y, v, color=cor, height=0.62, zorder=2)
+        ax.text(v + 0.5, y, f'{v:.1f}%'.replace('.', ','), va='center', fontsize=9, color=TINTA, fontweight='bold',
+                zorder=3, bbox=dict(fc='white', ec='none', pad=1))
+    ax.axvline(17.7, color=NEVOA, lw=1, ls=(0, (3, 3)), zorder=1)
+    ax.text(17.9, 5.45, 'média em campo: 17,7%', fontsize=8, color=NEVOA, va='center')
+    ax.set_yticks(ys); ax.set_yticklabels([d[0] for d in dados], fontsize=9)
+    ax.tick_params(axis='y', length=0)
+    ax.set_xlim(0, 36); ax.set_xticks([])
+    for s in ('top', 'right', 'bottom'):
+        ax.spines[s].set_visible(False)
+    save(fig, 'fig1_subgrupo_v2.png')
+
+
 if __name__ == '__main__':
     fig_subgrupo()
+    fig_subgrupo_v2()
     print('ok')

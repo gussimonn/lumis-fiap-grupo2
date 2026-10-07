@@ -102,3 +102,18 @@ A figura de faixas do "difícil de copiar" virou a Tabela 3, com as colunas "Hoj
 ### D-022 · 06/10/2026 · [Organização] F2-E1 v2: formatação da Tabela 3
 A Tabela 3 ("difícil de copiar") ganhou células de nível mescladas e cor de fundo por grupo, seguindo a paleta: âmbar para "valioso, mas travado" e Papel com texto Vital escuro para "difícil de copiar". O "destrava com…" passou para uma linha própria, em itálico. A equipe tinha começado a mesclar células no Word, e essa versão está em `_Historico/2026-10-06_F2-E1_Mapa_do_Territorio_v2_editado-no-word-2.docx`; a nova formatação cobre essa edição.
 **Motivo:** pedido da equipe por uma Tabela 3 mais legível.
+
+### D-023 · 06/10/2026 · [Lumis] C2 mantido: restringir já a recomendação automática para idosos de CEP C e D/E
+O compromisso C2 (Não Amplificação de Danos) fica como está. A F2-E2 v2 recomenda restringir a recomendação automática nos recortes 60+ CEP C e 60+ CEP D/E até a correção. Hoje o falso negativo deles é 2,2 e 3,0 vezes o do melhor subgrupo [fonte: Cap. 2, Quadro 10], acima do limite de 2 vezes proposto no indicador 1 [hipótese]. O modelo segue rodando em paralelo, sem decidir, para medir a correção. Custo estimado: cerca de 154 mil decisões por mês (24% do total) passam ao protocolo de triagem do próprio hospital [conta; hipótese: distribuição das decisões igual à da base]. A carga por hospital e a receita afetada não constam. A F2-E3 define quem executa a restrição e com que poder. A alternativa descartada foi revisar o C2 para aceitar a contenção atual.
+[fonte: F2-E2 Levantamento v1, seção 3.5]
+**Motivo:** pela letra do C2, o 31,8% já é padrão de viés, e manter o compromisso sem agir contradiria a Fase 1 e a F2-E1.
+
+### D-024 · 06/10/2026 · [Organização] Diretrizes da F2-E2 v2 (a partir do levantamento)
+- **Base:** a v1 do colega e o `F2-E2_Levantamento_v1.md`. Estrutura e tom da F2-E1 v2: tese no início, pedido ao conselho, quatro blocos na ordem do enunciado, tabelas curtas, uma figura, detalhe técnico no anexo.
+- **Proxy:** o caso principal é custo acumulado e número de atendimentos, o exemplo do Cap. 2 (2.2). O CEP entra como reforço.
+- **Indicadores:** cinco. (1) falso negativo por subgrupo, com a regra de liberação de versão; (2) direito de uso da base de treino; (3) reclamações por faixa de CEP cruzadas com o desempenho; (4) incidentes detectados antes do cliente; (5) afirmações públicas auditáveis. A disponibilidade de ponta a ponta sai da cesta e entra nos descartados, com as quatro perguntas.
+- **Amostra do indicador 1:** revisão humana de 10% nos subgrupos críticos e janela de 90 dias com leitura quinzenal nos demais.
+- **Marcadores:** sem estilo novo. Conta da equipe vira `[fonte: conta da equipe sobre o Quadro N]`, com o estilo Tag Fonte, e o contexto externo entra como referência numerada, como na F2-E1.
+- **Referências no corpo:** até cinco: Obermeyer et al. (2019), Wong et al. (2021), LGPD, Guia de Agentes de Tratamento da ANPD e NIST AI RMF. Cada uma é aberta no original por alguém da equipe antes da entrega.
+- **Prompts:** a F2-E2 não leva apêndice de prompts, porque o enunciado só exige na Entrega 1. O registro fica em `F2-A_Apendice_de_Prompts/F2-A_Registro_de_Prompts_F2-E2_v1.md`.
+**Motivo:** a equipe aprovou as seis recomendações da seção 6 do levantamento.

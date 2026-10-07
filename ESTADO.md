@@ -28,11 +28,11 @@
 | F1-E2 | Mapa de Stakeholders | [PDF](01_Fase1_A_Chegada/F1-E2_Mapa_de_Stakeholders/F1-E2_Mapa_de_Stakeholders_revisada.pdf) | ✅ Revisada |
 | F1-E3 | Declaração de Intenção | [PDF](01_Fase1_A_Chegada/F1-E3_Declaracao_de_Intencao/F1-E3_Declaracao_de_Intencao_revisada.pdf) | ✅ Revisada |
 | F2-E1 | Mapa do Território | [**v2 .docx**](02_Fase2_O_Mercado/F2-E1_Mapa_do_Territorio/F2-E1_Mapa_do_Territorio_v2.docx) · base: v1 do colega · [Levantamento](02_Fase2_O_Mercado/F2-E1_Mapa_do_Territorio/F2-E1_Levantamento_v1.md) · [Mercado e concorrentes](02_Fase2_O_Mercado/F2-E1_Mapa_do_Territorio/F2-E1_Mercado_e_Concorrentes_v1.md) | 🟡 v2 enxuta, com 3 figuras e 4 tabelas (D-017 a D-021); aguarda revisão da equipe |
-| F2-E2 | Auditoria do Ativo: Dados e Métricas | [v1 .docx](02_Fase2_O_Mercado/F2-E2_Auditoria_do_Ativo/F2-E2_Auditoria_do_Ativo_v1.docx) · base: v1 do colega (PDF) | 🟡 v1 do colega passada para o padrão visual, texto sem revisão; próximo passo: revisão |
+| F2-E2 | Auditoria do Ativo: Dados e Métricas | [**v2 .docx**](02_Fase2_O_Mercado/F2-E2_Auditoria_do_Ativo/F2-E2_Auditoria_do_Ativo_v2.docx) · base: v1 do colega e [Levantamento](02_Fase2_O_Mercado/F2-E2_Auditoria_do_Ativo/F2-E2_Levantamento_v1.md) · [Dados Q7–11](02_Fase2_O_Mercado/F2-E2_Auditoria_do_Ativo/Dados_Quadros_7-11.md) | 🟡 v2 com 6 seções e anexo (D-023, D-024); aguarda revisão da equipe e conferência das 5 referências no original |
 | F2-E3 | Linha de Responsabilidade | — | ⚪ A fazer |
 | F2-E4 | Diagnóstico de Cultura e Funil de Inovação | — | ⚪ A fazer |
 | F2-E5 | Due Diligence ESG da Expansão | — | ⚪ A fazer |
-| F2-A | Apêndice de Prompts (da F2-E1) | [Registro v1](02_Fase2_O_Mercado/F2-A_Apendice_de_Prompts/F2-A_Registro_de_Prompts_v1.md) · [Verificação de URLs](02_Fase2_O_Mercado/F2-A_Apendice_de_Prompts/F2-A_Verificacao_de_URLs_v1.md) | 🟢 Prompts registrados; URLs da F2-E1 v2 conferidas por Felipe em 05/10/2026 (9/9 confirmadas, 2 sugestões de precisão) |
+| F2-A | Apêndice de Prompts (da F2-E1) | [Registro F2-E1](02_Fase2_O_Mercado/F2-A_Apendice_de_Prompts/F2-A_Registro_de_Prompts_v1.md) · [Registro F2-E2](02_Fase2_O_Mercado/F2-A_Apendice_de_Prompts/F2-A_Registro_de_Prompts_F2-E2_v1.md) · [Verificação de URLs](02_Fase2_O_Mercado/F2-A_Apendice_de_Prompts/F2-A_Verificacao_de_URLs_v1.md) | 🟢 Prompts registrados; URLs da F2-E1 v2 conferidas por Felipe em 05/10/2026 (9/9 confirmadas, 2 sugestões de precisão) |
 | F2-M | Memorando ao Conselho (máx. 2 páginas) | — | ⚪ A fazer |
 | F2-D | Documento Integrado + planilhas e matrizes | — | ⚪ A fazer |
 
