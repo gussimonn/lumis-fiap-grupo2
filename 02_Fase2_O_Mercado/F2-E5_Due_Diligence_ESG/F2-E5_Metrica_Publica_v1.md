@@ -30,7 +30,7 @@ Escolhemos esse número porque:
 | Responsável pela publicação | Head of AI Management, que já coordena incidentes e prestação de contas pelo C4 [fonte: F1-E3; Cap. 2, Quadro 13] |
 | Responsável pela apuração | Yuri Nakamura, responsável por Dados [fonte: Cap. 2, Quadro 13] |
 | Verificação | Auditoria independente uma vez por ano, para que o número sobreviva ao critério do fundo: "qualquer número que não sobreviva a uma auditoria independente será tratado como passivo" [fonte: Cap. 2, 1.1] |
-| O que acontece se piorar | Subgrupo acima do limite entra em revisão humana obrigatória; se persistir por dois ciclos quinzenais, o uso para aquela decisão é suspenso até a correção, como prevê o C2 [proposta; fonte: F1-E3] |
+| O que acontece se piorar | Subgrupo entre 1,5 e 2 vezes entra em alerta, com revisão humana de 10% dos casos. Acima de 2 vezes, a recomendação automática é restrita de imediato no subgrupo até a correção, como prevê o C2 e recomenda a F2-E2 (D-026) [proposta; fonte: F1-E3; F2-E2] |
 
 Os responsáveis são provisórios até a F2-E3 fechar a linha de responsabilidade.
 
@@ -41,8 +41,8 @@ Aplicamos as quatro perguntas do Cap. 2 [fonte: Cap. 2, seção 2]:
 | Pergunta | Resposta |
 |---|---|
 | Medida em quê? | Em produção, com a base completa do período, e não num conjunto de validação montado à parte |
-| Medida por quem? | Pela área de Dados, com auditoria independente anual; o tamanho da amostra de cada subgrupo é publicado junto |
-| Muda alguma decisão? | Sim: dispara revisão humana obrigatória e, se persistir, a suspensão do uso naquele subgrupo |
+| Medida por quem? | Pelo responsável por Dados, com auditoria independente anual; o tamanho da amostra de cada subgrupo é publicado junto |
+| Muda alguma decisão? | Sim: entre 1,5 e 2 vezes, revisão reforçada; acima de 2 vezes, restrição imediata do uso naquele subgrupo |
 | Esconde qual distribuição? | Nenhuma das que conhecemos: é publicada por subgrupo. Sexo, raça ou cor e deficiência ainda não são medidos [não consta] e devem entrar na abertura quando houver dado |
 
 Há um risco de Goodhart: se a meta pesar sozinha, o modelo pode baixar o falso negativo marcando todos como prioridade [hipótese]. Por isso a sensibilidade e a proporção de pacientes priorizados também são publicadas.
@@ -52,9 +52,9 @@ Há um risco de Goodhart: se a meta pesar sozinha, o modelo pode baixar o falso 
 | Compromisso | A F2-E5 contradiz? | Como a F2-E5 responde |
 |---|---|---|
 | C1 Transparência | Não | A métrica pública cumpre o C1 com número. A política de privacidade aprovada também é condição prévia (etapa 3) |
-| C2 Não Amplificação de Danos | Não | Os indicadores E1 a E5 e a métrica pública dão número e limite ao monitoramento quinzenal por grupo e à suspensão previstos no C2 |
+| C2 Não Amplificação de Danos | Não, depois do ajuste de 07/10/2026 | Os indicadores E1 a E5 e a métrica pública dão número e limite ao monitoramento quinzenal por grupo e à suspensão previstos no C2. A primeira versão esperava dois ciclos quinzenais antes de suspender, o que contrariava a restrição imediata da D-026; agora, acima de 2 vezes, a restrição é imediata |
 | C3 Reversibilidade | Não | O indicador E3 usa o registro de revisões que o C3 exige |
-| C4 Responsabilidade | Não | O Head of AI Management responde pela publicação; os cargos de apuração foram nomeados |
+| C4 Responsabilidade | Não | O Head of AI Management responde pela publicação; os cargos seguem a linha de responsabilidade da F2-E3 |
 | C5 Segurança e Privacidade | Não | Os indicadores P1 a P3 medem o C5, inclusive a revisão de acessos a cada 90 dias |
 
 Nenhuma contradição encontrada. A F2-E5 aumenta a cobrança sobre os compromissos, porque transforma os textos de C2 e C5 em indicadores com limite e responsável.
@@ -63,7 +63,7 @@ Nenhuma contradição encontrada. A F2-E5 aumenta a cobrança sobre os compromis
 
 A expansão leva para novos mercados riscos que a Lumis ainda não resolveu em casa. As condições prévias saídas da F2-E5 são:
 
-1. falso negativo por subgrupo dentro do limite no Brasil, ou com revisão humana obrigatória nos subgrupos acima dele;
+1. falso negativo por subgrupo dentro do limite no Brasil, com a recomendação automática já restrita nos subgrupos acima dele;
 2. validação local por subgrupo antes de entrar em cada novo mercado;
 3. política de privacidade aprovada e os seis instrumentos de dados revisados, com aditivos para a Prisma e o Vila Ipê;
 4. relatório de impacto à proteção de dados para a plataforma e para cada país;

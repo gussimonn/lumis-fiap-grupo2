@@ -160,15 +160,15 @@ P('O desempenho por sexo, raça ou cor e deficiência não é medido [não const
   'grupos estão protegidos. Para medir o risco, propomos cinco indicadores:')
 TABELA([
     ['Indicador', 'Limite proposto', 'Se passar do limite', 'Frequência'],
-    ['E1. Falso negativo por subgrupo e razão entre o pior e o melhor', 'Até 1,5 vez (hoje: 3,0)', 'Revisão humana obrigatória no subgrupo; se persistir, suspensão daquela decisão, como prevê o C2', 'Quinzenal'],
+    ['E1. Falso negativo por subgrupo e razão entre o pior e o melhor', 'Meta: até 1,5 vez. Limite: 2 vezes (hoje: 3,0)', 'Acima de 2 vezes, restrição imediata da recomendação automática no subgrupo', 'Quinzenal'],
     ['E2. Reclamações por 1.000 pacientes, por subgrupo, cruzadas com o E1', 'Nenhuma faixa acima de 2 vezes a média', 'Auditoria de equidade e investigação da causa', 'Mensal'],
-    ['E3. Reversão humana por subgrupo (registro do C3)', 'Diferença de até 2 vezes entre subgrupos', 'Revisão das variáveis de acesso', 'Mensal'],
+    ['E3. Reversão humana por subgrupo (registro de revisões)', 'Diferença de até 2 vezes entre subgrupos', 'Revisão das variáveis de acesso', 'Mensal'],
     ['E4. Representatividade dos dados no novo mercado', 'Amostra suficiente para medir o E1 em todo subgrupo', 'O mercado não entra em produção', 'Antes da entrada; depois, anual'],
     ['E5. Aprovação no crédito por faixa de CEP', 'Mínimo de 0,8 da taxa da faixa com mais aprovações¹', 'Revisão humana e retirada de CEP e cobertura do modelo', 'Mensal'],
-], [5.0, 3.6, 5.2, 2.2], 'Tabela 3. Indicadores de equidade. Limites propostos pela equipe; E1 e E2 retomam os indicadores 1 e 5 da Entrega 2.')
-P('A apuração fica com Yuri Nakamura (Dados), e a decisão de exigir revisão ou suspender o uso fica com o Head '
-  'of AI Management, coordenador previsto no compromisso C4 [fonte: Cap. 2, Quadro 13; F1-E3]. Os cargos serão '
-  'confirmados na Entrega 3.')
+], [5.0, 3.6, 5.2, 2.2], 'Tabela 3. Indicadores de equidade. Limites propostos pela equipe; E1 e E2 retomam os indicadores 1 e 3 da Entrega 2.')
+P('O limite de 2 vezes e a restrição imediata são os mesmos da Entrega 2. Entre 1,5 e 2 vezes, o subgrupo fica '
+  'em alerta, com revisão humana de 10% dos casos. Pela linha de responsabilidade da Entrega 3, o responsável por '
+  'Dados apura, o Head of AI Management decide a revisão ou a restrição e o CTO a executa.')
 
 # ---------------- 3 ----------------
 H1('3. Privacidade e dados sensíveis')
@@ -191,9 +191,9 @@ P('Para o crédito, propomos uma regra fixa: dado de saúde não entra no modelo
 TABELA([
     ['Indicador', 'Hoje', 'Meta', 'Frequência'],
     ['P1. % dos registros de clientes em treinamento com autorização explícita e revisão jurídica', '0% com revisão jurídica; 64,6% com autorização explícita', '100% antes de qualquer frente nova; registro sem base sai do treinamento', 'Trimestral'],
-    ['P2. % dos acessos a dados de pacientes revisados nos últimos 90 dias (C5)', '[não consta]', '100%', 'A cada 90 dias'],
-    ['P3. Incidentes de privacidade e dias até a ação corretiva (C5)', 'Sem categoria própria no registro de incidentes [fonte: Cap. 2, Quadro 14]', 'Registro no dia em que é identificado; ação corretiva documentada', 'Mensal'],
-], [5.6, 4.0, 4.4, 2.0], 'Tabela 5. Indicadores de privacidade. Responsável: Ana Beatriz Rangel (DPO), até a confirmação na Entrega 3.')
+    ['P2. % dos acessos a dados de pacientes revisados nos últimos 90 dias', '[não consta]', '100%', 'A cada 90 dias'],
+    ['P3. Incidentes de privacidade e dias até a ação corretiva', 'Sem categoria própria no registro de incidentes [fonte: Cap. 2, Quadro 14]', 'Registro no dia em que é identificado; ação corretiva documentada', 'Mensal'],
+], [5.6, 4.0, 4.4, 2.0], 'Tabela 5. Indicadores de privacidade. Responsável: DPO, como na Entrega 3. P2 e P3 dão número ao compromisso de Segurança e Privacidade.')
 
 # ---------------- 4 ----------------
 H1('4. A métrica que vamos publicar')
@@ -206,10 +206,10 @@ TABELA([
     ['O que se publica', 'Falso negativo, sensibilidade e tamanho da amostra de cada subgrupo, mais a razão entre o pior e o melhor subgrupo e o valor do período anterior'],
     ['Ponto de partida', 'De 10,6% a 31,8%; razão de 3,0 vezes (1º semestre de 2026) [fonte: Cap. 2, Quadro 10]'],
     ['Meta', 'Razão de até 1,5 vez em 12 meses; nenhum subgrupo acima de 7,4%, o falso negativo da validação declarada, em 24 meses'],
-    ['Periodicidade', 'Trimestral, no site da Lumis e no relatório de cada cliente; acompanhamento interno quinzenal, como prevê o C2'],
-    ['Responsável', 'Head of AI Management publica; Yuri Nakamura (Dados) apura'],
+    ['Periodicidade', 'Trimestral, no site da Lumis e no relatório de cada cliente; acompanhamento interno quinzenal'],
+    ['Responsável', 'Head of AI Management publica; responsável por Dados apura'],
     ['Verificação', 'Auditoria independente uma vez por ano'],
-    ['Se piorar', 'Revisão humana obrigatória no subgrupo; suspensão do uso se persistir por dois ciclos quinzenais'],
+    ['Se piorar', 'Acima de 2 vezes, restrição imediata da recomendação automática no subgrupo'],
 ], [3.4, 12.6], 'Tabela 6. Ficha da métrica pública. Metas propostas pela equipe.')
 P('A sensibilidade é publicada junto para evitar que o número melhore às custas de marcar todos os pacientes '
   'como prioridade. Quando uma medida vira meta, ela deixa de ser boa medida (Goodhart) [fonte: Cap. 2, seção 2].')
@@ -217,14 +217,15 @@ P('A sensibilidade é publicada junto para evitar que o número melhore às cust
 # ---------------- 5 ----------------
 H1('5. Condições para a expansão')
 P('Recomendamos que nenhuma frente nova entre em produção antes de:')
-N('falso negativo por subgrupo dentro do limite no Brasil, ou com revisão humana obrigatória nos subgrupos acima dele;')
+N('falso negativo por subgrupo dentro do limite no Brasil, com a recomendação automática já restrita nos subgrupos acima dele;')
 N('validação local, por subgrupo, em cada novo mercado;')
 N('política de privacidade aprovada e os seis instrumentos de dados revisados, com aditivos para a Prisma (antes de 12/2026) e o Vila Ipê (antes de 03/2027);')
 N('relatório de impacto à proteção de dados para a plataforma e para cada país (LGPD, art. 38);')
 N('no crédito, dado de saúde fora do modelo e diferença de aprovação por faixa de CEP acompanhada desde o primeiro dia;')
 N('métrica pública de falso negativo por subgrupo já publicada.')
-P('Nenhum ponto desta entrega contradiz os compromissos C1 a C5. A entrega dá limite e responsável aos '
-  'compromissos C2 e C5, e a métrica pública cumpre o C1 com número. As condições acima seguem para o memorando '
+P('A entrega dá limite e responsável aos compromissos de Não Amplificação de Danos e de Segurança e Privacidade, '
+  'e a métrica pública dá número ao compromisso de Transparência. Nos subgrupos acima do limite, a restrição é '
+  'imediata, como a Entrega 2 recomendou, e não espera novas leituras. As condições acima seguem para o memorando '
   'ao conselho como condições prévias ao aporte.')
 
 # ---------------- referências ----------------

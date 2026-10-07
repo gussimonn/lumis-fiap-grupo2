@@ -139,11 +139,11 @@ O corpo da v2 caiu de 7 para 4 páginas, e o anexo ficou em 3 páginas mais curt
 O anexo da F2-E2 ficou só com as três tabelas das quatro perguntas (afirmações do mercado, indicadores propostos e indicadores descartados), que o enunciado exige. Saíram a tabela "Os números por trás do texto" e as listas de variáveis, divergências e do que não consta. Esses dados continuam no `F2-E2_Levantamento_v1.md` e no `Dados_Quadros_7-11.md`. No documento integrado, as três tabelas podem ir para a seção de matrizes de apoio. Entraram também duas edições da equipe no Word: saiu a frase sobre a queda de desempenho ser comum em IA clínica, e com ela a referência a Wong et al. (as referências passam de cinco para quatro, revendo a lista da D-027), e saiu o marcador de fonte do memorando na seção 4. A versão editada pela equipe está em `_Historico/2026-10-07_F2-E2_Auditoria_do_Ativo_v2_editado-no-word-2.docx`.
 **Motivo:** a equipe escolheu manter na entrega só o anexo que o enunciado exige.
 
-### D-030 · 07/10/2026 · [Organização] F2-E2 v2 sem anexo: as quatro perguntas no corpo
-A F2-E2 deixa de ter anexo. As quatro perguntas entram no corpo, porque são exigência da própria entrega. Na seção 4, a tabela das afirmações do mercado passou a ter as quatro perguntas e o destino de cada uma (Tabela 3). Na seção 5 entraram a Tabela 5 (indicadores propostos e as quatro perguntas, com a situação de hoje) e a Tabela 6 (indicadores descartados). O documento ficou com 5 páginas no total. Substitui a parte da D-029 que mantinha as três tabelas em anexo. A versão anterior está em `_Historico/2026-10-07_F2-E2_Auditoria_do_Ativo_v2_com-anexo.docx`.
+### D-027 · 07/10/2026 · [Organização] F2-E2 v2 sem anexo: as quatro perguntas no corpo
+A F2-E2 deixa de ter anexo. As quatro perguntas entram no corpo, porque são exigência da própria entrega. Na seção 4, a tabela das afirmações do mercado passou a ter as quatro perguntas e o destino de cada uma (Tabela 3). Na seção 5 entraram a Tabela 5 (indicadores propostos e as quatro perguntas, com a situação de hoje) e a Tabela 6 (indicadores descartados). O documento ficou com 5 páginas no total. Substitui a parte da D-026 que mantinha as três tabelas em anexo. A versão anterior está em `_Historico/2026-10-07_F2-E2_Auditoria_do_Ativo_v2_com-anexo.docx`.
 **Motivo:** a equipe entende que as quatro perguntas são análise da entrega, e não material de apoio.
 
-### D-031 · 07/10/2026 · [Organização] F2-E2 v2: uma tabela de indicadores e sem códigos internos
+### D-028 · 07/10/2026 · [Organização] F2-E2 v2: uma tabela de indicadores e sem códigos internos
 - Os indicadores ficam numa tabela só (Tabela 4), com as quatro perguntas. A coluna "Muda alguma decisão?" traz a decisão concreta e o limite que a dispara. A coluna "Quem responde" saiu: quem autoriza, monitora e suspende é tema da Entrega 3. Os descartados viraram a Tabela 5.
 - Saiu a frase "os pontos de ação são proposta da equipe, e os cargos são provisórios até a Entrega 3". A legenda da Tabela 4 diz que os limites são proposta da equipe.
 - Saíram do texto os códigos internos (D-XX, C1, C2). Os compromissos aparecem pelo nome, com a origem na Declaração de Intenção da Fase 1.
@@ -151,7 +151,7 @@ A F2-E2 deixa de ter anexo. As quatro perguntas entram no corpo, porque são exi
 Versões anteriores em `_Historico/2026-10-07_F2-E2_Auditoria_do_Ativo_v2_com-codigos-internos.docx` e `_Historico/2026-10-07_F2-E2_Auditoria_do_Ativo_v2_editado-no-word-3.docx`.
 **Motivo:** a banca não tem acesso aos arquivos internos, e a E2 deve tratar só do que o enunciado pede dela.
 
-### D-032 · 07/10/2026 · [Organização] F2-E2 v2 enxuta para o documento único, com figuras
+### D-029 · 07/10/2026 · [Organização] F2-E2 v2 enxuta para o documento único, com figuras
 A F2-E2 foi reescrita para entrar no documento único da fase mostrando só o essencial. O corpo caiu para cerca de 3,5 páginas. As tabelas de texto viraram figuras:
 - Figura 1: composição da base, com o que é exclusivo da Lumis e o que está frágil.
 - Figura 2: o que cada variável de acesso diz medir e o que mede de fato.
@@ -159,32 +159,3 @@ A F2-E2 foi reescrita para entrar no documento único da fase mostrando só o es
 - Figuras 4 e 5: matrizes curtas com as quatro perguntas, uma para as métricas de hoje e outra para os cinco indicadores.
 As respostas das matrizes têm poucas palavras. Saíram do corpo a tabela das fontes, a referência ao NIST, a revisão de 10% em parágrafo próprio e o indicador descartado "acurácia global em campo", que repetia a linha dos 94%. A "decisão de agora" vem antes da Figura 5. As figuras são geradas por `figuras/gerar_figuras_v2.py`. A versão anterior está em `_Historico/2026-10-07_F2-E2_Auditoria_do_Ativo_v2_antes-enxugar-para-documento-unico.docx`.
 **Motivo:** as entregas vão para um documento único, que não pode ficar gigante, e a equipe pediu menos informação e mais figuras.
-
-### D-033 · 07/10/2026 · [Organização] Renumeração das decisões duplicadas depois do merge da F2-E5
-O merge da F2-E5 deixou duas entradas D-027, duas D-028 e duas D-029. As três mais recentes, todas da F2-E2, passaram a D-030 ("sem anexo"), D-031 ("uma tabela de indicadores e sem códigos internos") e D-032 ("enxuta para o documento único"). Na D-030, a referência "substitui a parte da D-026" virou D-029, que é a entrada do anexo depois da renumeração do merge. O texto das entradas não mudou. Versão anterior em `_Historico/2026-10-07_DECISOES_antes-renumerar-duplicadas.md`.
-**Motivo:** cada decisão precisa de um número único para ser citada na Fase 7.
-
-### D-034 · 07/10/2026 · [Lumis] Linha de responsabilidade das decisões do Lumis Insight (F2-E3)
-- A CEO autoriza cada uso do sistema em cada cliente, com parecer obrigatório do Head of AI Management e da DPO. A autorização do cliente continua necessária, mas não basta.
-- O CTO libera versões novas e atualizações do fornecedor. O Head of AI Management confere o teste por grupo e pode barrar a liberação.
-- O responsável por Dados mede o erro por grupo e cruza as reclamações. Um auditor externo, contratado pela CEO, refaz a conta.
-- O Head of AI Management acompanha os alertas e decide suspender ou restringir. O CTO e a DPO também podem suspender. O CTO executa, com o responsável por Dados como suplente. Religar exige o CTO e o Head of AI Management juntos; sem acordo, o sistema segue suspenso e a CEO leva o caso ao conselho.
-- Prazo: decisão em até 24 horas e execução em mais 24 depois de confirmado o alerta, imediata com dano clínico em curso. É meta até o teste de suspensão, em até 30 dias e depois a cada trimestre.
-- Alertas lidos a cada quinze dias. Priorização: grupo com o dobro do erro do melhor (F2-E2). Protocolo: o dobro de sugestões alteradas pelo médico (E3 da F2-E5). Crédito: aprovação abaixo de 80% da melhor faixa de CEP (E5 da F2-E5). Sinistro: o dobro de negativas da melhor faixa [proposta].
-- Executa a D-026: o Head of AI Management ordena a restrição e o CTO executa de imediato.
-- Muda a F1-E2, que dava o poder de suspender à liderança em conjunto, e amplia o C4, que dava ao Head of AI Management só a coordenação de incidentes. Os compromissos C1 a C5 ficam com o texto atual e ganham cargo: C1 com o Head of AI Management, C5 com a DPO, a leitura quinzenal do C2 com o responsável por Dados e o Head of AI Management. Confirma os cargos provisórios da D-024 e da F2-E5.
-- Setor novo: portão com o responsável por Produto (leva o pedido), a CEO (decide) e o parecer do Head of AI Management e da DPO; modo sombra até haver erro medido por grupo; especialista do domínio que define erro grave; suspensão testada antes da entrada. O exemplo é o pedido do setor veterinário [fonte: Cap. 2, Quadro 16].
-[fonte: Cap. 2, Quadros 12 a 16; F1-E2; F1-E3; F2-E2; F2-E5] · Compromissos ligados: C1 a C5.
-**Motivo:** o enunciado pede que toda responsabilidade termine em um cargo, e hoje só a liberação de versão tem dono. Quem libera não deve ser o único que acompanha e suspende.
-
-### D-035 · 07/10/2026 · [Organização] F2-E3 v1 enxuta e com cargos sem nome
-A F2-E3 v1 foi gerada por `F2-E3_Linha_de_Responsabilidade/figuras/montar_v1.py`, com cerca de 3,5 páginas, para entrar no documento único. Os responsáveis aparecem pelo papel (CEO, CTO, DPO, Head of AI Management, responsável por Dados, Comercial e Produto), sem nome. As tabelas têm células curtas; explicações ficam no texto. O levantamento completo fica como apoio em `F2-E3_Levantamento_v1.md`.
-**Motivo:** pedido da equipe: o documento único não pode ficar gigante, e a E3 deve mostrar só o essencial.
-
-### D-036 · 07/10/2026 · [Lumis] F2-E5 alinhada à F2-E2 e à F2-E3
-- O indicador E1 e a métrica pública passam a ter meta de até 1,5 vez e limite de 2 vezes. Entre 1,5 e 2 vezes, o subgrupo fica em alerta, com revisão humana de 10% dos casos. Acima de 2 vezes, a recomendação automática é restrita de imediato. Sai a espera de dois ciclos quinzenais, que contrariava a D-026. A meta de 1,5 vez da D-024 continua.
-- A conferência contra os compromissos deixa de dizer que nada contradiz o C2 e registra o ajuste.
-- Os cargos seguem a D-034, citados pelo papel. Os compromissos aparecem pelo nome no .docx, sem códigos internos (D-031).
-- Correção da numeração: E2 (reclamações) retoma o indicador 3 da F2-E2, e P1 (direito de uso) o indicador 2.
-Versão anterior em `_Historico/2026-10-07_F2-E5_Due_Diligence_ESG_v1_antes-alinhar-com-E2-E3.docx`. Responsável pela entrega: Felipe Alef, que deve revisar o ajuste.
-**Motivo:** as entregas vão juntas no documento único, e o mesmo indicador não pode ter dois limites nem duas regras de suspensão.

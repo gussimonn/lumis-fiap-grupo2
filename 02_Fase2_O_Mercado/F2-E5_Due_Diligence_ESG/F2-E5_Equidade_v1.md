@@ -51,23 +51,23 @@ Juntas, pesam 55,1% do modelo [cálculo]. Quem tem menos acesso aparece nos dado
 
 ## 4. Como medir
 
-Proposta da equipe. Os indicadores 1 e 2 retomam os indicadores 1 e 5 da F2-E2, para que as duas entregas falem a mesma língua.
+Proposta da equipe. Os indicadores 1 e 2 retomam os indicadores 1 e 3 da F2-E2, para que as duas entregas falem a mesma língua.
 
 | # | Indicador | Como se calcula | Limite proposto | O que acontece se passar do limite | Periodicidade |
 |---|---|---|---|---|---|
-| E1 | Falso negativo por subgrupo e razão entre o pior e o melhor subgrupo | Falso negativo em produção aberto por idade × CEP; razão = pior ÷ melhor | Razão de até 1,5 vez (hoje: 3,0) [proposta] | Revisão humana obrigatória para o subgrupo afetado e, se persistir, suspensão daquela decisão até a correção, como prevê o C2 | Quinzenal, alinhada ao C2 |
+| E1 | Falso negativo por subgrupo e razão entre o pior e o melhor subgrupo | Falso negativo em produção aberto por idade × CEP; razão = pior ÷ melhor | Meta de até 1,5 vez; limite de 2 vezes, o mesmo da F2-E2 (hoje: 3,0) [proposta] | Entre 1,5 e 2 vezes: alerta, com revisão humana de 10% dos casos. Acima de 2 vezes: restrição imediata da recomendação automática no subgrupo, como prevê o C2 e recomenda a F2-E2 (D-026) | Quinzenal, alinhada ao C2 |
 | E2 | Reclamações por 1.000 pacientes, por subgrupo, cruzadas com E1 | Reclamações formais ÷ pacientes processados, por faixa de CEP e idade | Nenhuma faixa acima de 2 vezes a média [proposta] | Auditoria de equidade e investigação da causa | Mensal |
 | E3 | Taxa de reversão humana por subgrupo | Classificações alteradas por profissionais (registro do C3) ÷ classificações revisadas | Diferença entre subgrupos sinalizada quando passar de 2 vezes [proposta] | Revisão das variáveis de acesso (seção 2) | Mensal |
 | E4 | Representatividade antes de entrar no mercado | Peso de cada subgrupo nos dados de validação ÷ peso na população atendida no novo mercado | Todo subgrupo com amostra suficiente para medir E1 [proposta] | Sem isso, o mercado não entra em produção | Uma vez, antes da entrada; depois, anual |
 | E5 | Diferença de aprovação no crédito (só no caso 2) | Taxa de aprovação de cada faixa de CEP ÷ taxa da faixa com mais aprovações | Mínimo de 0,8, por analogia com a "regra dos quatro quintos", criada nos EUA para seleção de emprego: taxa de um grupo abaixo de 80% da do grupo com maior taxa é tratada como indício de impacto desigual [contexto externo: 29 CFR § 1607.4(D), https://www.law.cornell.edu/cfr/text/29/1607.4] | Revisão humana obrigatória e retirada de CEP e cobertura do modelo de crédito | Mensal |
 
-**Quem responde (provisório, a fechar na F2-E3):** a apuração fica com Yuri Nakamura (Dados) e a decisão de exigir revisão ou suspender fica com o Head of AI Management, como coordenador previsto no C4 [fonte: Cap. 2, Quadro 13; F1-E3].
+**Quem responde (fechado na F2-E3):** o responsável por Dados apura, o Head of AI Management decide a revisão ou a restrição, e o CTO executa. O poder individual de suspender do Head of AI Management vem da F2-E3, e não do C4, que dá só a coordenação de incidentes [fonte: Cap. 2, Quadro 13; F1-E3; F2-E3].
 
 ## 5. Condição para a expansão
 
 Do ponto de vista de equidade, recomendamos que nenhuma frente nova entre em produção antes de:
 
-1. o E1 do Brasil estar dentro do limite, ou com revisão humana obrigatória nos subgrupos acima dele;
+1. o E1 do Brasil estar dentro do limite, com a recomendação automática já restrita nos subgrupos acima dele;
 2. o E4 estar cumprido no novo mercado, com validação local por subgrupo;
 3. no crédito, o modelo ser validado sem CEP e sem tipo de cobertura, ou com o E5 acompanhado desde o primeiro dia.
 

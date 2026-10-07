@@ -51,7 +51,7 @@ Isso já entra em choque com o compromisso C5, que promete usar "apenas os dados
 
 | # | Indicador | Hoje | Meta proposta | Responsável | Periodicidade |
 |---|---|---|---|---|---|
-| P1 | % dos registros de clientes usados em treinamento com autorização explícita e revisão jurídica vigente (retoma o indicador 3 da F2-E2) | 0% com revisão jurídica; 64,6% com autorização explícita [cálculo] | 100% antes de qualquer nova frente; registros sem base saem do treinamento [proposta] | Ana Beatriz Rangel (DPO) | Trimestral |
+| P1 | % dos registros de clientes usados em treinamento com autorização explícita e revisão jurídica vigente (retoma o indicador 2 da F2-E2) | 0% com revisão jurídica; 64,6% com autorização explícita [cálculo] | 100% antes de qualquer nova frente; registros sem base saem do treinamento [proposta] | Ana Beatriz Rangel (DPO) | Trimestral |
 | P2 | % dos acessos a dados de pacientes revisados nos últimos 90 dias (compromisso C5) | [não consta] | 100% [fonte: F1-E3] | Ana Beatriz Rangel (DPO), com Yuri Nakamura (Dados) | A cada 90 dias |
 | P3 | Incidentes de privacidade registrados e dias até a ação corretiva (compromisso C5) | Registro de incidentes existe, mas sem categoria de privacidade [fonte: Cap. 2, Quadro 14] | Registro no dia em que é identificado; ação corretiva documentada [fonte: F1-E3] | Ana Beatriz Rangel (DPO) | Mensal |
 
