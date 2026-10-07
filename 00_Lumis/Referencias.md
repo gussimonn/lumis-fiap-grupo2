@@ -9,6 +9,8 @@ Arquivo vigente. Acrescente aqui toda referência usada em qualquer entrega, ind
 | PENNESTRÌ, F. et al. Sharing reliable information worldwide: healthcare strategies based on artificial intelligence need external validation. *BMC Medical Informatics and Decision Making*, v. 25, 56, 2025. DOI: 10.1186/s12911-025-02883-2. | F1-E1 |
 | ZHOU, N. et al. Concordance Study Between IBM Watson for Oncology and Clinical Practice for Patients with Cancer in China. *The Oncologist*, v. 24, n. 6, p. 812–819, 2019. DOI: 10.1634/theoncologist.2018-0255. | F1-E1 |
 | WONG, A. et al. External Validation of a Widely Implemented Proprietary Sepsis Prediction Model in Hospitalized Patients. *JAMA Internal Medicine*, v. 181, n. 8, p. 1065–1070, 2021. DOI: 10.1001/jamainternmed.2021.2626. | F1-E1 |
+| BRASIL. Lei nº 13.709, de 14 de agosto de 2018. Lei Geral de Proteção de Dados Pessoais (LGPD). Texto compilado. Disponível em: https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13709.htm. Acesso em: 7 out. 2026. | F2-E5 |
+| ESTADOS UNIDOS. 29 CFR § 1607.4: Information on impact (Uniform Guidelines on Employee Selection Procedures). Disponível em: https://www.law.cornell.edu/cfr/text/29/1607.4. Acesso em: 7 out. 2026. | F2-E5 |
 
 ## Bibliografia do curso
 

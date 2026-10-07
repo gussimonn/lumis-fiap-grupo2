@@ -1,4 +1,4 @@
-"""F2-E2 v2: relatório ao conselho, a partir do levantamento (F2-E2_Levantamento_v1.md) e das decisões D-023 e D-024.
+"""F2-E2 v2: relatório ao conselho, a partir do levantamento (F2-E2_Levantamento_v1.md) e das decisões D-026 e D-027.
 Base de formatação: F2-E1 v2 (capa só com título e subtítulo, cabeçalho e rodapé do design system)."""
 import re, sys, docx
 from docx.shared import Cm, RGBColor
@@ -181,7 +181,7 @@ TABELA([
     ['**5. Afirmações públicas auditáveis**', 'Afirmação que alguém de fora não consegue refazer', 'Retirar do material antes da próxima apresentação', 'Camila Torres propõe; Head of AI aprova'],
 ], [4.2, 4.0, 4.6, 3.2], 'Tabela 4. Os cinco indicadores. Valores de hoje, as quatro perguntas e os indicadores descartados estão no Anexo. Fonte: Cap. 2, Quadros 7, 10, 13, 14 e 17; propostas da equipe.')
 P('Como a Lumis mede o erro do próprio produto, cada indicador tem conferência de fora: o cliente refaz a conta do próprio grupo, como o Vila Ipê já fez, e um auditor confere a cada trimestre. Para a revisão quinzenal ter casos suficientes, a revisão humana sobe de 2% para 10% nos grupos críticos. O NIST pede que todo sistema de IA tenha responsável e meio definidos para ser desligado⁴.')
-P('**A decisão de agora.** Dois grupos já passam do ponto de ação do indicador 1: idosos de CEP C e de CEP D/E. Pelo nosso compromisso de Não Amplificação de Danos (C2), o uso é suspenso até a correção quando há padrão de viés. Por isso recomendamos restringir já a recomendação automática nesses grupos (D-023). Cerca de um quarto das decisões de priorização volta à triagem do próprio hospital, enquanto o modelo segue rodando em paralelo, sem decidir, para medir a correção. Quanto isso pesa em cada hospital [não consta], e a Entrega 3 define quem executa a restrição.')
+P('**A decisão de agora.** Dois grupos já passam do ponto de ação do indicador 1: idosos de CEP C e de CEP D/E. Pelo nosso compromisso de Não Amplificação de Danos (C2), o uso é suspenso até a correção quando há padrão de viés. Por isso recomendamos restringir já a recomendação automática nesses grupos (D-026). Cerca de um quarto das decisões de priorização volta à triagem do próprio hospital, enquanto o modelo segue rodando em paralelo, sem decidir, para medir a correção. Quanto isso pesa em cada hospital [não consta], e a Entrega 3 define quem executa a restrição.')
 
 # ---------------- 6. tese ----------------
 H1('6. O que isso muda na tese')
