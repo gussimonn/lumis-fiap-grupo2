@@ -31,7 +31,7 @@
 | F2-E2 | Auditoria do Ativo: Dados e Métricas | [v1 .docx](02_Fase2_O_Mercado/F2-E2_Auditoria_do_Ativo/F2-E2_Auditoria_do_Ativo_v1.docx) · base: v1 do colega (PDF) | 🟡 v1 do colega passada para o padrão visual, texto sem revisão; próximo passo: revisão |
 | F2-E3 | Linha de Responsabilidade | — | ⚪ A fazer |
 | F2-E4 | Diagnóstico de Cultura e Funil de Inovação | — | ⚪ A fazer |
-| F2-E5 | Due Diligence ESG da Expansão | [Materialidade v1](02_Fase2_O_Mercado/F2-E5_Due_Diligence_ESG/F2-E5_Materialidade_v1.md) · [Equidade v1](02_Fase2_O_Mercado/F2-E5_Due_Diligence_ESG/F2-E5_Equidade_v1.md) (apoio) · responsável: Felipe | 🟡 Etapas 1 e 2 de 4 (materialidade e equidade) feitas; recorte em D-023 |
+| F2-E5 | Due Diligence ESG da Expansão | [Materialidade v1](02_Fase2_O_Mercado/F2-E5_Due_Diligence_ESG/F2-E5_Materialidade_v1.md) · [Equidade v1](02_Fase2_O_Mercado/F2-E5_Due_Diligence_ESG/F2-E5_Equidade_v1.md) · [Privacidade v1](02_Fase2_O_Mercado/F2-E5_Due_Diligence_ESG/F2-E5_Privacidade_v1.md) (apoio) · responsável: Felipe | 🟡 Etapas 1 a 3 de 4 (materialidade, equidade e privacidade) feitas; recorte em D-023 |
 | F2-A | Apêndice de Prompts (da F2-E1) | [Registro v1](02_Fase2_O_Mercado/F2-A_Apendice_de_Prompts/F2-A_Registro_de_Prompts_v1.md) · [Verificação de URLs](02_Fase2_O_Mercado/F2-A_Apendice_de_Prompts/F2-A_Verificacao_de_URLs_v1.md) | 🟢 Prompts registrados; URLs da F2-E1 v2 conferidas por Felipe em 05/10/2026 (9/9 confirmadas, 2 sugestões de precisão) |
 | F2-M | Memorando ao Conselho (máx. 2 páginas) | — | ⚪ A fazer |
 | F2-D | Documento Integrado + planilhas e matrizes | — | ⚪ A fazer |
