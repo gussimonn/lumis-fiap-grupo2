@@ -56,4 +56,4 @@ Um tema é material quando tem nota Alta em pelo menos um dos dois eixos.
 1. ~~Matriz de materialidade~~ (esta)
 2. ~~Riscos de equidade~~ (ver [F2-E5_Equidade_v1.md](F2-E5_Equidade_v1.md))
 3. ~~Privacidade e dados sensíveis~~ (ver [F2-E5_Privacidade_v1.md](F2-E5_Privacidade_v1.md))
-4. Métrica de impacto pública, com periodicidade e cargo responsável. Depois: montar o .docx no modelo da equipe e conferir contra C1 a C5.
+4. ~~Métrica pública e conferência contra C1 a C5~~ (ver [F2-E5_Metrica_Publica_v1.md](F2-E5_Metrica_Publica_v1.md)). Falta: montar o .docx no modelo da equipe.

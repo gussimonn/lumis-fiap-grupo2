@@ -106,3 +106,8 @@ A Tabela 3 ("difícil de copiar") ganhou células de nível mescladas e cor de f
 ### D-023 · 07/10/2026 · [Organização] F2-E5: qual expansão a due diligence analisa
 O enunciado pede os riscos "no novo mercado", mas a direção de crescimento só será escolhida no memorando (F2-M). A F2-E5 analisa a expansão como o Vetor Capital a propõe (dois novos países e o Lumis Insight como plataforma) [fonte: Cap. 2, 1.1] e usa dois casos concretos do backlog: a expansão para o México e o módulo de risco de crédito para bancos [fonte: Cap. 2, Quadro 16]. Responsável pela entrega: Felipe Alef.
 **Motivo:** deixar a F2-E5 útil para qualquer direção que o memorando escolher e permitir que ela aponte uma expansão arriscada demais.
+
+### D-024 · 07/10/2026 · [Lumis] Métrica de impacto pública: falso negativo por subgrupo
+A Lumis passa a publicar, a cada trimestre, a taxa de falso negativo da priorização de atendimento por subgrupo de idade e faixa de CEP, com sensibilidade, tamanho da amostra e a razão entre o pior e o melhor subgrupo. Ponto de partida: razão de 3,0 vezes (1º sem/2026). Meta proposta: até 1,5 vez em 12 meses. Publicação pelo Head of AI Management, apuração por Yuri Nakamura (Dados), auditoria independente anual. Responsáveis provisórios até a F2-E3. Detalhes em `F2-E5_Due_Diligence_ESG/F2-E5_Metrica_Publica_v1.md`.
+[fonte: Cap. 2, Quadros 10 e 17; F2-E5] · Compromissos ligados: C1 e C2.
+**Motivo:** é o número que originou a crise, mede o dano mais grave do produto e mostra a distribuição que a média esconde.
