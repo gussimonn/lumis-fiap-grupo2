@@ -1,17 +1,17 @@
 # ESTADO — LumisOS
 
-**Atualizado em:** 07/10/2026 · **Conferido contra:** arquivos reais da pasta nesta data.
+**Atualizado em:** 08/10/2026 · **Conferido contra:** arquivos reais da pasta nesta data.
 
 ## Onde estamos
 
-**Fase 2 — O Mercado.** A F2-E1 está na v2, em revisão pela equipe. A Fase 1 está com as 3 entregas em versão revisada.
+**Fase 2 — O Mercado.** As cinco entregas estão em versão para revisão. O documento único (F2-D v1, 23 páginas) e o memorando ao conselho (F2-M v1, 2 páginas) foram montados em 08/10/2026 e aguardam a revisão da equipe antes do envio pelo portal. A Fase 1 está com as 3 entregas em versão revisada.
 
 ## Ciclo completo
 
 | Fase | Capítulo | Desafio | Enunciado | Status |
 |---|---|---|---|---|
 | 1 | A Chegada | Entender o terreno, mapear os afetados e assumir um compromisso ético explícito | Recebido | ✅ 3/3 entregas revisadas |
-| 2 | O Mercado | Mapear o ecossistema de IA e construir uma tese de crescimento defensável (prazo de 60 dias do Vetor Capital) | Recebido | 🟡 Em andamento: E1, E2, E3 e E5 em versão para revisão; faltam E4, memorando e documento único |
+| 2 | O Mercado | Mapear o ecossistema de IA e construir uma tese de crescimento defensável (prazo de 60 dias do Vetor Capital) | Recebido | 🟡 Em andamento: cinco entregas em versão para revisão; documento único e memorando v1 montados (D-042 a D-044); falta revisar e enviar |
 | 3 | O Motor | Entender, sem programar, como o sistema decide, com que dados aprende e quais são seus limites | Não liberado | ⚪ |
 | 4 | As Regras | Framework de governança que resista a auditoria externa | Não liberado | ⚪ |
 | 5 | O Produto | Próximo passo do Lumis Insight: escopo, limites, roadmap e critérios de sucesso | Não liberado | ⚪ |
@@ -30,11 +30,11 @@
 | F2-E1 | Mapa do Território | [**v2 .docx**](02_Fase2_O_Mercado/F2-E1_Mapa_do_Territorio/F2-E1_Mapa_do_Territorio_v2.docx) · base: v1 do colega · [Levantamento](02_Fase2_O_Mercado/F2-E1_Mapa_do_Territorio/F2-E1_Levantamento_v1.md) · [Mercado e concorrentes](02_Fase2_O_Mercado/F2-E1_Mapa_do_Territorio/F2-E1_Mercado_e_Concorrentes_v1.md) | 🟡 v2 enxuta, com 3 figuras e 4 tabelas (D-017 a D-021); aguarda revisão da equipe |
 | F2-E2 | Auditoria do Ativo: Dados e Métricas | [**v2 .docx**](02_Fase2_O_Mercado/F2-E2_Auditoria_do_Ativo/F2-E2_Auditoria_do_Ativo_v2.docx) · base: v1 do colega e [Levantamento](02_Fase2_O_Mercado/F2-E2_Auditoria_do_Ativo/F2-E2_Levantamento_v1.md) · [Dados Q7–11](02_Fase2_O_Mercado/F2-E2_Auditoria_do_Ativo/Dados_Quadros_7-11.md) | 🟡 v2 enxuta para o documento único: 4 páginas, 5 figuras, sem tabelas de texto (D-026 a D-032); falta conferir as 3 referências no original |
 | F2-E3 | Linha de Responsabilidade | [**v1 .docx**](02_Fase2_O_Mercado/F2-E3_Linha_de_Responsabilidade/F2-E3_Linha_de_Responsabilidade_v1.docx) · [Levantamento](02_Fase2_O_Mercado/F2-E3_Linha_de_Responsabilidade/F2-E3_Levantamento_v1.md) | 🟡 v1 enxuta (4 páginas, cargos sem nome) para o documento único (D-034, D-035); aguarda revisão da equipe |
-| F2-E4 | Diagnóstico de Cultura e Funil de Inovação | — | ⚪ A fazer |
+| F2-E4 | Diagnóstico de Cultura e Funil de Inovação | [**v1 .docx**](02_Fase2_O_Mercado/F2-E4_Cultura_e_Funil_de_Inovacao/F2-E4_Cultura_e_Funil_de_Inovacao_v1.docx) · [Levantamento v1](02_Fase2_O_Mercado/F2-E4_Cultura_e_Funil_de_Inovacao/F2-E4_Levantamento_v1.md) · [Registro de prompts](02_Fase2_O_Mercado/F2-A_Apendice_de_Prompts/F2-A_Registro_de_Prompts_F2-E4_v1.md) | 🟡 v1 com 5 páginas, 3 figuras e 5 tabelas (D-037 a D-041); aguarda revisão da equipe; falta abrir as 3 referências no original |
 | F2-E5 | Due Diligence ESG da Expansão | [**v1 .docx**](02_Fase2_O_Mercado/F2-E5_Due_Diligence_ESG/F2-E5_Due_Diligence_ESG_v1.docx) · apoio: [Materialidade v1](02_Fase2_O_Mercado/F2-E5_Due_Diligence_ESG/F2-E5_Materialidade_v1.md) · [Equidade v1](02_Fase2_O_Mercado/F2-E5_Due_Diligence_ESG/F2-E5_Equidade_v1.md) · [Privacidade v1](02_Fase2_O_Mercado/F2-E5_Due_Diligence_ESG/F2-E5_Privacidade_v1.md) · [Métrica pública v1](02_Fase2_O_Mercado/F2-E5_Due_Diligence_ESG/F2-E5_Metrica_Publica_v1.md) · responsável: Felipe | 🟡 v1 com 1 figura e 6 tabelas (D-023 a D-025), alinhada à E2 e à E3 em 07/10/2026 (D-036); Felipe revisa o ajuste |
-| F2-A | Apêndice de Prompts (da F2-E1) | [Registro F2-E1](02_Fase2_O_Mercado/F2-A_Apendice_de_Prompts/F2-A_Registro_de_Prompts_v1.md) · [Registro F2-E2](02_Fase2_O_Mercado/F2-A_Apendice_de_Prompts/F2-A_Registro_de_Prompts_F2-E2_v1.md) · [Verificação de URLs](02_Fase2_O_Mercado/F2-A_Apendice_de_Prompts/F2-A_Verificacao_de_URLs_v1.md) | 🟢 Prompts registrados; URLs da F2-E1 v2 conferidas por Felipe em 05/10/2026 (9/9 confirmadas, 2 sugestões de precisão) |
-| F2-M | Memorando ao Conselho (máx. 2 páginas) | — | ⚪ A fazer |
-| F2-D | Documento Integrado + planilhas e matrizes | — | ⚪ A fazer |
+| F2-A | Apêndice de Prompts (da F2-E1) | [Registro F2-E1](02_Fase2_O_Mercado/F2-A_Apendice_de_Prompts/F2-A_Registro_de_Prompts_v1.md) · [Registro F2-E2](02_Fase2_O_Mercado/F2-A_Apendice_de_Prompts/F2-A_Registro_de_Prompts_F2-E2_v1.md) · [Verificação de URLs](02_Fase2_O_Mercado/F2-A_Apendice_de_Prompts/F2-A_Verificacao_de_URLs_v1.md) | 🟢 Prompts registrados; URLs da F2-E1 v2 conferidas por Felipe em 05/10/2026 (9/9 confirmadas, 2 sugestões de precisão); os prompts da F2-E1 entram como Apêndice A do documento único |
+| F2-M | Memorando ao Conselho (máx. 2 páginas) | [**v1 .docx**](02_Fase2_O_Mercado/F2-M_Memorando_ao_Conselho/F2-M_Memorando_ao_Conselho_v1.docx) · gerado pelo script da F2-D | 🟡 v1 com 2 páginas: aceitar o aporte com condições e liberação por etapas, com cláusula de saída (D-042); aguarda revisão da equipe |
+| F2-D | Documento Integrado + planilhas e matrizes | [**v1 .docx**](02_Fase2_O_Mercado/F2-D_Documento_Integrado/F2-D_Documento_Integrado_v1.docx) · [script](02_Fase2_O_Mercado/F2-D_Documento_Integrado/figuras/montar_v1.py) · [README](02_Fase2_O_Mercado/F2-D_Documento_Integrado/README.md) | 🟡 v1 com 23 páginas: Entrega 5 primeiro, depois 1 a 4, fechamento com as doze condições prévias e Apêndice A com os prompts (D-043, D-044); aguarda revisão da equipe; falta a planilha das contas |
 
 ## Pendências e informações que não constam
 
@@ -48,8 +48,9 @@
 
 - **PDFs originais na raiz:** foram copiados para a estrutura. A remoção dos originais depende de autorização (ver D-002).
 
-
+- **Antes do envio da Fase 2:** revisar o documento único e o memorando; decidir a data da primeira publicação da métrica pública e se há substituto do Responsável por Dados nos portões do funil; montar a planilha das contas da equipe (item 4.2 do enunciado); abrir no original Nagji e Tuff (com data de acesso), Schein, Cooper, Obermeyer e o guia da ANPD; conferir na LGPD a redação usada para o art. 11, § 4º, e o art. 33. Detalhes no [README da F2-D](02_Fase2_O_Mercado/F2-D_Documento_Integrado/README.md).
+- **Entregas individuais x documento único:** os ajustes de coerência da D-044 (por exemplo, "seis instrumentos", alertas quinzenais e a parcela marcada como prioridade na métrica pública) estão só no documento único. Os .docx das entregas ficaram como estavam; a versão de envio é o documento único.
 
 ## Próximo passo
 
-A equipe revisa a F2-E1 v2. Em seguida: F2-E2 (Auditoria do Ativo) e F2-E3 (Linha de Responsabilidade). Ver a ordem sugerida em [02_Fase2_O_Mercado/README.md](02_Fase2_O_Mercado/README.md).
+A equipe revisa o documento único e o memorando. Depois: decisões pendentes, planilha das contas, conferência das referências no original e envio pelo portal.
