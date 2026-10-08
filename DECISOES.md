@@ -251,3 +251,22 @@ A equipe decidiu a direção do memorando (F2-M): recomendar ao conselho aceitar
 - **Termos e cargos:** "seis instrumentos de dados", como no Quadro 7, no lugar de "seis contratos"; a mesa de campo inclui o Head of AI Management (D-040); a política de privacidade passa ao grupo "antes de cada frente nova"; a saída do modo sombra segue o critério do funil (quatro leituras com o pior grupo até 1,5 vez o melhor); a exceção de crédito "só até o modo sombra" vale para o módulo novo, porque a sinalização de crédito já roda (Quadro 12).
 [fonte: Cap. 2, Quadros 8 a 10, 12 e 17; F2-E2 a F2-E5; D-024, D-034, D-036, D-038, D-040] · Compromissos ligados: C1, C2 e C5.
 **Motivo:** as entregas foram feitas em momentos diferentes. No documento único, o mesmo indicador não pode ter dois limites, duas frequências nem duas definições.
+
+### D-045 · 08/10/2026 · [Organização] Documento único e memorando v2: versão enxuta para quem decide
+A equipe avaliou que a v1 do documento único estava correta, mas pesada para leitura: cerca de 90 marcadores no corpo (46 de fonte, 22 de hipótese e 22 de "não consta") e 21 tabelas, o que fazia o leitor perder o argumento. A v2 muda a forma e mantém todas as decisões, números, limites, cargos e condições (D-042 a D-044).
+- **Corpo:** a decisão e o porquê. Cada entrega começa em página nova, abre com a conclusão e fica com uma ou duas peças principais. Corpo de 15 páginas (eram 19).
+- **Origem:** uma nota na página da tese diz que todo número sobre a Lumis vem do Anexo A, com o quadro na legenda de cada figura e tabela. Sai o `[fonte]` do texto corrido; citação direta leva a seção entre parênteses.
+- **Hipóteses:** marcadas só onde sustentam decisão (7 no corpo, 1 no memorando).
+- **O que não consta:** reunido no quadro "O que o Anexo A não informa", no fechamento, por tema e com a seção onde pesa. Atende ao enunciado ("identificar o que falta também é resultado de análise").
+- **Apêndice B (quadros de apoio):** recebe as tabelas e figuras de prova que saíram do corpo, com os marcadores originais. Também atende ao item "planilhas, matrizes ou diagramas" do 4.2, junto com a planilha das contas, ainda pendente.
+- **Memorando:** mesma estrutura, com 1 marcador (eram 11) e as fontes numa nota final.
+- **Histórico:** v1 do documento único (com a correção feita no Word pela equipe, "Porque" no lugar de "Por que"), v1 do memorando e o script da v1 em `_Historico/2026-10-08_*`. Na v2 a frase sobre os idosos foi para o quadro do que não consta e manteve "Por que", que é a forma correta em pergunta indireta.
+[fonte: pedido da equipe em 08/10/2026; Cap. 2, 4.2 e texto antes da Entrega 1] · Compromissos ligados: nenhum alterado.
+**Motivo:** o conselho e o comitê do Vetor precisam decidir lendo o corpo em poucos minutos; a prova continua no documento, no apêndice.
+
+### D-046 · 08/10/2026 · [Organização] "Teste em paralelo" no lugar de "modo sombra"; memorando v3 e documento único v3
+- **Termo:** "modo sombra" (tradução de *shadow mode*, jargão de engenharia de ML) sai do documento único e do memorando. Entra "teste em paralelo": o sistema roda junto ao processo atual, sem decidir. A etapa do funil passa a se chamar "Teste em paralelo"; as regras (fatia de até mais 30%, quatro leituras quinzenais com o pior grupo até 1,5 vez o melhor, encerramento com seis leituras acima de 2 vezes) não mudam. "Piloto" foi descartado porque costuma indicar uso real em pequena escala. Os levantamentos e as decisões anteriores (D-038 a D-041) ficam com o termo antigo, que equivale ao novo.
+- **Memorando v3:** parte da v2 editada no Word pela equipe (Aster, seguradoras e bancos; fase de teste do crédito; tabela de riscos reescrita). Condições prévias em tabela (condição, responsável e prazo); o pedido ao conselho sobe para o primeiro parágrafo; o uso do aporte vira uma frase; 2 páginas.
+- **Documento único v3:** o termo novo, a explicação de por que a Aster não chega a seguradoras e bancos (14 das 38 contas da Lumis) e a condição 12 com o mesmo texto do memorando.
+[fonte: pedido da equipe em 08/10/2026] · Compromissos ligados: nenhum alterado.
+**Motivo:** o leitor do conselho não conhece o termo técnico; memorando e documento único precisam usar o mesmo nome.
