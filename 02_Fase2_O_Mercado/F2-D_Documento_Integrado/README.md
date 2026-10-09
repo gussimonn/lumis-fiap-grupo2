@@ -1,5 +1,5 @@
 # F2-D — Documento Integrado (peça de envio)
-**Status:** 🟡 v3 em 08/10/2026; aguarda revisão da equipe · **Arquivo vigente:** [F2-D_Documento_Integrado_v3.docx](F2-D_Documento_Integrado_v3.docx) · **Decisões:** D-043 a D-046 · **Versões anteriores:** `_Historico/2026-10-08_F2-D_Documento_Integrado_v1.docx` e `_v2.docx`
+**Status:** 🟡 v3 em 08/10/2026; aguarda revisão da equipe · **Arquivo vigente:** [F2-D_Documento_Integrado_v3.docx](F2-D_Documento_Integrado_v3.docx) · **Decisões:** D-043 a D-047 · **Versões anteriores:** `_Historico/2026-10-08_F2-D_Documento_Integrado_v1.docx` e `_v2.docx`
 
 Documento único, com identificação da equipe, que reúne as cinco entregas articuladas entre si [fonte: Cap. 2, 4.2]. O memorando ao conselho vai em arquivo separado: [F2-M](../F2-M_Memorando_ao_Conselho/).
 
@@ -34,12 +34,15 @@ Os mesmos ajustes feitos no memorando: "modo sombra" virou "teste em paralelo" (
 
 Depois, a seção 4.4 foi reescrita: sem a citação de Nagji e Tuff, com o título "Como dividimos o tempo da equipe" e com "mês-pessoa" explicado na abertura da Entrega 4. A versão de antes está em `_Historico/2026-10-08_F2-D_Documento_Integrado_v3_antes-secao-4.4.docx`.
 
+Por último (D-047), a seção 5.4 foi refeita: a ficha da métrica pública tem só limite (o dobro) e meta (1,5 vez em 12 meses), marcados como proposta da equipe, sem a meta de 7,4%. A seção 5.2 ficou mais curta, o crédito usa "80% da melhor faixa" e o Apêndice B ganhou a tabela "De onde vem cada número". A mudança foi aplicada sobre o arquivo salvo no Word pela equipe (capa refeita e parágrafos justificados), que está em `_Historico/2026-10-08_F2-D_Documento_Integrado_v3_editado-no-word-antes-limites.docx`.
+
 ## Como foi montado
 - **Script:** [figuras/montar_v2.py](figuras/montar_v2.py) guarda o texto final de cada parte e gera o documento único e o memorando a partir do `00_Lumis/Design_System/Modelo_Entrega_Lumis.docx`. Para gerar de novo: `python montar_v2.py dossie saida.docx` ou `python montar_v2.py memo saida.docx`; `python montar_v2.py lint` confere códigos internos, travessões e remissões. O script da v1 está em `_Historico/2026-10-08_F2-D_montar_v1.py`.
 - **Texto:** o da v1, enxugado. As entregas individuais não mudaram.
 - **Figuras:** as mesmas da v1 ([figuras/gerar_figuras_e2_dossie.py](figuras/gerar_figuras_e2_dossie.py) para as quatro da Entrega 2).
 - **Conferência da v2:** números contra o Anexo A, as entregas e as decisões (nenhum número sem correspondência), lint sem avisos, páginas conferidas no PDF exportado pelo Word.
-- Se alguém editar o .docx no Word, guardar antes a versão anterior em `_Historico/`. O script não lê edições feitas no Word.
+- **O .docx vigente tem formatação feita no Word pela equipe** (capa nova e parágrafos justificados) que o script não gera. Para mudar texto: alterar o conteúdo em `montar_v2.py`, gerar um .docx temporário e aplicar o texto novo sobre o vigente com [figuras/sincronizar.py](figuras/sincronizar.py) (`python sincronizar.py vigente.docx gerado.docx saida.docx`), que mantém capa e formatação. Nunca substituir o vigente pelo gerado direto.
+- Se alguém editar o .docx no Word, guardar antes a versão anterior em `_Historico/`.
 
 ## Composição do envio (Cap. 2, 4.2)
 - [x] Documento único com identificação da equipe, com as cinco entregas articuladas

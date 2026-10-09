@@ -270,3 +270,12 @@ A equipe avaliou que a v1 do documento único estava correta, mas pesada para le
 - **Documento único v3:** o termo novo, a explicação de por que a Aster não chega a seguradoras e bancos (14 das 38 contas da Lumis) e a condição 12 com o mesmo texto do memorando.
 [fonte: pedido da equipe em 08/10/2026] · Compromissos ligados: nenhum alterado.
 **Motivo:** o leitor do conselho não conhece o termo técnico; memorando e documento único precisam usar o mesmo nome.
+
+### D-047 · 08/10/2026 · [Lumis] Limites de equidade apresentados como proposta da equipe; sai a meta de 7,4%
+- **Métrica pública (seção 5.4):** a ficha passa a ter limite (o dobro do erro do melhor grupo) e meta (1,5 vez em 12 meses), os dois marcados como proposta da equipe, com a justificativa do dobro. Sai a meta de 24 meses de nenhum grupo acima de 7,4%: o número é do caso (validação declarada, Quadro 9), mas usá-lo como meta foi ideia da equipe e acrescentava mais um nível. Saem também "sensibilidade" (é 100% menos o erro) e "valor do período anterior". Continua a publicação da parcela marcada como prioridade (D-044).
+- **Seção 5.2:** cada indicador diz o valor de hoje e o limite, com remissão à 5.4; a faixa de revisão de 10% fica no Apêndice B e nas seções 3.3 e 3.4.
+- **Crédito:** "0,8 da melhor" passa a "80% da melhor", como proposta da equipe e sem citar a regra americana.
+- **Apêndice B:** nova tabela "De onde vem cada número", que separa o que é do caso, o que é conta da equipe e o que é proposta da equipe.
+- Os limites e regras da D-036 e da D-044 não mudam; muda a forma de apresentar. O memorando já diz que metas e limites são propostas da equipe e não tem a meta de 7,4%; fica como está.
+[fonte: pedido da equipe em 08/10/2026; Cap. 2, Quadros 9, 10, 12 e 17] · Compromissos ligados: Não Amplificação de Danos e Transparência (texto sem mudança).
+**Motivo:** os limites pareciam regras do caso. Separar o que é dado do que é proposta torna a seção mais clara e mais honesta.
