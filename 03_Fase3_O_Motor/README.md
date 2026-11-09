@@ -1,7 +1,7 @@
 # Fase 3 · O Motor 🟡
 
-**Enunciado:** [_Enunciado/Cap03_O_Motor.pdf](_Enunciado/Cap03_O_Motor.pdf) (título do PDF: *AI in Action: Business Models, Algorithms and Ethics That Matter*) · **Dados:** Anexo A do mesmo PDF, Quadros 3 a 13 (no texto, A.1 a A.11)
-**Prazo no portal:** [não consta]. As "quatro semanas" até a auditoria são prazo da história.
+**Enunciado:** [_Enunciado/Cap03_O_Motor.pdf](_Enunciado/Cap03_O_Motor.pdf) (título do PDF: *AI in Action: Business Models, Algorithms and Ethics That Matter*) · **Dados:** Anexo A do mesmo PDF, Quadros 3 a 13 (no texto, A.1 a A.11). Transcrição do enunciado e do Anexo A feita pela equipe em 09/11/2026: [_Enunciado/Cap03_Enunciado_e_Anexo_A.md](_Enunciado/Cap03_Enunciado_e_Anexo_A.md)
+**Prazo no portal:** fase aberta de 15/10/2026 a 11/11/2026; a equipe trabalha com 10/11/2026. As "quatro semanas" até a auditoria são prazo da história.
 
 ## A história
 O conselho aceitou a recomendação da Fase 2, e o Vetor Capital acrescentou uma condição: antes de qualquer desembolso, uma auditoria técnica independente do Lumis Insight, feita por terceiros, com o Head of AI Management respondendo pelas conclusões. Ela começa em quatro semanas. Paulo Adjaí, o CTO, abre o sistema em uma reunião de seis horas. O que aparece é um sistema competente, cheio de decisões de negócio tomadas pelo time técnico porque não havia mais ninguém na sala para tomá-las. [fonte: Cap. 3, 1.1]
