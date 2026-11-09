@@ -4,7 +4,7 @@
 
 ## Onde estamos
 
-**Fase 2 — O Mercado.** As cinco entregas estão em versão para revisão. O documento único e o memorando ao conselho foram enxugados em 08/10/2026 (documento único v3, memorando v3): corpo de 15 páginas, prova no Apêndice B, um quadro do que o Anexo A não informa e "teste em paralelo" no lugar de "modo sombra" (D-045, D-046). Aguardam a revisão da equipe antes do envio pelo portal. A Fase 1 está com as 3 entregas em versão revisada.
+**Fase 3 — O Motor** (aberta desde 15/10/2026, prazo no portal 11/11/2026, equipe mira 10/11): enunciado transcrito em `03_Fase3_O_Motor/_Enunciado/` em 09/11/2026. **Fase 2 — O Mercado:** concluída no portal. As cinco entregas estão em versão para revisão. O documento único e o memorando ao conselho foram enxugados em 08/10/2026 (documento único v3, memorando v3): corpo de 15 páginas, prova no Apêndice B, um quadro do que o Anexo A não informa e "teste em paralelo" no lugar de "modo sombra" (D-045, D-046). Aguardam a revisão da equipe antes do envio pelo portal. A Fase 1 está com as 3 entregas em versão revisada.
 
 ## Ciclo completo
 
@@ -12,7 +12,7 @@
 |---|---|---|---|---|
 | 1 | A Chegada | Entender o terreno, mapear os afetados e assumir um compromisso ético explícito | Recebido | ✅ 3/3 entregas revisadas |
 | 2 | O Mercado | Mapear o ecossistema de IA e construir uma tese de crescimento defensável (prazo de 60 dias do Vetor Capital) | Recebido | 🟡 Em andamento: cinco entregas em versão para revisão; documento único e memorando na v2 enxuta (D-042 a D-045); falta revisar e enviar |
-| 3 | O Motor | Entender, sem programar, como o sistema decide, com que dados aprende e quais são seus limites | Não liberado | ⚪ |
+| 3 | O Motor | Entender, sem programar, como o sistema decide, com que dados aprende e quais são seus limites | Recebido (portal: 15/10 a 11/11/2026) | 🟡 Enunciado e Anexo A transcritos em 09/11/2026; 8 entregas a dividir; ver [README](03_Fase3_O_Motor/README.md) |
 | 4 | As Regras | Framework de governança que resista a auditoria externa | Não liberado | ⚪ |
 | 5 | O Produto | Próximo passo do Lumis Insight: escopo, limites, roadmap e critérios de sucesso | Não liberado | ⚪ |
 | 6 | As Pessoas | Liderar a transformação interna (medo de substituição e desconfiança no sistema) | Não liberado | ⚪ |
