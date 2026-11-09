@@ -1,0 +1,47 @@
+QUEBRA
+# Entrega 4 · Árvore de métricas: da estratégia à operação
+> Hoje a Lumis acompanha volume, disponibilidade, tempo de resposta e receita. Nenhum indicador mede se a prioridade certa chegou ao paciente certo, e nenhum é aberto por grupo (Quadro A.7). Propomos medir a qualidade da decisão por grupo e ligar cada indicador a uma ação concreta.
+
+## 4.1 Hipótese de valor
+> Se priorizarmos com dados suficientes, regras com dono e erro medido por grupo (A), os clientes atendem antes quem precisa, sem que a origem do registro decida a fila (B), o que sustenta contratos com margem positiva e a confiança de quem audita (C).
+
+A hipótese pode ser falsa, e a árvore existe para testá-la. O Anexo A não traz desfecho de pacientes, então ainda não dá para dizer que o benefício clínico aconteceu; e melhorar a média não garante melhorar cada grupo.
+
+## 4.2 A árvore
+O indicador estratégico junta as duas metades do negócio: a parcela da receita que vem de contas com margem de contribuição positiva e com o erro por grupo dentro do limite. Hoje ele não pode ser calculado, porque o erro por grupo não é medido de forma contínua [não consta]. Abaixo dele ficam cinco resultados intermediários e dez indicadores operacionais.
+
+Usamos um único indicador de qualidade da decisão: o falso negativo por grupo, isto é, a parcela de quem precisava de prioridade e não recebeu alta. A sensibilidade é o mesmo número visto do outro lado (as duas somam 100%), e por isso não entra como indicador separado.
+
+
+FIG[arvore]: Árvore de métricas, do indicador estratégico aos indicadores operacionais. Proposta da equipe; valores de hoje dos Quadros A.3, A.6 e A.11. Também entregue em arquivo próprio (PDF e PNG).
+
+## 4.3 Cada indicador e o que fazer se ele variar 20%
+TAB[e4_dic]: 3.3;0.9;3.0;4.4;4.4 | Dicionário dos indicadores. P: progresso, deve melhorar; S: saúde, deve ficar dentro da faixa. Proposta da equipe. Os limites de 1,5 e 2 vezes e a regra das reclamações foram propostos na Fase 2.
+| Indicador | Tipo | Quem revisa e quando | Se piorar 20% | Se melhorar 20% |
+| 1. Falso negativo por grupo, entre quem precisava de prioridade segundo a avaliação de referência | P | Responsável por Dados apura; Head of AI Management lê; a cada 15 dias, com publicação trimestral | Revisão humana no grupo e investigação da causa, sem esperar a média | Confirmar com amostra suficiente e ver se não veio de marcar mais casos como alta |
+| 2. Razão entre o pior e o melhor grupo no falso negativo | S | Head of AI Management; a cada 15 dias | Acima de 1,5: alerta e revisão humana de 10% no grupo. Acima de 2: recomendação automática restrita no grupo | Retirar a restrição só depois de quatro leituras seguidas até 1,5. Meta: 1,5 em 12 meses |
+| 3. Parcela marcada como alta por tipo de unidade (hoje de 24% a 9%) | S | Responsável por Dados; a cada 15 dias | Ver se a queda veio de campo vazio ou de regra (R-11, R-23, R-31) | Conferir se o falso negativo caiu junto; se não caiu, é inflação de alta |
+| 4. Campos críticos vazios por origem (hoje de 1,9 a 5,2 por registro) | S | Responsável por Dados, com a integração do cliente; semanal | Alertar o cliente, pedir correção do envio e mandar os casos à fila de incerteza | Levar o acordo de integração que funcionou a outros clientes |
+| 5. Casos com avaliação de referência, por grupo | S | Responsável por Dados e especialista clínico; mensal | Não publicar desempenho sem amostra e ampliar a revisão por amostragem | Ver se dá para reduzir a revisão sem perder precisão |
+| 6. Contestações revistas no prazo (imediata na urgência; até 48 horas nos demais casos) | S | Head of AI Management, com o Sucesso do cliente; semanal | Escalar os atrasos e reforçar a revisão | Auditar a qualidade da resposta, e não só o prazo |
+| 7. Reclamações por grupo, cruzadas com o erro | S | Sucesso do cliente registra; Responsável por Dados cruza; a cada 15 dias | A partir de 1,5 vez a parcela de pacientes do grupo, revisão clínica; acima de 2 vezes, auditoria de equidade | Conferir se o canal continua acessível a todos os grupos |
+| 8. Disponibilidade de ponta a ponta, até o sistema do cliente | S | CTO; diária | Acionar a contingência e avisar os clientes | Manter a configuração e reduzir contingências com teste |
+| 9. Margem de contribuição por conta | P | CEO, com o Responsável Comercial e a DPO nos contratos; mensal | Abrir a renegociação da conta, sem tocar na régua clínica | Investir parte da folga em qualidade de dados |
+| 10. Custo variável por decisão (hoje R$ 0,99) | S | CTO; mensal | Rever fornecedor e arquitetura | Conferir se qualidade e prazo se mantiveram |
+
+A variação de 20% é relativa ao período anterior e serve de gatilho para investigar, sem prova estatística. Em indicador com base perto de zero, vale o número absoluto e uma amostra mínima. Uma melhora nunca revoga um limite clínico ou ético.
+
+## 4.4 Os indicadores de hoje
+TAB[e4_hoje]: 4.2;2.6;9.2 | Indicadores acompanhados hoje e recomendação. Fonte: Quadro A.7; recomendação da equipe.
+| Indicador hoje | Deriva de hipótese? | Recomendação |
+| Decisões processadas por mês | Não | Manter como dado de operação e custo, fora do painel de valor. |
+| Disponibilidade da interface | Sim | Manter, ampliada para ponta a ponta (indicador 8). |
+| Tempo médio de resposta | Sim | Manter, junto com o tempo dos 5% de respostas mais lentas [proposta]. |
+| Receita recorrente anual | Sim | Manter, ao lado da margem por conta (indicador 9). |
+| Número de contas ativas | Parcialmente | Manter só junto da margem: conta nova com prejuízo não é crescimento. |
+| Vidas analisadas acumuladas | Não | Descartar: é número de divulgação, e a Fase 2 achou pacientes contados mais de uma vez. |
+| Acurácia do modelo (base de 2023) | Sim, mas antiga | Descartar como indicador principal e trocar pelos indicadores 1 e 2. Os 94% de 2023 viraram 87,6% em campo (Fase 2). |
+| Reclamações formais | Não é tratada como indicador | Transformar no indicador 7, com leitura a cada 15 dias. |
+
+## 4.5 Quem decide com esses números
+A cada 15 dias, na mesa de campo proposta na Fase 2, o Responsável por Dados apresenta o erro por grupo, a parcela marcada como alta e as reclamações, e o Head of AI Management decide restrições. Todo mês, a CEO revê a margem por conta e o CTO, o custo por decisão. A cada trimestre, a Lumis publica o falso negativo por grupo e a CEO leva ao conselho o painel de resultados, reclamações e correções; uma auditoria independente anual refaz as contas. Uma alta de 20% em volume ou receita não autoriza expandir se o erro por grupo piorar.

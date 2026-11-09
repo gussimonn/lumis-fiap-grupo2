@@ -1,0 +1,74 @@
+QUEBRA
+# Apêndice A · Biblioteca de prompts, resultados e verificação
+Os cinco prompts operam sobre os Quadros A.1 a A.4, colados no lugar de [ANEXO]. Antes de usar qualquer um deles: colar só o material autorizado, sem dado pessoal real; registrar data, ferramenta e quem executou; exigir fonte em cada afirmação; conferir números e regras à mão; e repetir os mesmos casos de teste a cada mudança no prompt. Nenhuma saída é tratada como verificada sem essa conferência.
+
+## A.1 Prompt P1: traduzir a lógica técnica
+**Técnica:** decomposição em etapas, saída em formato fixo e fonte em cada afirmação. **Por quê:** separar as etapas evita saltos de raciocínio e deixa à vista o que o anexo não informa.
+CAIXA
+Papel: atue como analista de sistemas responsável por comunicar uma rotina de priorização a uma equipe comercial e a um auditor.
+Contexto: receba os Quadros A.1, A.2 e A.3 em [ANEXO]; o sistema tem modelo estatístico e regras de ajuste.
+Tarefa: descreva entrada, ausência de dados, pontuação, ajustes, cortes, desempate e saída; apresente a ordem das regras publicadas e dois exemplos sintéticos condicionais (um de alta e um de baixa prioridade).
+Restrições: use apenas [ANEXO]; não invente as outras 33 regras, a fórmula da pontuação, os limites dos blocos, a definição de "limítrofe", o arredondamento nem os três fatores explicativos; não transforme recomendação em diagnóstico.
+Saída: (1) sete passos numerados; (2) tabela regra | condição | efeito | fonte; (3) cortes; (4) dois testes aritméticos; (5) lista DADO AUSENTE; (6) explicação para o cliente em até 90 palavras.
+Critério de sucesso: cada número coincide com o material, as dependências de R-19/R-23 e R-38 são ressalvadas e um leitor não técnico consegue repetir o caminho sem assumir o que não está documentado.
+FIMCAIXA
+
+## A.2 Prompt P2: encontrar decisões implícitas e seus donos
+**Técnica:** extração com evidência, exemplo do formato esperado e revisão adversarial da autoridade. **Por quê:** o exemplo alinha a saída sem descrevê-la por extenso, e a revisão separa quem escreveu o código de quem tinha mandato para decidir.
+CAIXA
+Papel: atue como auditor de governança de IA.
+Contexto: [ANEXO] traz regras, dados ausentes e histórico de alterações (Quadros A.2 a A.4).
+Tarefa: encontre parâmetros que impliquem escolha de valor, risco, fila, custo, tratamento desigual ou transparência; separe o motivo registrado de uma justificativa construída depois.
+Exemplo de linha: "Corte de alta | 72 pontos | Quadro A.2 | mar/2023 | ajuste de capacidade de fila | time técnico | pacientes perto do corte em 38 contas | corte operacional usado como clínico | CEO, com parecer clínico | trimestral".
+Restrições: nunca invente autorizador, data, motivo, fundamento clínico ou processo de aprovação; escreva NÃO INFORMADO quando faltar; não conclua causa a partir de diferenças entre grupos.
+Saída: tabela parâmetro | fato | fonte | data | motivo registrado | autorizador registrado | afetados | risco | novo dono proposto | revisão; depois, cinco perguntas para a auditoria.
+Critério de sucesso: R-11, R-23, R-31, R-38, corte de 72, preenchimento de dado ausente e desempate aparecem, e toda falta de registro fica visível.
+FIMCAIXA
+
+## A.3 Prompt P3: gerar cenários de teste
+**Técnica:** valores-limite e classes de equivalência, com separação entre resultado dedutível e indeterminável. **Por quê:** os erros de regra aparecem nas bordas, e um teste sem resposta conhecida precisa ser marcado como tal.
+CAIXA
+Papel: atue como engenheiro de testes de regras de negócio.
+Contexto: os Quadros A.1 a A.3 em [ANEXO] descrevem parcialmente um classificador em faixas.
+Tarefa: proponha no mínimo dez testes sintéticos, cobrindo os cortes 45 e 72, a R-11 com 2 versus 3 faltas, idade 74 versus 75, internação há 89 versus 91 dias, ausência de custo e de comorbidade, R-19 com R-23, R-38 em conta estratégica e desempate por data.
+Restrições: diferencie resultado numérico dedutível de comportamento indeterminável; para a pontuação inicial, fixe um valor fornecido pelo teste e não simule o modelo estatístico; não assuma bloco de regras, arredondamento ou definição de limítrofe.
+Saída: tabela caso | dados sintéticos | regra isolada | saída esperada condicionada | limite de inferência | evidência; ao final, cinco propriedades que nunca deveriam mudar sem aprovação.
+Critério de sucesso: ao menos três testes explicitam que falta especificação e todos os casos apontam a fonte.
+FIMCAIXA
+
+## A.4 Prompt P4: revisar um texto como auditor externo
+**Técnica:** rubrica de severidade e crítica apoiada em evidência. **Por quê:** obriga o modelo a procurar falhas e a provar cada uma com o anexo.
+CAIXA
+Papel: seja auditor externo cético, com foco em rastreabilidade e segurança do paciente.
+Contexto: [RASCUNHO] é a descrição do Lumis Insight; [ANEXO] contém os Quadros A.1 a A.4.
+Tarefa: aponte afirmações sem sustentação, confusão entre fato e proposta, números divergentes, regras omitidas, riscos para grupos de pacientes e lacunas que impedem reproduzir o resultado.
+Restrições: não use internet nem conhecimento externo como prova; não diga que houve auditoria real; não corrija lacuna inventando dado.
+Saída: tabela severidade (crítica, alta, média, baixa) | trecho | evidência | problema | correção sugerida | o que validar; ao final, nota de prontidão de 0 a 5 com os critérios usados.
+Critério de sucesso: aponta que o Quadro A.2 mostra 8 de 41 regras, que a R-38 não define "limítrofe", que o preenchimento de dado ausente pode mudar a prioridade e que não há processo formal de aprovação.
+FIMCAIXA
+
+## A.5 Prompt P5: argumentar contra a própria conclusão
+**Técnica:** contraposição em três papéis e pré-mortem. **Por quê:** a crítica se volta para as condições em que a decisão pioraria a situação, e não para uma segunda opinião qualquer.
+CAIXA
+Papel: atue como um comitê com três vozes: um clínico, um gestor de hospital com pouca capacidade e um responsável pela sustentabilidade financeira.
+Contexto: [CONCLUSÃO] traz uma proposta de mudança de regra; [ANEXO] contém os Quadros A.1 a A.4.
+Tarefa: construa a melhor objeção contra a proposta, aponte premissas escondidas e descreva três cenários em que ela pioraria a situação.
+Restrições: não relativize risco grave por potencial comercial; fundamente cada objeção; marque onde falta estimativa; não atribua falas a pessoas reais.
+Saída: (1) três objeções em diálogo curto; (2) tabela premissa | evidência necessária | risco se for falsa; (3) proposta revista, com salvaguardas e critério explícito de parada.
+Critério de sucesso: o resultado muda ao menos um controle, uma métrica ou um prazo, ou mostra com fundamento que a conclusão original resiste.
+FIMCAIXA
+
+## A.6 Resultados do P1 e do P3
+**Execução.** Em 08/11/2026, com Claude (Anthropic), em sessões separadas que leram só os Quadros A.1 a A.3, sem acesso ao restante do dossiê e sem busca na web. As saídas completas ficam guardadas na pasta da Entrega 6, sem edição.
+
+**P1, tradução.** A saída trouxe os sete passos, a tabela das oito regras com fonte, os cortes, dois testes (60 + 15 = 75, alta; e 30 com plano vazio, baixa nas duas leituras possíveis), a lista do que falta e uma explicação de 86 palavras para o cliente.
+- Útil: marcou como dedução tudo o que o anexo não diz, como o momento em que a R-38 entra, e achou o conflito entre a R-19 e a R-23 quando as duas estão no mesmo bloco.
+- Errado: listou "definido em 2023, sem revisão" como se fosse o responsável pela classificação; a explicação ao cliente não diz que a equipe clínica pode contestar e pedir revisão.
+- Verificação: os oito efeitos, os três cortes, as cinco frequências de dado ausente e o fator de 2,4 conferem com os Quadros A.2 e A.3. A explicação ao cliente da Entrega 1 foi reescrita com a contestação.
+
+**P3, testes.** A saída trouxe 24 casos (26 linhas com os dois controles) e as cinco propriedades.
+- Útil: casos de borda bem montados (44 e 45, 71 e 72, 2 e 3 faltas, 74 e 75 anos, 89 e 91 dias), o mesmo conflito entre a R-19 e a R-23 (caso C16) e a falta de definição de "internação recente" (caso C12).
+- Errado: tratou o mesmo mecanismo da R-23 como indeterminável no caso C16 e como dedutível no C17, conforme o plano fosse informado ou assumido; e apresentou como propriedade a regra de que a R-38 "nunca rebaixa", que o anexo sugere mas não afirma.
+- Verificação: refizemos as contas num script independente, que aplica só o que os Quadros A.1 a A.3 dizem. As 19 linhas com resposta conferem, e as 7 indetermináveis viraram perguntas para a auditoria (Apêndice B). O script e o arquivo dos casos seguem em arquivo próprio.
+
+**Uso de IA na elaboração.** A primeira versão do dossiê foi redigida pela equipe com apoio do GPT-6, em 05 e 06/11/2026; a revisão e as execuções acima usaram Claude (Anthropic), em 08/11/2026. Toda afirmação sobre a Lumis foi conferida contra o Anexo A, e as contas, por script.

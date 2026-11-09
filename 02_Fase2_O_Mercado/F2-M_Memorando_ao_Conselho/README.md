@@ -1,5 +1,5 @@
 # F2-M — Memorando de Recomendação ao Conselho
-**Status:** 🟡 v3 em 08/10/2026, com 2 páginas; aguarda revisão da equipe · **Arquivo vigente:** [F2-M_Memorando_ao_Conselho_v3.docx](F2-M_Memorando_ao_Conselho_v3.docx) · **Decisões:** D-042 e D-045 · **Versões anteriores:** `_Historico/2026-10-08_F2-M_Memorando_ao_Conselho_v1.docx` e `_v2_editado-no-word.docx`
+**Status:** ✅ Entregue pelo portal junto com o documento único; aguarda nota · v3 de 08/10/2026, com 2 páginas · **Arquivo vigente:** [F2-M_Memorando_ao_Conselho_v3.docx](F2-M_Memorando_ao_Conselho_v3.docx) · **Decisões:** D-042 e D-045 · **Versões anteriores:** `_Historico/2026-10-08_F2-M_Memorando_ao_Conselho_v1.docx` e `_v2_editado-no-word.docx`
 
 ## A recomendação
 Aceitar o aporte do Vetor Capital com liberação por etapas, ligada a condições verificáveis: primeiro tornar o ativo defensável, crescer onde a Lumis já tem cliente e contratar em ondas; novos países e plataforma só depois. Se o Vetor exigir países ou plataforma em produção antes das condições, recomendar não aceitar o aporte nesses termos.
@@ -16,4 +16,4 @@ Aceitar o aporte do Vetor Capital com liberação por etapas, ligada a condiçõ
 - **v3:** parte da v2 editada. Condições em tabela; o pedido ao conselho sobe para o primeiro parágrafo; o uso do aporte vira uma frase; "modo sombra" vira "teste em paralelo"; respostas da tabela de riscos encurtadas para caber em 2 páginas.
 
 ## Como gerar de novo
-O memorando sai do mesmo script do documento único: `python ../F2-D_Documento_Integrado/figuras/montar_v2.py memo saida.docx`. A segunda página está cheia; qualquer acréscimo precisa de um corte equivalente. A v3 vigente tem ajustes feitos no Word pela equipe (08/10/2026, 20:29) que o script não tem: o .docx vale mais que o script, e gerar de novo apagaria esses ajustes.
+O memorando sai do mesmo script do documento único: `python ../F2-D_Documento_Integrado/scripts/montar_v2.py memo saida.docx`. A segunda página está cheia; qualquer acréscimo precisa de um corte equivalente. A v3 vigente tem ajustes feitos no Word pela equipe (08/10/2026, 20:29) que o script não tem: o .docx vale mais que o script, e gerar de novo apagaria esses ajustes.

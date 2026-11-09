@@ -1,0 +1,20 @@
+# Síntese para a auditoria
+ROTULO: Em uma frase
+> O Lumis Insight cabe numa explicação de sete etapas, mas três decisões de negócio tomadas dentro do código (dado ausente vira zero, corte de alta herdado de um hospital e uma faixa a mais para conta estratégica) pesam mais sobre quem tem registro incompleto, e o contrato de valor fixo faz a Lumis perder dinheiro justamente nas contas que mais crescem.
+
+A auditoria independente exigida pelo Vetor Capital vai examinar a lógica de decisão, as escolhas de negócio embutidas, a economia por decisão, as métricas e a prontidão da empresa. O Head of AI Management responde pelas conclusões. Nas oito entregas a seguir, traduzimos o motor para quem não programa, mostramos quem decidiu cada parâmetro e propomos quem deve decidir daqui em diante.
+
+ROTULO: O que pedimos que a Lumis decida
+1. **Dado ausente.** Parar de tratar dado clínico ausente como ausência de necessidade. É o ponto mais urgente: atinge até 31% dos registros num único campo e pesa 2,4 vezes mais nas unidades públicas e nos sistemas antigos. Em 15 dias, testar em paralelo o estado "desconhecido" e a revisão humana por risco.
+2. **Regra R-38.** Suspender o efeito da regra que sobe uma faixa para conta estratégica nas novas classificações e renegociar com os cinco clientes envolvidos. Decisão da CEO em até 15 dias.
+3. **Corte de 72.** Recalibrar o corte de alta prioridade por contexto assistencial, com a autoridade clínica de cada cliente, e aprová-lo formalmente.
+4. **Preço.** Trocar o valor fixo com uso ilimitado por franquia mais excedente, começando pela Rede Sanare, que perde R$ 66.860 por mês.
+5. **Métricas.** Medir a qualidade da decisão por grupo (falso negativo e parcela marcada como alta) no lugar de volume processado e da acurácia de 2023.
+6. **Prontidão.** Catalogar as 41 regras com dono e criar um portão que encerre iniciativas sem prova. Encerrar já o agente de triagem e a reescrita parada do pipeline.
+
+Nenhuma dessas decisões mexe na régua clínica para proteger margem, e nenhuma depende de anuência comercial para suspender um risco aos pacientes.
+
+ROTULO: Como ler
+O fluxograma da lógica, a árvore de métricas, a planilha de margem por conta e o arquivo dos casos de teste seguem em arquivos próprios. Os prompts, as saídas e a conferência estão no Apêndice A; as contas, no Apêndice B. O que o Anexo A não informa está reunido num quadro, no fechamento.
+
+NOTA: Origem dos dados: todo número sobre a Lumis vem do Anexo A do Cap. 3 (Quadros A.1 a A.11, numerados de 3 a 13 no PDF do curso), com o quadro indicado na legenda de cada tabela. Contas da equipe e propostas estão identificadas. Limites, metas e cargos retomados da Fase 2 são propostas que a equipe já apresentou ao conselho.

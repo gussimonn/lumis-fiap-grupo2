@@ -1,5 +1,5 @@
 # F2-D — Documento Integrado (peça de envio)
-**Status:** 🟡 v3 em 08/10/2026; aguarda revisão da equipe · **Arquivo vigente:** [F2-D_Documento_Integrado_v3.docx](F2-D_Documento_Integrado_v3.docx) · **Decisões:** D-043 a D-047 · **Versões anteriores:** `_Historico/2026-10-08_F2-D_Documento_Integrado_v1.docx` e `_v2.docx`
+**Status:** ✅ Entregue pelo portal (data [não consta]); aguarda nota · v3 de 08/10/2026 · **Arquivo vigente:** [F2-D_Documento_Integrado_v3.docx](F2-D_Documento_Integrado_v3.docx) · **Decisões:** D-043 a D-047 · **Versões anteriores:** `_Historico/2026-10-08_F2-D_Documento_Integrado_v1.docx` e `_v2.docx`
 
 Documento único, com identificação da equipe, que reúne as cinco entregas articuladas entre si [fonte: Cap. 2, 4.2]. O memorando ao conselho vai em arquivo separado: [F2-M](../F2-M_Memorando_ao_Conselho/).
 
@@ -37,11 +37,12 @@ Depois, a seção 4.4 foi reescrita: sem a citação de Nagji e Tuff, com o tít
 Por último (D-047), a seção 5.4 foi refeita: a ficha da métrica pública tem só limite (o dobro) e meta (1,5 vez em 12 meses), marcados como proposta da equipe, sem a meta de 7,4%. A seção 5.2 ficou mais curta, o crédito usa "80% da melhor faixa" e o Apêndice B ganhou a tabela "De onde vem cada número". A mudança foi aplicada sobre o arquivo salvo no Word pela equipe (capa refeita e parágrafos justificados), que está em `_Historico/2026-10-08_F2-D_Documento_Integrado_v3_editado-no-word-antes-limites.docx`.
 
 ## Como foi montado
-- **Script:** [figuras/montar_v2.py](figuras/montar_v2.py) guarda o texto final de cada parte e gera o documento único e o memorando a partir do `00_Lumis/Design_System/Modelo_Entrega_Lumis.docx`. Para gerar de novo: `python montar_v2.py dossie saida.docx` ou `python montar_v2.py memo saida.docx`; `python montar_v2.py lint` confere códigos internos, travessões e remissões. O script da v1 está em `_Historico/2026-10-08_F2-D_montar_v1.py`.
-- **Texto:** o da v1, enxugado. As entregas individuais não mudaram.
-- **Figuras:** as mesmas da v1 ([figuras/gerar_figuras_e2_dossie.py](figuras/gerar_figuras_e2_dossie.py) para as quatro da Entrega 2).
+- **Script:** [scripts/montar_v2.py](scripts/montar_v2.py) guarda o texto final de cada parte e gera o documento único e o memorando a partir do `00_Lumis/Design_System/Modelo_Entrega_Lumis.docx`. Para gerar de novo: `python montar_v2.py dossie saida.docx` ou `python montar_v2.py memo saida.docx`; `python montar_v2.py lint` confere códigos internos, travessões e remissões. O script da v1 está em `_Historico/2026-10-08_F2-D_montar_v1.py`.
+- **Texto:** o da v1, enxugado. Os .docx das entregas individuais não receberam os ajustes e foram para `_Historico/2026-10-09_Fase2_entregas_individuais/` (D-048).
+- **Figuras:** ficam na pasta `figuras/` de cada entrega, com o script que as gera. As quatro da Entrega 2 saem de [gerar_figuras_e2_dossie.py](../F2-E2_Auditoria_do_Ativo/figuras/gerar_figuras_e2_dossie.py). Até 09/10/2026, os scripts e essas quatro figuras ficavam em `figuras/` nesta pasta (D-048).
+- **Texto de cada entrega em Markdown:** o README e o `.md` de cada pasta `F2-E1` a `F2-E5` trazem o texto da entrega extraído deste .docx, para leitura rápida. Se o .docx mudar, extrair de novo.
 - **Conferência da v2:** números contra o Anexo A, as entregas e as decisões (nenhum número sem correspondência), lint sem avisos, páginas conferidas no PDF exportado pelo Word.
-- **O .docx vigente tem formatação feita no Word pela equipe** (capa nova e parágrafos justificados) que o script não gera. Para mudar texto: alterar o conteúdo em `montar_v2.py`, gerar um .docx temporário e aplicar o texto novo sobre o vigente com [figuras/sincronizar.py](figuras/sincronizar.py) (`python sincronizar.py vigente.docx gerado.docx saida.docx`), que mantém capa e formatação. Nunca substituir o vigente pelo gerado direto.
+- **O .docx vigente tem formatação feita no Word pela equipe** (capa nova e parágrafos justificados) que o script não gera. Para mudar texto: alterar o conteúdo em `montar_v2.py`, gerar um .docx temporário e aplicar o texto novo sobre o vigente com [scripts/sincronizar.py](scripts/sincronizar.py) (`python sincronizar.py vigente.docx gerado.docx saida.docx`), que mantém capa e formatação. Nunca substituir o vigente pelo gerado direto.
 - Se alguém editar o .docx no Word, guardar antes a versão anterior em `_Historico/`.
 
 ## Composição do envio (Cap. 2, 4.2)
@@ -49,9 +50,9 @@ Por último (D-047), a seção 5.4 foi refeita: a ficha da métrica pública tem
 - [x] Memorando ao conselho, no máximo 2 páginas ([F2-M](../F2-M_Memorando_ao_Conselho/))
 - [x] Apêndice de prompts da Entrega 1, com resultado e verificação (Apêndice A)
 - [ ] Planilhas, matrizes e diagramas: matrizes e diagramas no corpo e no Apêndice B; falta a planilha das contas da equipe (cerca de 15 contas: 49,8%; 2,5; 2,2 e 3,0; 1,9 e 1,5; 154 mil; 57,4%; margens; R$ 19.240 e R$ 40.176; 8,7 meses; R$ 0,6 mi por mês-pessoa; 53% e 73%; 25,8%; 64,6%)
-- [ ] Envio pelo portal no prazo [prazo não consta]
+- [x] Envio pelo portal (data [não consta])
 
-## Antes do envio (equipe)
+## Pendências que estavam abertas antes do envio (se foram resolvidas, não consta)
 - Revisar o documento único e o memorando.
 - Decidir a data da primeira publicação da métrica pública (a condição 8 exige a métrica já publicada antes de qualquer frente nova).
 - Decidir se há substituto do Responsável por Dados nos portões do funil (risco de pessoa-chave).

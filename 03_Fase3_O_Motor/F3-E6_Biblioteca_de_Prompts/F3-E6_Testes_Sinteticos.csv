@@ -1,0 +1,27 @@
+﻿Caso;Dados sintéticos;Saída esperada (execução do P3);Conta independente;Resultado
+C01;Pontuação 44;Baixa;44 → Baixa;confere
+C02;Pontuação 45;Média;45 → Média;confere
+C03;Pontuação 71;Média;71 → Média;confere
+C04;Pontuação 72;Alta;72 → Alta;confere
+C05;Pontuação 71,6 ou 44,6;INDETERMINÁVEL: arredondamento não consta;INDETERMINÁVEL: arredondamento não consta;não calculado
+C06;Pontuação 78, 2 faltas;Alta;78 → Alta;confere
+C07;Pontuação 78, 3 faltas;Média;71 → Média;confere
+C08;Pontuação 50, 74 anos, sem internação;Média;50 → Média;confere
+C09;Pontuação 50, 75 anos, sem internação;Baixa;44 → Baixa;confere
+C10;Pontuação 60, internação há 89 dias;Alta;72 → Alta;confere
+C11;Pontuação 60, internação há 91 dias;Média;60 → Média;confere
+C12;75 anos, internação há 91 dias;"INDETERMINÁVEL: ""internação recente"" não definida";"INDETERMINÁVEL: ""internação recente"" não definida";não calculado
+C13;Pontuação 50, 78 anos, histórico vazio;Baixa;44 → Baixa;confere
+C14;Pontuação 62, custo vazio;Média;62 → Média;confere
+C14c;Controle: pontuação 62, custo no quartil superior;Alta;73 → Alta;confere
+C15;Pontuação 66, comorbidade vazia;Média;66 → Média;confere
+C15c;Controle: pontuação 66, comorbidade registrada;Alta;75 → Alta;confere
+C16;Custo no quartil superior e plano básico informado;INDETERMINÁVEL: divisão dos blocos não consta;INDETERMINÁVEL: divisão dos blocos não consta;não calculado
+C17;Pontuação 62, custo no quartil superior, plano vazio;Média;62 → Média;confere
+C18;Pontuação 62, plano básico, custo fora do quartil;Média;62 → Média;confere
+C19;Pontuação 71, conta estratégica;"INDETERMINÁVEL: ""limítrofe"" não definido";"INDETERMINÁVEL: ""limítrofe"" não definido";não calculado
+C20;Pontuação 44, conta estratégica;"INDETERMINÁVEL: ""limítrofe"" não definido";"INDETERMINÁVEL: ""limítrofe"" não definido";não calculado
+C21;Pontuação 90, conta estratégica;Alta;90 → Alta;confere
+C22;Empate em 60: A entrou antes de B;A antes de B;A antes de B;não calculado
+C23;Empate com a mesma data e hora;INDETERMINÁVEL: critério após a data não consta;INDETERMINÁVEL: critério após a data não consta;não calculado
+C24;R-38 com desempate;"INDETERMINÁVEL: ""limítrofe"" não definido";"INDETERMINÁVEL: ""limítrofe"" não definido";não calculado

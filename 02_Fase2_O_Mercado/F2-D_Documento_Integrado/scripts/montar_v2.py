@@ -11,7 +11,7 @@ O texto de cada parte está no fim deste arquivo (CONTEUDO_DOSSIE e CONTEUDO_MEM
 seguida das linhas "| ... |", NIVEIS[...] (tabela por níveis), CAIXA ... FIMCAIXA (prompt), QUEBRA, REFERENCIAS,
 NOTA:, LINHA:, TITULO:, SUBTITULO:. Marcadores [fonte: ...], [hipótese], [não consta] e [risco: ...] saem com os
 estilos Tag do modelo; {fig:chave}, {tab:chave} e {ref:chave} viram números.
-As figuras são as das entregas, menos as quatro da Entrega 2, refeitas para o dossiê por gerar_figuras_e2_dossie.py.
+As figuras ficam na pasta figuras/ de cada entrega; as quatro da Entrega 2 saem de gerar_figuras_e2_dossie.py, na pasta da E2.
 Versão enxuta: no corpo, a decisão e o porquê; a prova vai para o Apêndice B (quadros de apoio) e as lacunas
 para o quadro "O que o Anexo A não informa", no fechamento. Decisões: D-042 a D-045.
 """
@@ -44,19 +44,15 @@ META = {
     },
 }
 
-# Figuras disponíveis (as mesmas imagens que estão nas entregas vigentes). Largura padrão em cm.
+# Figuras usadas no documento único, na pasta figuras/ de cada entrega. Largura padrão em cm.
 FIGS = {
     'e1_camadas':      (F2 + 'F2-E1_Mapa_do_Territorio/figuras/fig1_camadas.png', 12.0),
-    'e1_ameacas':      (F2 + 'F2-E1_Mapa_do_Territorio/figuras/fig2_ameacas.png', 10.5),
-    'e1_margem':       (F2 + 'F2-E1_Mapa_do_Territorio/figuras/fig4_margem.png', 14.0),
-    'e2_base':         (F2 + 'F2-D_Documento_Integrado/figuras/d_e2_base.png', 13.0),
-    'e2_proxy':        (F2 + 'F2-D_Documento_Integrado/figuras/d_e2_proxy.png', 13.0),
+    'e2_base':         (F2 + 'F2-E2_Auditoria_do_Ativo/figuras/d_e2_base.png', 13.0),
+    'e2_proxy':        (F2 + 'F2-E2_Auditoria_do_Ativo/figuras/d_e2_proxy.png', 13.0),
     'e2_subgrupo':     (F2 + 'F2-E2_Auditoria_do_Ativo/figuras/fig1_subgrupo_v2.png', 13.0),
-    'e2_metricas':     (F2 + 'F2-D_Documento_Integrado/figuras/d_e2_metricas.png', 13.0),
-    'e2_indicadores':  (F2 + 'F2-D_Documento_Integrado/figuras/d_e2_indicadores.png', 13.0),
+    'e2_metricas':     (F2 + 'F2-E2_Auditoria_do_Ativo/figuras/d_e2_metricas.png', 13.0),
+    'e2_indicadores':  (F2 + 'F2-E2_Auditoria_do_Ativo/figuras/d_e2_indicadores.png', 13.0),
     'e4_clima':        (F2 + 'F2-E4_Cultura_e_Funil_de_Inovacao/figuras/v1_fig1_clima.png', 14.0),
-    'e4_funil':        (F2 + 'F2-E4_Cultura_e_Funil_de_Inovacao/figuras/v1_fig2_funil.png', 15.0),
-    'e4_capacidade':   (F2 + 'F2-E4_Cultura_e_Funil_de_Inovacao/figuras/v1_fig3_capacidade.png', 14.0),
     'e5_materialidade': (F2 + 'F2-E5_Due_Diligence_ESG/figuras/fig1_materialidade.png', 11.0),
 }
 

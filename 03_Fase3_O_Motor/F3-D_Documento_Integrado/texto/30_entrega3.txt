@@ -1,0 +1,63 @@
+QUEBRA
+# Entrega 3 · Modelo de negócio e economia por decisão
+> A Lumis cobra por conta e paga por decisão. Nas 24 contas hospitalares, que não têm teto de uso, cada decisão a mais custa R$ 0,99 e não traz receita. A Rede Sanare, maior cliente em volume e principal referência comercial da empresa, perde R$ 66.860 por mês, e ninguém tinha calculado isso antes deste dossiê.
+
+## 3.1 Como a Lumis cobra e como gasta
+TAB[e3_lado]: 8.0;8.0 | Receita e custo lado a lado. Fonte: Quadros A.5 e A.6.
+| Como cobra | Como gasta |
+| 24 hospitais e clínicas: valor fixo anual, uso ilimitado, ticket médio de R$ 1,18 milhão | Custo direto de R$ 1,44 milhão por mês |
+| 9 seguradoras: valor fixo anual com teto de 400 mil decisões, ticket médio de R$ 1,04 milhão | Inferência e infraestrutura variam com o volume: R$ 0,99 por decisão |
+| 5 bancos: valor fixo anual com teto de 250 mil decisões, ticket médio de R$ 0,72 milhão | 1.050.000 decisões por mês, ou R$ 1.039.500 de custo variável |
+| Reajuste por índice de inflação; nenhum contrato revê o preço por volume | O restante, cerca de R$ 400,5 mil por mês, não varia com o volume e não está distribuído por conta |
+
+O texto do Quadro A.6 fala em R$ 1.039 mil de custo variável, e a tabela soma R$ 1.039.500; usamos a tabela, que bate com 1.050.000 decisões a R$ 0,99. A receita mensal da tabela, vezes 12, dá R$ 41,196 milhões, e os tickets médios do Quadro A.5 dão R$ 41,28 milhões. A diferença de R$ 84 mil por ano deve vir do arredondamento dos tickets [hipótese].
+
+## 3.2 Margem por conta
+TAB[e3_margem]: 3.4;2.0;2.1;2.1;2.2;1.8;2.4 | Margem de contribuição por conta: receita menos custo variável. Fonte: Quadro A.6; margem em % e receita por decisão são conta da equipe. Planilha com as fórmulas em arquivo próprio.
+| Conta | Decisões por mês | Receita por mês | Custo variável | Margem por mês | Margem | Receita por decisão |
+| Rede Sanare | 214.000 | R$ 145.000 | R$ 211.860 | −R$ 66.860 | −46,1% | R$ 0,68 |
+| Hospital Vila Ipê | 96.000 | R$ 98.000 | R$ 95.040 | R$ 2.960 | 3,0% | R$ 1,02 |
+| Hospital Aurora | 61.000 | R$ 92.000 | R$ 60.390 | R$ 31.610 | 34,4% | R$ 1,51 |
+| Seguradora Prisma | 58.000 | R$ 87.000 | R$ 57.420 | R$ 29.580 | 34,0% | R$ 1,50 |
+| Banco Meridiano | 24.000 | R$ 60.000 | R$ 23.760 | R$ 36.240 | 60,4% | R$ 2,50 |
+| Demais 33 contas | 597.000 | R$ 2.951.000 | R$ 591.030 | R$ 2.359.970 | 80,0% | R$ 4,94 |
+| **Total** | 1.050.000 | R$ 3.433.000 | R$ 1.039.500 | R$ 2.393.500 | 69,7% | R$ 3,27 |
+
+A coluna da direita mostra o problema de uma vez: a Sanare paga R$ 0,68 por decisão, abaixo do custo de R$ 0,99, enquanto o Hospital Aurora e a Seguradora Prisma pagam cerca de R$ 1,50. Depois de todo o custo direto, a margem agregada é de 58,05%, a mesma de cerca de 58% usada na Fase 2. O Anexo A detalha só cinco contas; abrir as outras 33 exigiria inventar dados, e o custo que não varia com o volume não pode ser distribuído por conta sem um critério que o caso não dá.
+
+## 3.3 As contas que perdem margem ao crescer
+- **Rede Sanare.** O contrato é de 2020, quando a rede tinha três unidades; hoje são sete, o consumo cresceu 2,9 vezes e o valor pago não mudou. A margem zera em 146.465 decisões por mês (R$ 145.000 ÷ R$ 0,99), e a conta já está cerca de 67,5 mil acima disso. Se nada mudar, são −R$ 802.320 por ano, e cada 10 mil decisões a mais tiram outros R$ 9.900 por mês.
+- **Hospital Vila Ipê.** Tem R$ 2.960 de margem e fica negativo com cerca de 2.990 decisões a mais por mês, um crescimento de 3%.
+- **As 24 contas hospitalares.** Todas têm o mesmo desenho: cada mil decisões a mais tiram R$ 990 de margem. O Hospital Aurora ainda tem folga de cerca de 31,9 mil decisões por mês até a margem zero.
+- **Seguradoras e bancos.** Têm teto, mas o Quadro A.5 não diz o período. Se o teto for anual [hipótese], a Prisma, com 58 mil decisões por mês, passaria de 400 mil em cerca de 7 meses, e o Meridiano, com 24 mil, passaria de 250 mil em cerca de 10. O que acontece depois do teto (cobrança extra, bloqueio ou nada) [não consta].
+
+## 3.4 Quatro alternativas e quem fica com o risco
+TAB[e3_modelos]: 3.3;4.0;3.9;4.8 | Formas de cobrar e quem absorve a variação de volume. Proposta da equipe a partir do Cap. 3, seção 2.2.
+| Modelo | Como funciona | Quem absorve o risco de volume | Ponto fraco |
+| A. Valor fixo, uso ilimitado (hoje) | Mesma receita em qualquer volume | A Lumis, sozinha | O prejuízo cresce com o sucesso do cliente |
+| B. Por decisão | Preço vezes as decisões do mês | O cliente, no volume; a Lumis, no custo unitário | O orçamento do hospital fica imprevisível |
+| C. Franquia mais excedente | A mensalidade cobre uma franquia; acima dela, preço por decisão | A Lumis até a franquia; o cliente acima dela | Exige medir a decisão faturável de forma auditável |
+| D. Faixas de volume | Preço por faixa de consumo, revisto a cada trimestre | Dividido, em degraus | Perto da troca de faixa, o preço salta |
+| E. Por resultado | O cliente paga por caso "priorizado corretamente" | Dividido conforme o resultado | Descartado: premia marcar mais casos como alta e mistura receita com critério clínico |
+
+## 3.5 Recomendação: franquia mais excedente, começando pela Sanare
+Recomendamos o modelo C para todos os contratos novos e para os atuais na renovação ou por aditivo aceito pelo cliente: franquia calculada sobre o uso real, excedente medido de forma auditável e revisão quando o cliente abre unidades. O preço varia com volume e serviço contratado, nunca com a prioridade dos pacientes. A referência para o excedente é de R$ 1,50 por decisão, o que o Aurora e a Prisma já pagam hoje.
+
+TAB[e3_sanare]: 6.8;3.1;3.1;3.0 | Rede Sanare no volume de hoje (214 mil decisões e R$ 211.860 de custo variável por mês). Cenários da equipe, e não preço de mercado; nenhum inclui o custo que não varia com o volume.
+| Modelo | Receita por mês | Margem por mês | Margem |
+| A. Hoje: R$ 145 mil, uso ilimitado | R$ 145.000 | −R$ 66.860 | −46,1% |
+| B. R$ 1,50 por decisão | R$ 321.000 | R$ 109.140 | 34,0% |
+| C. R$ 145 mil com 100 mil decisões, mais R$ 1,50 por decisão excedente | R$ 316.000 | R$ 104.140 | 33,0% |
+| D. R$ 145 mil até 100 mil; R$ 1,30 de 100 mil a 200 mil; R$ 1,50 acima | R$ 296.000 | R$ 84.140 | 28,4% |
+
+No modelo C, a conta da Sanare passa de R$ 145 mil para R$ 316 mil por mês, 2,2 vezes o valor de hoje. É uma conversa difícil com o maior cliente, e ela pode coincidir com a retirada da R-38, que atinge as contas estratégicas; se a Sanare é uma delas, o Anexo A não diz [não consta]. Por isso propomos começar com o excedente a R$ 0,75 por decisão, o que já leva a receita a R$ 230.500 e a margem a R$ 18.640 por mês (8,1%), e chegar a R$ 1,50 na renovação seguinte [proposta]. Com 30% de margem no volume de hoje, a mensalidade teria de ser de cerca de R$ 302.657.
+
+**Transição proposta.**
+1. Em 30 dias: medir a decisão faturável por conta, resolver divergências de volume e ler os contratos e os tetos (DPO).
+2. De 31 a 60 dias: negociar primeiro com a Sanare e com os hospitais de maior consumo, numa conversa por cliente conduzida pela CEO com o Responsável Comercial, tratando juntos o preço e a R-38.
+3. De 61 a 90 dias: faturar em paralelo, sem cobrar, para conferir diferenças.
+4. Na renovação ou por aditivo aceito: ativar a nova cobrança e acompanhar a margem mês a mês.
+5. Até lá, o contrato vigente vale como está. A ordem segue o tamanho da perda, e nenhuma regra de prioridade muda para proteger margem.
+
+## 3.6 O que falta para fechar a conta
+O custo de suporte por cliente, tributos, inadimplência, o período e o efeito dos tetos, as datas de renovação, a abertura das 33 contas agregadas e o critério para distribuir os R$ 400,5 mil que não variam com o volume. Sem isso, a margem calculada é parcial, mas basta para mostrar que a Sanare dá prejuízo e que o desenho atual transfere todo o risco de volume dos hospitais para a Lumis.

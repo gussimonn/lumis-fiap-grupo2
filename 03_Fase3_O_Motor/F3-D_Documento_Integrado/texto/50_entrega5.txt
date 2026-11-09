@@ -1,0 +1,50 @@
+QUEBRA
+# Entrega 5 · Deliberação ética estruturada
+> Escolhemos os dilemas 1 e 2 do Quadro A.8 porque os dois decidem quem é atendido primeiro. Nos dois, a decisão certa custa dinheiro ou capacidade, e o custo fica escrito.
+
+Seguimos o mesmo método nos dois dilemas: fatos e o que não se sabe; quem é afetado, inclusive quem não participa da decisão; os valores legítimos em conflito; ao menos quatro alternativas; a decisão e o porquê; o custo; e quem tem autoridade para decidir e revisar. O terceiro dilema, a transparência do limiar, não foi deliberado aqui; a posição que tomamos sobre ele está na seção 1.5.
+
+## 5.1 Dilema 1: a regra R-38
+**Fatos.** A R-38 foi criada em novembro de 2025, a pedido comercial e com autorização da diretoria comercial, para melhorar a percepção de valor em contratos grandes. Ela sobe uma faixa os casos limítrofes de contas estratégicas: dois pacientes com o mesmo quadro recebem prioridades diferentes conforme o hospital em que estão. Retirá-la exige conversas com cinco clientes que somam 31% da receita (Quadros A.4 e A.8). Não constam a definição de "limítrofe", quantos casos sobem de faixa nem quais são as contas estratégicas.
+
+**Quem é afetado.** Os pacientes de contas não estratégicas que ficam atrás, sem saber que a regra existe; os pacientes das contas estratégicas; as equipes clínicas que confiam na faixa; os cinco clientes; o Responsável Comercial; a CEO e os investidores, pela receita em jogo; o time técnico que implementou a regra; e os reguladores. Não há registro de que algum paciente tenha sido ouvido [não consta].
+
+**Valores em conflito.** De um lado, tratar igual quem tem o mesmo quadro clínico e manter a confiança na faixa. Do outro, preservar receita e cumprir o que foi prometido a clientes grandes. Os dois são legítimos, mas o segundo não pode ser pago com a prioridade de um paciente.
+
+TAB[e5_d1]: 5.2;5.0;5.8 | Alternativas para a R-38. Proposta da equipe.
+| Alternativa | Ganho | Custo ou risco |
+| A. Manter a regra | Nenhuma conversa difícil | A prioridade passa a depender do contrato, contra o compromisso de Não Amplificação de Danos |
+| B. Retirar já, sem aviso | Corrige na hora | Quebra de expectativa e risco contratual com 31% da receita |
+| C. Suspender o efeito nas novas classificações e renegociar, com transição registrada | Corrige o que importa e dá tempo à conversa | Esforço comercial, jurídico e técnico; possível perda de receita |
+| D. Trocar por exceção clínica individual, assinada por profissional do cliente | Admite urgência real sem critério comercial | Mais trabalho humano; exceção sem controle vira outra R-38 |
+| E. Trocar o benefício por serviço que não mexe em prioridade (suporte dedicado, relatórios, treinamento) | Mantém valor percebido para o cliente grande | Pode exigir preço novo e negociação |
+
+**Decisão recomendada: C com E.** O porte comercial do cliente não define urgência. Em 15 dias, bloquear o efeito da R-38 nas novas decisões, com versão registrada e teste de regressão; avisar individualmente os cinco clientes; e oferecer serviços que não alteram prioridade. Exceção clínica só com justificativa de um profissional do cliente, nunca por contrato. Antes, a DPO confirma se os contratos mencionam a regra.
+
+**Custo.** A receita exposta é de 31% de R$ 3.433.000, cerca de R$ 1,064 milhão por mês ou R$ 12,77 milhões por ano [conta da equipe]. É receita em conversa, e não perda prevista. Os custos jurídico e técnico e a perda efetiva não podem ser calculados com o Anexo A [não consta]. Há também custo de relacionamento: as conversas podem coincidir com a renegociação de preço da Entrega 3, e por isso propomos uma conversa só por cliente, conduzida pela CEO.
+
+**Quem decide.** A CEO, porque a decisão mexe em contrato e receita, com parecer do Head of AI Management sobre o efeito por grupo e da DPO sobre os contratos. O CTO executa e registra. O Responsável Comercial conduz as conversas e não decide sobre prioridade. Se a decisão não sair em 15 dias, o Head of AI Management pode suspender o efeito da regra, como prevê a linha de responsabilidade da Fase 2. Decidir contra o parecer, só por escrito e com o caso levado ao conselho. Revisão em 30 e 90 dias, com resultado por grupo, reclamações e incidentes.
+
+## 5.2 Dilema 2: dado ausente tratado como ausência de necessidade
+**Fatos.** Faltam o histórico de internações em 23% dos registros, o custo em 31%, as comorbidades em 19%, os exames em 42% e o plano em 8%, e o sistema preenche com zero, nenhuma, média ou básico. Unidades públicas e sistemas antigos têm 2,4 vezes mais campos vazios (Quadro A.3). Mandar todos esses casos à revisão humana aumentaria em cerca de 31% as revisões manuais dos clientes, que vários não conseguem absorver e não estão obrigados por contrato a fazer (Quadro A.8). Essa carga se somaria à da restrição recomendada na Fase 2 para idosos de CEP C e D/E, estimada em cerca de 154 mil priorizações por mês de volta à triagem dos hospitais. O volume atual de revisões manuais não consta, e a soma não pode ser calculada.
+
+**Quem é afetado.** Pacientes com histórico fragmentado, sobretudo idosos e quem é atendido em unidades públicas e em regiões remotas; seus familiares; as equipes de triagem dos hospitais; gestores com pouca capacidade; os clientes; o Responsável por Dados e a integração; os reguladores; e quem nunca soube que um campo vazio vira zero.
+
+**Valores em conflito.** Evitar dano e não punir quem tem registro pior, contra a capacidade limitada das equipes, a rapidez do atendimento e a previsibilidade da fila. Revisão para todos protege cada paciente e pode travar a fila de todos.
+
+TAB[e5_d2]: 5.4;4.8;5.8 | Alternativas para o dado ausente. Proposta da equipe.
+| Alternativa | Ganho | Custo ou risco |
+| A. Manter o preenchimento atual | Nenhum custo novo | Mantém o rebaixamento de quem tem registro incompleto |
+| B. Mandar todo registro incompleto à revisão humana | Nenhuma decisão automática com dado fraco | Mais 31% de revisões, sem capacidade garantida |
+| C. Revisão só quando falta campo crítico e há sinal de risco, com fila por gravidade | Esforço onde o risco é maior | Precisa de critério clínico validado e de medição por grupo |
+| D. Estado "desconhecido", sem bônus nem desconto, e pedido do dado ao cliente | O vazio deixa de valer como zero | Integração, demora e risco de atrasar caso urgente |
+| E. Testar regras novas em paralelo, sem decidir, comparando por grupo | Evidência antes de trocar | Custa tempo e não corrige o dano de hoje sozinho |
+
+**Decisão recomendada: C, D e E juntos.** Proibir que a ausência de um campo crítico rebaixe o caso; pedir o dado ao cliente quando houver tempo; mandar à revisão humana por gravidade e incerteza; e testar em paralelo antes de trocar a regra. O especialista clínico aprova as regras de encaminhamento à revisão, que não se deduzem só dos percentuais do Anexo A.
+
+**Custo.** Revisão para todos: mais 31% de carga (Quadro A.8). A revisão seletiva custa menos, mas o Anexo A não permite dizer quanto, porque falta a capacidade de cada hospital. Engenharia, integração e treinamento têm custo que não consta. O benefício esperado, menos casos prioritários classificados como baixa, ainda precisa ser medido.
+
+**Quem decide.** O Head of AI Management decide a restrição de uso nos grupos afetados, com parecer do Responsável por Dados e do especialista clínico. Trocar o valor assumido para dado ausente é decisão da CEO (seção 2.3). O CTO executa; a autoridade clínica de cada cliente define capacidade e contingência; a DPO valida o pedido e o uso dos dados. O teste dura 30 dias ou até haver amostra suficiente, com leitura a cada 15 dias por grupo e decisão formal em 60 dias. Se a fila travar sem ganho no erro, a Lumis volta atrás.
+
+## 5.3 Como registrar cada decisão
+Cada decisão ética vira uma ata com identificação e versão, data, quem participou e quem faltou, evidências usadas, alternativas descartadas e por quê, conflitos de interesse, quem decide e quem pode suspender, custo financeiro, operacional e de relacionamento, indicadores e limites para voltar atrás, data de revisão e o parecer contrário, se houver. Com isso, o auditor compara o que foi prometido com o que aconteceu.

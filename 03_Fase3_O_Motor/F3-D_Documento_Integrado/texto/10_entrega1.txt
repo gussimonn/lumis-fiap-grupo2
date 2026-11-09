@@ -1,0 +1,62 @@
+QUEBRA
+# Entrega 1 · Como o Lumis Insight decide
+> O sistema recebe o registro do paciente, preenche o que falta com suposições fixas, calcula uma pontuação, ajusta essa pontuação com regras escritas à mão, compara o resultado com dois cortes e devolve ao hospital só a faixa. A faixa é uma recomendação: quem decide o atendimento é a equipe clínica.
+
+## 1.1 O caminho, etapa por etapa
+TAB[e1_etapas]: 2.6;6.7;6.7 | Caminho de uma decisão. Fonte: Quadros A.1, A.2 e A.3.
+| Etapa | O que acontece | O que isso muda para quem usa |
+| 1. Recepção | O cliente envia o registro do paciente, com até 34 campos. | O resultado depende do que o cliente preencheu. |
+| 2. Completude | O sistema vê o que falta e preenche por regra: internação ausente vira zero, custo ausente vira zero, comorbidade ausente vira nenhuma, exame ausente vira a média da base e plano ausente vira básico. | Faltar o dado passa a valer como não ter a condição. Unidades públicas e sistemas antigos mandam, em média, 2,4 vezes mais campos vazios. |
+| 3. Pontuação | Um modelo estatístico dá uma nota de 0 a 100, com as variáveis do modelo descrito na Fase 2. | A fórmula não consta do Anexo A. Na Fase 2, vimos que quatro dessas variáveis medem acesso a serviço e somam 49,8% do peso. |
+| 4. Ajustes | Regras escritas à mão somam ou tiram pontos: são 41, e 8 estão divulgadas (Tabela 2). São lidas na ordem, e a primeira que vale encerra o seu bloco. | Quais regras formam cada bloco não consta. Por isso não dá para garantir que duas regras se somem no mesmo caso. |
+| 5. Classificação | A nota ajustada vira faixa: alta com 72 ou mais, média de 45 a 71 e baixa abaixo de 45. | O corte de 72 foi feito em 2023 para a fila de um hospital e vale para as 38 contas. |
+| 6. Desempate | Com a mesma nota e a mesma faixa, passa na frente o registro mais antigo. | A regra estava só no código, sem documento e sem responsável. |
+| 7. Entrega | O cliente recebe a faixa e os três fatores de maior peso. A nota não é enviada. | A decisão de esconder a nota é de 2023 e nunca foi comunicada aos clientes. |
+
+FIG[fluxo]: Fluxograma da lógica de decisão, com os pontos em que o caminho se divide. Fonte: Quadros A.1 a A.3. Também entregue em arquivo próprio (PDF e PNG).
+
+## 1.2 As regras conhecidas e a ordem em que são lidas
+TAB[e1_regras]: 1.5;4.4;1.9;1.4;6.8 | As oito regras divulgadas, na ordem do Quadro A.2. As outras 33 não constam do Anexo A.
+| Regra | Condição | Efeito | Desde | O que observar |
+| R-04 | Internação nos últimos 90 dias | +12 | 2022 | Histórico vazio vira zero internações, e o bônus some. |
+| R-07 | Comorbidade crônica registrada | +9 | 2022 | Comorbidade vazia vira "nenhuma", e o bônus some. |
+| R-11 | Mais de 2 faltas em consultas | −7 | 2023 | A falta pode vir de dificuldade de acesso, e não de menor necessidade [hipótese]. |
+| R-15 | Encaminhamento do pronto-socorro | +15 | 2022 | Depende de por onde o paciente chegou. |
+| R-19 | Custo acumulado no quartil superior | +11 | 2023 | Custo mede uso de serviço: quem teve menos acesso gastou menos (Fase 2). |
+| R-23 | Plano da categoria básica | anula o +11 da R-19 | 2024 | Plano vazio vira básico e também perde o bônus. |
+| R-31 | 75 anos ou mais e nenhuma internação recente | −6 | 2023 | Histórico vazio aciona o desconto. "Recente" não está definido. |
+| R-38 | Conta estratégica e caso limítrofe | +1 faixa | 2025 | "Limítrofe" não está definido. Muda a faixa, não a nota. |
+
+Dois pontos pedem cuidado. O primeiro é a ordem: se a R-19 e a R-23 estiverem no mesmo bloco, a R-19 encerra a avaliação e a R-23 nunca roda, embora o texto da R-23 diga que ela anula a R-19. Os dois prompts que rodamos acharam esse conflito, cada um por conta própria (Apêndice A). O segundo é a R-38: ela muda a faixa, que só existe depois da etapa 5, e o Anexo A não diz em que momento ela entra.
+
+## 1.3 Os cortes
+TAB[e1_cortes]: 2.6;2.8;2.6;8.0 | Limiares aplicados à nota já ajustada, definidos em março de 2023. Fonte: Quadro A.2.
+| Faixa | Nota ajustada | Casos em 2026 | O que muda |
+| Alta | 72 ou mais | 18% | Entra no grupo de atendimento prioritário do hospital. |
+| Média | 45 a 71 | 44% | Fica na fila comum. Um caso com 71 está a um ponto da alta. |
+| Baixa | abaixo de 45 | 38% | Fica no fim da fila, salvo revisão da equipe clínica. |
+
+O corte de 72 foi escolhido para que a fila de alta do Hospital Vila Ipê coubesse na capacidade daquela unidade em 2023. O objetivo era operacional, e não clínico, e o número nunca foi recalibrado para as outras contas. O Anexo A também não diz se a nota tem casas decimais nem se há arredondamento, o que deixa sem resposta o caso de uma nota entre 71 e 72.
+
+## 1.4 Dois casos completos
+As notas iniciais abaixo foram fixadas para o exemplo, porque a fórmula do modelo não consta. Os resultados valem se nenhuma das 33 regras não divulgadas disparar.
+
+TAB[e1_casos]: 2.6;6.7;6.7 | Dois casos fictícios percorrendo as sete etapas. Fonte: regras dos Quadros A.1 a A.3; casos montados pela equipe.
+| Etapa | Caso A: alta prioridade | Caso B: baixa prioridade |
+| 1. Recepção | Paciente de 60 anos, registro completo, encaminhado pelo pronto-socorro, sem internação recente, sem comorbidade, plano não básico, conta não estratégica. | Paciente de 78 anos de uma unidade pública. O histórico de internações e o campo de comorbidades chegam vazios. |
+| 2. Completude | Nada a preencher. | Histórico vazio vira zero internações; comorbidade vazia vira nenhuma. |
+| 3. Pontuação | Nota inicial 65 (fixada para o exemplo). | Nota inicial 50 (fixada para o exemplo). |
+| 4. Ajustes | Pronto-socorro aciona a R-15: 65 + 15 = 80. | A R-04 e a R-07 não valem, porque os dados viraram zero e nenhuma. A R-31 vale (75 anos ou mais, sem internação): 50 − 6 = 44. |
+| 5. Classificação | 80 é 72 ou mais: alta. | 44 é menor que 45: baixa. |
+| 6. Desempate | Só se outro caso tiver 80 e alta: o mais antigo passa na frente. | Só se outro caso tiver 44 e baixa: o mais antigo passa na frente. |
+| 7. Entrega | O hospital recebe "alta" e três fatores. A nota 80 não é enviada. | O hospital recebe "baixa" e três fatores. A nota 44 não é enviada. |
+
+O caso B mostra a decisão escondida em funcionamento. Se o hospital tivesse registrado uma internação de 30 dias antes, o caso ganharia 12 pontos pela R-04 e não perderia os 6 da R-31: ficaria com 62, em média prioridade. O que derrubou o paciente para baixa foi o campo vazio, e não o seu estado.
+
+## 1.5 Como explicar a um cliente
+> "O Lumis Insight lê o registro do paciente, calcula uma nota interna e aplica regras para indicar prioridade alta, média ou baixa. O hospital recebe a faixa e os três fatores que mais pesaram. Quando um campo chega vazio, o sistema assume que a condição não existe, o que pode baixar a prioridade; por isso o registro completo importa. A faixa é uma recomendação: a equipe clínica decide e pode contestar e pedir revisão."
+
+O comercial não pode dizer que o sistema diagnostica, que a faixa é neutra ou clínica, que o corte foi validado para cada cliente ou que existe prioridade especial por contrato. Dizer que há uma nota interna decide em parte o terceiro dilema do Quadro A.8, porque a Lumis nunca contou que a nota existe. Seguimos o compromisso de Transparência da Declaração de Intenção da Fase 1: o cliente sabe que há nota, regras e cortes. O valor do corte e a nota de cada caso ficam fora da resposta até a Lumis decidir esse dilema com método.
+
+## 1.6 O que a auditoria ainda não consegue reproduzir
+Com o Anexo A, a lógica geral se explica numa página. Reproduzir a faixa de um paciente real ainda não é possível, porque faltam as 33 regras não divulgadas e a divisão dos blocos, a fórmula e os pesos do modelo, a definição de "limítrofe" e de conta estratégica, a regra de arredondamento, o modo de escolher os três fatores, o sentido de "internação recente" na R-31 e o tratamento dos outros 6 dos 11 campos que costumam chegar vazios. A lista completa está no fechamento.

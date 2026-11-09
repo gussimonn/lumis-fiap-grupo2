@@ -25,5 +25,5 @@ Pasta de trabalho do semestre de **Gestão em IA (FIAP)**. A Lumis Intelligence 
 
 ```
 01 A Chegada ──► 02 O Mercado ──► 03 O Motor ──► 04 As Regras ──► 05 O Produto ──► 06 As Pessoas ──► 07 O Julgamento
- (concluída)      (em andamento)    (aguardando enunciado ─────────────────────────────────────────►)   (dossiê final)
+ (concluída)      (entregue)      (em andamento)  (aguardando enunciado ─────────────────────────►)   (dossiê final)
 ```

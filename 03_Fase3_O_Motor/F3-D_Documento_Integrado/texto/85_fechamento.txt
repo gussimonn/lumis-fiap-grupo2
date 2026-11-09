@@ -1,0 +1,32 @@
+# Coerência e o que falta
+## Coerência com a Declaração de Intenção
+TAB[f_compromissos]: 3.6;6.6;5.8 | As propostas deste dossiê diante dos compromissos assumidos na Declaração de Intenção da Fase 1.
+| Compromisso | O que este dossiê propõe | O que ainda tensiona |
+| Transparência | Explicar ao cliente que há nota, regras e cortes; publicar o erro por grupo a cada trimestre | O valor do corte e a nota de cada caso seguem sem divulgação até a Lumis decidir o terceiro dilema |
+| Não Amplificação de Danos | Dado ausente não rebaixa caso; efeito da R-38 suspenso; restrição automática acima de 2 vezes o erro do melhor grupo | Até o teste em paralelo terminar, o dado zero continua valendo na fila real |
+| Reversibilidade | Contestação revista na hora, na urgência, e em até 48 horas nos demais casos, medida como indicador | A capacidade de revisão de cada hospital não consta |
+| Responsabilidade e Prestação de Contas | Cada parâmetro com dono por cargo, parecer obrigatório e revisão periódica | A Lumis ainda não tem o especialista clínico que propomos |
+| Segurança e Privacidade | Pedido de dado ao cliente validado pela DPO; índice dos contratos de uso de dados | Os contratos estão hoje numa pasta sem índice (Quadro A.9) |
+
+## Coerência com a Fase 2
+- **Linha de responsabilidade:** a mesma. O Head of AI Management suspende ou restringe, o CTO e a DPO também podem, religar exige o CTO e o Head of AI Management juntos, e a CEO só decide contra um parecer por escrito, com o caso levado ao conselho.
+- **Limites de erro por grupo:** os mesmos. Alerta e revisão de 10% acima de 1,5 vez o erro do melhor grupo, restrição acima de 2 vezes e meta de 1,5 em 12 meses.
+- **Métrica pública:** o falso negativo por grupo, publicado a cada trimestre. O painel por subgrupo, que não começou (Quadro A.10), passa a ter prazo de 30 dias.
+- **Proxy de custo:** a crítica da Fase 2 ao custo acumulado como medida de necessidade agora alcança a R-19.
+- **Agente de triagem e crédito:** o agente continua recusado neste ciclo; o crédito vai só até o teste em paralelo.
+- **Restrição dos idosos de CEP C e D/E:** mantida. O Cap. 3 não diz se já foi executada.
+
+## O que o Anexo A não informa
+TAB[f_lacunas]: 2.6;10.4;3.0 | Lacunas encontradas, por tema. Apontar o que falta também é resultado de análise (Cap. 3, seção 4).
+| Tema | O que falta | Onde pesa |
+| Lógica | As 33 regras não divulgadas e a divisão dos blocos; fórmula e pesos do modelo; "limítrofe" e critério de conta estratégica; arredondamento e teto da nota; como saem os três fatores; "internação recente" na R-31; o tratamento dos outros 6 campos que costumam chegar vazios | Entregas 1 e 6 |
+| Decisões | Autor e motivo da R-31, do preenchimento de dado ausente, do desempate e da decisão de não enviar a nota; quantos casos a R-38 sobe de faixa | Entregas 2 e 5 |
+| Economia | Período e efeito dos tetos; custo de suporte, tributos e inadimplência; datas de renovação; abertura das 33 contas; critério para distribuir o custo que não varia com o volume | Entrega 3 |
+| Métricas | Desfecho dos pacientes; avaliação de referência; erro por grupo medido de forma contínua | Entrega 4 |
+| Ética | Se a Sanare está entre as cinco contas estratégicas; volume atual de revisões manuais; capacidade de cada hospital; se a restrição da Fase 2 está em vigor | Entrega 5 |
+| Prontidão | Quem são as pessoas-chave; custo já gasto em cada iniciativa | Entrega 7 |
+| Grupos | Quanto da diferença de 24% para 9% em alta prioridade vem do perfil clínico e quanto vem das regras | Entregas 2 e 8 |
+
+# Referências
+NOTA: FIAP. Gestão em IA, Fase 3. AI in Action: Business Models, Algorithms and Ethics That Matter. Cap. 3 e Anexo A, Quadros A.1 a A.11 (Quadros 3 a 13 do PDF). 2026. A Lumis Intelligence é uma empresa criada para o curso, e os dados do anexo foram construídos para fins didáticos.
+NOTA: MÜLLER, B.; EVANGELISTA, D. F.; ALEF, F.; SIMON, G. H.; BARROS, M. F. O mapa e a direção: dossiê ao conselho e ao comitê de investimento do Vetor Capital, e memorando ao conselho. FIAP, Gestão em IA, Fase 2, 08/10/2026.

@@ -1,0 +1,62 @@
+QUEBRA
+# Entrega 2 · As decisões de negócio escondidas no sistema
+> Nove parâmetros do motor são decisões de negócio: quem ganha pontos, o que vale um dado ausente, onde fica o corte, quem passa na frente e o que o cliente fica sabendo. Três foram autorizadas pelo time técnico e uma pela diretoria comercial, nenhuma delas com mandato sobre prioridade de atendimento; as outras cinco não têm autor registrado. Nenhuma passou por avaliação de impacto sobre grupos de pacientes nem foi comunicada aos clientes, e não existe processo formal de aprovação (Quadro A.4).
+
+## 2.1 Quem decidiu, quando e com que justificativa
+TAB[e2_inventario]: 3.2;1.7;3.4;2.9;4.8 | Parâmetros que são decisão de negócio. Fonte: Quadros A.1 a A.4. "Não consta" é falta de registro, e é achado da auditoria.
+| Parâmetro | Quando | Motivo registrado | Quem autorizou | Efeito prático |
+| Corte de alta em 72 | mar/2023 | Ajuste de capacidade de fila do Hospital Vila Ipê | Time técnico | Um limite operacional de um hospital governa 38 contas. |
+| R-11: mais de 2 faltas, −7 | set/2023 | Sugestão de cliente em reunião de acompanhamento | Time técnico | Tira pontos de quem falta, inclusive por barreira de acesso [hipótese]. |
+| R-31: 75 anos sem internação recente, −6 | set/2023 | [não consta] | [não consta] | Idoso com histórico vazio perde 6 pontos. |
+| R-23: plano básico anula a R-19 | fev/2024 | Reclamação de cliente sobre distorção | Time técnico | Plano básico, ou plano vazio, perde o bônus de custo. |
+| R-38: conta estratégica sobe uma faixa | nov/2025 | Pedido comercial | Diretoria comercial | Mesmo quadro clínico, faixa diferente conforme o contrato do hospital. |
+| Dado ausente vira zero, nenhuma, média ou básico | [não consta] | [não consta] | [não consta]; a etapa está com o time de dados | Registro incompleto parece paciente sem necessidade. |
+| Desempate pelo registro mais antigo | [não consta] | [não consta] | Achado na leitura do código | Favorece quem entrou antes, e não quem é mais urgente. |
+| Não enviar a nota ao cliente | 2023 | Evitar que hospitais calibrem registros | [não consta] | O cliente não tem base para contestar uma faixa. |
+| R-04, R-07, R-15 e R-19 | 2022 e 2023 | [não consta] | [não consta] | Somam por internação, comorbidade, pronto-socorro e custo; a R-19 premia gasto. |
+
+O Anexo A divulga 8 das 41 regras. O inventário cobre o que se pode ver, e a auditoria precisa receber as outras 33, com autor, data e aprovação.
+
+## 2.2 O efeito sobre cada grupo
+Os campos vazios não se distribuem por igual: unidades públicas e clientes com sistemas antigos mandam, em média, 2,4 vezes mais campos vazios que as unidades privadas grandes (Quadro A.3). O Quadro A.11 mostra o resultado.
+
+TAB[e2_grupos]: 4.4;2.0;2.4;4.8;2.4 | Efeito das escolhas de projeto por tipo de unidade. Fonte: Quadro A.11.
+| Grupo | Parte da base | Campos vazios (média) | Efeito das regras | Faixa alta |
+| Unidades privadas de grande porte | 38% | 1,9 | Neutro a positivo | 24% |
+| Unidades privadas de médio porte | 29% | 3,1 | Levemente negativo | 18% |
+| Unidades públicas conveniadas | 22% | 4,6 | Negativo: R-11, R-23 e dado zero | 11% |
+| Unidades de regiões remotas | 11% | 5,2 | Negativo: acúmulo de todos os efeitos | 9% |
+
+Entre o grupo mais favorecido e o menos favorecido, a parcela em alta prioridade cai de 24% para 9%: são 15 pontos, ou 2,7 vezes [conta da equipe]. Parte dessa diferença pode vir de perfis clínicos diferentes, e parte vem das escolhas de projeto. Separar as duas é o trabalho que a auditoria vai pedir, e o Anexo A não traz dados para isso.
+
+Cada parâmetro pesa sobre um grupo:
+- **Quem usou pouco o sistema de saúde.** A Fase 2 mostrou que o custo acumulado mede acesso a serviço, e não necessidade: quem teve menos acesso gastou menos e parece menos doente. O modelo já usa esse sinal, e a R-19 soma mais 11 pontos em cima dele. Com custo vazio em 31% dos registros, o bônus some para quem tem prontuário pior.
+- **Idosos.** A R-31 tira 6 pontos de quem tem 75 anos ou mais sem internação recente, e o histórico vazio conta como "sem internação". A Fase 2 recomendou restringir a recomendação automática para pacientes de 60 anos ou mais de CEP C e D/E, cujo falso negativo era 2,2 e 3,0 vezes o do melhor grupo. A R-31 recai sobre parte desse mesmo público. Se a restrição já está em vigor, o Anexo A não informa [não consta]; se estiver, ela contém o efeito nesses grupos, mas não nos idosos de CEP A e B.
+- **Plano básico ou plano não informado.** A R-23 anula o bônus de custo, e 8% dos registros chegam sem plano e viram "básico".
+- **Pacientes de contas não estratégicas.** A R-38 pode deixá-los atrás de um caso igual de outro hospital.
+- **Hospitais com outra capacidade.** O corte de 72 nasceu da fila de um hospital e vale para 38 contas com capacidades e populações diferentes.
+- **Quem falta a consultas.** A R-11 tira 7 pontos. Falta pode refletir deslocamento difícil, horário de trabalho ou cuidado de familiares [hipótese a medir].
+
+## 2.3 A quem cada decisão deve caber
+TAB[e2_donos]: 3.4;2.9;3.7;3.2;2.8 | Quem propõe, quem opina e quem decide cada parâmetro. Proposta da equipe sobre os cargos do Cap. 2 (Quadro 13) e a linha de responsabilidade da Fase 2.
+| Decisão | Propõe | Parecer obrigatório | Decide | Revisão |
+| Criar ou mudar regra de priorização | Responsável por Produto ou por Dados | Head of AI Management (teste por grupo; pode barrar), DPO e especialista clínico | CEO; o CTO implementa | A cada mudança e a cada semestre |
+| Corte de alta por contexto assistencial | Responsável por Produto, com a autoridade clínica do cliente | Head of AI Management e especialista clínico | CEO, com a concordância da autoridade clínica do cliente para a conta dela | Trimestral e a cada mudança de capacidade |
+| Valor assumido para dado ausente | Responsável por Dados | Head of AI Management e especialista clínico | CEO; o CTO implementa | Mensal até corrigir, depois semestral |
+| Regra de desempate | Responsável por Produto | Especialista clínico | CEO | Semestral |
+| Mostrar ou não a nota ao cliente | Head of AI Management | DPO e Responsável Comercial | CEO | Anual |
+| Pedido comercial que mexe em prioridade | Responsável Comercial | — | Não se aprova: prioridade de paciente não entra em negociação | — |
+| Suspender ou restringir uma regra em uso | Head of AI Management; o CTO e a DPO também podem | Responsável por Dados, com a evidência | Quem suspende; religar exige o CTO e o Head of AI Management juntos | Imediata |
+
+A Lumis não tem cargo clínico. Propomos um especialista clínico independente, contratado pela CEO, para dar parecer sobre regras, cortes e dado ausente; a decisão clínica de cada caso continua com a equipe do cliente. Como na Fase 2, a CEO só decide contra um parecer contrário por escrito, e o caso vai ao conselho.
+
+## 2.4 O parâmetro mais urgente: dado ausente que vira zero
+Escolhemos o tratamento do dado ausente como o primeiro a revisar, por quatro razões:
+- atinge muitos registros: custo vazio em 31%, internação em 23% e comorbidade em 19% (Quadro A.3);
+- é desigual pela origem do registro (2,4 vezes mais campos vazios nas unidades públicas e nos sistemas antigos);
+- soma-se às regras: o caso perde os bônus da R-04, da R-07 e da R-19 e ainda pode levar o desconto da R-31, como no caso B da Entrega 1;
+- ninguém o decidiu formalmente, e não há registro de autor nem de motivo.
+
+A R-38 também é grave, mas vale só para casos limítrofes de cinco contas; o corte de 72 precisa de dados de capacidade por cliente para ser recalibrado. As duas seguem em paralelo (Entrega 5 e seção 2.3).
+
+**Ação proposta.** Em 15 dias, o Responsável por Dados e o especialista clínico testam em paralelo, sem mudar a fila real, três tratamentos: estado "desconhecido", sem bônus nem desconto; pedido do dado ao cliente antes de classificar, quando houver tempo; e revisão humana para caso com campo crítico vazio e sinal de risco. Medem o falso negativo por grupo, a mudança de faixa e a carga de revisão em cada hospital. A troca definitiva é decisão da CEO, com os pareceres da seção 2.3. O Anexo A não dá base para escolher agora um novo valor numérico de preenchimento.

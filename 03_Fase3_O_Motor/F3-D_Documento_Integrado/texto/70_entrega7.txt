@@ -1,0 +1,51 @@
+QUEBRA
+# Entrega 7 · Diagnóstico de prontidão e funil de inovação
+> Hoje a Lumis não consegue explicar o próprio sistema sem duas pessoas do time de dados, não tem caminho definido entre ideia e produção e não tem onde questionar uma regra sem que isso vire conflito. O funil que propomos já encerra duas das cinco iniciativas em andamento.
+
+## 7.1 Prontidão nas três dimensões
+TAB[e7_prontidao]: 3.0;9.4;3.6 | Prontidão atual. Fonte: Quadros A.4, A.9 e A.10 e Cap. 3, seções 1.2 e 2.6. A leitura é avaliação qualitativa da equipe.
+| Dimensão | O que o caso mostra | Leitura |
+| Documentação | As 41 regras estão só no código (2 pessoas dominam); o porquê dos limiares, só na memória de uma reunião (1 pessoa); o pipeline tem documentação parcial, desatualizada desde 2024 (3); os critérios de retreinamento não estão escritos (2); os incidentes ficam numa planilha pessoal (1); os contratos de uso de dados, numa pasta sem índice (2). | Baixa: o sistema não se explica sem as pessoas. |
+| Caminho da ideia à decisão | Cinco iniciativas sem critério de encerramento nem avaliação formal de prioridade, que entraram por cliente, comercial, time técnico, sócio-fundador e Fase 2. Uma está parada há 11 meses e ainda ocupa reuniões semanais. | Baixa: avança quem insiste. |
+| Tolerância ao questionamento | Nenhuma mudança de parâmetro passou por aprovação formal; a R-38 entrou por pedido comercial; ninguém fora do time técnico tinha lido as regras; a divisão entre técnico e comercial virou conflito. Na pesquisa de clima da Fase 2, de 21% a 29% das respostas indicavam não saber a quem levar um problema ético. | Baixa: questionar depende de coragem pessoal. |
+
+## 7.2 Dependência de pessoas
+TAB[e7_pessoas]: 3.8;1.8;5.2;5.2 | Conhecimento concentrado e risco. Fonte: Quadro A.9; risco e medida propostos pela equipe.
+| Conhecimento | Pessoas que dominam | Risco se alguém sair | Primeira medida |
+| Lógica das 41 regras | 2 | Ninguém muda nem explica uma regra com segurança | Catálogo das regras (intervenção 1) |
+| Porquê dos limiares | 1 | Perde-se o motivo do corte de 72 | Entrevista registrada e ata da decisão |
+| Pipeline e integrações | 3 | Recuperação lenta depois de uma falha | Documento atualizado e roteiro de recuperação |
+| Critérios de retreinamento | 2 | Retreino sem critério que se possa repetir | Checklist com aprovação do Head of AI Management |
+| Histórico de incidentes | 1 | Perde-se o que já deu errado | Registro comum, com cópia e responsável |
+| Contratos e uso de dados | 2 | Treino com dado sem base contratual | Índice dos contratos, mantido pela DPO |
+
+Duas pessoas do time de dados concentram quatro dos seis conhecimentos, e a rotatividade desse time foi de 27% nos últimos 12 meses. Quem são essas pessoas o Anexo A não diz, e não é preciso saber para agir.
+
+## 7.3 O funil: quem propõe, que prova, quem decide e quanto se libera
+Partimos do funil da Fase 2. Cada passagem tem quatro saídas: seguir, voltar, pausar com data ou encerrar. Os critérios são eliminatórios, para que receita prevista não compense risco aos pacientes, e quem pediu a iniciativa não vota.
+
+TAB[e7_funil]: 2.4;4.4;3.6;2.0;3.6 | Etapas do funil. Proposta da equipe, a partir da Fase 2; fatias em parcela do esforço estimado de cada iniciativa.
+| Etapa | Quem propõe e o que precisa mostrar | Quem decide | Recurso liberado | Encerra quando |
+| Entrada | Qualquer área, com ficha: problema, quem é afetado, dados com autorização, responsável com cargo e critério de encerramento escrito | Responsável por Produto; Head of AI Management e DPO podem barrar. Se muda decisão sobre pessoas, mercado ou setor, decide a CEO | Nenhum para construir | Falta item da ficha ou a ideia contraria a Declaração de Intenção |
+| Descoberta | Dono da iniciativa: hipótese de valor, dado autorizado por escrito, amostra para medir o erro por grupo e especialista do domínio | Responsável por Produto, com parecer do Head of AI Management | Até 10% | A fatia ou o prazo acabam sem evidência nova |
+| Teste em paralelo | Time técnico: roda junto ao processo atual, sem decidir, com plano de suspensão | CTO e Head of AI Management | Até mais 30% | Seis leituras quinzenais com algum grupo acima de 2 vezes o erro do melhor. Avança com quatro leituras até 1,5 vez |
+| Produção limitada | Dono: uso real em poucos clientes, com revisão humana, contrato e suspensão testada | CEO, por cliente, com parecer do Head of AI Management e da DPO | Até mais 30% | Seis leituras sem corrigir piora em algum grupo |
+| Escala | Dono: auditoria independente contratada, viabilidade econômica e erro por grupo publicado | CEO e conselho | O restante, até 30% | Suspensão pela linha de responsabilidade |
+
+Regras de encerramento que valem em qualquer etapa: gastar a fatia sem evidência nova; não obter autorização de uso dos dados até a data marcada; ter a estimativa de esforço aumentada em mais de 50%; passar de 10 meses-pessoa sem nova decisão; e ficar 60 dias parada sem decisão, regra nova que propomos por causa da reescrita do pipeline [proposta].
+
+## 7.4 O critério aplicado às cinco iniciativas
+TAB[e7_iniciativas]: 3.0;3.6;3.4;6.0 | As iniciativas em andamento e a decisão proposta. Fonte: Quadro A.10; decisões propostas pela equipe.
+| Iniciativa | Situação | Decisão | Critério e prazo |
+| Agente conversacional de triagem | Protótipo há 7 meses; ideia de sócio-fundador (o Cap. 2 dizia pedido comercial; vale o Cap. 3) | Encerrar o ciclo atual | A Fase 2 recusou o agente neste ciclo. Ele volta à Entrada só com o pior grupo até 1,5 vez o erro do melhor e a explicabilidade pronta |
+| Reescrita do pipeline de dados | Parada há 11 meses, ainda em reuniões semanais | Encerrar como está e tirar da pauta em 15 dias | Reabre pela Entrada só a primeira fatia prevista na Fase 2, com dono, prazo e documentação atualizada como entrega |
+| Explicabilidade das decisões | Em desenvolvimento há 5 meses, pedido de cliente após incidente | Manter, com critério | Em 30 dias, explicar casos reais com as regras do catálogo; se não conseguir, volta à Descoberta |
+| Módulo de risco de crédito | Em especificação há 3 meses, pedido comercial | Manter só até o teste em paralelo, exceção aprovada na Fase 2 | Dado de saúde fora do modelo e aprovação em cada faixa de CEP de pelo menos 80% da melhor; sem isso, encerra |
+| Painel de desempenho por subgrupo | Não iniciado, consequência da Fase 2 | Começar já, porque cumpre um compromisso assumido | Primeira leitura publicada em 30 dias; só a CEO pode replanejar, e não pode ser encerrado |
+
+Encerrar não apaga o que foi aprendido. Cada encerramento gera um relatório curto com o que se reaproveita e quando a ideia pode voltar. O custo já gasto em cada iniciativa não consta do Anexo A.
+
+## 7.5 Duas intervenções de prontidão
+**1. Catálogo das regras e parâmetros.** Responsáveis: o CTO, pelo registro técnico, e o Responsável por Dados, pela documentação; o Head of AI Management responde pelo conteúdo de negócio. Prazo: 30 dias. Entrega: as 41 regras, o corte, os valores para dado ausente e o desempate, cada um com autor, data, motivo, aprovação, teste e efeito por grupo. Sinal de que funcionou: 41 de 41 regras catalogadas, e uma terceira pessoa, que não seja nenhuma das duas que dominam hoje, faz sozinha uma mudança simulada de regra com teste de regressão.
+
+**2. Portão quinzenal na mesa de campo.** Responsáveis: o Responsável por Produto coordena; o Head of AI Management dá o parecer de risco; a DPO, o CTO e o Responsável Comercial participam. Prazo: primeira reunião em 15 dias. Entrega: as cinco iniciativas com critério de encerramento escrito e um espaço fixo para questionar regras, com registro de quem perguntou e da resposta. Sinal de que funcionou: em 30 dias, as cinco iniciativas com critério escrito, ao menos uma decisão de encerrar registrada, a reescrita do pipeline fora da pauta semanal e todo questionamento respondido em até duas reuniões.

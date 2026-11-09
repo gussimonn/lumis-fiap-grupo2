@@ -1,0 +1,599 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Fase 3 · Guia da equipe</title>
+<style>
+  :root{
+    --vital:#3DBE93; --vital-escuro:#1E8C6B; --profundo:#0F2D3A; --pulso:#2BA6C9;
+    --tinta:#18252C; --nevoa:#6B7C85; --papel:#EEF7F3; --papel-frio:#F1F6F4; --borda:#D3DEDB;
+    --ambar:#B7791F; --tijolo:#B4442F;
+    --serif: Georgia, "Source Serif 4", serif; --sans: Calibri, "Source Sans 3", "Segoe UI", sans-serif;
+  }
+  @page{size:A4;margin:15mm 17mm 16mm 17mm}
+  @page :first{margin:0}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  body{font-family:var(--sans);color:var(--tinta);font-size:10pt;line-height:1.42;background:#fff}
+
+  /* Capa */
+  .capa{width:210mm;height:297mm;background:var(--profundo);color:#fff;position:relative;page-break-after:always;overflow:hidden}
+  .capa .feixe{width:100%;display:block}
+  .capa .miolo{padding:16mm 20mm 0}
+  .capa img.logo{height:12mm}
+  .capa .fase{margin-top:16mm;font-size:13pt;color:var(--vital)}
+  .capa h1{font-family:var(--serif);font-weight:normal;font-size:40pt;line-height:1.05;letter-spacing:-0.02em;margin-top:3mm}
+  .capa .sub{font-size:14pt;color:#BFD3D0;margin-top:6mm;max-width:150mm;line-height:1.45}
+  .capa .rodape{position:absolute;left:20mm;right:20mm;bottom:18mm;border-top:1px solid rgba(255,255,255,.25);padding-top:5mm;font-size:10pt;color:#BFD3D0;display:flex;justify-content:space-between;gap:10mm}
+  .capa .rodape b{color:#fff;font-weight:normal}
+
+  /* Títulos */
+  h2{font-family:var(--serif);font-weight:normal;font-size:19pt;color:var(--profundo);letter-spacing:-0.01em;line-height:1.2;padding-bottom:2.5mm;border-bottom:2px solid var(--vital);margin-bottom:5mm}
+  h3{font-family:var(--serif);font-weight:normal;font-size:13pt;color:var(--profundo);margin:4.5mm 0 1.5mm;line-height:1.25}
+  h4{font-size:10.8pt;font-weight:bold;color:var(--profundo);margin:4mm 0 1mm}
+  p + p{margin-top:1.8mm}
+  .secao{page-break-before:always}
+  .leve{color:var(--nevoa);font-size:9pt}
+  ul.lista{margin:1.5mm 0 0 0;list-style:none}
+  ul.lista li{padding-left:4.5mm;position:relative;margin-top:.7mm}
+  ul.lista li::before{content:"";position:absolute;left:0;top:2.3mm;width:1.6mm;height:1.6mm;border-radius:50%;background:var(--vital)}
+  ol.passos{margin:1.5mm 0 0 5mm}
+  ol.passos li{margin-top:.8mm;padding-left:1mm}
+
+  .destaque{font-family:var(--serif);font-style:italic;font-size:11.2pt;color:var(--profundo);border-left:4px solid var(--vital);background:var(--papel);padding:3.5mm 5mm;margin:4mm 0;line-height:1.45}
+  .tag{font-weight:bold;font-size:8.6pt;white-space:nowrap}
+  .tf{color:var(--vital-escuro)} .th{color:var(--ambar)} .tn{color:#6B7A8C} .tr{color:var(--tijolo)}
+  .nw{white-space:nowrap}
+
+  table{width:100%;border-collapse:collapse;margin:2mm 0 .5mm;font-size:8.9pt;line-height:1.32}
+  th{background:var(--profundo);color:#fff;text-align:left;font-weight:bold;padding:1.3mm 2.2mm;vertical-align:bottom}
+  td{padding:1.15mm 2.2mm;border-bottom:1px solid var(--borda);vertical-align:top}
+  tr:nth-child(even) td{background:var(--papel-frio)}
+  td.num, th.num{text-align:right;white-space:nowrap}
+  table{page-break-inside:avoid}
+  .fonte{font-size:8.3pt;color:var(--nevoa);margin-top:.8mm;line-height:1.35}
+
+  /* Linha do tempo da história */
+  .historia{display:grid;grid-template-columns:repeat(3,1fr);gap:4mm;margin-top:3mm}
+  .momento{border-top:4px solid var(--borda);padding-top:2.5mm}
+  .momento.agora{border-top-color:var(--vital)}
+  .momento .quando{font-size:9pt;color:var(--nevoa)}
+  .momento h4{margin-top:.5mm;font-family:var(--serif);font-weight:normal;font-size:12pt}
+  .momento p{font-size:9.3pt;line-height:1.4}
+
+  /* Caixas */
+  .duas{display:grid;grid-template-columns:1fr 1fr;gap:5mm}
+  .caixa{background:var(--papel-frio);border-radius:2mm;padding:3.5mm 4.5mm}
+  .caixa h4{margin-top:0}
+  .caixa p, .caixa li{font-size:9.3pt}
+
+  /* Exemplo */
+  .caminhos{display:grid;grid-template-columns:1fr 1fr;gap:4mm;margin-top:2.5mm}
+  .caminho{border:1px solid var(--borda);border-radius:2mm;padding:3mm 4mm}
+  .caminho .rot{font-weight:bold;color:var(--profundo);margin-bottom:1.5mm}
+  .linha{display:flex;justify-content:space-between;font-size:9.8pt;padding:1mm 0;border-bottom:1px solid var(--borda)}
+  .res{margin-top:2mm;text-align:center;font-weight:bold;padding:1.5mm;border-radius:1.2mm;font-size:10pt}
+  .alta{background:var(--profundo);color:#fff}
+  .media{border:1.5px solid var(--profundo);color:var(--profundo)}
+
+  /* Entregas */
+  .entrega{page-break-before:always}
+  .entrega .cab{display:flex;align-items:baseline;gap:4mm;border-bottom:2px solid var(--vital);padding-bottom:2.2mm;margin-bottom:3mm}
+  .entrega .cod{background:var(--profundo);color:#fff;font-weight:bold;font-size:10pt;padding:.6mm 2.4mm;border-radius:1mm;position:relative;top:-1mm}
+  .entrega h2{border:none;padding:0;margin:0;font-size:18pt}
+  .ficha{display:grid;grid-template-columns:auto 1fr;gap:.5mm 4mm;font-size:9pt;color:var(--nevoa);margin-bottom:2mm}
+  .ficha b{color:var(--profundo)}
+  .rotulo{font-weight:bold;font-size:8.8pt;color:var(--vital-escuro);margin:3.6mm 0 .8mm;letter-spacing:.02em}
+  .pronto{margin-top:3.6mm;border:1px solid var(--borda);border-left:4px solid var(--profundo);border-radius:1.5mm;padding:3mm 4.5mm;font-size:10pt}
+  .pronto b{color:var(--profundo)}
+  .bloco{page-break-inside:avoid}
+
+  /* Ordem */
+  .ordem td:first-child{font-family:var(--serif);font-size:13pt;color:var(--profundo);width:9mm;text-align:center}
+</style>
+</head>
+<body>
+
+<!-- CAPA -->
+<section class="capa">
+  <img class="feixe" src="../../00_Lumis/Design_System/artefato/feixe_capa.jpg" alt="">
+  <div class="miolo">
+    <img class="logo" src="../../00_Lumis/Design_System/logo/lumis-insight_horizontal_negativo.svg" alt="Lumis Insight">
+    <div class="fase">Fase 3 · O Motor</div>
+    <h1>Guia da equipe</h1>
+    <p class="sub">Onde a Lumis está na história, o que cada uma das oito entregas pede e por quê, o que o Anexo A já mostra e em que ordem vamos trabalhar.</p>
+  </div>
+  <div class="rodape">
+    <span><b>Equipe:</b> Bruno Müller, Diego Franca Evangelista, Felipe Alef, Gustavo Halfen Simon e Maria Fernanda Barros</span>
+    <span class="nw">Documento interno · 04/11/2026</span>
+  </div>
+</section>
+
+<!-- 1. HISTÓRIA -->
+<section>
+  <h2>1. Onde a Lumis está agora</h2>
+  <p>A Lumis Intelligence é uma empresa brasileira de IA, fundada em 2022, que vende o Lumis Insight: um sistema que, entre outras coisas, prioriza o atendimento de pacientes em hospitais e clínicas. Tem 38 contas (24 hospitais e clínicas, 9 seguradoras e 5 bancos) e 96 pessoas. Desde a Fase 1, nós somos o Head of AI Management, o primeiro da empresa. <span class="tag tf">[fonte: Cap. 2, Quadro 3]</span></p>
+
+  <div class="historia">
+    <div class="momento">
+      <div class="quando">Fase 1 · A Chegada</div>
+      <h4>A crise</h4>
+      <p>Um hospital cliente notificou que o sistema rebaixava a prioridade de idosos de regiões periféricas. A ANS pediu resposta em 72 horas. Mapeamos a situação e os afetados e assumimos cinco compromissos públicos (transparência, não amplificação de danos, reversibilidade, responsabilidade, segurança e privacidade), que valem como critério de julgamento até o fim do curso.</p>
+    </div>
+    <div class="momento">
+      <div class="quando">Fase 2 · O Mercado</div>
+      <h4>O aporte</h4>
+      <p>O fundo Vetor Capital ofereceu R$ 120 milhões por 22% da empresa e pediu uma tese de crescimento. Mostramos que o número de 94% de acurácia não vale em campo (o pior grupo, 60+ de CEP D/E, tem 31,8% de falso negativo) e recomendamos aceitar o aporte com condições e liberação por etapas.</p>
+    </div>
+    <div class="momento agora">
+      <div class="quando">Fase 3 · O Motor (agora)</div>
+      <h4>A auditoria</h4>
+      <p>O conselho aceitou a recomendação. O Vetor manteve a proposta e pôs uma exigência: antes de qualquer desembolso, uma auditoria técnica independente do Lumis Insight, feita por terceiros, com a gente respondendo pelas conclusões. Ela começa em quatro semanas. <span class="tag tf">[fonte: Cap. 3, 1.1]</span></p>
+    </div>
+  </div>
+
+  <h3>A reunião com o CTO</h3>
+  <p>Paulo Adjaí, diretor de tecnologia, passou seis horas mostrando o sistema por dentro. O que apareceu foi um sistema competente e cheio de decisões de negócio tomadas por quem não tinha mandato para tomá-las. Não houve má-fé: toda vez que alguém precisou escolher onde cortar, o que fazer quando falta um dado ou quem passa na frente num empate, o time técnico decidiu, porque não havia mais ninguém na sala. <span class="tag tf">[fonte: Cap. 3, 1.1]</span></p>
+
+  <div class="duas" style="margin-top:4mm">
+    <div class="caixa">
+      <h4>O que a auditoria vai examinar</h4>
+      <ol class="passos">
+        <li><b>Lógica de decisão:</b> regras, limiares, ordem e exceções, em linguagem de gestor.</li>
+        <li><b>Escolhas de negócio embutidas:</b> quem decidiu, com que justificativa e sob que autoridade.</li>
+        <li><b>Receita e economia por decisão:</b> se o preço acompanha o custo.</li>
+        <li><b>Métricas:</b> se o que se mede liga a estratégia ao dia a dia.</li>
+        <li><b>Prontidão:</b> se a empresa sustenta o que construiu ou depende de poucas pessoas.</li>
+      </ol>
+    </div>
+    <div class="caixa">
+      <h4>As cinco anotações do caderno</h4>
+      <ol class="passos">
+        <li>Não é caixa-preta: são um modelo estatístico e cerca de 40 regras escritas à mão que ninguém de fora leu.</li>
+        <li>O ponto de corte foi definido em 2023 e nunca revisto.</li>
+        <li>Quando falta um dado, o sistema assume zero.</li>
+        <li>A Lumis cobra valor fixo e paga por decisão processada.</li>
+        <li>A empresa inova por impulso: não há caminho definido da ideia à produção.</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="destaque">Nosso trabalho não é consertar o código. É traduzir o que existe para uma linguagem que auditor, regulador e investidor consigam avaliar, achar as decisões de negócio que estão lá dentro e assumir a responsabilidade por elas, inclusive pelas que foram tomadas antes de chegarmos.</div>
+  <p class="leve">A descrição da lógica de decisão desta fase é, segundo o enunciado, a peça mais consultada na Fase 7. A primeira pergunta de qualquer auditor no julgamento final será: explique, sem jargão, como este sistema decide. <span class="tag tf">[fonte: Cap. 3, seção 3]</span></p>
+</section>
+
+<!-- 2. COMO O SISTEMA DECIDE -->
+<section class="secao">
+  <h2>2. Como o Lumis Insight decide, em poucas palavras</h2>
+  <p>Antes das entregas, vale todo mundo ter o mesmo retrato do sistema. Ele tem duas camadas. Um modelo estatístico dá a cada paciente uma nota de 0 a 100. Depois, um conjunto de regras escritas à mão soma ou tira pontos e define a faixa final. O hospital recebe só a faixa e os três fatores que mais pesaram, nunca a nota. <span class="tag tf">[fonte: Cap. 3, Quadro 3]</span></p>
+
+  <table>
+    <tr><th style="width:24mm">Etapa</th><th>O que acontece</th><th style="width:40mm">Quem responde pela regra</th></tr>
+    <tr><td>1. Recepção</td><td>Chega o registro do paciente, com até 34 campos preenchidos pelo hospital.</td><td>Integração, time técnico</td></tr>
+    <tr><td>2. Completude</td><td>O sistema vê quais campos faltam e aplica a regra de preenchimento (por exemplo, campo vazio vira zero).</td><td>Time de dados</td></tr>
+    <tr><td>3. Pontuação</td><td>O modelo estatístico dá a nota de 0 a 100.</td><td>Time de dados</td></tr>
+    <tr><td>4. Ajustes por regra</td><td>As regras somam ou tiram pontos. São 41 ativas; o anexo mostra 8.</td><td>Time técnico</td></tr>
+    <tr><td>5. Classificação</td><td>A nota ajustada vira faixa: alta (72 ou mais), média (45 a 71) ou baixa (abaixo de 45).</td><td>Definido em 2023, sem revisão</td></tr>
+    <tr><td>6. Desempate</td><td>Com nota e faixa iguais, passa na frente o registro que entrou antes no sistema.</td><td>Não documentado</td></tr>
+    <tr><td>7. Entrega</td><td>Volta para o hospital a faixa e os três fatores de maior peso.</td><td>Integração, time técnico</td></tr>
+  </table>
+  <p class="fonte">[fonte: Cap. 3, Quadros 3, 5 e 6]</p>
+
+  <h3>Exemplo: por que isso importa</h3>
+  <p>O mesmo paciente, internado há 30 dias, é atendido em dois hospitais. Um envia o histórico de internações; o outro deixa o campo vazio, o que acontece em 23% dos registros. <span class="tag tf">[fonte: Cap. 3, Quadros 4, 5 e 6]</span></p>
+  <div class="caminhos">
+    <div class="caminho">
+      <div class="rot">Hospital A envia o histórico</div>
+      <div class="linha"><span>Nota do modelo</span><span>64</span></div>
+      <div class="linha"><span>Regra R-04: internação nos últimos 90 dias</span><span>+12</span></div>
+      <div class="linha"><span>Nota ajustada</span><span>76</span></div>
+      <div class="res alta">Alta prioridade</div>
+    </div>
+    <div class="caminho">
+      <div class="rot">Hospital B deixa o campo vazio</div>
+      <div class="linha"><span>Nota do modelo</span><span>64</span></div>
+      <div class="linha"><span>Campo vazio vira zero; a R-04 não se aplica</span><span>+0</span></div>
+      <div class="linha"><span>Nota ajustada</span><span>64</span></div>
+      <div class="res media">Média prioridade</div>
+    </div>
+  </div>
+  <p style="margin-top:3mm">O paciente é o mesmo; o que muda a faixa é um campo que não foi enviado. Como o hospital não vê a nota, também não tem como perceber que o caso ficou a 8 pontos do corte. <span class="tag th">[hipótese]</span> A nota 64 é ilustrativa; a regra, o corte e a taxa de campo vazio são do anexo.</p>
+
+  <h3>Onde as decisões de negócio se escondem</h3>
+  <p>O capítulo aponta três lugares, e as entregas 1, 2, 5 e 8 giram em torno deles: <span class="tag tf">[fonte: Cap. 3, 2.1]</span></p>
+  <ul class="lista">
+    <li><b>No limiar.</b> Todo corte decide quantos erros de cada tipo a empresa aceita. Baixar o corte põe mais gente em alta prioridade sem precisar (falso positivo); subir deixa de fora quem precisava (falso negativo). O corte de 72 foi escolhido para a fila de um hospital, o Vila Ipê, caber na capacidade dele em 2023. Hoje vale para as 38 contas.</li>
+    <li><b>No dado que falta.</b> Assumir zero, assumir a média, recusar ou mandar para revisão humana: cada opção favorece um grupo de pessoas. Unidades públicas e de sistemas antigos mandam 2,4 vezes mais campos vazios.</li>
+    <li><b>No desempate.</b> A regra existe mesmo quando ninguém a escreveu. A da Lumis (o mais antigo primeiro) só foi descoberta lendo o código para preparar o dossiê.</li>
+  </ul>
+
+</section>
+
+<!-- 3. ENTREGAS -->
+<section class="entrega">
+  <div class="cab"><span class="cod">Entrega 1</span><h2>Tradução da lógica de decisão</h2></div>
+  <div class="ficha"><b>Quadros</b><span>A.1 Arquitetura, A.2 Regras e limiares, A.3 Dados faltantes e desempate</span><b>Disciplina</b><span>Computational Thinking &amp; AI for Leaders</span><b>Peça à parte</b><span>Fluxograma em arquivo próprio, apresentável a terceiros</span></div>
+
+  <div class="rotulo">Por que essa entrega existe</div>
+  <p>Hoje, só duas pessoas do time técnico conhecem as 41 regras, que estão no código, sem documentação. A auditoria exige que a lógica esteja descrita em linguagem de gestor. O capítulo insiste que entender um algoritmo não exige programar: descrever como uma empresa aprova uma despesa já é escrever um algoritmo. É também a peça que vai ser cobrada primeiro na Fase 7. <span class="tag tf">[fonte: Cap. 3, 2.1 e Quadro 11]</span></p>
+
+  <div class="rotulo">O que o enunciado pede</div>
+  <ul class="lista">
+    <li>O caminho completo da entrada à saída, em etapas numeradas.</li>
+    <li>As regras de cada etapa e a ordem em que são avaliadas.</li>
+    <li>Os limiares e o que muda quando o caso fica acima ou abaixo de cada um.</li>
+    <li>Um fluxograma ou diagrama da lógica.</li>
+    <li>Dois exemplos completos, um de alta e um de baixa prioridade, com o motivo em cada etapa.</li>
+  </ul>
+
+  <div class="rotulo">O que o anexo já mostra</div>
+  <table>
+    <tr><th style="width:12mm">Regra</th><th>Em linguagem comum</th><th class="num">Efeito</th><th class="num">Criada</th></tr>
+    <tr><td>R-04</td><td>Internação nos últimos 90 dias</td><td class="num">+12</td><td class="num">2022</td></tr>
+    <tr><td>R-07</td><td>Comorbidade crônica registrada</td><td class="num">+9</td><td class="num">2022</td></tr>
+    <tr><td>R-11</td><td>Mais de 2 faltas em consultas agendadas</td><td class="num">−7</td><td class="num">2023</td></tr>
+    <tr><td>R-15</td><td>Encaminhado pelo pronto-socorro</td><td class="num">+15</td><td class="num">2022</td></tr>
+    <tr><td>R-19</td><td>Custo acumulado de procedimentos no quartil superior</td><td class="num">+11</td><td class="num">2023</td></tr>
+    <tr><td>R-23</td><td>Plano da categoria básica: anula o bônus da R-19</td><td class="num">anula +11</td><td class="num">2024</td></tr>
+    <tr><td>R-31</td><td>75 anos ou mais e nenhuma internação recente</td><td class="num">−6</td><td class="num">2023</td></tr>
+    <tr><td>R-38</td><td>Cliente é conta estratégica: sobe uma faixa os casos limítrofes</td><td class="num">+1 faixa</td><td class="num">2025</td></tr>
+  </table>
+  <p class="fonte">[fonte: Cap. 3, Quadro 4]. Faixas em 2026: alta 18% dos casos, média 44%, baixa 38% [Quadro 5].</p>
+
+  <div class="rotulo">Como vamos fazer</div>
+  <ol class="passos">
+    <li>Escrever cada uma das sete etapas do ponto de vista do caso que passa por ela, em uma ou duas frases.</li>
+    <li>Pôr as 8 regras em linguagem comum e dizer, em cada uma, quando ela entra e o que provoca.</li>
+    <li>Desenhar o fluxograma com os pontos de decisão nos cortes de 45 e 72 e no desempate.</li>
+    <li>Montar os dois casos com as 8 regras do anexo, marcados como ilustrativos.</li>
+    <li>Dizer com clareza o que não sabemos: as outras 33 regras, como o modelo pesa cada variável e o que o anexo chama de "bloco" quando diz que a primeira regra aplicada encerra a avaliação. <span class="tag tn">[não consta]</span></li>
+  </ol>
+
+  <div class="pronto"><b>Pronto quando:</b> alguém do comercial lê o texto e consegue explicar o sistema a um cliente sem errar.</div>
+</section>
+
+<section class="entrega">
+  <div class="cab"><span class="cod">Entrega 2</span><h2>As decisões de negócio escondidas no sistema</h2></div>
+  <div class="ficha"><b>Quadros</b><span>A.2 Regras e limiares, A.3 Dados faltantes, A.4 Histórico de alterações</span><b>Disciplina</b><span>AI Governance &amp; Responsible AI Management</span><b>Alimenta</b><span>Entregas 5 e 8</span></div>
+
+  <div class="rotulo">Por que essa entrega existe</div>
+  <p>Toda vez que o sistema trata um empate, ignora um dado faltante ou aplica um corte, alguém tomou uma decisão de negócio. A auditoria quer saber quem tomou, com que justificativa e sob que autoridade. O enunciado resume: um parâmetro sem dono é um risco sem responsável, e a auditoria vai procurar exatamente isso. Na Fase 2 já defendemos que toda responsabilidade termina num cargo, nunca numa área; aqui aplicamos isso a cada parâmetro. <span class="tag tf">[fonte: Cap. 3, 1.1 e Entrega 2]</span></p>
+
+  <div class="rotulo">O que o enunciado pede</div>
+  <ul class="lista">
+    <li>Os parâmetros que são decisão de negócio, e não escolha técnica.</li>
+    <li>Para cada um: quem decidiu, quando, com que justificativa registrada e sob que autoridade.</li>
+    <li>O efeito prático de cada um sobre os grupos afetados.</li>
+    <li>A quem a decisão deve caber daqui em diante e de quanto em quanto tempo deve ser revista.</li>
+    <li>O parâmetro que a equipe considera mais urgente revisar, com a justificativa.</li>
+  </ul>
+
+  <div class="rotulo">O que o anexo já mostra</div>
+  <table>
+    <tr><th style="width:18mm">Quando</th><th>Alteração</th><th>Motivo registrado</th><th>Quem autorizou</th></tr>
+    <tr><td>mar/2023</td><td>Limiar de alta prioridade em 72</td><td>Ajuste da capacidade de fila</td><td>Time técnico</td></tr>
+    <tr><td>set/2023</td><td>R-11 (desconto por faltas)</td><td>Sugestão de cliente em reunião</td><td>Time técnico</td></tr>
+    <tr><td>set/2023</td><td>R-31 (desconto para 75+ sem internação)</td><td>Não registrado</td><td>Não registrado</td></tr>
+    <tr><td>fev/2024</td><td>R-23 (anula bônus por plano básico)</td><td>Reclamação de cliente sobre distorção</td><td>Time técnico</td></tr>
+    <tr><td>nov/2025</td><td>R-38 (sobe faixa de conta estratégica)</td><td>Pedido comercial</td><td>Diretoria comercial</td></tr>
+  </table>
+  <p class="fonte">[fonte: Cap. 3, Quadro 7]. Nenhuma alteração passou por avaliação de impacto sobre grupos de pacientes, nenhuma foi comunicada aos clientes, e não há processo formal de aprovação.</p>
+  <p>Fora do histórico, há mais três escolhas sem dono: o campo vazio tratado como zero, o desempate pelo registro mais antigo e a decisão de 2023 de não mostrar a nota ao cliente, que nunca foi comunicada. <span class="tag tf">[fonte: Cap. 3, A.1 e A.3]</span></p>
+
+  <div class="rotulo">Como vamos fazer</div>
+  <ol class="passos">
+    <li>Montar uma tabela única com os parâmetros: quem, quando, motivo, autoridade e efeito por grupo (usando o Quadro 13 para os grupos).</li>
+    <li>Para cada um, propor um cargo dono e um prazo de revisão, partindo da linha de responsabilidade que fizemos na Fase 2.</li>
+    <li>Escolher em equipe o mais urgente. Os candidatos mais fortes são o limiar de 72, por governar 38 contas com uma calibragem feita para uma, e o campo vazio como zero, por pesar mais sobre unidades públicas e remotas.</li>
+    <li>Checar contra os compromissos: a R-31 tira pontos de idosos, e na Fase 2 decidimos restringir a recomendação automática para idosos de CEP C e D/E. <span class="tag tr">[risco: C2]</span></li>
+  </ol>
+
+  <div class="pronto"><b>Pronto quando:</b> nenhum parâmetro da tabela fica sem um cargo responsável e sem data de revisão.</div>
+</section>
+
+<section class="entrega">
+  <div class="cab"><span class="cod">Entrega 3</span><h2>Modelo de negócio e economia por decisão</h2></div>
+  <div class="ficha"><b>Quadros</b><span>A.5 Contratos e cobrança, A.6 Custo por decisão e rentabilidade</span><b>Disciplina</b><span>AI Strategy &amp; Market Dynamics</span><b>Peça à parte</b><span>Planilha de margem por conta</span></div>
+
+  <div class="rotulo">Por que essa entrega existe</div>
+  <p>Software comum quase não custa nada a cada uso a mais. IA custa: cada decisão consome capacidade de computação paga a terceiros. A Lumis cobra como software comum (valor anual fixo) e gasta como IA (por decisão). Por isso, a conta que mais cresce é a que menos dá retorno, e ninguém acompanhava isso conta a conta. A Rede Sanare, apresentada como principal referência comercial, dá prejuízo, e ninguém tinha calculado a margem dela antes do dossiê. <span class="tag tf">[fonte: Cap. 3, 2.2 e A.6]</span></p>
+
+  <div class="rotulo">O que o enunciado pede</div>
+  <ul class="lista">
+    <li>O modelo de receita e o modelo de custo de hoje, lado a lado.</li>
+    <li>A margem por conta, com o volume real de decisões.</li>
+    <li>As contas que ficam menos rentáveis conforme crescem, com os números.</li>
+    <li>Pelo menos três modelos alternativos de cobrança, dizendo quem absorve o risco de volume em cada um.</li>
+    <li>O modelo recomendado e a transição para os contratos que já existem.</li>
+  </ul>
+
+  <div class="rotulo">O que o anexo já mostra</div>
+  <table>
+    <tr><th>Conta</th><th class="num">Decisões/mês</th><th class="num">Receita/mês</th><th class="num">Custo variável</th><th class="num">Margem</th><th class="num">Volume em que zera <span class="tag th" style="color:#F3D9A6">[cálculo nosso]</span></th></tr>
+    <tr><td>Rede Sanare</td><td class="num">214.000</td><td class="num">R$ 145.000</td><td class="num">R$ 211.860</td><td class="num">−R$ 66.860</td><td class="num">146.465</td></tr>
+    <tr><td>Hospital Vila Ipê</td><td class="num">96.000</td><td class="num">R$ 98.000</td><td class="num">R$ 95.040</td><td class="num">R$ 2.960</td><td class="num">98.990</td></tr>
+    <tr><td>Hospital Aurora</td><td class="num">61.000</td><td class="num">R$ 92.000</td><td class="num">R$ 60.390</td><td class="num">R$ 31.610</td><td class="num">92.929</td></tr>
+    <tr><td>Seguradora Prisma</td><td class="num">58.000</td><td class="num">R$ 87.000</td><td class="num">R$ 57.420</td><td class="num">R$ 29.580</td><td class="num">87.879</td></tr>
+    <tr><td>Banco Meridiano</td><td class="num">24.000</td><td class="num">R$ 60.000</td><td class="num">R$ 23.760</td><td class="num">R$ 36.240</td><td class="num">60.606</td></tr>
+    <tr><td>Demais 33 contas</td><td class="num">597.000</td><td class="num">R$ 2.951.000</td><td class="num">R$ 591.030</td><td class="num">R$ 2.359.970</td><td class="num">[não consta]</td></tr>
+    <tr><td><b>Total</b></td><td class="num"><b>1.050.000</b></td><td class="num"><b>R$ 3.433.000</b></td><td class="num"><b>R$ 1.039.500</b></td><td class="num"><b>R$ 2.393.500</b></td><td class="num"></td></tr>
+  </table>
+  <p class="fonte">[fonte: Cap. 3, Quadro 9; custo variável de R$ 0,99 por decisão]. As contas do quadro fecham. A última coluna é a receita dividida por R$ 0,99: o volume mensal a partir do qual a conta passa a dar prejuízo.</p>
+  <p>O Vila Ipê está a 3% do ponto em que zera. Os 24 hospitais têm uso ilimitado; seguradoras têm teto de 400 mil decisões e bancos, de 250 mil. Nenhum contrato prevê revisão de preço por volume, e o reajuste é só pela inflação. <span class="tag tf">[fonte: Cap. 3, Quadro 8]</span></p>
+
+  <div class="rotulo">Como vamos fazer</div>
+  <ol class="passos">
+    <li>Montar a planilha: margem, receita por decisão e volume em que zera, para as cinco contas e para o agregado.</li>
+    <li>Mostrar a curva: quanto a Sanare perde a cada 10 mil decisões a mais, e em quanto tempo o Vila Ipê vira prejuízo se continuar crescendo <span class="tag th">[hipótese: o ritmo de crescimento por conta não consta]</span>.</li>
+    <li>Comparar ao menos três modelos (por volume, fixo com teto e excedente, por resultado, híbrido) dizendo quem absorve a variação de custo em cada um.</li>
+    <li>Recomendar um modelo e a transição, começando pelos contratos sem teto.</li>
+  </ol>
+  <p class="leve">Dois cuidados. A margem do quadro só desconta o custo variável; os cerca de R$ 400 mil mensais de custo direto fixo não estão divididos por conta, e se fizermos esse rateio ele será hipótese nossa. O anexo também não diz se o teto é anual. Se for, a Prisma (58 mil por mês) e o Meridiano (24 mil por mês) já teriam passado dele. <span class="tag tn">[não consta]</span></p>
+
+  <div class="pronto"><b>Pronto quando:</b> os números mostram o que o contrato fixo com consumo variável faz com a Lumis, e a recomendação diz o que muda em cada tipo de contrato.</div>
+</section>
+
+<section class="entrega">
+  <div class="cab"><span class="cod">Entrega 4</span><h2>Árvore de métricas: da estratégia à operação</h2></div>
+  <div class="ficha"><b>Quadros</b><span>A.6 Rentabilidade por conta, A.7 Indicadores acompanhados</span><b>Disciplina</b><span>Data-Driven Business &amp; Analytics</span><b>Peça à parte</b><span>A árvore de métricas</span></div>
+
+  <div class="rotulo">Por que essa entrega existe</div>
+  <p>A Lumis mede o que consegue medir: decisões processadas, vidas analisadas, contas ativas. Quase nada mede se a decisão entregue ao paciente foi boa. O capítulo diz que uma empresa pode dobrar o número de recomendações e piorar em tudo o que importa. Na Fase 2 vimos isso na prática: 94% de acurácia na validação de 2023 e 87,6% em campo, com 31,8% de falso negativo no pior grupo. <span class="tag tf">[fonte: Cap. 3, 2.3; Cap. 2, Quadro 9]</span></p>
+
+  <div class="rotulo">O que o enunciado pede</div>
+  <ul class="lista">
+    <li>A hipótese de valor no formato "se fizermos A, acontecerá B, o que produzirá C".</li>
+    <li>A árvore de métricas derivada dela, do indicador estratégico aos operacionais.</li>
+    <li>Cada indicador classificado como métrica de progresso ou de saúde.</li>
+    <li>Os indicadores de hoje que não derivam de hipótese nenhuma, com a recomendação de manter ou descartar.</li>
+    <li>Pelo menos um indicador de qualidade da decisão entregue.</li>
+    <li>Quem revisa cada indicador e com que frequência.</li>
+  </ul>
+
+  <div class="rotulo">O que o anexo já mostra</div>
+  <table>
+    <tr><th>Indicador</th><th>Frequência</th><th>Quem acompanha</th><th>Deriva de hipótese de valor?</th></tr>
+    <tr><td>Decisões processadas por mês</td><td>Diária</td><td>Time técnico</td><td>Não: mede atividade</td></tr>
+    <tr><td>Disponibilidade da interface</td><td>Diária</td><td>Time técnico</td><td>Sim: confiabilidade contratada</td></tr>
+    <tr><td>Tempo médio de resposta</td><td>Diária</td><td>Time técnico</td><td>Sim: experiência de uso</td></tr>
+    <tr><td>Receita recorrente anual</td><td>Mensal</td><td>Diretoria</td><td>Sim: sustentabilidade</td></tr>
+    <tr><td>Número de contas ativas</td><td>Mensal</td><td>Comercial</td><td>Em parte: não separa conta rentável</td></tr>
+    <tr><td>Vidas analisadas acumuladas</td><td>Mensal</td><td>Comercial</td><td>Não: número de divulgação</td></tr>
+    <tr><td>Acurácia do modelo</td><td>Anual</td><td>Time de dados</td><td>Sim, mas só na base de 2023</td></tr>
+    <tr><td>Reclamações formais</td><td>Sem periodicidade</td><td>Sucesso do cliente</td><td>Não é tratado como indicador</td></tr>
+  </table>
+  <p class="fonte">[fonte: Cap. 3, Quadro 10]. Nenhum indicador mede a qualidade da decisão para o paciente, e nenhum é aberto por grupo.</p>
+
+  <div class="rotulo">Como vamos fazer</div>
+  <ol class="passos">
+    <li>Escrever a hipótese de valor e discutir em equipe antes de montar a árvore, porque tudo deriva dela.</li>
+    <li>Desenhar a árvore em três níveis e classificar cada indicador como progresso ou saúde (a margem por conta da entrega 3, por exemplo, é de saúde).</li>
+    <li>Passar os oito indicadores atuais pelo filtro de manter ou descartar.</li>
+    <li>Usar como indicador de qualidade o falso negativo por grupo, que já é a métrica pública que prometemos na Fase 2, para o dossiê não ganhar um número novo e solto.</li>
+    <li>Definir dono e frequência, coerentes com o compromisso de revisar os indicadores por grupo a cada quinze dias.</li>
+  </ol>
+
+  <div class="pronto"><b>Pronto quando:</b> para cada métrica, conseguimos responder o que a empresa passa a fazer de diferente se ela variar 20%.</div>
+</section>
+
+<section class="entrega">
+  <div class="cab"><span class="cod">Entrega 5</span><h2>Deliberação ética estruturada</h2></div>
+  <div class="ficha"><b>Quadros</b><span>A.2 Regras e limiares, A.3 Dados faltantes, A.8 Dilemas em aberto</span><b>Disciplina</b><span>AI Governance &amp; Responsible AI Management</span><b>Escolha</b><span>Dois dos três dilemas</span></div>
+
+  <div class="rotulo">Por que essa entrega existe</div>
+  <p>Ninguém defende em público um sistema injusto. O problema aparece quando a escolha certa custa dinheiro, e aí a ética deixa de ser declaração e vira gestão. O capítulo trata o limiar, o dado faltante e o desempate como decisões éticas disfarçadas de parâmetros técnicos e propõe um método em quatro passos: ver quem é afetado (inclusive quem não está na sala), explicitar os valores em conflito, buscar alternativas além das duas óbvias e decidir registrando a justificativa, para que a decisão possa ser revista e cobrada depois. <span class="tag tf">[fonte: Cap. 3, 2.4]</span></p>
+
+  <div class="rotulo">Os três dilemas</div>
+  <table>
+    <tr><th style="width:36mm">Dilema</th><th>O conflito</th></tr>
+    <tr><td><b>1. A regra R-38</b></td><td>A regra sobe uma faixa os casos limítrofes de contas estratégicas. Dois pacientes com o mesmo quadro recebem prioridades diferentes conforme o hospital. Tirar a regra significa conversas difíceis com cinco clientes que somam 31% da receita.</td></tr>
+    <tr><td><b>2. O dado faltante</b></td><td>Tratar ausência como zero prejudica pacientes de unidades com sistemas menos completos, em geral públicas e menores. Mandar esses casos para revisão humana aumentaria em cerca de 31% as revisões manuais dos clientes, que muitos não conseguem absorver e não são obrigados por contrato a fazer.</td></tr>
+    <tr><td><b>3. A transparência do limiar</b></td><td>A Lumis nunca contou aos clientes que a nota existe nem qual é o corte. Divulgar permite questionamento qualificado e também permite que clientes ajustem registros para subir de faixa, distorcendo o sistema para todos.</td></tr>
+  </table>
+  <p class="fonte">[fonte: Cap. 3, A.8]</p>
+
+  <div class="rotulo">O que o enunciado pede, para cada dilema escolhido</div>
+  <ul class="lista">
+    <li>Todos os afetados, inclusive quem não participa da decisão.</li>
+    <li>Os valores legítimos em conflito: o dilema real raramente é entre certo e errado.</li>
+    <li>Pelo menos quatro alternativas.</li>
+    <li>A decisão recomendada, com a justificativa num formato que permita revisão.</li>
+    <li>O custo da decisão: financeiro, operacional ou de relacionamento.</li>
+    <li>Quem, na estrutura da Lumis, deveria ter autoridade para tomá-la.</li>
+  </ul>
+
+  <div class="rotulo">Como vamos fazer</div>
+  <p>Primeiro escolhemos os dois dilemas. Cada um ganha a mesma estrutura de quatro passos e uma ficha de decisão (o que foi decidido, por quê, quem decidiu, quando rever). Os dilemas tocam compromissos da Fase 1: o 1 e o 2 tocam a não amplificação de danos <span class="tag tr">[risco: C2]</span>, e o 3 toca a transparência <span class="tag tr">[risco: C1]</span>. Se a decisão contrariar um compromisso, isso tem de ser dito e registrado.</p>
+
+  <div class="pronto"><b>Pronto quando:</b> o custo da decisão aparece em número ou em consequência concreta. Decisão ética que não custa nada raramente é dilema.</div>
+</section>
+
+<section class="entrega">
+  <div class="cab"><span class="cod">Entrega 6</span><h2>Biblioteca de prompts para análise de sistemas</h2></div>
+  <div class="ficha"><b>Quadros</b><span>A.1 a A.4, o material sobre o qual os prompts operam</span><b>Disciplina</b><span>Prompt Engineering &amp; Intelligent Automation for Business</span><b>No documento</b><span>Apêndice</span></div>
+
+  <div class="rotulo">Por que essa entrega existe</div>
+  <p>Na Fase 2, a IA generativa foi ferramenta de pesquisa. Agora é ferramenta de trabalho estruturado. O capítulo lembra que o valor de uma resposta gerada por IA depende de quem a recebe saber julgá-la: prompt avançado amplifica a competência de quem tem e amplifica o erro de quem não tem. <span class="tag tf">[fonte: Cap. 3, 2.5]</span></p>
+
+  <div class="rotulo">O que o enunciado pede</div>
+  <ul class="lista">
+    <li>Cinco prompts, um para cada finalidade: traduzir lógica técnica, encontrar decisões implícitas, gerar cenários de teste, revisar um texto como um auditor e argumentar contra a própria conclusão.</li>
+    <li>Cada um com papel, contexto, restrições, formato de saída e critério de sucesso.</li>
+    <li>O resultado de pelo menos dois deles aplicado ao Anexo A.</li>
+    <li>Uma análise do que veio útil, do que veio errado e de como a equipe verificou.</li>
+    <li>A técnica usada em cada prompt e por que ela foi escolhida.</li>
+  </ul>
+
+  <div class="rotulo">Técnicas que o capítulo cita</div>
+  <p>Dividir a tarefa em etapas encadeadas; dar exemplos do formato esperado; definir papel, restrições e critério de sucesso antes da tarefa; pedir o caminho até a conclusão. Para verificar: fazer a mesma pergunta de formas diferentes, pedir que o modelo argumente contra a própria conclusão e exigir que ele diga o que não pode ser afirmado com os dados. <span class="tag tf">[fonte: Cap. 3, 2.5]</span></p>
+
+  <div class="rotulo">Como vamos fazer</div>
+  <p>Ela não fica para o fim. Em cada entrega, quem usar IA guarda o prompt, a resposta e como conferiu. Os candidatos naturais são o prompt de tradução aplicado aos Quadros 3 e 4 (entrega 1), o de decisões implícitas aplicado ao Quadro 7 (entrega 2) e o de argumentar contra aplicado à conclusão da entrega 2. No fim escolhemos os cinco melhores para o apêndice.</p>
+
+  <div class="pronto"><b>Pronto quando:</b> cada resultado mostrado no apêndice vem com a conferência contra o quadro de origem. Prompt cujo resultado ninguém sabe avaliar é risco com aparência de produtividade.</div>
+</section>
+
+<section class="entrega">
+  <div class="cab"><span class="cod">Entrega 7</span><h2>Diagnóstico de prontidão e funil de inovação</h2></div>
+  <div class="ficha"><b>Quadros</b><span>A.9 Documentação e dependência de pessoas, A.10 Iniciativas em andamento</span><b>Disciplinas</b><span>Leadership, Change Management &amp; Organizational Culture; AI Product &amp; Innovation Management</span></div>
+
+  <div class="rotulo">Por que essa entrega existe</div>
+  <p>Uma empresa pronta sabe onde guarda o que aprende, tem um caminho da ideia ao experimento e do experimento à decisão, e aceita que as pessoas questionem o processo. Segundo o capítulo, a Lumis falha nas três: o conhecimento está na cabeça de poucas pessoas, não há caminho entre ideia e produção, e a briga entre técnico e comercial que vimos na Fase 2 transformou questionamento em conflito. O capítulo também insiste que toda iniciativa precisa de critério de encerramento definido antes de começar. <span class="tag tf">[fonte: Cap. 3, 2.6 e 2.7]</span></p>
+
+  <div class="rotulo">O que o enunciado pede</div>
+  <ul class="lista">
+    <li>O diagnóstico da prontidão em três dimensões: documentação, caminho da ideia à decisão e tolerância ao questionamento.</li>
+    <li>As dependências críticas de pessoas específicas, com o risco.</li>
+    <li>O funil de inovação: quem propõe, que evidência mínima cada etapa exige, quem decide e quanto recurso se libera por vez.</li>
+    <li>O critério de encerramento, aplicado a pelo menos duas das iniciativas em andamento.</li>
+    <li>Duas intervenções concretas, com responsável, prazo e sinal observável de que funcionaram.</li>
+  </ul>
+
+  <div class="rotulo">O que o anexo já mostra</div>
+  <div class="duas">
+    <table>
+      <tr><th>Conhecimento</th><th class="num">Pessoas que dominam</th></tr>
+      <tr><td>Lógica das 41 regras (no código, sem documentação)</td><td class="num">2</td></tr>
+      <tr><td>Racional dos limiares (memória de reunião)</td><td class="num">1</td></tr>
+      <tr><td>Pipeline e integrações (documentação de 2024)</td><td class="num">3</td></tr>
+      <tr><td>Critérios de retreinamento (não documentados)</td><td class="num">2</td></tr>
+      <tr><td>Histórico de incidentes (planilha individual)</td><td class="num">1</td></tr>
+      <tr><td>Contratos e cláusulas de dados (pasta sem índice)</td><td class="num">2</td></tr>
+    </table>
+    <table>
+      <tr><th>Iniciativa</th><th>Como entrou</th><th>Situação</th></tr>
+      <tr><td>Explicabilidade das decisões</td><td>Pedido de cliente após incidente</td><td>Em desenvolvimento, 5 meses</td></tr>
+      <tr><td>Módulo de risco de crédito</td><td>Pedido comercial</td><td>Em especificação, 3 meses</td></tr>
+      <tr><td>Reescrita do pipeline de dados</td><td>Proposta do time técnico</td><td>Parada, 11 meses</td></tr>
+      <tr><td>Agente conversacional de triagem</td><td>Ideia de sócio-fundador</td><td>Protótipo, 7 meses</td></tr>
+      <tr><td>Painel de desempenho por grupo</td><td>Consequência da Fase 2</td><td>Não iniciado</td></tr>
+    </table>
+  </div>
+  <p class="fonte">[fonte: Cap. 3, Quadros 11 e 12]. Duas pessoas do time de dados concentram 4 dos 6 ativos, e a rotatividade desse time foi de 27% em doze meses. Nenhuma iniciativa tem critério de encerramento, e a parada há onze meses ainda ocupa reuniões semanais.</p>
+
+  <div class="rotulo">Como vamos fazer</div>
+  <ol class="passos">
+    <li>Partir do funil que desenhamos na Fase 2, com os portões e o "teste em paralelo", e dizer o que muda. Não começamos do zero.</li>
+    <li>Aplicar o critério de encerramento a pelo menos duas iniciativas. Os candidatos óbvios são a reescrita parada há 11 meses e o agente de triagem, que recusamos na Fase 2 e que mesmo assim está em protótipo há 7 meses.</li>
+    <li>Propor duas intervenções com dono, prazo e sinal observável. O racional dos limiares, que só uma pessoa conhece, é um ponto de partida natural.</li>
+  </ol>
+  <p class="leve">Divergência: o Cap. 2 diz que o agente de triagem foi pedido pelo comercial; o Cap. 3, que foi ideia de um sócio-fundador. Vale o Cap. 3, com a diferença sinalizada.</p>
+
+  <div class="pronto"><b>Pronto quando:</b> o funil mostra que sabe matar projeto, não só aprovar.</div>
+</section>
+
+<section class="entrega">
+  <div class="cab"><span class="cod">Entrega 8</span><h2>Nota de Ciência, Tecnologia e Sociedade</h2></div>
+  <div class="ficha"><b>Quadros</b><span>A.3 Dados faltantes, A.8 Dilemas, A.11 Efeito sobre grupos</span><b>Disciplina</b><span>Formação Social e Sustentabilidade</span><b>Tamanho</b><span>Duas a três páginas</span></div>
+
+  <div class="rotulo">Por que essa entrega existe</div>
+  <p>Nenhuma tecnologia é neutra: ela carrega as prioridades de quem a financiou, os dados que estavam disponíveis para quem a construiu e o que alguém decidiu que ela deveria otimizar. Para quem decide prioridade de atendimento em saúde, essa reflexão é a diferença entre uma ferramenta que reduz desigualdade e uma que a automatiza com aparência de neutralidade. <span class="tag tf">[fonte: Cap. 3, 2.8]</span></p>
+
+  <div class="rotulo">O que o enunciado pede</div>
+  <ul class="lista">
+    <li>Como as decisões técnicas da entrega 2 afetam grupos distintos de forma desigual.</li>
+    <li>Que prioridades ficaram embutidas no que o sistema otimiza, e quem as definiu.</li>
+    <li>Quem deveria ter sido consultado no desenho do sistema e não foi.</li>
+    <li>A diferença entre reduzir desigualdade e automatizá-la com aparência de neutralidade.</li>
+    <li>A posição da equipe sobre o que a Lumis deve assumir em público.</li>
+  </ul>
+
+  <div class="rotulo">O que o anexo já mostra</div>
+  <table>
+    <tr><th>Grupo</th><th class="num">% da base</th><th class="num">Campos vazios (média)</th><th>Efeito acumulado das regras</th><th class="num">Alta prioridade</th></tr>
+    <tr><td>Privadas de grande porte</td><td class="num">38%</td><td class="num">1,9</td><td>Neutro a positivo</td><td class="num">24%</td></tr>
+    <tr><td>Privadas de médio porte</td><td class="num">29%</td><td class="num">3,1</td><td>Levemente negativo</td><td class="num">18%</td></tr>
+    <tr><td>Públicas conveniadas</td><td class="num">22%</td><td class="num">4,6</td><td>Negativo: R-11, R-23 e dado zero</td><td class="num">11%</td></tr>
+    <tr><td>Regiões remotas</td><td class="num">11%</td><td class="num">5,2</td><td>Negativo: soma de todos os efeitos</td><td class="num">9%</td></tr>
+  </table>
+  <p class="fonte">[fonte: Cap. 3, Quadro 13]. A média ponderada dá cerca de 18% em alta prioridade, igual ao Quadro 5 [cálculo nosso].</p>
+  <p>O próprio anexo avisa que parte da diferença entre 24% e 9% pode ser perfil clínico, e parte vem das escolhas de projeto. Separar as duas causas é o que a auditoria vai exigir. Com os dados do anexo, não dá para fazer essa separação, e a nota precisa dizer isso. <span class="tag tn">[não consta]</span></p>
+
+  <div class="rotulo">Como vamos fazer</div>
+  <ol class="passos">
+    <li>Ligar cada decisão da entrega 2 aos grupos que ela atinge mais.</li>
+    <li>Mostrar o que o sistema otimiza de fato: o corte de 72 nasceu para a fila de um hospital caber na capacidade dele, com objetivo operacional e não clínico.</li>
+    <li>Listar quem não foi ouvido: pacientes, equipes de unidades públicas e remotas, e os clientes que nunca souberam do corte nem da nota.</li>
+    <li>Fechar com a posição da equipe sobre o que a Lumis assume em público, coerente com os compromissos de transparência e de não amplificação de danos.</li>
+  </ol>
+
+  <div class="pronto"><b>Pronto quando:</b> o texto cabe em duas a três páginas e cada afirmação se apoia num quadro ou numa entrega. O enunciado diz que densidade importa mais que extensão.</div>
+</section>
+
+<!-- 4. COMO VAMOS TRABALHAR -->
+<section class="secao">
+  <h2>3. Como vamos trabalhar</h2>
+
+  <h3>Ordem de execução</h3>
+  <p>A ordem segue as dependências: cada etapa usa o que a anterior deixou pronto.</p>
+  <table class="ordem">
+    <tr><th></th><th style="width:38mm">Etapa</th><th>Por que nesta posição</th></tr>
+    <tr><td>0</td><td>Dados do Anexo A</td><td>Transcrever e conferir os Quadros 3 a 13. As tabelas saem embaralhadas quando o PDF é lido, e todo número das entregas deve sair desse arquivo.</td></tr>
+    <tr><td>1</td><td>Entrega 1</td><td>É a base de tudo: as outras entregas pressupõem que sabemos como o sistema decide.</td></tr>
+    <tr><td>2</td><td>Entrega 2</td><td>Usa a lógica da entrega 1 e alimenta as entregas 5 e 8.</td></tr>
+    <tr><td>3</td><td>Entregas 3 e 4</td><td>A entrega 3 calcula a margem por conta, que a entrega 4 usa como métrica de saúde.</td></tr>
+    <tr><td>4</td><td>Entregas 5 e 8</td><td>As duas dependem do levantamento de parâmetros da entrega 2.</td></tr>
+    <tr><td>5</td><td>Entrega 7</td><td>Independe das outras, mas precisa partir do funil da Fase 2.</td></tr>
+    <tr><td>6</td><td>Documento único</td><td>Montagem das oito entregas, apêndice de prompts, peças à parte, revisão e envio.</td></tr>
+  </table>
+  <p>A entrega 6 corre junto com todas: os prompts são registrados no momento em que forem usados.</p>
+
+  <h3>Os seis passos de cada entrega</h3>
+  <ol class="passos">
+    <li><b>Ler o pedido.</b> No PDF, o trecho da entrega e os quadros indicados. O resumo deste guia e dos READMEs não substitui o enunciado.</li>
+    <li><b>Conferir os dados.</b> Só números do Anexo A e das entregas já feitas. O que não está lá é informação indisponível e deve ser dito.</li>
+    <li><b>Levantar e concluir.</b> Uma conclusão em uma frase e a origem de cada afirmação marcada: <span class="tag tf">[fonte]</span>, <span class="tag th">[hipótese]</span> ou <span class="tag tn">[não consta]</span>.</li>
+    <li><b>Checar a coerência.</b> Contra os cinco compromissos da Fase 1 e contra o que a Fase 2 já decidiu. Se a entrega contrariar algum, decidimos explicitamente e registramos.</li>
+    <li><b>Escrever no documento único.</b> Desde o começo o texto vai para o documento único, sem versão individual em Word, para não repetir o retrabalho da Fase 2.</li>
+    <li><b>Revisar com a equipe.</b> Só depois do aval passamos à próxima etapa.</li>
+  </ol>
+
+  <h3>O que vai para o portal</h3>
+  <table>
+    <tr><th>Peça</th><th>De onde sai</th></tr>
+    <tr><td>Documento único, com identificação da equipe e as oito entregas articuladas</td><td>Entregas 1 a 8</td></tr>
+    <tr><td>Fluxograma da lógica de decisão, em arquivo próprio</td><td>Entrega 1</td></tr>
+    <tr><td>Biblioteca de prompts, com resultados e verificação, em apêndice</td><td>Entrega 6</td></tr>
+    <tr><td>Planilha de margem por conta</td><td>Entrega 3</td></tr>
+    <tr><td>Árvore de métricas</td><td>Entrega 4</td></tr>
+  </table>
+  <p class="fonte">[fonte: Cap. 3, 4.2]. Nesta fase não há memorando ao conselho.</p>
+
+  <h3>Como seremos avaliados</h3>
+  <p>Clareza da tradução, identificação de decisões implícitas, consistência econômica, qualidade da árvore de métricas, método na deliberação ética, domínio de prompt avançado, realismo do funil de inovação e consciência sociotécnica. <span class="tag tf">[fonte: Cap. 3, 4.3]</span></p>
+</section>
+
+<section class="bloco" style="margin-top:8mm">
+  <h2>4. O que falta saber e o que a equipe decide</h2>
+  <div class="duas">
+    <div class="caixa">
+      <h4>O anexo não informa</h4>
+      <ul class="lista">
+        <li>As outras 33 das 41 regras.</li>
+        <li>Seis dos 11 campos que costumam chegar vazios.</li>
+        <li>A margem individual das 33 contas agregadas.</li>
+        <li>Se o teto de consumo é anual.</li>
+        <li>O ritmo de crescimento de cada conta.</li>
+        <li>O que separa perfil clínico de efeito das regras no Quadro 13.</li>
+        <li>O prazo de envio no portal.</li>
+      </ul>
+    </div>
+    <div class="caixa">
+      <h4>Para a equipe decidir</h4>
+      <ul class="lista">
+        <li>Quem fica com cada entrega.</li>
+        <li>Quais dois dilemas entram na entrega 5.</li>
+        <li>Qual parâmetro é o mais urgente na entrega 2.</li>
+        <li>Se fazemos rateio do custo fixo na entrega 3.</li>
+        <li>O formato do fluxograma e da árvore de métricas.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="caixa" style="margin-top:6mm">
+    <h4>Termos que vão aparecer</h4>
+    <p><b>Limiar ou ponto de corte:</b> a nota a partir da qual o caso muda de faixa. <b>Falso negativo:</b> paciente que precisava de prioridade e não recebeu. <b>Custo variável:</b> o que a Lumis gasta a cada decisão processada (R$ 0,99). <b>Margem por conta:</b> receita da conta menos o custo variável do volume que ela usa. <b>Métrica de saúde:</b> precisa ficar dentro de uma faixa. <b>Métrica de progresso:</b> precisa crescer. <b>Funil de inovação:</b> o caminho, com portões, que uma ideia percorre até virar produto ou ser encerrada.</p>
+  </div>
+</section>
+
+</body>
+</html>

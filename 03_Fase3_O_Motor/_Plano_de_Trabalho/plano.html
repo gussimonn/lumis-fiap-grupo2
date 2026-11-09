@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Plano da Fase 3</title>
+<style>
+  :root{
+    --vital:#3DBE93; --vital-escuro:#1E8C6B; --profundo:#0F2D3A; --pulso:#2BA6C9;
+    --tinta:#18252C; --nevoa:#6B7C85; --papel:#EEF7F3; --papel-frio:#F1F6F4; --borda:#D3DEDB;
+    --ambar:#B7791F; --serif: Georgia, "Source Serif 4", serif; --sans: Calibri, "Source Sans 3", "Segoe UI", sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{width:1920px;background:#FFFFFF}
+  body{font-family:var(--sans);color:var(--tinta);font-size:16px;line-height:1.4}
+
+  /* Cabeçalho */
+  header{background:var(--profundo);color:#fff;padding:40px 56px 36px;display:grid;grid-template-columns:auto 1fr auto;gap:48px;align-items:center;position:relative;overflow:hidden}
+  header::after{content:"";position:absolute;left:0;right:0;bottom:0;height:5px;background:linear-gradient(90deg,var(--vital),var(--pulso))}
+  header img{height:46px}
+  .titulo h1{font-family:var(--serif);font-weight:normal;font-size:46px;letter-spacing:-0.02em;line-height:1.1}
+  .titulo p{font-size:19px;color:#BFD3D0;margin-top:8px;max-width:900px}
+  .numeros{display:flex;gap:36px}
+  .numeros div{text-align:left}
+  .numeros b{display:block;font-family:var(--serif);font-weight:normal;font-size:40px;color:var(--vital);line-height:1}
+  .numeros span{font-size:14px;color:#BFD3D0;display:block;margin-top:4px;max-width:150px}
+
+  main{padding:40px 56px 0}
+  h2{font-family:var(--serif);font-weight:normal;font-size:27px;color:var(--profundo);letter-spacing:-0.01em}
+  h2 small{font-family:var(--sans);font-size:16px;color:var(--nevoa);margin-left:14px;letter-spacing:0}
+
+  /* Linha do tempo */
+  .trilho{position:relative;margin-top:26px}
+  .trilho::before{content:"";position:absolute;left:18px;right:18px;top:18px;height:2px;background:var(--profundo)}
+  .trilho::after{content:"";position:absolute;left:18px;width:30%;top:17px;height:4px;background:linear-gradient(90deg,var(--vital),var(--pulso))}
+  .etapas{display:grid;grid-template-columns:repeat(7,1fr);gap:18px;position:relative;z-index:1}
+  .no{width:38px;height:38px;border-radius:50%;background:#fff;border:3px solid var(--profundo);display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:19px;color:var(--profundo)}
+  .etapa.base .no{background:var(--vital);border-color:var(--vital);color:#fff}
+  .etapa.fim .no{background:var(--profundo);color:#fff}
+  .etapa h3{font-family:var(--serif);font-weight:normal;font-size:20px;color:var(--profundo);margin:14px 0 10px;line-height:1.2;min-height:48px}
+
+  .card{background:#fff;border:1px solid var(--borda);border-top:4px solid var(--profundo);border-radius:6px;padding:14px 15px 15px;box-shadow:0 1px 0 rgba(15,45,58,.04),0 8px 22px -14px rgba(15,45,58,.28)}
+  .card + .card{margin-top:12px}
+  .etapa.base .card{border-top-color:var(--vital);background:var(--papel)}
+  .etapa.fim .card{border-top-color:var(--pulso)}
+  .cod{display:inline-block;font-weight:bold;font-size:13px;color:#fff;background:var(--profundo);border-radius:3px;padding:1px 7px;margin-right:6px;vertical-align:1px}
+  .etapa.base .cod{background:var(--vital-escuro)}
+  .card h4{font-size:17px;color:var(--profundo);line-height:1.25;margin-bottom:8px}
+  .card ul{list-style:none}
+  .card li{font-size:14.5px;line-height:1.38;padding-left:13px;position:relative;margin-top:4px}
+  .card li::before{content:"";position:absolute;left:0;top:8px;width:5px;height:5px;border-radius:50%;background:var(--vital)}
+  .teste{margin-top:10px;padding-top:9px;border-top:1px dashed var(--borda);font-family:var(--serif);font-style:italic;font-size:14px;color:var(--vital-escuro);line-height:1.35}
+  .usa{font-size:13px;color:var(--nevoa);margin-top:7px}
+
+  /* Faixa da E6 */
+  .faixa{margin-top:20px;display:grid;grid-template-columns:repeat(7,1fr);gap:18px}
+  .faixa .corpo{grid-column:2 / 7;background:var(--profundo);color:#fff;border-radius:6px;padding:14px 20px;display:flex;gap:22px;align-items:center;position:relative}
+  .faixa .corpo::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;border-radius:6px 0 0 6px;background:linear-gradient(180deg,var(--vital),var(--pulso))}
+  .faixa .cod{background:var(--pulso);font-size:14px}
+  .faixa b{font-family:var(--serif);font-weight:normal;font-size:19px;white-space:nowrap}
+  .faixa p{font-size:15px;color:#D6E4E1;line-height:1.4}
+
+  /* Linha de baixo */
+  .baixo{display:grid;grid-template-columns:1.35fr 1fr;gap:40px;margin-top:40px}
+  .passos{display:grid;grid-template-columns:repeat(3,1fr);gap:14px 18px;margin-top:18px}
+  .passo{display:grid;grid-template-columns:34px 1fr;gap:10px;align-items:start;padding:12px 14px;background:var(--papel-frio);border-radius:6px}
+  .passo .n{width:30px;height:30px;border-radius:50%;border:2px solid var(--vital-escuro);color:var(--vital-escuro);font-family:var(--serif);font-size:16px;display:flex;align-items:center;justify-content:center}
+  .passo strong{display:block;font-size:16px;color:var(--profundo)}
+  .passo span{font-size:14px;line-height:1.38;display:block;margin-top:2px}
+  .tags{margin-top:6px}
+  .tag{font-weight:bold;font-size:12.5px;margin-right:6px}
+  .passo .tags span{display:inline;margin-top:0}
+  .tag.tf{color:var(--vital-escuro)} .tag.th{color:var(--ambar)} .tag.tn{color:#6B7A8C}
+  .nw{white-space:nowrap}
+
+  .exemplo{border:1px solid var(--borda);border-left:5px solid var(--vital);border-radius:6px;padding:18px 22px;margin-top:18px;background:#fff;box-shadow:0 10px 26px -18px rgba(15,45,58,.35)}
+  .exemplo .intro{font-size:15px;color:var(--tinta)}
+  .caminhos{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
+  .caminho{background:var(--papel-frio);border-radius:6px;padding:12px 14px}
+  .caminho .rot{font-weight:bold;font-size:14px;color:var(--profundo);margin-bottom:8px}
+  .linha{display:flex;justify-content:space-between;font-size:14px;padding:4px 0;border-bottom:1px solid var(--borda)}
+  .linha:last-of-type{border-bottom:none}
+  .linha em{font-style:normal;color:var(--nevoa)}
+  .faixa-res{margin-top:9px;font-weight:bold;font-size:15px;padding:6px 10px;border-radius:4px;text-align:center}
+  .alta{background:var(--profundo);color:#fff}
+  .media{background:#fff;color:var(--profundo);border:1.5px solid var(--profundo)}
+  .moral{font-family:var(--serif);font-style:italic;font-size:16.5px;color:var(--profundo);margin-top:14px;line-height:1.4}
+
+  footer{margin:36px 56px 0;padding:18px 0 30px;border-top:2px solid var(--profundo);display:flex;justify-content:space-between;gap:40px;font-size:14px;color:var(--nevoa)}
+  footer strong{color:var(--profundo)}
+</style>
+</head>
+<body>
+<header>
+  <img src="../../00_Lumis/Design_System/logo/lumis-insight_horizontal_negativo.svg" alt="Lumis Insight">
+  <div class="titulo">
+    <h1>Fase 3 · O Motor: plano de trabalho</h1>
+    <p>Traduzir o Lumis Insight para a auditoria técnica independente que o Vetor Capital exigiu antes do desembolso, e assumir as decisões que estão dentro dele.</p>
+  </div>
+  <div class="numeros">
+    <div><b>8</b><span>entregas num documento único</span></div>
+    <div><b>3</b><span>peças à parte: fluxograma, planilha de margem e árvore de métricas</span></div>
+    <div><b>4 sem.</b><span>até a auditoria, na história (prazo do portal não consta)</span></div>
+  </div>
+</header>
+
+<main>
+  <h2>Ordem de execução e o que entra em cada entrega<small>cada etapa usa o que a anterior deixou pronto</small></h2>
+
+  <div class="trilho">
+    <div class="etapas">
+
+      <div class="etapa base">
+        <div class="no">0</div>
+        <h3>Dados do Anexo A</h3>
+        <div class="card">
+          <h4><span class="cod">Base</span>Quadros 3 a 13</h4>
+          <ul>
+            <li>Transcrever as tabelas, que saem embaralhadas do PDF</li>
+            <li>Bater as contas (o Quadro 9 já fecha)</li>
+            <li>Listar o que não consta: 33 das 41 regras, margem das 33 contas, período do teto</li>
+          </ul>
+          <div class="teste">Pronto quando todo número das entregas sair daqui.</div>
+        </div>
+      </div>
+
+      <div class="etapa">
+        <div class="no">1</div>
+        <h3>Como o sistema decide</h3>
+        <div class="card">
+          <h4><span class="cod">E1</span>Tradução da lógica</h4>
+          <ul>
+            <li>As 7 etapas, da recepção à entrega</li>
+            <li>As 8 regras do anexo e os cortes 72 e 45</li>
+            <li>Fluxograma em arquivo próprio</li>
+            <li>Dois casos completos: um alta, um baixa</li>
+          </ul>
+          <div class="teste">O comercial consegue explicar a um cliente sem errar?</div>
+        </div>
+      </div>
+
+      <div class="etapa">
+        <div class="no">2</div>
+        <h3>Quem decidiu o quê</h3>
+        <div class="card">
+          <h4><span class="cod">E2</span>Decisões escondidas</h4>
+          <ul>
+            <li>Limiar 72, dado vazio vira zero, desempate, <span class="nw">R-11</span>, <span class="nw">R-19</span>, <span class="nw">R-23</span>, <span class="nw">R-31</span>, <span class="nw">R-38</span>, pontuação oculta</li>
+            <li>Quem, quando, motivo e autoridade de cada um</li>
+            <li>Novo dono por cargo e prazo de revisão</li>
+            <li>O parâmetro mais urgente</li>
+          </ul>
+          <div class="teste">Nenhum parâmetro sai sem dono.</div>
+        </div>
+      </div>
+
+      <div class="etapa">
+        <div class="no">3</div>
+        <h3>Dinheiro e medida</h3>
+        <div class="card">
+          <h4><span class="cod">E3</span>Economia por decisão</h4>
+          <ul>
+            <li>Receita fixa x custo de <span class="nw">R$ 0,99</span> por decisão</li>
+            <li>Margem por conta; Sanare: <span class="nw">−R$ 66,9 mil</span> por mês</li>
+            <li>3+ modelos de cobrança e quem absorve o volume</li>
+            <li>Transição dos contratos e planilha</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h4><span class="cod">E4</span>Árvore de métricas</h4>
+          <ul>
+            <li>Hipótese "se A, então B, então C"</li>
+            <li>Progresso x saúde; manter ou descartar os 8 atuais</li>
+            <li>Um indicador de qualidade da decisão</li>
+          </ul>
+          <div class="usa">Usa a margem da E3.</div>
+          <div class="teste">Se variar 20%, o que a empresa faz?</div>
+        </div>
+      </div>
+
+      <div class="etapa">
+        <div class="no">4</div>
+        <h3>Ética e sociedade</h3>
+        <div class="card">
+          <h4><span class="cod">E5</span>Deliberação ética</h4>
+          <ul>
+            <li>2 dos 3 dilemas: R-38, dado faltante, transparência do limiar</li>
+            <li>Afetados, valores, 4+ alternativas</li>
+            <li>Custo da decisão e quem tem autoridade</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h4><span class="cod">E8</span>Nota CTS, 2 a 3 páginas</h4>
+          <ul>
+            <li>Alta prioridade: 24% nas privadas grandes, 9% nas remotas</li>
+            <li>Quem não foi consultado</li>
+            <li>O que a Lumis assume em público</li>
+          </ul>
+          <div class="usa">As duas usam a E2.</div>
+        </div>
+      </div>
+
+      <div class="etapa">
+        <div class="no">5</div>
+        <h3>A empresa aguenta?</h3>
+        <div class="card">
+          <h4><span class="cod">E7</span>Prontidão e funil</h4>
+          <ul>
+            <li>Documentação, caminho da ideia, tolerância a questionar</li>
+            <li>2 pessoas guardam 4 de 6 ativos; rotatividade de 27%</li>
+            <li>Funil a partir do que a Fase 2 desenhou</li>
+            <li>Encerrar: pipeline parado há 11 meses e agente de triagem</li>
+            <li>Duas intervenções com dono e prazo</li>
+          </ul>
+          <div class="teste">O funil precisa saber matar projeto.</div>
+        </div>
+      </div>
+
+      <div class="etapa fim">
+        <div class="no">6</div>
+        <h3>Montagem e envio</h3>
+        <div class="card">
+          <h4><span class="cod">F3-D</span>Documento único</h4>
+          <ul>
+            <li>As 8 entregas articuladas, no modelo da Lumis</li>
+            <li>Prompts em apêndice</li>
+            <li>Fluxograma, planilha de margem e árvore à parte</li>
+            <li>Revisão da equipe e envio pelo portal</li>
+          </ul>
+          <div class="teste">Escrito para quem vai ler na Fase 7, sob pressão.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="faixa">
+    <div class="corpo">
+      <span><span class="cod">E6</span></span>
+      <b>Biblioteca de prompts, ao longo de todas</b>
+      <p>Em cada entrega guardamos o prompt usado, a resposta e como conferimos. No fim vão 5 prompts ao apêndice (traduzir, achar decisões implícitas, gerar cenários de teste, revisar como auditor, argumentar contra a própria conclusão), 2 deles com resultado aplicado ao Anexo A.</p>
+    </div>
+  </div>
+
+  <div class="baixo">
+    <section>
+      <h2>Como fazemos cada entrega</h2>
+      <div class="passos">
+        <div class="passo"><div class="n">1</div><div><strong>Ler o pedido</strong><span>No PDF, o trecho da entrega e os quadros indicados. O README da pasta é só resumo.</span></div></div>
+        <div class="passo"><div class="n">2</div><div><strong>Conferir os dados</strong><span>Só números do Anexo A e das entregas já feitas. O que falta vira lacuna declarada.</span></div></div>
+        <div class="passo"><div class="n">3</div><div><strong>Levantar e concluir</strong><span>Conclusão em uma frase, com a origem de cada afirmação marcada.</span><div class="tags"><span class="tag tf">[fonte]</span><span class="tag th">[hipótese]</span><span class="tag tn">[não consta]</span></div></div></div>
+        <div class="passo"><div class="n">4</div><div><strong>Checar a coerência</strong><span>Contra os compromissos C1 a C5 e o que a Fase 2 já decidiu.</span></div></div>
+        <div class="passo"><div class="n">5</div><div><strong>Escrever no documento único</strong><span>Texto direto, sem jargão, registrando o prompt usado e a decisão tomada.</span></div></div>
+        <div class="passo"><div class="n">6</div><div><strong>Revisar com a equipe</strong><span>Só depois do aval passamos à próxima etapa.</span></div></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Exemplo: um caso como a E1 vai explicar</h2>
+      <div class="exemplo">
+        <p class="intro">O mesmo paciente, internado há 30 dias, chega de dois hospitais. Um envia o histórico de internações, o outro deixa o campo vazio, como acontece em 23% dos registros.</p>
+        <div class="caminhos">
+          <div class="caminho">
+            <div class="rot">Hospital A envia o histórico</div>
+            <div class="linha"><span>Pontuação do modelo</span><em>64</em></div>
+            <div class="linha"><span>R-04: internação em 90 dias</span><em>+12</em></div>
+            <div class="linha"><span>Pontuação ajustada</span><em>76</em></div>
+            <div class="faixa-res alta">Alta prioridade (72 ou mais)</div>
+          </div>
+          <div class="caminho">
+            <div class="rot">Hospital B deixa o campo vazio</div>
+            <div class="linha"><span>Pontuação do modelo</span><em>64</em></div>
+            <div class="linha"><span>Vazio vira zero; R-04 não se aplica</span><em>+0</em></div>
+            <div class="linha"><span>Pontuação ajustada</span><em>64</em></div>
+            <div class="faixa-res media">Média prioridade (45 a 71)</div>
+          </div>
+        </div>
+        <p class="moral">Muda a faixa porque um campo não foi enviado; o quadro do paciente é o mesmo. E o hospital nunca vê a pontuação, só a faixa.</p>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <span><strong>Vai ao portal:</strong> documento único com as 8 entregas e os prompts em apêndice, fluxograma em arquivo próprio, planilha de margem por conta e árvore de métricas.</span>
+  <span>[fonte: Cap. 3, seção 4 e Quadros 3 a 13] · No exemplo, a pontuação 64 é ilustrativa; regra, corte e taxa de campo vazio são do Anexo A.</span>
+</footer>
+</body>
+</html>

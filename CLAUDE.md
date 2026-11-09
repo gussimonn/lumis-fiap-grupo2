@@ -26,7 +26,7 @@ Em todo chat novo que trate de uma entrega, montar o contexto antes de propor ou
 - Em conflito entre capítulos, vale o mais recente, com a divergência sinalizada (D-003).
 
 ## Onde gravar
-- Entrega: um único arquivo vigente, em `.docx` (ex.: `F2-E1_Mapa_do_Territorio_v2.docx`). Não manter cópia `.md` da entrega (D-011).
+- Entrega: um único arquivo vigente, em `.docx` (ex.: `F2-E1_Mapa_do_Territorio_v2.docx`). Não manter cópia `.md` da entrega (D-011). Exceção (D-048): quando a entrega vai dentro de um documento integrado, o .docx individual vai para `_Historico/` e a pasta da entrega guarda o `.md` extraído do documento integrado, como cópia de leitura.
 - Material de apoio (levantamento, dados transcritos, registro de prompts) pode ficar em `.md` na pasta da entrega.
 - Antes de substituir uma versão, mover a anterior para `_Historico/`.
 - Toda decisão de gestão vira entrada em `DECISOES.md` (append-only).

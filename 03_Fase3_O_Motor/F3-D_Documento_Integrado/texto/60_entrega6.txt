@@ -1,0 +1,17 @@
+QUEBRA
+# Entrega 6 · Biblioteca de prompts para análise de sistemas
+> Cinco prompts, um para cada finalidade pedida, cada um com papel, contexto, restrições, formato de saída e critério de sucesso. Rodamos o P1 e o P3 sobre os Quadros A.1 a A.3 e conferimos as saídas contra o anexo e por script. Os prompts completos, as saídas e a conferência estão no Apêndice A.
+
+TAB[e6_prompts]: 1.2;3.6;11.2 | A biblioteca e a técnica de cada prompt.
+| Prompt | Finalidade | Técnica e por que foi escolhida |
+| P1 | Traduzir a lógica técnica | Decomposição em etapas, saída em formato fixo e fonte em cada afirmação: evita saltos de raciocínio e deixa visível o que falta. |
+| P2 | Encontrar decisões implícitas | Extração com evidência, um exemplo do formato esperado e revisão adversarial da autoridade: separa quem escreveu o código de quem tinha mandato para decidir. |
+| P3 | Gerar cenários de teste | Valores-limite e classes de equivalência, com separação entre resultado dedutível e indeterminável: testa as bordas, e não os casos confortáveis. |
+| P4 | Revisar um texto como auditor externo | Rubrica de severidade e crítica apoiada em evidência: obriga o modelo a procurar falhas, e não a elogiar o texto. |
+| P5 | Argumentar contra a própria conclusão | Contraposição em três papéis e pré-mortem: procura as condições em que a decisão pioraria a situação. |
+
+**O que veio útil.** O P1 e o P3 acharam, cada um por conta própria, um conflito que a primeira versão deste dossiê não tinha visto: se a R-19 e a R-23 estiverem no mesmo bloco, a R-19 encerra a avaliação e a R-23 nunca roda. Fazer a mesma pergunta de duas formas diferentes e chegar ao mesmo achado é a verificação que o capítulo recomenda (Cap. 3, seção 2.5). O P3 também mostrou que a R-31 não define "internação recente", o que deixa indeterminado um idoso internado há 91 dias.
+
+**O que veio errado.** O P1 listou "definido em 2023, sem revisão" como responsável pela classificação, quando o quadro diz justamente que não há responsável. A explicação ao cliente que ele escreveu omitiu o direito de contestar e pedir revisão. O P3 tratou o mesmo mecanismo como indeterminável num caso e como dedutível em outro. Nenhum número saiu errado.
+
+**Como conferimos.** Comparamos cada item das saídas com os Quadros A.1 a A.3 e refizemos por conta própria, num script, os casos de teste do P3 (26 linhas, contando os controles): as 19 que têm resposta conferem, e os 7 indetermináveis foram mantidos como perguntas para a auditoria. Os erros do P1 foram corrigidos no texto da Entrega 1, cuja explicação ao cliente inclui a contestação.
