@@ -4,7 +4,7 @@
 
 ## Onde estamos
 
-**Global Solution 2026.2 (Fase 4) — CitizenTech.** Prazo 19/11/2026, 23h55, sem prorrogação. Projeto independente da Lumis. Proposta: Prosa, assistente por áudio no WhatsApp para a agricultura familiar (D-052). Deck v1 em PDF (12 slides + 5 de anexo) e roteiro do vídeo prontos em [GS_2026-2_CitizenTech/](GS_2026-2_CitizenTech/README.md). Falta: leitura da equipe, gravar o vídeo, colar o link na capa, exportar de novo e enviar.
+**Global Solution 2026.2 (Fase 4) — CitizenTech.** Prazo 19/11/2026, 23h55, sem prorrogação. Projeto independente da Lumis. Proposta: Prosa, assistente por áudio no WhatsApp para a agricultura familiar (D-052). Deck v2 em PDF (12 slides + 5 de anexo) e roteiro do vídeo para três vozes prontos em [GS_2026-2_CitizenTech/](GS_2026-2_CitizenTech/README.md). Falta: leitura da equipe, gravar o vídeo, colar o link na capa, exportar de novo e enviar.
 
 **Fase 2 — O Mercado.** ✅ Entregue pelo portal (informado pela equipe em 05/11/2026; data do envio [não consta]). A peça enviada é o documento único com as cinco entregas, mais o memorando ao conselho. A pasta guarda a v3 de ambos; se a equipe alterou algo depois da v3, a versão enviada precisa ser salva aqui. Nota e feedback ainda não saíram. Em 09/10/2026 a pasta foi organizada: os .docx individuais das entregas foram para `_Historico/`, e cada pasta de entrega tem agora o texto do documento único em `.md` (D-048). A Fase 1 está com as 3 entregas em versão revisada.
 
@@ -50,7 +50,7 @@
 
 - **Nota e feedback da Fase 2:** aguardando. Quando sair a devolutiva, salvar na pasta [F2-D](02_Fase2_O_Mercado/F2-D_Documento_Integrado/) e registrar aqui.
 - **Nota e feedback das entregas da Fase 1:** não constam. Se houver devolutiva do professor, salvar na pasta da entrega.
-- **Equipe (para identificação):** Bruno Müller, Diego Franca Evangelista, Felipe Alef, Gustavo Halfen Simon e Maria Fernanda Barros (D-008).
+- **Equipe (para identificação):** Bruno Müller, Diego Franca Evangelista, Felipe Alef, Gustavo Halfen Simon e Maria Fernanda Barros (D-008). Desde 17/11/2026 a equipe é de três: Felipe Alef dos Santos Dias, Gustavo Halfen Simon e Maria Fernanda Costa Barros (D-053).
 - **Divergências entre o Cap. 1 e o Cap. 2:** CTO, diretoria jurídica, aporte, crescimento e volume de decisões. Ver [00_Lumis/Pessoas_e_Cargos.md](00_Lumis/Pessoas_e_Cargos.md) e [00_Lumis/Empresa_e_Contexto.md](00_Lumis/Empresa_e_Contexto.md).
 - **Tabelas do Anexo A (Cap. 2):** os Quadros 3–6 já estão transcritos e conferidos em `F2-E1_Mapa_do_Territorio/Dados_Quadros_3-6.md`, e o Quadro 7 foi conferido no PDF em 05/10/2026. A extração em modo `pdftotext -raw` funciona para os demais quadros, que ainda estão por transcrever.
 

@@ -11,21 +11,21 @@ Projeto novo e independente: a GS não usa o caso da Lumis. A equipe funda uma C
 1. **Pitch deck em PDF:** 10 a 12 slides, mais um anexo de até 5 slides com dados, cálculos, fluxo detalhado e os principais prompts.
 2. **Vídeo pitch:** até 5 minutos, no YouTube como "não listado", com o link na capa do deck.
 
-A capa traz o nome completo e o RM dos cinco integrantes.
+A capa traz o nome completo e o RM dos integrantes. Desde 17/11/2026, a equipe é de três: Felipe Alef dos Santos Dias (RM 574450), Gustavo Halfen Simon (RM 575052) e Maria Fernanda Costa Barros (RM 576110) (D-053).
 
 ## Nossa proposta: Prosa
 
 O agrônomo que cabe no WhatsApp do pequeno produtor. Assistente por áudio para a agricultura familiar: dúvidas respondidas com base na Embrapa e na assistência técnica local, alertas de clima, preço da semana e hipótese de praga por foto, com um técnico humano sempre que a decisão pesa. O produtor usa de graça; cooperativas e prefeituras pagam R$ 4,50 por produtor ativo/mês. Piloto proposto no Sertão do Pajeú (PE). ODS 2, 13, 10 e 9.
 
-Tema escolhido pela equipe em 17/11/2026 entre três opções (pequeno produtor, acesso a benefícios sociais, enchentes). Ver D-052.
+Tema escolhido pela equipe em 17/11/2026 entre três opções (pequeno produtor, acesso a benefícios sociais, enchentes). Ver D-052. Versões anteriores em `_Historico/`.
 
 ## Arquivos
 
 | Arquivo | O que é | Status |
 |---|---|---|
-| [GS_Prosa_Pitch_Deck_v1.pdf](GS_Prosa_Pitch_Deck_v1.pdf) | Deck para envio: 12 slides + anexos A1 a A5 | 🟡 v1, aguarda leitura da equipe e o link do vídeo |
-| [deck/GS_Prosa_Pitch_Deck_v1.html](deck/GS_Prosa_Pitch_Deck_v1.html) | Fonte do deck (editar aqui e exportar de novo) | |
-| [GS_Roteiro_Video_Pitch_v1.md](GS_Roteiro_Video_Pitch_v1.md) | Roteiro de 5 minutos, dividido entre os cinco | 🟡 v1, falta gravar |
+| [GS_Prosa_Pitch_Deck_v2.pdf](GS_Prosa_Pitch_Deck_v2.pdf) | Deck para envio: 12 slides + anexos A1 a A5 | 🟡 v2 (capa com a equipe de três), aguarda leitura e o link do vídeo |
+| [deck/GS_Prosa_Pitch_Deck_v2.html](deck/GS_Prosa_Pitch_Deck_v2.html) | Fonte do deck (editar aqui e exportar de novo) | |
+| [GS_Roteiro_Video_Pitch_v2.md](GS_Roteiro_Video_Pitch_v2.md) | Roteiro de 5 minutos, dividido entre os três | 🟡 v2, falta gravar |
 | [Registro_de_Prompts.md](Registro_de_Prompts.md) | Buscas, verificações e correções feitas com IA | ✅ |
 
 ## Mapa do enunciado
@@ -48,9 +48,9 @@ Tema escolhido pela equipe em 17/11/2026 entre três opções (pequeno produtor,
 
 ## Como editar e exportar
 
-1. Editar o texto em `deck/GS_Prosa_Pitch_Deck_v1.html` (cada slide é um bloco `<section>`).
+1. Editar o texto em `deck/GS_Prosa_Pitch_Deck_v2.html` (cada slide é um bloco `<section>`).
 2. Exportar com o Edge ou o Chrome: abrir o HTML, Imprimir, "Salvar como PDF", margens "Nenhuma", sem cabeçalho e rodapé. Ou pela linha de comando:
-   `msedge --headless=new --no-pdf-header-footer --print-to-pdf="GS_Prosa_Pitch_Deck_v1.pdf" "file:///.../deck/GS_Prosa_Pitch_Deck_v1.html"`
+   `msedge --headless=new --no-pdf-header-footer --print-to-pdf="GS_Prosa_Pitch_Deck_v2.pdf" "file:///.../deck/GS_Prosa_Pitch_Deck_v2.html"`
 3. Antes de substituir uma versão já enviada ao grupo, mover a anterior para `_Historico/`.
 
 ## Padrão visual

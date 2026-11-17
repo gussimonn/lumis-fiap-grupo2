@@ -325,3 +325,10 @@ A GS da Fase 4 chegou (prazo 19/11/2026, 23h55). É avaliação independente: pr
 [fonte: enunciado da GS 2026.2; escolhas da equipe em 17/11/2026]
 **Motivo:** deixar a GS visível para o grupo no mesmo repositório sem misturar com o caso da Lumis, e manter o padrão de escrita e de fonte do projeto.
 
+### D-053 · 17/11/2026 · [Organização] Equipe passa a ter três integrantes
+A partir de 17/11/2026, a equipe é Felipe Alef dos Santos Dias (RM 574450), Gustavo Halfen Simon (RM 575052) e Maria Fernanda Costa Barros (RM 576110). Bruno Müller e Diego Franca Evangelista deixam o grupo.
+- **GS 2026.2:** capa do deck e roteiro do vídeo refeitos para três (v2); a v1 foi para `GS_2026-2_CitizenTech/_Historico/`. No roteiro, Maria Fernanda abre (cidadão e solução), Gustavo segue (negócio e controle) e Felipe fecha (equidade, ODS e pedido) e fica com a edição e o envio.
+- **Entregas já enviadas** (Fases 1 a 3, Challenge Cilia) ficam como estão, com os cinco nomes da época.
+[fonte: informação de Felipe em 17/11/2026]
+**Motivo:** a identificação da capa precisa bater com quem entrega; as próximas entregas usam a equipe de três.
+
