@@ -314,3 +314,14 @@ A equipe salvou a v1 em PDF (`03_Fase3_O_Motor/Lumis Intelligence - Fase 3.pdf`)
 - **Forma:** fechamento com a Declaração de Intenção, a Fase 2 e o quadro "O que o Anexo A não informa"; referências externas sem citação no corpo saem; casos e testes não se repetem; sem códigos internos no texto.
 [fonte: Cap. 3, Quadros A.1 a A.11; D-024, D-026, D-034, D-036, D-038, D-040, D-044, D-046, D-047] · Compromissos ligados: C1 a C5.
 **Motivo:** a v1 contradizia a Fase 2 em pontos que a Fase 7 vai cobrar e atribuía decisões a áreas que não existem no caso.
+
+### D-052 · 17/11/2026 · [Organização] Global Solution 2026.2: pasta própria, tema e padrão visual
+A GS da Fase 4 chegou (prazo 19/11/2026, 23h55). É avaliação independente: projeto novo, sem o caso da Lumis.
+- **Pasta:** `GS_2026-2_CitizenTech/` na raiz, fora das pastas das fases da Lumis, com `_Enunciado/` (cópia idêntica do PDF), README com o mapa do enunciado, deck (PDF e fonte em HTML), roteiro do vídeo e registro de prompts.
+- **Tema:** a equipe escolheu "pequeno produtor" entre três opções (pequeno produtor, acesso a benefícios, enchentes). Nome da CitizenTech: Prosa, assistente por áudio no WhatsApp para a agricultura familiar, com técnico humano no circuito. Escopo pedido: deck completo e roteiro; a gravação fica com o grupo.
+- **Padrão visual:** cores e fontes do design system (D-013 a D-015) valem também aqui. Logo e Feixe da Lumis **não** entram, porque são marca de outra empresa (fictícia) e a GS exige proposta própria.
+- **Números:** dados públicos com fonte (IBGE, Cetic.br, CNM, Embrapa, legislação) separados de premissas simuladas da equipe (preço, custos, taxa de revisão, benefício ao produtor), marcadas no deck e no anexo A1.
+- **Honestidade do anexo de prompts:** a primeira versão do anexo A4 descrevia duas revisões que não aconteceram; foi reescrito só com buscas e conferências reais, registradas em `Registro_de_Prompts.md`.
+[fonte: enunciado da GS 2026.2; escolhas da equipe em 17/11/2026]
+**Motivo:** deixar a GS visível para o grupo no mesmo repositório sem misturar com o caso da Lumis, e manter o padrão de escrita e de fonte do projeto.
+

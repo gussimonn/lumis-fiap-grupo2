@@ -1,0 +1,529 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Prosa · Pitch Deck · GS 2026.2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet">
+<style>
+@page { size: 1280px 720px; margin: 0; }
+:root{
+  --verde:#0F2D3A; --verde2:#1E8C6B; --terra:#1E8C6B; --areia:#FFFFFF; --areia2:#F1F6F4;
+  --tinta:#18252C; --cinza:#6B7C85; --linha:#D3DEDB; --azul:#2BA6C9; --vermelho:#B4442F;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:#888}
+body{font-family:"Source Sans 3",Calibri,Arial,sans-serif;color:var(--tinta);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.s{width:1280px;height:720px;background:var(--areia);position:relative;overflow:hidden;page-break-after:always;padding:52px 64px 44px}
+.s:last-child{page-break-after:auto}
+h1{font-family:"Source Serif 4",Georgia,serif;font-weight:700;font-size:38px;line-height:1.12;color:var(--verde);letter-spacing:-.3px}
+h2{font-family:"Source Serif 4",Georgia,serif;font-size:21px;color:var(--tinta);margin:0 0 8px}
+h1::after{content:"";display:block;width:72px;height:4px;background:#3DBE93;margin-top:12px;border-radius:2px}
+.capa h1::after{display:none}
+.kick{font-size:13px;font-weight:700;letter-spacing:2.2px;text-transform:uppercase;color:var(--terra);margin-bottom:8px}
+.sub{font-size:18px;color:var(--cinza);margin-top:8px;max-width:1040px;line-height:1.35}
+.foot{position:absolute;left:64px;right:64px;bottom:18px;font-size:11px;color:#8A8F86;display:flex;justify-content:space-between;border-top:1px solid var(--linha);padding-top:6px}
+.num{font-weight:700;color:var(--verde)}
+.grid{display:grid;gap:18px}
+.g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+.card{background:#fff;border:1px solid var(--linha);border-radius:12px;padding:16px 18px}
+.card h3{font-size:16px;color:var(--verde);margin-bottom:6px}
+.card p,.card li{font-size:14.5px;line-height:1.4}
+ul{padding-left:18px} li{margin:3px 0}
+.big{font-family:"Source Serif 4",Georgia,serif;font-size:44px;font-weight:700;color:var(--verde);line-height:1}
+.big.t{color:#1A86A8}
+.lab{font-size:13.5px;color:var(--cinza);margin-top:6px;line-height:1.3}
+.src{font-size:10.5px;color:#8A8F86;margin-top:4px}
+table{border-collapse:collapse;width:100%;font-size:13.5px;background:#fff}
+th{background:var(--verde);color:#fff;text-align:left;padding:7px 9px;font-weight:600}
+td{padding:6px 9px;border-bottom:1px solid var(--areia2);vertical-align:top;line-height:1.3}
+tr:nth-child(even) td{background:#F1F6F4}
+.tag{display:inline-block;font-size:11.5px;font-weight:700;padding:2px 8px;border-radius:10px;color:#fff}
+.baixo{background:var(--verde2)}.medio{background:#2BA6C9}.alto{background:#B7791F}.fora{background:var(--vermelho)}
+.quote{font-family:"Source Serif 4",Georgia,serif;font-size:21px;line-height:1.35;color:var(--tinta);border-left:5px solid var(--terra);padding-left:16px}
+.pill{display:inline-block;background:var(--areia2);border-radius:14px;padding:3px 10px;font-size:12.5px;margin:2px 3px 2px 0}
+.note{font-size:12.5px;color:var(--cinza);line-height:1.35}
+.anx{position:absolute;top:22px;right:64px;font-size:12px;font-weight:700;color:#fff;background:var(--cinza);padding:3px 10px;border-radius:10px}
+/* capa */
+.capa{background:var(--verde);color:#fff;padding:60px 70px}
+.capa .logo{font-family:"Source Serif 4",Georgia,serif;font-size:96px;font-weight:700;letter-spacing:-2px}
+.capa .logo span{color:#3DBE93}
+.capa .tl{font-size:28px;margin-top:4px;font-family:"Source Serif 4",Georgia,serif;color:#EEF7F3}
+.capa .meta{position:absolute;left:70px;bottom:48px;right:70px}
+.capa table{background:transparent;font-size:14px;width:auto}
+.capa td{border:none;color:#EEF7F3;padding:2px 22px 2px 0;background:transparent!important}
+.capa .video{margin-top:14px;font-size:15px;background:rgba(255,255,255,.12);display:inline-block;padding:8px 14px;border-radius:8px}
+.capa .gs{position:absolute;top:60px;right:70px;text-align:right;font-size:13px;letter-spacing:1.5px;color:#DCE8DE;line-height:1.6}
+.wave{position:absolute;right:-60px;top:170px;opacity:.16}
+</style>
+</head>
+<body>
+
+<!-- 01 CAPA -->
+<section class="s capa">
+  <div class="gs">GLOBAL SOLUTION 2026.2 · CITIZENTECH<br>GESTÃO DE IA · 1º ANO · FASE 4 · 1TGIOR</div>
+  <svg class="wave" width="620" height="420" viewBox="0 0 620 420"><g fill="none" stroke="#fff" stroke-width="10" stroke-linecap="round"><path d="M40 300 C140 200 240 360 340 260 S540 220 600 120"/><path d="M40 360 C140 260 240 420 340 320 S540 280 600 180" opacity=".6"/><circle cx="470" cy="110" r="46" stroke-width="8"/></g></svg>
+  <div style="margin-top:120px" class="logo">Prosa<span>.</span></div>
+  <div class="tl">O agrônomo que cabe no WhatsApp do pequeno produtor</div>
+  <p style="margin-top:14px;font-size:17px;color:#DCE8DE;max-width:760px;line-height:1.4">Pergunte por áudio, receba a resposta em áudio. Alertas de chuva, seca, preço e praga antes do prejuízo, com um técnico humano sempre que a decisão pesa.</p>
+  <div class="meta">
+    <table>
+      <tr><td>Bruno Marcelo Almeida Müller · RM 574652</td><td>Diego Franca Evangelista · RM 575195</td></tr>
+      <tr><td>Felipe Alef dos Santos Dias · RM 574450</td><td>Gustavo Halfen Simon · RM 575052</td></tr>
+      <tr><td>Maria Fernanda Costa Barros · RM 576110</td><td></td></tr>
+    </table>
+    <div class="video">Vídeo pitch (YouTube, não listado): <b>[COLAR O LINK AQUI]</b></div>
+  </div>
+</section>
+
+<!-- 02 CIDADÃO E PROBLEMA -->
+<section class="s">
+  <div class="kick">01 · O cidadão e o problema</div>
+  <h1>A informação para plantar melhor já existe.<br>Ela só não chega a quem planta.</h1>
+  <div class="grid" style="grid-template-columns:1.05fr 1.95fr;margin-top:22px">
+    <div class="card" style="background:#EEF7F3">
+      <h3>Seu Josué, 61 anos</h3>
+      <p>Sertão do Pajeú (PE). 3 hectares de milho e feijão de sequeiro. Celular pré-pago, usa WhatsApp, prefere mandar áudio. Nunca recebeu visita de técnico. Decide quando plantar olhando o céu e o que o vizinho fez.</p>
+      <p style="margin-top:10px;font-size:13px;color:var(--cinza)">Persona construída a partir do perfil do Censo Agro 2017. Representa um grupo, não uma pessoa real.</p>
+    </div>
+    <div class="grid g3">
+      <div class="card"><div class="big">3,9 mi</div><div class="lab">estabelecimentos da agricultura familiar, 77% do total, com 10,1 milhões de pessoas ocupadas</div><div class="src">IBGE, Censo Agro 2017</div></div>
+      <div class="card"><div class="big t">8 em 10</div><div class="lab">estabelecimentos não receberam nenhuma orientação técnica (só 20,2% receberam)</div><div class="src">IBGE, Atlas do Espaço Rural</div></div>
+      <div class="card"><div class="big t">3x menos</div><div class="lab">assistência para produtores pretos (9,6%) e pardos (10,8%) do que para brancos (31,1%); indígenas, 8,4%</div><div class="src">IBGE, Censo Agro 2017</div></div>
+      <div class="card"><div class="big">R$ 6,7 bi</div><div class="lab">em perdas do agro por eventos climáticos extremos só até agosto de 2024</div><div class="src">CNM, ago/2024</div></div>
+      <div class="card"><div class="big">15 mil</div><div class="lab">usuários ativos do app público de janela de plantio (Zarc), para 3,9 milhões de estabelecimentos</div><div class="src">Embrapa, 2021</div></div>
+      <div class="card"><div class="big">82%</div><div class="lab">da população rural conectada usa internet só pelo celular, em geral com plano pré-pago</div><div class="src">Cetic.br, TIC Domicílios 2024</div></div>
+    </div>
+  </div>
+  <p class="quote" style="margin-top:20px;font-size:18px">Custo de não resolver: a cada safra, decisões de plantio, colheita e venda tomadas sem dado, por quem tem menos reserva para absorver uma perda.</p>
+  <div class="foot"><span>Prosa · GS 2026.2 CitizenTech</span><span class="num">2</span></div>
+</section>
+
+<!-- 03 EMPRESA E MERCADO -->
+<section class="s">
+  <div class="kick">02 · A empresa e o mercado</div>
+  <h1>Quem usa não paga. Paga quem ganha com o produtor bem informado.</h1>
+  <div class="grid g3" style="margin-top:20px">
+    <div class="card"><h3>Proposta de valor</h3><ul>
+      <li>Dúvida por áudio, resposta em áudio em minutos, na fala do produtor</li>
+      <li>Alerta antes da chuva forte, da seca e da praga</li>
+      <li>Preço da semana na região para decidir quando vender</li>
+      <li>Técnico humano quando a decisão pesa</li></ul></div>
+    <div class="card"><h3>Quem usa e quem paga</h3>
+      <p><b>Usa:</b> o produtor familiar, sem custo.</p>
+      <p style="margin-top:6px"><b>Paga:</b></p><ul>
+      <li>Cooperativas e associações: R$ 4,50 por produtor ativo/mês</li>
+      <li>Prefeituras e órgãos de ATER: contrato de assistência técnica digital, mesmo preço</li>
+      <li>A partir do ano 2: análises agregadas e anonimizadas para defesa civil e planejamento agrícola</li></ul></div>
+    <div class="card"><h3>Mercado</h3>
+      <p><b>TAM</b> (mercado total): 3,9 mi estabelecimentos familiares</p>
+      <p><b>SAM</b> (mercado que atendemos): ~3,1 mi sem orientação técnica</p>
+      <p><b>SOM</b> (meta em 3 anos): 250 mil produtores ativos (8% do SAM), começando pelo semiárido nordestino</p>
+      <p class="note" style="margin-top:8px">SAM = 3,9 mi × 79,8% sem orientação. SOM é meta da equipe.</p></div>
+  </div>
+  <h2 style="margin-top:18px">Concorrentes e substitutos</h2>
+  <table>
+    <tr><th>Alternativa</th><th>O que oferece</th><th>Por que não resolve para o Seu Josué</th></tr>
+    <tr><td>Técnico da Emater/IPA</td><td>Orientação presencial de qualidade</td><td>Escasso: 8 em 10 nunca receberam visita</td></tr>
+    <tr><td>Apps públicos (Zarc Plantio Certo, Embrapa)</td><td>Janela de plantio por município, gratuito</td><td>Exigem instalar app e ler; 15 mil ativos</td></tr>
+    <tr><td>Plantix e apps de diagnóstico por foto</td><td>Identificação de praga por imagem</td><td>Não falam a língua do semiárido nem têm técnico local por trás</td></tr>
+    <tr><td>Plataformas para médio e grande (Aegro, Agrosmart)</td><td>Gestão e sensores da fazenda</td><td>Preço e foco em quem já tem gestão e conectividade</td></tr>
+    <tr><td>Vizinho e balcão da loja de insumos</td><td>Resposta rápida e de confiança</td><td>Sem dado de clima; a loja tem interesse em vender produto</td></tr>
+  </table>
+  <div class="foot"><span>Prosa · GS 2026.2 CitizenTech</span><span class="num">3</span></div>
+</section>
+
+<!-- 04 QUE IA RESOLVE O QUÊ -->
+<section class="s">
+  <div class="kick">03 · Que IA resolve o quê</div>
+  <h1>Cada parte do problema com a técnica certa, e o limite escrito</h1>
+  <table style="margin-top:20px;font-size:14px">
+    <tr><th style="width:17%">Parte do problema</th><th style="width:23%">Tipo de IA</th><th style="width:30%">O que faz</th><th>Limite e como tratamos</th></tr>
+    <tr><td>Entender o áudio</td><td>Reconhecimento de fala (voz para texto)</td><td>Transcreve a pergunta, com vocabulário regional</td><td>Erra com ruído e sotaque pouco representado: o Prosa repete o que entendeu antes de responder</td></tr>
+    <tr><td>Responder dúvidas</td><td>Modelo de linguagem (LLM) com busca numa base curada (RAG)</td><td>Responde só com conteúdo da Embrapa, do Zarc e da ATER local, citando a fonte</td><td>Pode inventar fora da base: sem fonte na base, não responde e chama o técnico</td></tr>
+    <tr><td>Alertas de clima</td><td>Modelos de previsão (dados INMET e Cemaden) + regras do Zarc</td><td>Avisa chuva forte, veranico e janela de plantio por município</td><td>Previsão é probabilidade: o alerta diz a chance ("7 em 10") e nunca garante</td></tr>
+    <tr><td>Preço de venda</td><td>Estatística sobre séries da CONAB e do CEPEA</td><td>Mostra preço da semana e tendência na região</td><td>Tendência não é promessa: sem previsão de preço futuro além de 2 semanas</td></tr>
+    <tr><td>Praga e doença por foto</td><td>Visão computacional (classificação de imagem)</td><td>Sugere uma hipótese de praga ou doença</td><td>Confiança abaixo de 85% ou doença grave: vai para o técnico. Nunca indica produto</td></tr>
+    <tr><td>Falar de volta</td><td>Síntese de voz (texto para voz)</td><td>Resposta em áudio curto, com opção de repetir</td><td>Voz sintética pode soar fria: tom e vocabulário testados com produtores</td></tr>
+  </table>
+  <div class="card" style="margin-top:16px;border-left:6px solid var(--terra)"><p><b>Onde uma pessoa decide, sempre:</b> confirmar diagnóstico de praga ou doença · qualquer indicação de agrotóxico ou dose (receituário agronômico exigido pela Lei 14.785/2023) · tudo que envolva crédito, seguro ou dívida do produtor.</p></div>
+  <div class="foot"><span>Prosa · GS 2026.2 CitizenTech</span><span class="num">4</span></div>
+</section>
+
+<!-- 05 ESTRATÉGIA DE ADOÇÃO -->
+<section class="s">
+  <div class="kick">04 · Estratégia de adoção</div>
+  <h1>Começar pelo que vale muito e arrisca pouco</h1>
+  <div class="grid" style="grid-template-columns:1fr 1.15fr;margin-top:14px;align-items:start">
+    <div>
+      <p class="note" style="margin-bottom:6px">Framework: matriz valor × risco. Valor = efeito na renda e na perda do produtor. Risco = dano possível se a IA errar.</p>
+      <svg width="520" height="420" viewBox="0 0 520 420" style="background:#fff;border:1px solid var(--linha);border-radius:12px">
+        <rect x="60" y="20" width="220" height="180" fill="#EEF7F3"/><rect x="280" y="20" width="220" height="180" fill="#E6F4F9"/>
+        <rect x="60" y="200" width="220" height="180" fill="#F1F6F4"/><rect x="280" y="200" width="220" height="180" fill="#F7E4DF"/>
+        <text x="170" y="42" text-anchor="middle" font-size="12" fill="#1E8C6B" font-weight="700">FAZER PRIMEIRO</text>
+        <text x="390" y="42" text-anchor="middle" font-size="12" fill="#1A86A8" font-weight="700">FAZER COM REVISÃO HUMANA</text>
+        <text x="170" y="222" text-anchor="middle" font-size="12" fill="#6B7C85" font-weight="700">DEPOIS, SE SOBRAR FÔLEGO</text>
+        <text x="390" y="222" text-anchor="middle" font-size="12" fill="#B4442F" font-weight="700">NÃO AUTOMATIZAR</text>
+        <g font-size="13" fill="#18252C">
+          <circle cx="110" cy="80" r="9" fill="#1E8C6B"/><text x="124" y="85">Alertas de clima</text>
+          <circle cx="130" cy="125" r="9" fill="#1E8C6B"/><text x="144" y="130">Preço da semana</text>
+          <circle cx="200" cy="168" r="9" fill="#1E8C6B"/><text x="105" y="190">Dúvidas com base curada</text>
+          <circle cx="330" cy="95" r="9" fill="#1A86A8"/><text x="344" y="100">Praga por foto</text>
+          <circle cx="310" cy="150" r="9" fill="#1A86A8"/><text x="324" y="155">Plano de plantio</text>
+          <circle cx="120" cy="290" r="9" fill="#9AA39C"/><text x="134" y="295">Mercado de vendas</text>
+          <circle cx="410" cy="270" r="9" fill="#B4442F"/><text x="300" y="300">Dose de agrotóxico</text>
+          <circle cx="440" cy="330" r="9" fill="#B4442F"/><text x="320" y="355">Score de crédito</text>
+        </g>
+        <line x1="60" y1="380" x2="500" y2="380" stroke="#6B7C85"/><line x1="60" y1="20" x2="60" y2="380" stroke="#6B7C85"/>
+        <text x="280" y="405" text-anchor="middle" font-size="13" fill="#6B7C85">risco se a IA errar →</text>
+        <text x="28" y="200" text-anchor="middle" font-size="13" fill="#6B7C85" transform="rotate(-90 28 200)">valor para o produtor →</text>
+      </svg>
+    </div>
+    <div>
+      <h2>Roadmap de 12 meses</h2>
+      <table style="font-size:13.5px">
+        <tr><th style="width:18%">Trimestre</th><th>O que entra</th><th style="width:25%">Gate para seguir</th></tr>
+        <tr><td><b>T1</b> m1–3</td><td>Escuta em 2 comunidades do Pajeú; base de conhecimento com técnicos; alertas de clima para 50 produtores (alfa)</td><td>70% acham o alerta útil; zero erro grave</td></tr>
+        <tr><td><b>T2</b> m4–6</td><td>Dúvidas por áudio e preço da semana; 1 cooperativa; 1.000 produtores</td><td>≥ 90% das respostas revisadas corretas</td></tr>
+        <tr><td><b>T3</b> m7–9</td><td>Praga por foto com 100% de revisão do técnico; 2 prefeituras; 8.000 produtores</td><td>Técnico responde em < 24 h</td></tr>
+        <tr><td><b>T4</b> m10–12</td><td>Revisão por amostra (5%); SMS e ligação para quem não tem dados; 20.000 produtores; proposta a um estado</td><td>Alcance por grupo proporcional ao perfil local</td></tr>
+      </table>
+      <p class="note" style="margin-top:10px">Se um gate falha em dois ciclos, a funcionalidade volta para teste ou sai do roadmap. Crédito e agrotóxico ficam fora de qualquer trimestre.</p>
+    </div>
+  </div>
+  <div class="foot"><span>Prosa · GS 2026.2 CitizenTech</span><span class="num">5</span></div>
+</section>
+
+<!-- 06 DECISÕES COM DADOS -->
+<section class="s">
+  <div class="kick">05 · Decisões com dados</div>
+  <h1>A conta fecha com 66 mil produtores ativos</h1>
+  <div class="grid" style="grid-template-columns:1fr 1fr 1.15fr;margin-top:18px">
+    <div class="card"><h3>Dados que usamos</h3><ul>
+      <li>Clima: INMET e Cemaden</li><li>Janela de plantio: Zarc (Embrapa/Mapa)</li><li>Preços: CONAB e CEPEA</li><li>Perfil do produtor: Censo Agro (IBGE)</li><li>Conteúdo técnico: Embrapa e ATER local</li></ul>
+      <h3 style="margin-top:10px">Dados que geramos</h3><ul>
+      <li>Perguntas anonimizadas por município</li><li>Fotos com diagnóstico confirmado pelo técnico</li><li>Ação tomada depois do alerta</li><li>Resultado da safra declarado</li></ul></div>
+    <div class="card"><h3>Indicadores-chave</h3>
+      <table style="font-size:12.5px"><tr><th>Indicador</th><th>Meta m12</th></tr>
+      <tr><td>Produtores ativos no mês</td><td>20 mil</td></tr>
+      <tr><td>Agiu depois de um alerta</td><td>≥ 70%</td></tr>
+      <tr><td>Respostas revisadas corretas</td><td>≥ 95%</td></tr>
+      <tr><td>Tempo até o técnico</td><td>< 24 h</td></tr>
+      <tr><td>Mulheres entre os usuários</td><td>≥ 40%</td></tr>
+      <tr><td>Perda evitada estimada</td><td>R$ 9 mi/ano</td></tr></table>
+      <p class="note" style="margin-top:6px">Indicador que derruba decisão: se o erro sobe num grupo, a função pausa nesse grupo.</p></div>
+    <div class="card"><h3>Custo por produtor ativo/mês</h3>
+      <svg width="370" height="200" viewBox="0 0 370 200">
+        <g font-size="12" fill="#18252C">
+          <rect x="10" y="20" width="62" height="160" fill="#F1F6F4"/>
+          <rect x="10" y="100" width="62" height="80" fill="#1A86A8"/><rect x="10" y="68" width="62" height="32" fill="#1A86A8"/><rect x="10" y="40" width="62" height="28" fill="#1E8C6B"/>
+          <text x="80" y="62">IA R$ 0,72</text><text x="80" y="90">WhatsApp R$ 0,32</text><text x="80" y="145">Revisão humana R$ 1,80</text>
+          <rect x="250" y="20" width="62" height="160" fill="#1E8C6B"/>
+          <text x="281" y="14" text-anchor="middle" font-weight="700">preço R$ 4,50</text>
+          <text x="41" y="196" text-anchor="middle">custo R$ 2,84</text>
+          <text x="281" y="196" text-anchor="middle">margem 37%</text>
+        </g></svg>
+      <p class="note">Custo fixo de R$ 110 mil/mês (equipe de 9 + infraestrutura) ÷ margem de R$ 1,66 = <b>66 mil produtores ativos</b> para o equilíbrio, previsto para o ano 2.</p>
+      <p class="note" style="margin-top:6px"><b>Para o produtor:</b> evitar 1/4 de uma perda média de 20% numa renda de R$ 9 mil/ano = R$ 450/ano, 8 vezes o que o parceiro paga por ele.</p></div>
+  </div>
+  <p class="note" style="margin-top:12px">Números de custo, preço e benefício são simulados pela equipe, com premissas declaradas no anexo A1. Incerteza maior: taxa de revisão humana e frequência de uso. Sensibilidade no anexo.</p>
+  <div class="foot"><span>Prosa · GS 2026.2 CitizenTech</span><span class="num">6</span></div>
+</section>
+
+<!-- 07 AUTOMAÇÃO COM CONTROLE HUMANO -->
+<section class="s">
+  <div class="kick">06 · Automação com controle humano</div>
+  <h1>Agentes fazem o volume. O técnico decide o que pesa.</h1>
+  <svg width="1152" height="400" viewBox="0 0 1152 400" style="margin-top:14px">
+    <defs><marker id="a" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 z" fill="#6B7C85"/></marker></defs>
+    <g font-size="13" font-family="Source Sans 3,Calibri,Arial" fill="#18252C">
+      <rect x="0" y="150" width="150" height="70" rx="10" fill="#fff" stroke="#1E8C6B" stroke-width="2"/><text x="75" y="180" text-anchor="middle" font-weight="700">Produtor</text><text x="75" y="198" text-anchor="middle">áudio, foto ou texto</text>
+      <rect x="195" y="150" width="170" height="70" rx="10" fill="#EEF7F3" stroke="#1E8C6B"/><text x="280" y="176" text-anchor="middle" font-weight="700">Agente de triagem</text><text x="280" y="194" text-anchor="middle">entende e confirma</text><text x="280" y="210" text-anchor="middle">a intenção</text>
+      <line x1="150" y1="185" x2="193" y2="185" stroke="#6B7C85" stroke-width="2" marker-end="url(#a)"/>
+      <rect x="430" y="20" width="230" height="74" rx="10" fill="#EEF7F3" stroke="#1E8C6B"/><text x="545" y="44" text-anchor="middle" font-weight="700">Clima, preço, dúvida</text><text x="545" y="62" text-anchor="middle">agente de resposta com RAG</text><text x="545" y="80" text-anchor="middle">e checagem de fonte</text>
+      <rect x="430" y="150" width="230" height="74" rx="10" fill="#E6F4F9" stroke="#1A86A8"/><text x="545" y="174" text-anchor="middle" font-weight="700">Foto de praga ou doença</text><text x="545" y="192" text-anchor="middle">visão computacional</text><text x="545" y="210" text-anchor="middle">confiança ≥ 85% e não grave?</text>
+      <rect x="430" y="282" width="230" height="74" rx="10" fill="#F7E4DF" stroke="#B4442F"/><text x="545" y="306" text-anchor="middle" font-weight="700">Agrotóxico, dose, crédito</text><text x="545" y="324" text-anchor="middle">bloqueio automático:</text><text x="545" y="342" text-anchor="middle">nunca responde sozinho</text>
+      <line x1="365" y1="175" x2="428" y2="60" stroke="#6B7C85" stroke-width="2" marker-end="url(#a)"/>
+      <line x1="365" y1="187" x2="428" y2="187" stroke="#6B7C85" stroke-width="2" marker-end="url(#a)"/>
+      <line x1="365" y1="200" x2="428" y2="315" stroke="#6B7C85" stroke-width="2" marker-end="url(#a)"/>
+      <rect x="745" y="20" width="200" height="74" rx="10" fill="#fff" stroke="#1E8C6B"/><text x="845" y="50" text-anchor="middle" font-weight="700">Resposta em áudio</text><text x="845" y="70" text-anchor="middle">com fonte e chance</text>
+      <line x1="660" y1="57" x2="743" y2="57" stroke="#6B7C85" stroke-width="2" marker-end="url(#a)"/>
+      <line x1="660" y1="175" x2="743" y2="70" stroke="#6B7C85" stroke-width="2" marker-end="url(#a)"/><text x="690" y="132" font-size="12" fill="#1E8C6B">sim</text>
+      <rect x="745" y="215" width="200" height="90" rx="10" fill="#1E8C6B"/><text x="845" y="245" text-anchor="middle" fill="#fff" font-weight="700">Técnico humano</text><text x="845" y="265" text-anchor="middle" fill="#fff">Emater ou cooperativa</text><text x="845" y="285" text-anchor="middle" fill="#fff">confirma e decide</text>
+      <line x1="660" y1="200" x2="743" y2="245" stroke="#6B7C85" stroke-width="2" marker-end="url(#a)"/><text x="688" y="238" font-size="12" fill="#1A86A8">não</text>
+      <line x1="660" y1="319" x2="743" y2="290" stroke="#6B7C85" stroke-width="2" marker-end="url(#a)"/>
+      <line x1="845" y1="215" x2="845" y2="96" stroke="#6B7C85" stroke-width="2" marker-end="url(#a)"/>
+      <rect x="990" y="20" width="160" height="150" rx="10" fill="#fff" stroke="#1A86A8"/><text x="1070" y="44" text-anchor="middle" font-weight="700" fill="#1A86A8">Integrações</text>
+      <text x="1003" y="68">WhatsApp Cloud API</text><text x="1003" y="88">INMET e Cemaden</text><text x="1003" y="108">CONAB e CEPEA</text><text x="1003" y="128">Base Embrapa e Zarc</text><text x="1003" y="148">Painel do técnico</text>
+      <rect x="990" y="190" width="160" height="110" rx="10" fill="#fff" stroke="#1A86A8"/><text x="1070" y="214" text-anchor="middle" font-weight="700" fill="#1A86A8">Agente de alertas</text><text x="1003" y="238">lê a previsão a cada 6 h</text><text x="1003" y="258">e avisa só quem é da</text><text x="1003" y="278">área e da cultura afetada</text>
+    </g>
+  </svg>
+  <div class="grid g4" style="margin-top:4px">
+    <div class="card"><p><b>1.</b> Técnico confirma todo diagnóstico grave e qualquer insumo</p></div>
+    <div class="card"><p><b>2.</b> Agrônomo responsável revisa a base de conhecimento toda semana</p></div>
+    <div class="card"><p><b>3.</b> 5% das respostas automáticas são auditadas, por região e grupo</p></div>
+    <div class="card"><p><b>4.</b> O produtor pode dizer "quero falar com gente" a qualquer hora</p></div>
+  </div>
+  <div class="foot"><span>Prosa · GS 2026.2 CitizenTech</span><span class="num">7</span></div>
+</section>
+
+<!-- 08 REGRAS DO JOGO -->
+<section class="s">
+  <div class="kick">07 · As regras do jogo</div>
+  <h1>Risco classificado antes de escalar, salvaguarda do tamanho do risco</h1>
+  <table style="margin-top:16px;font-size:13.5px">
+    <tr><th style="width:20%">Uso de IA</th><th style="width:12%">Risco</th><th style="width:30%">Obrigação aplicável</th><th>Salvaguarda</th></tr>
+    <tr><td>Alertas de clima e preço</td><td><span class="tag baixo">Baixo</span></td><td>Transparência: avisar que é IA e que previsão tem incerteza</td><td>Fonte e chance em todo alerta; registro de acerto por município</td></tr>
+    <tr><td>Dúvidas com base curada</td><td><span class="tag medio">Limitado</span></td><td>Transparência; não induzir a erro (CDC e boa-fé)</td><td>Só responde com fonte da base; auditoria de 5%; "falar com gente"</td></tr>
+    <tr><td>Diagnóstico de praga por foto</td><td><span class="tag alto">Médio-alto</span></td><td>Supervisão humana e registro da decisão</td><td>Técnico confirma; 100% de revisão até o gate do T3; não indica produto</td></tr>
+    <tr><td>Indicação de agrotóxico e dose</td><td><span class="tag fora">Fora da IA</span></td><td>Lei 14.785/2023: receituário agronômico por profissional habilitado</td><td>Bloqueio automático do tema e encaminhamento ao agrônomo</td></tr>
+    <tr><td>Crédito, seguro, score</td><td><span class="tag fora">Alto · não fazemos</span></td><td>Alto risco no AI Act (Anexo III) e na lógica do PL 2338/2023</td><td>Não vendemos dado individual a banco nem a loja de insumos</td></tr>
+  </table>
+  <div class="grid g2" style="margin-top:14px">
+    <div class="card"><h3>LGPD na prática</h3><ul>
+      <li>Consentimento pedido e gravado em áudio, em linguagem simples</li>
+      <li>Minimização: sem CPF para usar; localização só por município e comunidade</li>
+      <li>A voz não identifica a pessoa (evita dado biométrico, sensível pelo art. 5º, II)</li>
+      <li>Dado vendido só agregado e anonimizado (art. 12); comando "apagar meus dados"</li></ul></div>
+    <div class="card"><h3>Referências</h3><ul>
+      <li>PL 2338/2023, marco legal da IA: aprovado no Senado em 12/2024, em análise na Câmara</li>
+      <li>União Europeia: AI Act, Regulamento 2024/1689</li>
+      <li>UNESCO: Recomendação sobre a Ética da IA (2021)</li>
+      <li>OCDE: Princípios de IA; LGPD, Lei 13.709/2018</li></ul></div>
+  </div>
+  <div class="foot"><span>Prosa · GS 2026.2 CitizenTech</span><span class="num">8</span></div>
+</section>
+
+<!-- 09 LIDERANÇA E MUDANÇA -->
+<section class="s">
+  <div class="kick">08 · Liderança e mudança</div>
+  <h1>Uma startup de 9 pessoas lidera pelo exemplo e pelo campo</h1>
+  <p class="sub">Fase de piloto pede liderança próxima, sem estrutura corporativa. Usamos o ADKAR (consciência, desejo, conhecimento, habilidade, reforço) para cada público.</p>
+  <div class="grid g3" style="margin-top:18px">
+    <div class="card"><h3>Equipe</h3><ul>
+      <li>Reunião semanal de erros sem caça a culpado: cada erro vira ajuste na base</li>
+      <li>Todo mundo passa um dia por mês em campo, inclusive quem programa</li>
+      <li>Metas de impacto e de equidade valem tanto quanto as de crescimento</li></ul>
+      <p class="note" style="margin-top:8px">Sinal: 100% da equipe com visita de campo no trimestre</p></div>
+    <div class="card"><h3>Técnicos parceiros</h3><ul>
+      <li>Medo real: ser trocado pela IA. Resposta: o técnico assina a base e decide o que pesa; um técnico passa a atender 10 vezes mais produtores</li>
+      <li>Técnicos co-desenham as respostas e aprovam antes de ampliar</li>
+      <li>Painel mostra o trabalho do técnico, que vira indicador do convênio</li></ul>
+      <p class="note" style="margin-top:8px">Sinal: técnicos recomendam o Prosa (pesquisa trimestral ≥ 8/10)</p></div>
+    <div class="card"><h3>Produtores</h3><ul>
+      <li>"Produtor-semente" em cada comunidade: lideranças, mulheres e jovens que ensinam os vizinhos</li>
+      <li>Demonstração em feira, sindicato e rádio comunitária</li>
+      <li>Primeiro valor na primeira semana: um alerta útil para a roça dele</li></ul>
+      <p class="note" style="margin-top:8px">Sinal: 60% ativos 90 dias depois do cadastro</p></div>
+  </div>
+  <div class="card" style="margin-top:16px;border-left:6px solid var(--verde)"><p>Quem fala com o produtor é sempre alguém da região. A tecnologia chega pela confiança que já existe: a cooperativa, o sindicato, o técnico conhecido.</p></div>
+  <div class="foot"><span>Prosa · GS 2026.2 CitizenTech</span><span class="num">9</span></div>
+</section>
+
+<!-- 10 CULTURA E INOVAÇÃO -->
+<section class="s">
+  <div class="kick">09 · Cultura e inovação</div>
+  <h1>Testar com o produtor, em paralelo, antes de valer para valer</h1>
+  <div class="grid" style="grid-template-columns:1fr 1.3fr;margin-top:18px">
+    <div class="card"><h3>Pessoas no centro</h3><ul>
+      <li>Antes de escrever código: escuta em duas comunidades, gravando dúvidas reais por áudio</li>
+      <li>Conselho consultivo de produtores, com metade de mulheres, que se reúne por trimestre</li>
+      <li>Toda nova função passa por teste com áudio real, sotaques e celulares simples</li>
+      <li>Erro que chega ao produtor vira registro público e correção em até 48 h</li></ul>
+      <h3 style="margin-top:12px">Experimento seguro</h3>
+      <p>No teste em paralelo, o técnico responde a mesma pergunta que a IA. O produtor recebe a resposta do técnico, e a equipe compara as duas. A IA só passa a responder sozinha quando acerta no nível do gate.</p></div>
+    <div>
+      <table style="font-size:13.5px">
+        <tr><th style="width:18%">Etapa</th><th style="width:15%">Escala</th><th>Critério para avançar</th><th style="width:28%">Critério para encerrar</th></tr>
+        <tr><td>Alfa</td><td>50 produtores</td><td>≥ 90% de acerto nas respostas revisadas; zero indicação de agrotóxico</td><td>Dois ciclos sem atingir o acerto</td></tr>
+        <tr><td>Beta</td><td>1.000</td><td>60% ativos no mês; técnico responde em < 24 h</td><td>Uso abaixo de 30% depois de 90 dias</td></tr>
+        <tr><td>Piloto público</td><td>8.000</td><td>Alcance por gênero, raça e idade proporcional ao perfil local</td><td>Diferença de erro entre grupos acima de 1,5 vez</td></tr>
+        <tr><td>Escala</td><td>20.000+</td><td>Avaliação independente e equilíbrio no plano</td><td>Custo por produtor acima do preço por 2 trimestres</td></tr>
+      </table>
+      <p class="note" style="margin-top:10px">Inspiração: descoberta orientada a hipótese e ciclos curtos de experimento (Lean Startup), com o critério de encerramento escrito antes de começar.</p>
+    </div>
+  </div>
+  <div class="foot"><span>Prosa · GS 2026.2 CitizenTech</span><span class="num">10</span></div>
+</section>
+
+<!-- 11 QUEM A IA PODE DEIXAR PARA TRÁS -->
+<section class="s">
+  <div class="kick">10 · Quem a IA pode deixar para trás</div>
+  <h1>Um assistente que só funciona para quem já está incluído repete a desigualdade</h1>
+  <div class="grid g3" style="margin-top:18px">
+    <div class="card"><h3>Quem não lê nem escreve</h3><p>Tudo funciona por voz, do cadastro ao alerta.</p></div>
+    <div class="card"><h3>Quem está sem internet</h3><p>Mesmo conteúdo por SMS e ligação gratuita; boletim semanal na rádio comunitária.</p></div>
+    <div class="card"><h3>Sotaques e línguas</h3><p>Reconhecimento de fala testado por região, com nomes locais de pragas. Línguas indígenas só com parceria na fase 2: hoje não atendemos e dizemos isso.</p></div>
+    <div class="card"><h3>Mulheres agricultoras</h3><p>Cadastro individual, não só do titular do lote. Meta: 40% das usuárias.</p></div>
+    <div class="card"><h3>Pretos, pardos e indígenas</h3><p>Recebem hoje três vezes menos assistência técnica. Meta: alcance proporcional ao perfil de cada município, medido todo mês.</p></div>
+    <div class="card"><h3>Idosos</h3><p>Áudio curto e pausado, opção "repete", e "falar com gente" sempre disponível.</p></div>
+  </div>
+  <div class="grid g3" style="margin-top:14px">
+    <div class="card" style="background:#EEF7F3"><h3>Nos dados</h3><p>Fotos de pragas do sequeiro e da agricultura familiar, não só de soja. Desempenho medido por região, cultura e grupo.</p></div>
+    <div class="card" style="background:#EEF7F3"><h3>Na equipe</h3><p>Metade da equipe com origem rural ou nordestina; técnicos e produtores no desenho das respostas.</p></div>
+    <div class="card" style="background:#EEF7F3"><h3>No atendimento</h3><p>Indicador de equidade: diferença de acesso de cada grupo de até 10% em relação ao perfil local.</p></div>
+  </div>
+  <div class="foot"><span>Prosa · GS 2026.2 CitizenTech</span><span class="num">11</span></div>
+</section>
+
+<!-- 12 IMPACTO, ODS E PEDIDO -->
+<section class="s">
+  <div class="kick">11 · Impacto, ODS e o pedido</div>
+  <h1>R$ 1,5 milhão e dois municípios para provar em 12 meses</h1>
+  <div class="grid" style="grid-template-columns:1.25fr 1fr;margin-top:16px">
+    <div>
+      <table style="font-size:13.5px">
+        <tr><th style="width:24%">ODS</th><th>Meta da ONU</th><th style="width:34%">Como o Prosa contribui</th></tr>
+        <tr><td><b>2</b> Fome zero e agricultura sustentável</td><td>2.3 dobrar produtividade e renda dos pequenos produtores; 2.4 práticas agrícolas resilientes</td><td>Decidir plantio, colheita e venda com dado</td></tr>
+        <tr><td><b>13</b> Ação contra a mudança do clima</td><td>13.1 resiliência e adaptação a riscos climáticos</td><td>Alerta de chuva forte e veranico antes do prejuízo</td></tr>
+        <tr><td><b>10</b> Redução das desigualdades</td><td>10.2 inclusão social e econômica de todos</td><td>Assistência técnica a quem nunca recebeu</td></tr>
+        <tr><td><b>9</b> Indústria, inovação e infraestrutura</td><td>9.c acesso às tecnologias de informação</td><td>Tecnologia útil num celular simples, por voz</td></tr>
+      </table>
+      <h2 style="margin-top:14px">Impacto em 12 meses</h2>
+      <div class="grid g4">
+        <div class="card"><div class="big" style="font-size:32px">20 mil</div><div class="lab">produtores ativos</div></div>
+        <div class="card"><div class="big" style="font-size:32px">70%</div><div class="lab">agiram após um alerta</div></div>
+        <div class="card"><div class="big t" style="font-size:28px;white-space:nowrap">R$ 9 mi</div><div class="lab">perdas evitadas (estimativa)</div></div>
+        <div class="card"><div class="big" style="font-size:32px">40%</div><div class="lab">mulheres entre os usuários</div></div>
+      </div>
+    </div>
+    <div class="card" style="background:var(--verde);color:#fff;border:none">
+      <h3 style="color:#3DBE93;font-size:19px">O que pedimos</h3>
+      <ul style="font-size:15.5px;line-height:1.5">
+        <li><b>R$ 1,5 milhão</b> de investimento de impacto: 12 meses de equipe, piloto e uma avaliação independente</li>
+        <li><b>2 prefeituras e 1 cooperativa</b> do Sertão do Pajeú para o piloto</li>
+        <li><b>Técnicos da ATER estadual</b> no circuito de revisão</li>
+        <li><b>Apoio da Embrapa</b> para a base de conhecimento</li>
+      </ul>
+      <p style="margin-top:14px;font-size:14px;color:#DCE8DE">Em troca: indicadores de impacto e de equidade publicados a cada trimestre, inclusive quando forem ruins.</p>
+    </div>
+  </div>
+  <div class="foot"><span>Prosa · GS 2026.2 CitizenTech</span><span class="num">12</span></div>
+</section>
+
+<!-- A1 CONTA -->
+<section class="s">
+  <span class="anx">ANEXO A1</span>
+  <div class="kick">Anexo · Mercado e conta do negócio</div>
+  <h1 style="font-size:30px">Premissas, cálculo e sensibilidade</h1>
+  <div class="grid g2" style="margin-top:14px">
+    <div>
+      <table style="font-size:13px">
+        <tr><th>Premissa (simulada, por produtor ativo/mês)</th><th>Valor</th></tr>
+        <tr><td>Consultas por produtor</td><td>12</td></tr>
+        <tr><td>Custo de IA por consulta (voz, LLM com RAG, voz)</td><td>R$ 0,06</td></tr>
+        <tr><td>Alertas proativos × custo por mensagem de utilidade</td><td>8 × R$ 0,04</td></tr>
+        <tr><td>Consultas que vão para revisão humana</td><td>5%</td></tr>
+        <tr><td>Tempo e custo da revisão</td><td>4 min a R$ 45/h</td></tr>
+        <tr><td><b>Custo variável</b> = 0,72 + 0,32 + 1,80</td><td><b>R$ 2,84</b></td></tr>
+        <tr><td>Preço pago por cooperativa ou prefeitura</td><td>R$ 4,50</td></tr>
+        <tr><td><b>Margem de contribuição</b></td><td><b>R$ 1,66 (37%)</b></td></tr>
+        <tr><td>Custo fixo: equipe de 9 + infraestrutura</td><td>R$ 110 mil/mês</td></tr>
+        <tr><td><b>Equilíbrio</b> = 110.000 ÷ 1,66</td><td><b>66.265 ativos</b></td></tr>
+      </table>
+      <p class="note" style="margin-top:6px">O preço por mensagem de utilidade do WhatsApp varia entre fontes (R$ 0,035 a R$ 0,05 no Brasil); usamos R$ 0,04.</p>
+    </div>
+    <div>
+      <table style="font-size:13px">
+        <tr><th>Cenário</th><th>Ativos</th><th>Receita/mês</th><th>Resultado/mês</th></tr>
+        <tr><td>Mês 12</td><td>20.000</td><td>R$ 90.000</td><td>−R$ 76.800</td></tr>
+        <tr><td>Ano 2</td><td>90.000</td><td>R$ 405.000</td><td>R$ 39.400</td></tr>
+        <tr><td>Ano 3</td><td>250.000</td><td>R$ 1.125.000</td><td>R$ 305.000</td></tr>
+      </table>
+      <table style="font-size:13px;margin-top:12px">
+        <tr><th>Sensibilidade</th><th>Equilíbrio</th></tr>
+        <tr><td>Preço R$ 4,00</td><td>~94.800 ativos</td></tr>
+        <tr><td>Preço R$ 5,00</td><td>~50.900 ativos</td></tr>
+        <tr><td>Revisão humana em 10% das consultas</td><td>margem de R$ 0,14: inviável sem técnico do parceiro</td></tr>
+      </table>
+      <table style="font-size:13px;margin-top:12px">
+        <tr><th>Mercado</th><th>Cálculo</th></tr>
+        <tr><td>TAM</td><td>3.897.408 estabelecimentos familiares (IBGE)</td></tr>
+        <tr><td>SAM</td><td>× 79,8% sem orientação técnica ≈ 3,1 milhões</td></tr>
+        <tr><td>SOM (3 anos)</td><td>250 mil ativos ≈ 8% do SAM</td></tr>
+        <tr><td>Pedido</td><td>R$ 110 mil × 12 = R$ 1,32 mi + piloto e avaliação ≈ R$ 1,5 mi</td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="foot"><span>Prosa · GS 2026.2 CitizenTech · Anexo</span><span class="num">A1</span></div>
+</section>
+
+<!-- A2 FLUXO DETALHADO -->
+<section class="s">
+  <span class="anx">ANEXO A2</span>
+  <div class="kick">Anexo · Fluxo detalhado</div>
+  <h1 style="font-size:30px">Do áudio do produtor à resposta, passo a passo</h1>
+  <table style="margin-top:14px;font-size:13px">
+    <tr><th style="width:4%">#</th><th style="width:17%">Etapa</th><th style="width:20%">Quem faz</th><th>O que acontece</th><th style="width:25%">Exceção</th></tr>
+    <tr><td>1</td><td>Cadastro</td><td>Agente + produtor-semente</td><td>Nome, município, comunidade, culturas e consentimento gravado em áudio</td><td>Sem consentimento: só recebe boletim público</td></tr>
+    <tr><td>2</td><td>Entrada</td><td>WhatsApp, SMS ou ligação</td><td>Áudio, foto ou texto chega pela API</td><td>Sem dados móveis: ligação gratuita ou SMS</td></tr>
+    <tr><td>3</td><td>Transcrição</td><td>IA de voz para texto</td><td>Transcreve e devolve "entendi que você perguntou..."</td><td>Produtor diz "não": pede de novo ou passa ao técnico</td></tr>
+    <tr><td>4</td><td>Triagem</td><td>Agente de triagem</td><td>Classifica em clima, preço, dúvida, foto, tema bloqueado</td><td>Classe incerta: técnico</td></tr>
+    <tr><td>5</td><td>Resposta</td><td>Agente com RAG</td><td>Busca na base curada e escreve resposta curta com a fonte</td><td>Sem fonte na base: não responde e chama o técnico</td></tr>
+    <tr><td>6</td><td>Foto</td><td>Visão computacional</td><td>Gera hipótese de praga ou doença com nível de confiança</td><td>Confiança &lt; 85%, doença grave ou T1–T3: técnico</td></tr>
+    <tr><td>7</td><td>Bloqueio</td><td>Regra fixa</td><td>Temas de agrotóxico, dose, crédito e seguro nunca são respondidos pela IA</td><td>Sempre técnico ou agrônomo</td></tr>
+    <tr><td>8</td><td>Revisão</td><td>Técnico (Emater ou cooperativa)</td><td>Confirma, corrige ou responde no painel; prazo de 24 h</td><td>Urgência (praga se espalhando): prioridade na fila</td></tr>
+    <tr><td>9</td><td>Saída</td><td>IA de texto para voz</td><td>Áudio curto com fonte e chance, opção "repete"</td><td>Pedido de "falar com gente": ligação do técnico</td></tr>
+    <tr><td>10</td><td>Alertas</td><td>Agente de alertas, a cada 6 h</td><td>Cruza previsão INMET/Cemaden com município e cultura e avisa só quem é afetado</td><td>Fonte fora do ar: sem alerta, com aviso ao técnico</td></tr>
+    <tr><td>11</td><td>Aprendizado</td><td>Agrônomo responsável</td><td>Revisa a base toda semana; 5% das respostas auditadas por grupo</td><td>Erro grave: pausa a função no grupo afetado</td></tr>
+  </table>
+  <div class="foot"><span>Prosa · GS 2026.2 CitizenTech · Anexo</span><span class="num">A2</span></div>
+</section>
+
+<!-- A3 DADOS PÚBLICOS -->
+<section class="s">
+  <span class="anx">ANEXO A3</span>
+  <div class="kick">Anexo · Dados públicos usados e premissas</div>
+  <h1 style="font-size:30px">De onde vem cada número</h1>
+  <table style="margin-top:14px;font-size:12.5px">
+    <tr><th style="width:38%">Dado</th><th style="width:24%">Fonte</th><th>Uso e ressalva</th></tr>
+    <tr><td>3.897.408 estabelecimentos familiares (77%); 10,1 mi pessoas ocupadas (67%)</td><td>IBGE, Censo Agropecuário 2017</td><td>Base do TAM. Último censo agro publicado</td></tr>
+    <tr><td>20,2% dos estabelecimentos receberam orientação técnica (2017)</td><td>IBGE, Atlas do Espaço Rural Brasileiro</td><td>Outras tabulações dão 19,9% a 20,1% por denominador diferente</td></tr>
+    <tr><td>Assistência: brancos 31,12%, amarelos 28,03%, pardos 10,83%, pretos 9,57%, indígenas 8,4%</td><td>IBGE, Censo Agro 2017 (cor ou raça do produtor)</td><td>Primeiro censo com essa abertura</td></tr>
+    <tr><td>Perdas de ao menos R$ 6,7 bi no agro por eventos extremos (até ago/2024)</td><td>CNM, balanço de agosto de 2024</td><td>Parcial e só até agosto; usado como ordem de grandeza</td></tr>
+    <tr><td>App Zarc Plantio Certo: ~15 mil usuários ativos</td><td>Embrapa, 2021</td><td>Dado antigo; mostra a distância entre informação e uso</td></tr>
+    <tr><td>Adoção do Zarc evitou mais de R$ 8,7 bi em perdas (2021)</td><td>Mapa, a partir do Balanço Social da Embrapa</td><td>Mostra o valor da informação de risco climático</td></tr>
+    <tr><td>76% da população rural usa internet; 82% dos rurais conectados usam só o celular</td><td>Cetic.br, TIC Domicílios 2024</td><td>Justifica WhatsApp e voz; 16% nunca acessou: SMS e ligação</td></tr>
+    <tr><td>Receituário agronômico obrigatório para venda de agrotóxicos</td><td>Lei 14.785/2023; Resolução Confea 1.149/2025</td><td>Base do bloqueio automático do tema</td></tr>
+  </table>
+  <div class="card" style="margin-top:12px"><p class="note"><b>Premissas da equipe, não dados:</b> preço de R$ 4,50, custo de IA por consulta, taxa de revisão de 5%, custo fixo, ritmo de crescimento, renda de R$ 9 mil/ano do produtor-tipo, perda média de 20% e fração evitável de 1/4. Todas aparecem marcadas como simuladas no deck e devem ser testadas no piloto.</p></div>
+  <div class="foot"><span>Prosa · GS 2026.2 CitizenTech · Anexo</span><span class="num">A3</span></div>
+</section>
+
+<!-- A4 PROMPTS -->
+<section class="s">
+  <span class="anx">ANEXO A4</span>
+  <div class="kick">Anexo · Uso de IA no trabalho</div>
+  <h1 style="font-size:30px">Principais prompts e como revisamos</h1>
+  <p class="note" style="margin-top:6px">Ferramenta: Claude (Anthropic), com busca na web, em 17/11/2026. A IA pesquisou, calculou e redigiu; nenhum número entrou no deck sem fonte conferida (anexo A3). Registro completo em <i>Registro_de_Prompts.md</i>, na pasta do projeto.</p>
+  <table style="margin-top:10px;font-size:12.3px">
+    <tr><th style="width:5%">#</th><th style="width:38%">Prompt</th><th style="width:17%">Técnica</th><th>Resultado e verificação</th></tr>
+    <tr><td>P1</td><td>"Censo Agropecuário 2017 agricultura familiar 3,9 milhões estabelecimentos 77% orientação técnica IBGE"</td><td>Busca com hipótese explícita, para ser confirmada ou refutada</td><td>A hipótese estava errada: 77% é a fatia familiar, e a orientação técnica foi de 20,2%. Corrigido e conferido no Atlas do Espaço Rural (IBGE)</td></tr>
+    <tr><td>P2</td><td>"WhatsApp Business Platform preço Brasil 2025 mensagem de utilidade conversa de serviço gratuita por mensagem"</td><td>Pedido de valores com fonte, separando oficial e terceiros</td><td>Só fontes de terceiros, com valores de R$ 0,035 a R$ 0,05 e datas divergentes. Usamos R$ 0,04 e declaramos a incerteza</td></tr>
+    <tr><td>P3</td><td>"PL 2338/2023 inteligência artificial aprovado Senado dezembro 2024 classificação alto risco tramitação Câmara 2026"</td><td>Checagem de status legal antes de citar</td><td>Fontes com previsões de votação desencontradas. Citamos só o que confere: aprovado no Senado em 12/2024 e ainda em análise na Câmara</td></tr>
+    <tr><td>P4</td><td>"Lei 14.785/2023 agrotóxicos receituário agronômico obrigatório profissional habilitado"</td><td>Busca da base legal de uma salvaguarda</td><td>Confirmou o receituário por profissional habilitado (Resolução Confea 1.149/2025). Virou o bloqueio automático do tema</td></tr>
+    <tr><td>P5</td><td>"Agora precisamos entregar o GS baseado no documento" + escolhas da equipe: tema pequeno produtor; deck e roteiro do vídeo</td><td>Papel (Head of AI), contexto (enunciado da GS), decomposição slide a slide, formato fixo</td><td>Gerou o deck e a conta (refeita em script). Conferência contra o enunciado achou siglas sem explicação (TAM, SAM, SOM); ajustado. Leitura final da equipe antes do envio</td></tr>
+  </table>
+  <div class="foot"><span>Prosa · GS 2026.2 CitizenTech · Anexo</span><span class="num">A4</span></div>
+</section>
+
+<!-- A5 RISCOS -->
+<section class="s">
+  <span class="anx">ANEXO A5</span>
+  <div class="kick">Anexo · Riscos do negócio e plano B</div>
+  <h1 style="font-size:30px">O que pode dar errado e o que fazemos</h1>
+  <table style="margin-top:14px;font-size:13.5px">
+    <tr><th style="width:26%">Risco</th><th style="width:30%">Sinal de alerta</th><th>Resposta</th></tr>
+    <tr><td>Prefeitura troca de gestão e corta o contrato</td><td>Atraso de pagamento ou de renovação</td><td>Receita misturada: cooperativas pagam por associado; contrato plurianual com metas públicas</td></tr>
+    <tr><td>Técnicos não têm tempo para revisar</td><td>Fila acima de 24 h</td><td>Técnico remoto da própria Prosa para o excedente; revisão por amostra só depois do gate</td></tr>
+    <tr><td>IA erra com sotaque de uma região</td><td>Mais pedidos de "repete" e de técnico num município</td><td>Pausa a função ali, coleta áudios com consentimento e retreina</td></tr>
+    <tr><td>Custo de IA ou do WhatsApp sobe</td><td>Custo variável acima de R$ 3,50</td><td>Modelos menores e locais para triagem; menos alertas, só os de maior valor</td></tr>
+    <tr><td>Produtor perde confiança por um alerta errado</td><td>Queda de ativos após o evento</td><td>Alerta sempre com chance; explicação do erro em áudio; produtor-semente faz a ponte</td></tr>
+    <tr><td>Pressão para vender dado a banco ou loja de insumos</td><td>Proposta comercial de dado individual</td><td>Regra no estatuto e nos contratos: dado individual não é vendido</td></tr>
+  </table>
+  <h2 style="margin-top:16px">Referências</h2>
+  <p class="note">IBGE: Censo Agropecuário 2017 (resultados definitivos e Agência de Notícias); Atlas do Espaço Rural Brasileiro. Cetic.br: TIC Domicílios 2024. CNM: balanço de prejuízos climáticos, ago/2024. Embrapa e Mapa: Zarc Plantio Certo. Brasil: Lei 13.709/2018 (LGPD); Lei 14.785/2023; PL 2338/2023. Confea: Resolução 1.149/2025. União Europeia: Regulamento 2024/1689 (AI Act). UNESCO: Recomendação sobre a Ética da IA, 2021. OCDE: Princípios de IA. ONU: Agenda 2030 e metas dos ODS 2, 9, 10 e 13. RIES, E. A startup enxuta, 2012. HIATT, J. ADKAR, 2006.</p>
+  <div class="foot"><span>Prosa · GS 2026.2 CitizenTech · Anexo</span><span class="num">A5</span></div>
+</section>
+
+</body>
+</html>
