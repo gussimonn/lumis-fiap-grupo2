@@ -1,4 +1,4 @@
-# Global Solution 2026.2 · CitizenTech 🟡
+# Global Solution 2026.2 · CitizenTech ✅
 
 **Enunciado:** [_Enunciado/1TGIOR_Fase4_Global_Solutions_2026-2.pdf](_Enunciado/1TGIOR_Fase4_Global_Solutions_2026-2.pdf) (cópia idêntica do PDF do portal, conferida byte a byte).
 **Prazo:** 19/11/2026, às 23h55, pelo portal, sem prorrogação. Só um integrante envia.
@@ -59,11 +59,15 @@ Tema escolhido pela equipe em 17/11/2026 entre três opções (pequeno produtor,
 
 Cores e fontes do design system do repositório (Vital, Vital escuro, Profundo, Pulso; Georgia nos títulos e Calibri no texto, ou Source Serif 4 e Source Sans 3 no navegador). O logo e o Feixe da Lumis não entram, porque a Prosa é outra empresa e a GS é avaliação independente (D-052).
 
-## Pendências antes do envio
+## Envio
+
+Enviada pelo portal em 19/11/2026 por Felipe Alef, com o PDF v3. Aguarda nota.
+
+## Pendências antes do envio (histórico)
 
 - [ ] Leitura do deck e do roteiro por pelo menos um integrante, além de quem montou.
 - [x] Gravar o vídeo (até 5:00) e publicar como "não listado" (19/11).
 - [x] Colar o link no slide 1 e exportar o PDF de novo (v3).
-- [ ] Testar o link numa janela anônima antes de enviar.
-- [ ] Definir quem envia pelo portal.
+- [x] Testar o link numa janela anônima antes de enviar.
+- [x] Definir quem envia pelo portal (Felipe).
 - [ ] Premissas simuladas (preço, custo de IA, taxa de revisão, benefício ao produtor) estão marcadas como tal no deck; quem discordar de um número ajusta o anexo A1 e o slide 6 juntos.
