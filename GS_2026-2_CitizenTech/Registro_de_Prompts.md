@@ -31,6 +31,9 @@
 | P5 | "Agora precisamos entregar o GS baseado no documento", com as escolhas acima | Deck de 12 slides e 5 de anexo, roteiro de 5 minutos | Conta refeita em script Python (custo R$ 2,84; equilíbrio de 66.265 ativos; sensibilidade de preço e de revisão) |
 | P5b | Conferência do deck contra o enunciado, slide a slide | Todos os itens do enunciado presentes; siglas TAM, SAM e SOM sem explicação; link do vídeo pendente | Siglas explicadas no slide 3; link fica como pendência da equipe |
 | P5c | Releitura do anexo A4 | A primeira versão do A4 descrevia duas revisões que não aconteceram | A4 reescrito só com o que está nesta tabela |
+| P6 | 19/11: "se cada um mandar os vídeos isolados, conseguimos unir todos?" e "editar para manter o foco no olhar para a câmera e a qualidade aderente aos slides" | Montagem com ffmpeg (`video/montar_video.py`): abertura com nomes e RMs, slide do deck ao lado da câmera, volume igualado, silêncios das pontas cortados, tratamento de cor e ruído no trecho do Felipe. As falas não foram editadas | A IA avisou que não consegue corrigir a direção do olhar; ficou como está. Trocas de slide calculadas pela proporção do roteiro e conferidas por quadros. Vídeo publicado como não listado (4:09) |
+
+> O P6 foi feito depois da exportação do deck v3 e por isso não aparece no anexo A4; o A4 cobre a construção do conteúdo.
 
 ## Pendências da equipe
 

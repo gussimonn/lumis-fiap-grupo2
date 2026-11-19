@@ -27,6 +27,7 @@ Tema escolhido pela equipe em 17/11/2026 entre três opções (pequeno produtor,
 | [deck/GS_Prosa_Pitch_Deck_v3.html](deck/GS_Prosa_Pitch_Deck_v3.html) | Fonte do deck (editar aqui e exportar de novo) | |
 | [GS_Roteiro_Video_Pitch_v2.md](GS_Roteiro_Video_Pitch_v2.md) | Roteiro de 5 minutos, dividido entre os três | ✅ gravado |
 | Vídeo pitch | [youtu.be/x5oLf6txOko](https://youtu.be/x5oLf6txOko), não listado, 4:09. Montado a partir das gravações individuais; os arquivos de vídeo ficam fora do repositório | ✅ |
+| [video/montar_video.py](video/montar_video.py) | Script da montagem do vídeo (ffmpeg + pymupdf). Os vídeos brutos e o MP4 final ficam fora do repositório, por tamanho | ✅ |
 | [Registro_de_Prompts.md](Registro_de_Prompts.md) | Buscas, verificações e correções feitas com IA | ✅ |
 
 ## Mapa do enunciado
