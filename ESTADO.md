@@ -1,10 +1,10 @@
 # ESTADO — LumisOS
 
-**Atualizado em:** 17/11/2026 (GS 2026.2: deck v1 e roteiro montados) · **Conferido contra:** arquivos reais da pasta nesta data.
+**Atualizado em:** 19/11/2026 (GS 2026.2: vídeo publicado, deck v3 com o link) · **Conferido contra:** arquivos reais da pasta nesta data.
 
 ## Onde estamos
 
-**Global Solution 2026.2 (Fase 4) — CitizenTech.** Prazo 19/11/2026, 23h55, sem prorrogação. Projeto independente da Lumis. Proposta: Prosa, assistente por áudio no WhatsApp para a agricultura familiar (D-052). Deck v2 em PDF (12 slides + 5 de anexo) e roteiro do vídeo para três vozes prontos em [GS_2026-2_CitizenTech/](GS_2026-2_CitizenTech/README.md). Falta: leitura da equipe, gravar o vídeo, colar o link na capa, exportar de novo e enviar.
+**Global Solution 2026.2 (Fase 4) — CitizenTech.** Prazo 19/11/2026, 23h55, sem prorrogação. Projeto independente da Lumis. Proposta: Prosa, assistente por áudio no WhatsApp para a agricultura familiar (D-052). Vídeo pitch gravado pelos três, montado (4:09) e publicado no YouTube como não listado em 19/11: https://youtu.be/x5oLf6txOko. Deck v3 em PDF (12 slides + 5 de anexo) com o link na capa, em [GS_2026-2_CitizenTech/](GS_2026-2_CitizenTech/README.md). Falta: validação final da equipe e o envio do PDF v3 pelo portal por um integrante.
 
 **Fase 2 — O Mercado.** ✅ Entregue pelo portal (informado pela equipe em 05/11/2026; data do envio [não consta]). A peça enviada é o documento único com as cinco entregas, mais o memorando ao conselho. A pasta guarda a v3 de ambos; se a equipe alterou algo depois da v3, a versão enviada precisa ser salva aqui. Nota e feedback ainda não saíram. Em 09/10/2026 a pasta foi organizada: os .docx individuais das entregas foram para `_Historico/`, e cada pasta de entrega tem agora o texto do documento único em `.md` (D-048). A Fase 1 está com as 3 entregas em versão revisada.
 

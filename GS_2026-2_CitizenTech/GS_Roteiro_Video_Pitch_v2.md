@@ -6,11 +6,11 @@
 
 ## Quem fala
 
-| Pessoa | Trechos | Tempo |
-|---|---|---|
-| Maria Fernanda | 1. O cidadão · 2. A solução | 0:00 a 1:50 |
-| Gustavo | 3. O negócio · 4. O controle | 1:50 a 3:50 |
-| Felipe | 5. Para quem e o pedido, e a edição final | 3:50 a 4:40 |
+| Pessoa         | Trechos                                   | Tempo       |
+| -------------- | ----------------------------------------- | ----------- |
+| Maria Fernanda | 1. O cidadão · 2. A solução               | 0:00 a 1:50 |
+| Gustavo        | 3. O negócio · 4. O controle              | 1:50 a 3:50 |
+| Felipe         | 5. Para quem e o pedido, e a edição final | 3:50 a 4:40 |
 
 Felipe fala menos e fica com a edição e o envio; se preferirem equilibrar, o trecho 4 pode passar para ele.
 

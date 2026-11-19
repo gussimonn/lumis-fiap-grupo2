@@ -23,9 +23,10 @@ Tema escolhido pela equipe em 17/11/2026 entre três opções (pequeno produtor,
 
 | Arquivo | O que é | Status |
 |---|---|---|
-| [GS_Prosa_Pitch_Deck_v2.pdf](GS_Prosa_Pitch_Deck_v2.pdf) | Deck para envio: 12 slides + anexos A1 a A5 | 🟡 v2 (capa com a equipe de três), aguarda leitura e o link do vídeo |
-| [deck/GS_Prosa_Pitch_Deck_v2.html](deck/GS_Prosa_Pitch_Deck_v2.html) | Fonte do deck (editar aqui e exportar de novo) | |
-| [GS_Roteiro_Video_Pitch_v2.md](GS_Roteiro_Video_Pitch_v2.md) | Roteiro de 5 minutos, dividido entre os três | 🟡 v2, falta gravar |
+| [GS_Prosa_Pitch_Deck_v3.pdf](GS_Prosa_Pitch_Deck_v3.pdf) | Deck para envio: 12 slides + anexos A1 a A5 | ✅ v3, com o link do vídeo na capa; é este o arquivo do portal |
+| [deck/GS_Prosa_Pitch_Deck_v3.html](deck/GS_Prosa_Pitch_Deck_v3.html) | Fonte do deck (editar aqui e exportar de novo) | |
+| [GS_Roteiro_Video_Pitch_v2.md](GS_Roteiro_Video_Pitch_v2.md) | Roteiro de 5 minutos, dividido entre os três | ✅ gravado |
+| Vídeo pitch | [youtu.be/x5oLf6txOko](https://youtu.be/x5oLf6txOko), não listado, 4:09. Montado a partir das gravações individuais; os arquivos de vídeo ficam fora do repositório | ✅ |
 | [Registro_de_Prompts.md](Registro_de_Prompts.md) | Buscas, verificações e correções feitas com IA | ✅ |
 
 ## Mapa do enunciado
@@ -48,9 +49,9 @@ Tema escolhido pela equipe em 17/11/2026 entre três opções (pequeno produtor,
 
 ## Como editar e exportar
 
-1. Editar o texto em `deck/GS_Prosa_Pitch_Deck_v2.html` (cada slide é um bloco `<section>`).
+1. Editar o texto em `deck/GS_Prosa_Pitch_Deck_v3.html` (cada slide é um bloco `<section>`).
 2. Exportar com o Edge ou o Chrome: abrir o HTML, Imprimir, "Salvar como PDF", margens "Nenhuma", sem cabeçalho e rodapé. Ou pela linha de comando:
-   `msedge --headless=new --no-pdf-header-footer --print-to-pdf="GS_Prosa_Pitch_Deck_v2.pdf" "file:///.../deck/GS_Prosa_Pitch_Deck_v2.html"`
+   `msedge --headless=new --no-pdf-header-footer --print-to-pdf="GS_Prosa_Pitch_Deck_v3.pdf" "file:///.../deck/GS_Prosa_Pitch_Deck_v3.html"`
 3. Antes de substituir uma versão já enviada ao grupo, mover a anterior para `_Historico/`.
 
 ## Padrão visual
@@ -60,7 +61,8 @@ Cores e fontes do design system do repositório (Vital, Vital escuro, Profundo, 
 ## Pendências antes do envio
 
 - [ ] Leitura do deck e do roteiro por pelo menos um integrante, além de quem montou.
-- [ ] Gravar o vídeo (até 5:00), publicar como "não listado" e testar o link em janela anônima.
-- [ ] Colar o link no slide 1 (procurar `[COLAR O LINK AQUI]` no HTML) e exportar o PDF de novo.
+- [x] Gravar o vídeo (até 5:00) e publicar como "não listado" (19/11).
+- [x] Colar o link no slide 1 e exportar o PDF de novo (v3).
+- [ ] Testar o link numa janela anônima antes de enviar.
 - [ ] Definir quem envia pelo portal.
 - [ ] Premissas simuladas (preço, custo de IA, taxa de revisão, benefício ao produtor) estão marcadas como tal no deck; quem discordar de um número ajusta o anexo A1 e o slide 6 juntos.
